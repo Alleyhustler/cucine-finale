@@ -6,8 +6,8 @@
     <title>Cucine Nuove di Lusso</title>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
+        /* Stili identici alla pagina principale */
         * {
             margin: 0;
             padding: 0;
@@ -21,49 +21,17 @@
             --accent-light: #DADED8;
             --white: #ffffff;
             --black: #000000;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --error: #ef4444;
         }
 
         body {
             font-family: "Arvo", serif;
             line-height: 1.6;
-            background: var(--white);
+            background: url('bedge-grunge.png') var(--white);
             color: var(--primary-dark);
             overflow-x: hidden;
         }
 
-        /* Loading Spinner */
-        .loading-spinner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        .spinner {
-            width: 60px;
-            height: 60px;
-            border: 4px solid var(--accent-light);
-            border-left: 4px solid var(--primary-dark);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Header Styles - Enhanced */
+        /* Header Styles */
         .header {
             position: fixed;
             top: 20px;
@@ -83,7 +51,7 @@
         }
 
         .header.scrolled {
-            background: rgba(255, 255, 255, 0.95);
+            background: url('bedge-grunge.png') rgba(255, 255, 255, 0);
             backdrop-filter: blur(20px);
             box-shadow: 0 8px 32px rgba(44, 52, 36, 0.1);
             height: 60px;
@@ -93,7 +61,20 @@
         .header.scrolled .nav-link,
         .header.scrolled .logo,
         .header.scrolled .menu-line {
-            color: var(--primary-dark);
+            color: white;
+        }
+
+        .header.scrolled .cta-button {
+            color: white;
+            border-color: var(--primary-dark);
+        }
+
+        .header.scrolled .cta-button::before {
+            background: var(--primary-dark);
+        }
+
+        .header.scrolled .cta-button:hover {
+            color: var(--white);
         }
 
         .header-content {
@@ -108,7 +89,8 @@
         .header-left {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.5rem;
+            margin-left: -200px;
         }
 
         .menu-toggle {
@@ -118,6 +100,10 @@
             cursor: pointer;
             padding: 8px 5px;
             transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
         }
 
         .menu-line {
@@ -142,21 +128,36 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: white;
+            color: #2C3424;
             text-decoration: none;
             letter-spacing: 2px;
             position: relative;
         }
 
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-dark), var(--accent-medium));
+            transition: width 0.3s ease;
+        }
+
+        .logo:hover::after {
+            width: 100%;
+        }
+
         .nav-desktop {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
         .nav-link {
-            color: white;
+            color: #2C3424;
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
@@ -177,17 +178,23 @@
             transform: translateX(-50%);
         }
 
+        .nav-link:hover {
+            color: var(--primary-medium);
+            transform: translateY(-2px);
+        }
+
         .nav-link:hover::before {
             width: 100%;
         }
 
         .cta-button {
-            background: var(--primary-dark);
+            background: url('bedge-grunge.png') var(--primary-dark);
             color: white;
-            padding: 12px 24px;
+            padding: 12px 20px;
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 1px;
+            margin-right: -200px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             border: 2px solid white;
@@ -196,19 +203,36 @@
             font-size: 0.9rem;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44, 52, 36, 0.3);
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+            z-index: -1;
         }
 
-        /* Mobile Menu - Enhanced */
+        .cta-button:hover {
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .cta-button:hover::before {
+            transform: translateX(0);
+        }
+
+        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             top: 0;
-            width: min(400px, 80vw);
-            left: -100%;
+            width: 500px;
+            left: -500px;
             height: 100vh;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+            background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
             backdrop-filter: blur(20px);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1001;
@@ -222,10 +246,16 @@
             left: 0;
         }
 
+        .mobile-menu .logo {
+            color: var(--white);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
         .mobile-nav {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .mobile-nav .nav-link {
@@ -234,12 +264,11 @@
             padding: 1rem;
             border-bottom: 1px solid rgba(255,255,255,0.1);
             transition: all 0.3s ease;
-            border-radius: 8px;
         }
 
         .mobile-nav .nav-link:hover {
             background: rgba(255,255,255,0.1);
-            transform: translateX(10px);
+            padding-left: 1.5rem;
         }
 
         .mobile-overlay {
@@ -248,12 +277,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.5);
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 999;
-            backdrop-filter: blur(2px);
         }
 
         .mobile-overlay.active {
@@ -261,17 +289,15 @@
             visibility: visible;
         }
 
-        /* Enhanced Product Hero */
+        /* Product Page Specific Styles */
         .product-hero {
-            height: 80vh;
+            height: 70vh;
             background-size: cover;
             background-position: center;
             position: relative;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-end;
             padding: 4rem 2rem;
-            background-attachment: fixed;
         }
 
         .product-hero::before {
@@ -281,72 +307,31 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(44,52,36,0.4));
+            background: rgba(0,0,0,0.3);
         }
 
         .product-hero-content {
             position: relative;
             z-index: 2;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            text-align: center;
             width: 100%;
         }
 
         .product-title {
-            font-size: clamp(3rem, 8vw, 5rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 700;
             color: var(--white);
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
-            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
         .product-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1rem, 3vw, 1.5rem);
             color: var(--accent-light);
-            max-width: 800px;
-            margin: 0 auto;
-            text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+            max-width: 600px;
         }
 
-        /* Price Badge */
-        .price-badge {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            background: var(--success);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-            z-index: 3;
-        }
-
-        /* Breadcrumb Navigation */
-        .breadcrumb {
-            padding: 1rem 2rem;
-            background: var(--accent-light);
-            font-size: 0.9rem;
-        }
-
-        .breadcrumb a {
-            color: var(--primary-medium);
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            color: var(--primary-dark);
-        }
-
-        .breadcrumb span {
-            color: var(--primary-dark);
-            margin: 0 0.5rem;
-        }
-
-        /* Enhanced Product Content */
         .product-content {
             padding: 6rem 2rem;
             max-width: 1400px;
@@ -356,312 +341,99 @@
         .product-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            margin-bottom: 6rem;
+            gap: 4rem;
         }
 
         .product-details {
             display: flex;
             flex-direction: column;
-            gap: 3rem;
-        }
-
-        .product-description {
-            font-size: 1.3rem;
-            line-height: 1.9;
-            color: var(--primary-medium);
-        }
-
-        /* Enhanced Gallery with Lightbox */
-        .product-gallery {
-            position: relative;
-        }
-
-        .main-gallery-image {
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            position: relative;
-            box-shadow: 0 15px 40px rgba(44, 52, 36, 0.2);
-        }
-
-        .main-gallery-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .main-gallery-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .gallery-thumbnails {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 1rem;
-        }
-
-        .thumbnail {
-            height: 80px;
-            overflow: hidden;
-            border-radius: 8px;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .thumbnail.active,
-        .thumbnail:hover {
-            opacity: 1;
-            border-color: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Image zoom icon */
-        .zoom-icon {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(0,0,0,0.5);
-            color: white;
-            padding: 0.5rem;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .zoom-icon:hover {
-            background: rgba(0,0,0,0.8);
-            transform: scale(1.1);
-        }
-
-        /* Lightbox Modal */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 3000;
-            backdrop-filter: blur(5px);
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
-
-        .lightbox img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            font-size: 1.5rem;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .lightbox-nav:hover {
-            background: rgba(0,0,0,0.8);
-        }
-
-        .lightbox-prev {
-            left: -60px;
-        }
-
-        .lightbox-next {
-            right: -60px;
-        }
-
-        /* Enhanced Features */
-        .product-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
-        .feature-item {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(44, 52, 36, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid var(--accent-light);
+        .product-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--primary-medium);
         }
 
-        .feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(44, 52, 36, 0.15);
+        .product-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
         }
 
         .feature-icon {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             color: var(--primary-dark);
-            margin-bottom: 1rem;
-            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .feature-text {
+            flex: 1;
         }
 
         .feature-title {
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--primary-dark);
-            font-size: 1.3rem;
         }
 
         .feature-desc {
             color: var(--primary-medium);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        /* Enhanced Specifications */
-        .product-specs {
-            margin-top: 6rem;
-            background: linear-gradient(135deg, var(--accent-light), var(--white));
-            padding: 4rem 2rem;
-            border-radius: 20px;
-        }
-
-        .specs-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary-dark);
-            text-align: center;
-        }
-
-        .specs-grid {
+        .product-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
         }
 
-        .spec-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(44, 52, 36, 0.1);
-            border-left: 6px solid var(--primary-dark);
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
             transition: all 0.3s ease;
         }
 
-        .spec-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(44, 52, 36, 0.15);
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(44, 52, 36, 0.2);
         }
 
-        .spec-title {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--primary-dark);
-            font-size: 1.4rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .spec-title::before {
-            content: '⚙️';
-            font-size: 1.2rem;
-        }
-
-        .spec-list {
-            list-style: none;
-        }
-
-        .spec-list li {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(44, 52, 36, 0.1);
-        }
-
-        .spec-list li::before {
-            content: '✓';
-            color: var(--success);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        /* Enhanced CTA Section */
-        .product-cta {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
-            padding: 4rem 2rem;
-            color: var(--white);
-            margin-top: 6rem;
-            text-align: center;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .gallery-item img {
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .main-image {
+            grid-column: span 2;
+            height: 400px;
+        }
+
+        .product-cta {
+            background: url('bedge-grunge.png') var(--primary-dark);
+            padding: 3rem 2rem;
+            color: var(--white);
+            margin-top: 4rem;
+            text-align: center;
         }
 
         .cta-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .cta-buttons {
@@ -669,42 +441,21 @@
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
         }
 
         .cta-btn {
-            padding: 15px 35px;
+            padding: 12px 30px;
             background: var(--white);
             color: var(--primary-dark);
             text-decoration: none;
             font-weight: 600;
             border: 2px solid var(--white);
-            border-radius: 50px;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-btn:hover::before {
-            left: 100%;
         }
 
         .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+            background: transparent;
+            color: var(--white);
         }
 
         .cta-btn.secondary {
@@ -718,89 +469,116 @@
             color: var(--primary-dark);
         }
 
-        /* Enhanced Related Products */
-        .related-products {
-            padding: 6rem 2rem;
+        .product-specs {
+            margin-top: 4rem;
+        }
+
+        .specs-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-dark);
+            text-align: center;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .spec-card {
             background: var(--white);
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(44, 52, 36, 0.1);
+            border-left: 4px solid var(--primary-dark);
+        }
+
+        .spec-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .spec-list {
+            list-style: none;
+        }
+
+        .spec-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .spec-list li::before {
+            content: '•';
+            color: var(--primary-dark);
+        }
+
+        /* Related Products */
+        .related-products {
+            padding: 4rem 2rem;
+            background: url('bedge-grunge.png') var(--white);
         }
 
         .related-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             color: var(--primary-dark);
         }
 
         .related-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .related-card {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 0;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(44, 52, 36, 0.1);
+            box-shadow: 0 15px 40px rgba(44, 52, 36, 0.1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            border: 1px solid var(--accent-light);
-        }
-
-        .related-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(44, 52, 36, 0.03), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
 
         .related-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 35px 70px rgba(44, 52, 36, 0.2);
-        }
-
-        .related-card:hover::before {
-            opacity: 1;
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(44, 52, 36, 0.2);
         }
 
         .related-image {
-            height: 280px;
+            height: 250px;
             width: 100%;
             object-fit: cover;
             transition: all 0.5s ease;
         }
 
         .related-card:hover .related-image {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
 
         .related-info {
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .related-name {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--primary-dark);
         }
 
         .related-desc {
             color: var(--primary-medium);
-            margin-bottom: 2rem;
-            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .related-link {
             display: inline-block;
-            padding: 12px 28px;
+            padding: 8px 20px;
             background: var(--primary-dark);
             color: var(--white);
             text-decoration: none;
@@ -808,77 +586,16 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
             border: 2px solid var(--primary-dark);
-            border-radius: 50px;
         }
 
         .related-link:hover {
             background: transparent;
             color: var(--primary-dark);
-            transform: translateY(-2px);
         }
 
-        /* Error State */
-        .error-state {
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-
-        .error-icon {
-            font-size: 4rem;
-            color: var(--error);
-            margin-bottom: 1rem;
-        }
-
-        .error-message {
-            font-size: 1.5rem;
-            color: var(--primary-medium);
-            margin-bottom: 2rem;
-        }
-
-        .error-cta {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--primary-dark);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .error-cta:hover {
-            background: var(--primary-medium);
-            transform: translateY(-2px);
-        }
-
-        /* Toast Notifications */
-        .toast {
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            background: var(--success);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transform: translateX(400px);
-            transition: all 0.3s ease;
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .toast.show {
-            transform: translateX(0);
-        }
-
-        .toast.error {
-            background: var(--error);
-        }
-
-        /* Enhanced Footer */
+        /* Footer */
         .footer {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+            background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
             color: var(--primary-medium);
             padding: 4rem 2rem 2rem;
         }
@@ -887,16 +604,16 @@
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
         }
 
         .footer-section h3 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             letter-spacing: 1px;
-            color: var(--white);
+            color: var(--black);
         }
 
         .footer-links {
@@ -910,18 +627,18 @@
             text-decoration: none;
             transition: all 0.3s ease;
             font-size: 1.1rem;
-            padding: 0.5rem 0;
         }
 
         .footer-link:hover {
             color: var(--white);
-            transform: translateX(10px);
+            transform: translateX(5px);
         }
 
         .contact-info {
             display: flex;
+            color: #4C583E;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .contact-item {
@@ -930,21 +647,52 @@
             gap: 1rem;
             color: #4C583E;
             font-size: 1.1rem;
-            padding: 1rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            transition: all 0.3s ease;
         }
 
-        .contact-item:hover {
-            background: rgba(255,255,255,0.1);
+        .email-signup {
+            display: flex;
+            gap: 1rem;
+            color: #4C583E;
+            margin-top: 1rem;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(61, 58, 58, 0.3);
+            color: #4C583E;
+            font-family: "Philosopher", sans-serif;
+        }
+
+        .email-input::placeholder {
+            color: rgba(27, 25, 25, 0.7);
+        }
+
+        .email-submit {
+            padding: 12px 24px;
+            background: var(--accent-medium);
+            color: #4C583E;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Philosopher", sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .email-submit:hover {
+            background: var(--accent-light);
+            color: var(--primary-dark);
             transform: translateY(-2px);
+            color: #4C583E;
         }
 
         .social-links {
             display: flex;
             gap: 1rem;
-            margin-top: 1.5rem;
+            color: #4C583E;
+            margin-top: 1rem;
         }
 
         .social-link {
@@ -956,15 +704,14 @@
             background: rgba(255, 255, 255, 0.1);
             color: var(--white);
             text-decoration: none;
-            border-radius: 50%;
             transition: all 0.3s ease;
             font-size: 1.5rem;
         }
 
         .social-link:hover {
-            background: var(--white);
+            background: var(--accent-light);
             color: var(--primary-dark);
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         .footer-bottom {
@@ -975,15 +722,15 @@
             color: #4C583E;
         }
 
-        /* Enhanced Modal */
+        /* Modal Styles */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(8px);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -999,34 +746,32 @@
         }
 
         .modal {
-            background: var(--white);
-            border-radius: 16px;
+            background: url('bedge-grunge.png') var(--white);
+            border-radius: 0;
             width: 90%;
-            max-width: 600px;
+            max-width: 500px;
             max-height: 90vh;
             overflow-y: auto;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-            transform: scale(0.8) translateY(20px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(20px);
             transition: all 0.3s ease;
         }
 
         .modal-overlay.active .modal {
-            transform: scale(1) translateY(0);
+            transform: translateY(0);
         }
 
         .modal-header {
-            padding: 2rem;
+            padding: 1.5rem;
             border-bottom: 1px solid var(--accent-light);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(135deg, var(--accent-light), var(--white));
         }
 
         .modal-header h3 {
             color: var(--primary-dark);
-            font-size: 1.8rem;
-            margin: 0;
+            font-size: 1.5rem;
         }
 
         .modal-close {
@@ -1036,53 +781,48 @@
             cursor: pointer;
             color: var(--primary-medium);
             transition: all 0.3s ease;
-            padding: 0.5rem;
-            border-radius: 50%;
         }
 
         .modal-close:hover {
             color: var(--primary-dark);
-            background: rgba(44, 52, 36, 0.1);
             transform: rotate(90deg);
         }
 
         .modal-body {
-            padding: 2rem;
+            padding: 1.5rem;
+        }
+
+        .contact-info {
+            margin: 1.5rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            font-size: 1.1rem;
         }
 
         .modal-note {
             font-style: italic;
             margin: 1.5rem 0;
             color: var(--primary-medium);
-            padding: 1rem;
-            background: var(--accent-light);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-dark);
         }
 
         .preventivo-form {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .preventivo-form input,
         .preventivo-form textarea {
-            padding: 15px 20px;
-            border: 2px solid var(--accent-light);
+            padding: 12px 16px;
+            border: 1px solid var(--accent-light);
             font-family: "Arvo", serif;
             background: rgba(255, 255, 255, 0.7);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .preventivo-form input:focus,
-        .preventivo-form textarea:focus {
-            outline: none;
-            border-color: var(--primary-dark);
-            box-shadow: 0 0 0 3px rgba(44, 52, 36, 0.1);
-            transform: translateY(-2px);
         }
 
         .preventivo-form textarea {
@@ -1091,71 +831,46 @@
         }
 
         .submit-button {
-            background: linear-gradient(135deg, var(--primary-medium), var(--primary-dark));
+            background: var(--primary-medium);
             color: white;
-            padding: 16px;
+            padding: 14px;
             border: none;
             cursor: pointer;
             font-family: "Arvo", serif;
             font-weight: 600;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .submit-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .submit-button:hover::before {
-            left: 100%;
         }
 
         .submit-button:hover {
+            background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(44, 52, 36, 0.3);
         }
 
-        /* Responsive Design */
+        /* Responsive Styles */
         @media (max-width: 1024px) {
             .product-grid {
                 grid-template-columns: 1fr;
-                gap: 4rem;
             }
             
             .product-gallery {
                 order: -1;
-                margin-bottom: 2rem;
+                margin-bottom: 3rem;
             }
             
-            .main-gallery-image {
-                height: 400px;
+            .main-image {
+                height: 300px;
             }
             
-            .nav-desktop {
-                display: none;
-            }
-            
-            .specs-grid {
-                grid-template-columns: 1fr;
+            .gallery-item {
+                height: 200px;
             }
         }
 
         @media (max-width: 768px) {
             .product-hero {
-                height: 60vh;
-                padding: 2rem 1rem;
-                background-attachment: scroll;
+                height: 50vh;
+                padding: 2rem;
             }
             
             .header-left {
@@ -1164,8 +879,6 @@
             
             .cta-button {
                 margin-right: 0;
-                padding: 10px 16px;
-                font-size: 0.8rem;
             }
             
             .cta-buttons {
@@ -1173,152 +886,52 @@
                 align-items: center;
             }
             
-            .main-gallery-image {
-                height: 300px;
-            }
-            
-            .product-content {
-                padding: 4rem 1rem;
-            }
-            
-            .product-specs {
-                padding: 3rem 1rem;
-                margin-top: 4rem;
-            }
-            
-            .related-products {
-                padding: 4rem 1rem;
-            }
-            
-            .price-badge {
-                position: static;
-                margin: 1rem auto 2rem;
-                display: inline-block;
+            .mobile-menu {
+                width: 80%;
+                left: -80%;
             }
         }
 
         @media (max-width: 480px) {
             .product-hero {
-                height: 50vh;
+                height: 40vh;
             }
             
             .product-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .product-subtitle {
                 font-size: 1.1rem;
             }
             
-            .main-gallery-image {
+            .product-content {
+                padding: 3rem 1rem;
+            }
+            
+            .gallery-item {
+                height: 150px;
+            }
+            
+            .main-image {
                 height: 250px;
-            }
-            
-            .thumbnail {
-                height: 60px;
-            }
-            
-            .modal {
-                width: 95%;
-                margin: 1rem;
-            }
-            
-            .modal-header,
-            .modal-body {
-                padding: 1.5rem;
             }
         }
 
-        /* Animation Classes */
+        /* Animation Styles */
         .fade-in {
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(30px);
+            transition: all 0.6s ease;
         }
 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .slide-in-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .slide-in-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .slide-in-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Loading states */
-        .loading {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .loading::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-            animation: loading-shimmer 1.5s infinite;
-        }
-
-        @keyframes loading-shimmer {
-            100% { left: 100%; }
-        }
-
-        /* Accessibility improvements */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        /* Focus styles for better accessibility */
-        button:focus,
-        input:focus,
-        textarea:focus,
-        a:focus {
-            outline: 2px solid var(--primary-dark);
-            outline-offset: 2px;
-        }
-
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            :root {
-                --primary-dark: #000000;
-                --primary-medium: #333333;
-                --accent-light: #cccccc;
-                --white: #ffffff;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Loading Spinner -->
-    <div class="loading-spinner" id="loadingSpinner">
-        <div class="spinner"></div>
-    </div>
-
     <!-- Header -->
     <header class="header" id="header">
         <div class="header-content">
@@ -1333,7 +946,7 @@
             
             <nav class="nav-desktop">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="cucine-seconda-mano.html" class="nav-link">Cucine Seconda Mano</a>
+                <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
                 <a href="servizi.html" class="nav-link">Servizi</a>
                 <a href="index.html#contatti" class="nav-link">Contatti</a>
@@ -1349,8 +962,7 @@
     <nav class="mobile-menu" id="mobileMenu">
         <a href="index.html" class="logo">Cucine Italia</a>
         <div class="mobile-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="cucine-seconda-mano.html" class="nav-link">Cucine Seconda Mano</a>
+            <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
             <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
             <a href="servizi.html" class="nav-link">Servizi</a>
             <a href="index.html#contatti" class="nav-link">Contatti</a>
@@ -1358,20 +970,8 @@
         </div>
     </nav>
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" id="breadcrumb" style="display: none;">
-        <a href="index.html">Home</a>
-        <span>›</span>
-        <a href="cucine-nuove.html">Cucine Nuove</a>
-        <span>›</span>
-        <span id="breadcrumbProduct">Prodotto</span>
-    </nav>
-
     <!-- Product Hero Section -->
     <section class="product-hero" id="product-hero">
-        <div class="price-badge" id="price-badge" style="display: none;">
-            €<span id="product-price">0</span>
-        </div>
         <div class="product-hero-content">
             <h1 class="product-title fade-in" id="product-title">Nome Cucina</h1>
             <p class="product-subtitle fade-in" id="product-subtitle">Descrizione breve della cucina</p>
@@ -1381,9 +981,9 @@
     <!-- Product Content -->
     <section class="product-content">
         <div class="product-grid">
-            <div class="product-details slide-in-left">
+            <div class="product-details">
                 <div class="product-description fade-in" id="product-description">
-                    <p>Caricamento descrizione...</p>
+                    <p>Descrizione dettagliata della cucina verrà inserita qui...</p>
                 </div>
                 
                 <div class="product-features fade-in" id="product-features">
@@ -1391,14 +991,8 @@
                 </div>
             </div>
             
-            <div class="product-gallery slide-in-right">
-                <div class="main-gallery-image" id="main-gallery-image">
-                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    <img src="" alt="" id="main-image">
-                </div>
-                <div class="gallery-thumbnails" id="gallery-thumbnails">
-                    <!-- Thumbnails will be populated by JavaScript -->
-                </div>
+            <div class="product-gallery fade-in" id="product-gallery">
+                <!-- Gallery images will be populated by JavaScript -->
             </div>
         </div>
         
@@ -1413,14 +1007,9 @@
     <!-- CTA Section -->
     <section class="product-cta fade-in">
         <h2 class="cta-title">Interessato a questa cucina?</h2>
-        <p class="cta-subtitle">Contattaci per un preventivo personalizzato e scopri come possiamo realizzare la cucina dei tuoi sogni</p>
         <div class="cta-buttons">
-            <a href="#preventivo" class="cta-btn" id="ctaPreventivo">
-                <i class="fas fa-calculator"></i> Richiedi un preventivo
-            </a>
-            <a href="cucine-nuove.html" class="cta-btn secondary">
-                <i class="fas fa-arrow-left"></i> Vedi altre cucine
-            </a>
+            <a href="#preventivo" class="cta-btn" id="ctaPreventivo">Richiedi un preventivo</a>
+            <a href="cucine-nuove.html" class="cta-btn secondary">Vedi altre cucine</a>
         </div>
     </section>
 
@@ -1438,7 +1027,7 @@
             <div class="footer-section">
                 <h3>Menu</h3>
                 <div class="footer-links">
-                    <a href="cucine-seconda-mano.html" class="footer-link">Cucine Seconda Mano</a>
+                    <a href="SecondaMano.html" class="footer-link">Cucine Seconda Mano</a>
                     <a href="cucine-nuove.html" class="footer-link">Cucine Nuove</a>
                     <a href="servizi.html" class="footer-link">Servizi</a>
                     <a href="index.html#contatti" class="footer-link">Contatti</a>
@@ -1467,10 +1056,10 @@
             <div class="footer-section">
                 <h3>Socials</h3>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61576278827754" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/cucine.italia/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@cucineitalia" class="social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://share.google/A3HR21mBeUiB6YImR" class="social-link" title="Google"><i class="fab fa-google"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61576278827754" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/cucine.italia/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@cucineitalia" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://share.google/A3HR21mBeUiB6YImR" class="social-link"><i class="fab fa-google"></i></a>
                 </div>
             </div>
             
@@ -1496,21 +1085,11 @@
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
-            <button class="lightbox-close">&times;</button>
-            <button class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></button>
-            <img src="" alt="" id="lightbox-image">
-        </div>
-    </div>
-
     <!-- Modal for Preventivo -->
     <div class="modal-overlay" id="preventivoModal">
       <div class="modal">
         <div class="modal-header">
-          <h3><i class="fas fa-calculator"></i> Richiedi un Preventivo</h3>
+          <h3>Richiedi un Preventivo</h3>
           <button class="modal-close">&times;</button>
         </div>
         <div class="modal-body">
@@ -1525,42 +1104,28 @@
               <span>info.cucineitalia@gmail.com</span>
             </div>
           </div>
-          <p class="modal-note">
-              <i class="fas fa-info-circle"></i> 
-              Oppure compila il form sottostante e ti risponderemo entro 24 ore.
-          </p>
-          <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="preventivo-form" id="preventivoForm">
+          <p class="modal-note">Oppure compila il form sottostante e ti risponderemo entro 24 ore.</p>
+          <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="preventivo-form">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Nuova richiesta di preventivo dal sito">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="https://iltuosito.com/grazie.html">
             <input type="text" name="_honey" style="display:none">
-            <input type="text" name="Nome" placeholder="Il tuo nome" required>
-            <input type="email" name="email" placeholder="La tua email" required>
-            <input type="tel" name="Telefono" placeholder="Il tuo numero di telefono">
-            <textarea name="Richiesta" placeholder="Descrivi la tua richiesta (dimensioni della cucina, stile preferito, budget indicativo, ecc.)" required></textarea>
-            <button type="submit" class="submit-button">
-                <i class="fas fa-paper-plane"></i> Invia Richiesta
-            </button>
+            <input type="text" name="Nome" placeholder="Nome">
+            <input type="email" name="email" placeholder="Email">
+            <input type="tel" name="Telefono" placeholder="Telefono">
+            <textarea name="Richiesta" placeholder="Descrivi la tua richiesta"></textarea>
+            <button type="submit" class="submit-button">Invia Richiesta</button>
           </form>
         </div>
       </div>
     </div>
 
-    <!-- Toast Notification -->
-    <div class="toast" id="toast">
-        <i class="fas fa-check-circle"></i>
-        <span id="toast-message">Messaggio di notifica</span>
-    </div>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- JavaScript -->
     <script>
-        // Global variables
-        let currentProduct = null;
-        let allProducts = [];
-        let currentImageIndex = 0;
-        let productImages = [];
-
         // Function to get URL parameters
         function getUrlParameter(name) {
             name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -1569,150 +1134,50 @@
             return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
         }
 
-        // Show toast notification
-        function showToast(message, type = 'success') {
-            const toast = document.getElementById('toast');
-            const toastMessage = document.getElementById('toast-message');
-            
-            toastMessage.textContent = message;
-            toast.className = `toast ${type}`;
-            toast.classList.add('show');
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 4000);
+    async function loadProductData() {
+        const slug = getUrlParameter('slug');
+        console.log('Slug from URL:', slug);
+
+        if (!slug) {
+            console.error('Nessun slug trovato nell\'URL');
+            showError('Nessun prodotto specificato');
+            return;
         }
 
-        // Show error state
-        function showError(message) {
-            const heroContent = document.querySelector('.product-hero-content');
-            heroContent.innerHTML = `
-                <div class="error-state">
-                    <div class="error-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="error-message">${message}</div>
-                    <a href="cucine-nuove.html" class="error-cta">
-                        <i class="fas fa-arrow-left"></i> Torna alle cucine
-                    </a>
-                </div>
-            `;
-            document.querySelector('.breadcrumb').style.display = 'none';
-        }
-
-        // Enhanced product data loading with better error handling
-        async function loadProductData() {
-            const slug = getUrlParameter('slug');
-            console.log('Slug from URL:', slug);
-
-            if (!slug) {
-                console.error('Nessun slug trovato nell\'URL');
-                showError('Nessun prodotto specificato');
-                hideLoadingSpinner();
+        try {
+            console.log('Caricamento products.json...');
+            const response = await fetch('data/cucine.json');
+            
+            if (!response.ok) {
+                throw new Error(`Errore nel caricamento del JSON: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            console.log('Dati JSON caricati:', data);
+            
+            const product = data.products.find(p => p.slug === slug);
+            console.log('Prodotto trovato:', product);
+            
+            if (!product) {
+                showError(`Prodotto "${slug}" non trovato`);
                 return;
             }
 
-            try {
-                console.log('Caricamento products.json...');
-                const response = await fetch('data/cucine.json');
-                
-                if (!response.ok) {
-                    throw new Error(`Errore nel caricamento del JSON: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                console.log('Dati JSON caricati:', data);
-                allProducts = data.products;
-                
-                const product = data.products.find(p => p.slug === slug);
-                console.log('Prodotto trovato:', product);
-                
-                if (!product) {
-                    showError(`Prodotto "${slug}" non trovato`);
-                    hideLoadingSpinner();
-                    return;
-                }
-
-                currentProduct = product;
-                await populateProductPage(product);
-                loadRelatedProducts(data.products, product.relatedProducts || []);
-                
-                // Show breadcrumb
-                document.getElementById('breadcrumbProduct').textContent = product.name;
-                document.querySelector('.breadcrumb').style.display = 'block';
-                
-                hideLoadingSpinner();
-                showToast('Prodotto caricato con successo!');
-
-            } catch (error) {
-                console.error('Errore nel caricamento dei dati:', error);
-                showError('Errore nel caricamento dei dati del prodotto');
-                hideLoadingSpinner();
-                showToast('Errore nel caricamento del prodotto', 'error');
-            }
-        }
-
-        // Enhanced product page population
-        async function populateProductPage(product) {
-            // Update page title and meta
+            // Popola la pagina con i dati del prodotto
             document.title = `${product.name} | Cucine Italia`;
-            
-            // Set hero background with fallback
-            const hero = document.getElementById('product-hero');
-            if (product.heroImage) {
-                hero.style.backgroundImage = `url('${product.heroImage}')`;
-            } else if (product.images && product.images.length > 0) {
-                hero.style.backgroundImage = `url('${product.images[0]}')`;
-            }
-            
-            // Populate basic info
-            document.getElementById('product-title').textContent = product.name || 'Nome non disponibile';
-            document.getElementById('product-subtitle').textContent = product.shortDescription || 'Descrizione non disponibile';
-            
-            // Show price if available
-            if (product.price) {
-                document.getElementById('product-price').textContent = product.price;
-                document.getElementById('price-badge').style.display = 'block';
-            }
-            
-            // Populate description with HTML support
-            const descriptionContainer = document.getElementById('product-description');
-            if (product.description) {
-                descriptionContainer.innerHTML = Array.isArray(product.description) 
-                    ? product.description.map(p => `<p>${p}</p>`).join('')
-                    : `<p>${product.description}</p>`;
-            } else {
-                descriptionContainer.innerHTML = '<p>Descrizione non disponibile</p>';
-            }
+            document.getElementById('product-hero').style.backgroundImage = `url('${product.heroImage}')`;
+            document.getElementById('product-title').textContent = product.name;
+            document.getElementById('product-subtitle').textContent = product.shortDescription;
+            document.getElementById('product-description').innerHTML = product.description;
 
-            // Populate features
-            populateFeatures(product.features || []);
-            
-            // Populate gallery
-            populateGallery(product.images || []);
-            
-            // Populate specifications
-            populateSpecifications(product.specifications || []);
-        }
-
-        // Enhanced features population
-        function populateFeatures(features) {
+            // Popola le features
             const featuresContainer = document.getElementById('product-features');
-            featuresContainer.innerHTML = '';
-            
-            if (!features.length) {
-                featuresContainer.innerHTML = '<p>Caratteristiche non disponibili</p>';
-                return;
-            }
-            
-            features.forEach((feature, index) => {
+            featuresContainer.innerHTML = ''; // Pulisci il contenuto
+            product.features.forEach(feature => {
                 const featureItem = document.createElement('div');
-                featureItem.className = 'feature-item fade-in';
-                featureItem.style.animationDelay = `${index * 0.1}s`;
-                
-                const icon = feature.icon || 'fa-check-circle';
+                featureItem.className = 'feature-item';
                 featureItem.innerHTML = `
-                    <div class="feature-icon"><i class="fas ${icon}"></i></div>
+                    <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
                     <div class="feature-text">
                         <h4 class="feature-title">${feature.title}</h4>
                         <p class="feature-desc">${feature.description}</p>
@@ -1720,98 +1185,23 @@
                 `;
                 featuresContainer.appendChild(featureItem);
             });
-        }
 
-        // Enhanced gallery with lightbox functionality
-        function populateGallery(images) {
-            if (!images.length) return;
-            
-            productImages = images;
-            currentImageIndex = 0;
-            
-            const mainImage = document.getElementById('main-image');
-            const thumbnailsContainer = document.getElementById('gallery-thumbnails');
-            
-            // Set main image
-            mainImage.src = images[0];
-            mainImage.alt = currentProduct.name;
-            
-            // Clear and populate thumbnails
-            thumbnailsContainer.innerHTML = '';
-            
-            images.forEach((image, index) => {
-                const thumbnail = document.createElement('div');
-                thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
-                thumbnail.innerHTML = `<img src="${image}" alt="${currentProduct.name} - ${index + 1}">`;
-                
-                thumbnail.addEventListener('click', () => {
-                    switchMainImage(index);
-                });
-                
-                thumbnailsContainer.appendChild(thumbnail);
+            // Popola la gallery
+            const galleryContainer = document.getElementById('product-gallery');
+            galleryContainer.innerHTML = ''; // Pulisci il contenuto
+            product.images.forEach((image, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = index === 0 ? 'gallery-item main-image' : 'gallery-item';
+                galleryItem.innerHTML = `<img src="${image}" alt="${product.name} - Immagine ${index + 1}">`;
+                galleryContainer.appendChild(galleryItem);
             });
-            
-            // Add main image click event for lightbox
-            document.getElementById('main-gallery-image').addEventListener('click', () => {
-                openLightbox(currentImageIndex);
-            });
-        }
 
-        // Switch main gallery image
-        function switchMainImage(index) {
-            currentImageIndex = index;
-            const mainImage = document.getElementById('main-image');
-            mainImage.src = productImages[index];
-            
-            // Update active thumbnail
-            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
-                thumb.classList.toggle('active', i === index);
-            });
-        }
-
-        // Lightbox functionality
-        function openLightbox(index) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightbox-image');
-            
-            lightboxImage.src = productImages[index];
-            lightboxImage.alt = `${currentProduct.name} - ${index + 1}`;
-            lightbox.classList.add('active');
-            
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function navigateLightbox(direction) {
-            if (direction === 'next') {
-                currentImageIndex = (currentImageIndex + 1) % productImages.length;
-            } else {
-                currentImageIndex = currentImageIndex === 0 ? productImages.length - 1 : currentImageIndex - 1;
-            }
-            
-            document.getElementById('lightbox-image').src = productImages[currentImageIndex];
-            switchMainImage(currentImageIndex);
-        }
-
-        // Enhanced specifications population
-        function populateSpecifications(specifications) {
+            // Popola le specifiche
             const specsContainer = document.getElementById('product-specs');
-            specsContainer.innerHTML = '';
-            
-            if (!specifications.length) {
-                specsContainer.innerHTML = '<p>Specifiche non disponibili</p>';
-                return;
-            }
-            
-            specifications.forEach((spec, index) => {
+            specsContainer.innerHTML = ''; // Pulisci il contenuto
+            product.specifications.forEach(spec => {
                 const specCard = document.createElement('div');
-                specCard.className = 'spec-card fade-in';
-                specCard.style.animationDelay = `${index * 0.1}s`;
-                
+                specCard.className = 'spec-card';
                 const specItems = spec.details.map(item => `<li>${item}</li>`).join('');
                 specCard.innerHTML = `
                     <h3 class="spec-title">${spec.category}</h3>
@@ -1819,268 +1209,177 @@
                 `;
                 specsContainer.appendChild(specCard);
             });
-        }
 
-// Enhanced related products loading
+            // Carica prodotti correlati
+            loadRelatedProducts(data.products, product.relatedProducts);
+
+        } catch (error) {
+            console.error('Errore nel caricamento dei dati:', error);
+            showError('Errore nel caricamento dei dati del prodotto');
+        }
+    }
+
+    function showError(message) {
+        // Mostra un messaggio di errore invece di reindirizzare
+        const heroContent = document.querySelector('.product-hero-content');
+        heroContent.innerHTML = `
+            <h1 class="product-title" style="color: #ff0000;">Errore</h1>
+            <p class="product-subtitle">${message}</p>
+            <a href="cucine-nuove.html" class="cta-btn" style="margin-top: 20px;">Torna alle cucine</a>
+        `;
+    }
+
+        // Function to load related products
         function loadRelatedProducts(allProducts, relatedSlugs) {
             const relatedContainer = document.getElementById('related-products');
-            relatedContainer.innerHTML = '';
+            const relatedProducts = allProducts.filter(p => relatedSlugs.includes(p.slug));
             
-            if (!relatedSlugs.length) {
-                // Show random products if no related products specified
-                const randomProducts = allProducts
-                    .filter(p => p.slug !== currentProduct.slug)
-                    .sort(() => Math.random() - 0.5)
-                    .slice(0, 3);
-                relatedSlugs = randomProducts.map(p => p.slug);
-            }
-            
-            relatedSlugs.forEach(slug => {
-                const product = allProducts.find(p => p.slug === slug);
-                if (!product) return;
-                
+            relatedProducts.forEach(product => {
                 const relatedCard = document.createElement('div');
-                relatedCard.className = 'related-card fade-in';
+                relatedCard.className = 'related-card';
                 relatedCard.innerHTML = `
-                    <img src="${product.images[0] || 'assets/images/default-kitchen.jpg'}" 
-                         alt="${product.name}" class="related-image">
+                    <a href="cucina.html?slug=${product.slug}">
+                        <img src="${product.thumbnail}" alt="${product.name}" class="related-image">
+                    </a>
                     <div class="related-info">
                         <h3 class="related-name">${product.name}</h3>
-                        <p class="related-desc">${product.shortDescription || 'Descrizione non disponibile'}</p>
-                        <a href="prodotto.html?slug=${product.slug}" class="related-link">
-                            <i class="fas fa-eye"></i> Visualizza
-                        </a>
+                        <p class="related-desc">${product.shortDescription}</p>
+                        <a href="cucina.html?slug=${product.slug}" class="related-link">Scopri di più</a>
                     </div>
                 `;
                 relatedContainer.appendChild(relatedCard);
             });
         }
 
-        // Hide loading spinner
-        function hideLoadingSpinner() {
-            const spinner = document.getElementById('loadingSpinner');
-            spinner.style.opacity = '0';
-            setTimeout(() => {
-                spinner.style.display = 'none';
-            }, 500);
-        }
-
-        // Header scroll effects
-        function handleHeaderScroll() {
+        // Header scroll animation
+        let lastScroll = 0;
+        window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
-            const scrolled = window.scrollY > 100;
+            const currentScroll = window.scrollY;
             
-            header.classList.toggle('scrolled', scrolled);
-        }
-
-        // Mobile menu functionality
-        function setupMobileMenu() {
-            const menuToggle = document.getElementById('menuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileOverlay = document.getElementById('mobileOverlay');
-            
-            function toggleMenu() {
-                menuToggle.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-                mobileOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            if (currentScroll <= 0) {
+                header.classList.add('visible');
+                header.classList.remove('scrolled');
+                return;
             }
             
-            menuToggle.addEventListener('click', toggleMenu);
-            mobileOverlay.addEventListener('click', toggleMenu);
-            
-            // Close menu when clicking on links
-            mobileMenu.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', toggleMenu);
-            });
-        }
-
-        // Modal functionality for preventivo
-        function setupModal() {
-            const modal = document.getElementById('preventivoModal');
-            const openButtons = document.querySelectorAll('[href="#preventivo"], #preventivoButton, #ctaPreventivo');
-            const closeButton = modal.querySelector('.modal-close');
-            
-            function openModal(e) {
-                e.preventDefault();
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-            
-            function closeModal() {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-            
-            openButtons.forEach(button => {
-                button.addEventListener('click', openModal);
-            });
-            
-            closeButton.addEventListener('click', closeModal);
-            
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal();
-            });
-            
-            // Form submission
-            const form = document.getElementById('preventivoForm');
-            form.addEventListener('submit', function(e) {
-                // Add product info to form data
-                const productInput = document.createElement('input');
-                productInput.type = 'hidden';
-                productInput.name = 'Prodotto';
-                productInput.value = currentProduct ? currentProduct.name : 'Non specificato';
-                form.appendChild(productInput);
-                
-                showToast('Richiesta inviata con successo!');
-                setTimeout(closeModal, 2000);
-            });
-        }
-
-        // Lightbox setup
-        function setupLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            const closeButton = lightbox.querySelector('.lightbox-close');
-            const prevButton = lightbox.querySelector('.lightbox-prev');
-            const nextButton = lightbox.querySelector('.lightbox-next');
-            
-            closeButton.addEventListener('click', closeLightbox);
-            prevButton.addEventListener('click', () => navigateLightbox('prev'));
-            nextButton.addEventListener('click', () => navigateLightbox('next'));
-            
-            // Close on overlay click
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) closeLightbox();
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (!lightbox.classList.contains('active')) return;
-                
-                switch(e.key) {
-                    case 'Escape':
-                        closeLightbox();
-                        break;
-                    case 'ArrowLeft':
-                        navigateLightbox('prev');
-                        break;
-                    case 'ArrowRight':
-                        navigateLightbox('next');
-                        break;
+            if (currentScroll > lastScroll) {
+                if (currentScroll > 100) {
+                    header.classList.add('visible', 'scrolled');
                 }
-            });
-        }
-
-        // Intersection Observer for animations
-        function setupAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe all elements with animation classes
-            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-                observer.observe(el);
-            });
-        }
-
-        // Smooth scrolling for internal links
-        function setupSmoothScrolling() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Error handling for images
-        function setupImageErrorHandling() {
-            document.addEventListener('error', (e) => {
-                if (e.target.tagName === 'IMG') {
-                    e.target.src = 'assets/images/default-kitchen.jpg';
-                    e.target.alt = 'Immagine non disponibile';
+            } else {
+                header.classList.add('visible');
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
                 }
-            }, true);
-        }
-
-        // Newsletter form setup
-        function setupNewsletterForm() {
-            const form = document.querySelector('.email-signup');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    showToast('Iscrizione alla newsletter completata!');
-                });
             }
-        }
+            
+            lastScroll = currentScroll;
+        });
 
-        // Initialize everything when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM caricato, inizializzazione...');
-            
-            // Setup all functionality
-            setupMobileMenu();
-            setupModal();
-            setupLightbox();
-            setupSmoothScrolling();
-            setupImageErrorHandling();
-            setupNewsletterForm();
-            
-            // Add scroll event listener
-            window.addEventListener('scroll', handleHeaderScroll);
-            
-            // Load product data
-            loadProductData();
-            
-            // Setup animations after a short delay to ensure DOM is fully rendered
-            setTimeout(setupAnimations, 100);
-            
-            // Make header visible
+        // Show header on page load
+        window.addEventListener('load', function() {
             document.getElementById('header').classList.add('visible');
         });
 
-        // Handle window resize
-        window.addEventListener('resize', function() {
-            // Close mobile menu on resize if open
-            const mobileMenu = document.getElementById('mobileMenu');
-            if (mobileMenu.classList.contains('active')) {
-                document.getElementById('menuToggle').classList.remove('active');
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileOverlay.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-nav .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
                 mobileMenu.classList.remove('active');
-                document.getElementById('mobileOverlay').classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Modal functionality
+        const preventivoButton = document.getElementById('preventivoButton');
+        const ctaPreventivo = document.getElementById('ctaPreventivo');
+        const preventivoModal = document.getElementById('preventivoModal');
+        const modalClose = document.querySelector('.modal-close');
+
+        // Open modal when clicking "Richiedi un preventivo"
+        [preventivoButton, ctaPreventivo].forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                preventivoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal when clicking X button
+        modalClose.addEventListener('click', function() {
+            preventivoModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close modal when clicking outside
+        preventivoModal.addEventListener('click', function(e) {
+            if (e.target === preventivoModal) {
+                preventivoModal.classList.remove('active');
                 document.body.style.overflow = '';
             }
         });
 
-        // Service Worker registration for better performance (optional)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                // Uncomment if you have a service worker
-                // navigator.serviceWorker.register('/sw.js');
-            });
-        }
-
-        // Performance monitoring
-        window.addEventListener('load', function() {
-            // Log performance metrics
-            if (window.performance && window.performance.timing) {
-                const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-                console.log(`Page load time: ${loadTime}ms`);
-            }
-        });
+        // Load product data when page loads
+        document.addEventListener('DOMContentLoaded', loadProductData);
     </script>
 </body>
 </html>
