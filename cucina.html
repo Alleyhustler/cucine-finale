@@ -550,68 +550,135 @@
             transform: translateY(-2px);
         }
 
-        /* Footer */
-        .footer {
-            background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
-            color: var(--primary-medium);
-            padding: 4rem 2rem 2rem;
-        }
+/* Footer */
+.footer {
+    background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+    color: var(--primary-medium); /* Base text color */
+    padding: 4rem 2rem 2rem;
+}
 
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
 
-        .footer-section h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-            color: var(--white);
-        }
+.footer-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--black) Keep titles white */
+}
 
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-        .footer-link {
-            color: var(--accent-light);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
+.footer-link {
+    color: #4C583E; /* Lighter version of your accent-light */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
 
-        .footer-link:hover {
-            color: var(--white);
-            transform: translateX(5px);
-        }
+.footer-link:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+.contact-info {
+    display: flex;
+    color: #4C583E;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: var(--accent-light);
-            font-size: 1.1rem;
-        }
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #4C583E; /* Darker gray for better readability */
+    font-size: 1.1rem;
+}
 
-        .footer-bottom {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
-            color: var(--accent-light);
-        }
+/* Rest of your existing footer styles remain the same */
+.email-signup {
+    display: flex;
+    gap: 1rem;
+    color: #4C583E;
+    margin-top: 1rem;
+}
+
+.email-input {
+    flex: 1;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(61, 58, 58, 0.3);
+    color: #4C583E;
+    font-family: "Philosopher", sans-serif;
+}
+
+.email-input::placeholder {
+    color: rgba(27, 25, 25, 0.7);
+}
+
+.email-submit {
+    padding: 12px 24px;
+    background: var(--accent-medium);
+    color: #4C583E;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.email-submit:hover {
+    background: var(--accent-light);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+        color: #4C583E;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+        color: #4C583E;
+    margin-top: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    background: var(--accent-light);
+    color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: #4C583E;
+}
 
         /* Modal Styles */
         .modal-overlay {
