@@ -1160,122 +1160,150 @@
             line-height: 1.6;
         }
         
-        /* Used Kitchen Grid */
-        .used-kitchen-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
+        /* Grid System Moderno */
+    .kitchen-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    @media (min-width: 768px) {
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
         }
-        
-        .used-kitchen-card {
-            background: var(--white);
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(44, 52, 36, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
+    }
+
+    @media (min-width: 992px) {
+        .col-lg-4 {
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
         }
-        
-        .used-kitchen-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 60px rgba(44, 52, 36, 0.2);
+    }
+
+    @media (min-width: 1200px) {
+        .col-xl-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
         }
-        
-        .used-kitchen-image-container {
-            height: 300px;
-            overflow: hidden;
-            position: relative;
+    }
+
+    /* Margini responsive */
+    .mb-30 {
+        margin-bottom: 30px !important;
+    }
+
+    @media (min-width: 768px) {
+        .mb-md-80 {
+            margin-bottom: 80px !important;
         }
-        
-        .used-kitchen-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.5s ease;
+    }
+
+    /* Card Cucina */
+    .sn_kitchen_i {
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sn_kitchen_i:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .sn_kitchen_i_link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    /* tolto il padding inferiore */
+.mb-30,
+.mb-md-80 {
+    margin-bottom: 0 !important;
+}
+    .sn_kitchen_i_title {
+        padding: 20px 20px 5px; /* Ridotto il padding inferiore */
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sn_kitchen_i_title i {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sn_kitchen_i_sw {
+        position: relative;
+        overflow: hidden;
+        margin: 0; /* Rimosso completamente il margine */
+    }
+
+    .sn_kitchen_i_sw img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .sn_kitchen_i_sw_nav {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .sn_swiper_pagination {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: rgba(255,255,255,0.5);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--white);
+    }
+
+    .sn_swiper_nav {
+        color: var(--white);
+        cursor: pointer;
+        padding: 0 10px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 767px) {
+        .sn_kitchen_i_title {
+            font-size: 1.2rem;
+            padding: 15px 15px 5px; /* Padding ridotto per mobile */
         }
-        
-        .used-kitchen-card:hover .used-kitchen-image {
-            transform: scale(1.05);
-        }
-        
-        .used-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--primary-dark);
-            color: var(--white);
-            padding: 5px 15px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            z-index: 2;
-        }
-        
-        .used-kitchen-info {
-            padding: 2rem;
-        }
-        
-        .used-kitchen-name {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary-dark);
-        }
-        
-        .used-kitchen-origin {
-            font-size: 1rem;
-            color: var(--accent-medium);
-            margin-bottom: 0.5rem;
-            font-style: italic;
-        }
-        
-        .used-kitchen-description {
-            color: var(--primary-medium);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .used-kitchen-price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 1.5rem;
-        }
-        
-        .view-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--primary-dark);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--primary-dark);
-        }
-        
-        .view-button:hover {
-            background: transparent;
-            color: var(--primary-dark);
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .main-content {
-                padding: 6rem 1rem 3rem;
-            }
-            
-            .used-kitchen-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .used-kitchen-image-container {
-                height: 250px;
-            }
-        }
-    </style>
+    }
+</style>
+
     <!-- Incluye todos los demás estilos de la página principal aquí -->
     <!-- Copia todo el bloque de estilo de la página principal -->
 </head>
@@ -1310,194 +1338,168 @@
     <nav class="mobile-menu" id="mobileMenu">
         <a href="#" class="logo">Cucine Italia</a>
         <div class="mobile-nav">
-                <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
-                <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
-                <a href="servizi.html" class="nav-link">Servizi</a>
-                <a href="index.html#contatti" class="nav-link">Contatti</a>
-                <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
+            <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
+            <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+            <a href="servizi.html" class="nav-link">Servizi</a>
+            <a href="index.html#contatti" class="nav-link">Contatti</a>
+            <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
+        <main class="main-content">
         <div class="page-header fade-in">
             <h1 class="page-title">Cucine Seconda Mano di Qualità</h1>
             <p class="page-subtitle">Scopri la nostra selezione di cucine Seconda Mano ricondizionate con cura. Ogni pezzo viene selezionato personalmente, controllato e rimesso a nuovo per offrirti qualità a un prezzo vantaggioso.</p>
         </div>
         
-        <div class="used-kitchen-grid">
-            <!-- Cucina 1 -->
-            <div class="used-kitchen-card fade-in">
-                <a href="cucina-moderna-usata.html" class="used-kitchen-image-container">
-                    <span class="used-tag">RICONDIZIONATA</span>
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cucina Moderna Usata" class="used-kitchen-image">
-                </a>
-                <div class="used-kitchen-info">
-                    <h3 class="used-kitchen-name">Linea Moderna</h3>
-                    <p class="used-kitchen-origin">Provenienza: Appartamento privato Milano</p>
-                    <p class="used-kitchen-description">Cucina moderna in ottime condizioni, completamente ricondizionata. Laccato bianco con dettagli in acciaio. Elettrodomestici inclusi e revisionati.</p>
-                    <div class="used-kitchen-price">€ 3.500 (invece di € 8.900 nuovi)</div>
-                    <a href="cucina-moderna-usata.html" class="view-button">Dettagli</a>
-                </div>
-            </div>
-            
-            <!-- Cucina 2 -->
-            <div class="used-kitchen-card fade-in">
-                <a href="cucina-classica-usata.html" class="used-kitchen-image-container">
-                    <span class="used-tag">SEMINUOVA</span>
-                    <img src="https://images.unsplash.com/photo-1556909195-f691848ea5c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cucina Classica Usata" class="used-kitchen-image">
-                </a>
-                <div class="used-kitchen-info">
-                    <h3 class="used-kitchen-name">Linea Classica</h3>
-                    <p class="used-kitchen-origin">Provenienza: Showroom Bergamo</p>
-                    <p class="used-kitchen-description">Cucina in legno massello di rovere, pochissimo utilizzata. Finitura naturale con dettagli artigianali. Piano in granito originale.</p>
-                    <div class="used-kitchen-price">€ 4.800 (invece di € 12.500 nuovi)</div>
-                    <a href="cucina-classica-usata.html" class="view-button">Dettagli</a>
-                </div>
-            </div>
-            
-            <!-- Cucina 3 -->
-            <div class="used-kitchen-card fade-in">
-                <a href="cucina-isola-usata.html" class="used-kitchen-image-container">
-                    <span class="used-tag">RICONDIZIONATA</span>
-                    <img src="https://images.unsplash.com/photo-1556909197-f5046c8025b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cucina con Isola Usata" class="used-kitchen-image">
-                </a>
-                <div class="used-kitchen-info">
-                    <h3 class="used-kitchen-name">Linea con Isola</h3>
-                    <p class="used-kitchen-origin">Provenienza: Residenza privata Como</p>
-                    <p class="used-kitchen-description">Cucina moderna con isola centrale completamente attrezzata. Laccato grigio antracite con top in quarzo. Elettrodomestici premium inclusi.</p>
-                    <div class="used-kitchen-price">€ 6.200 (invece di € 15.000 nuovi)</div>
-                    <a href="cucina-isola-usata.html" class="view-button">Dettagli</a>
-                </div>
-            </div>
-            
-            <!-- Cucina 4 -->
-            <div class="used-kitchen-card fade-in">
-                <a href="cucina-rustica-usata.html" class="used-kitchen-image-container">
-                    <span class="used-tag">OTTIME CONDIZIONI</span>
-                    <img src="https://images.unsplash.com/photo-1556909197-45951e4d3ddf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cucina Rustica Usata" class="used-kitchen-image">
-                </a>
-                <div class="used-kitchen-info">
-                    <h3 class="used-kitchen-name">Linea Rustica</h3>
-                    <p class="used-kitchen-origin">Provenienza: Agriturismo Piemonte</p>
-                    <p class="used-kitchen-description">Cucina in stile country con ante in legno massello di castagno invecchiato. Piano in pietra originale. Molto caratteristica e autentica.</p>
-                    <div class="used-kitchen-price">€ 2.900 (invece di € 7.200 nuovi)</div>
-                    <a href="cucina-rustica-usata.html" class="view-button">Dettagli</a>
-                </div>
-            </div>
-            
-            <!-- Cucina 5 -->
-            <div class="used-kitchen-card fade-in">
-                <a href="cucina-lusso-usata.html" class="used-kitchen-image-container">
-                    <span class="used-tag">ESPOSIZIONE</span>
-                    <img src="https://images.unsplash.com/photo-1556909197-4965ba40c61e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cucina di Lusso Usata" class="used-kitchen-image">
-                </a>
-                <div class="used-kitchen-info">
-                    <h3 class="used-kitchen-name">Linea Lusso</h3>
-                    <p class="used-kitchen-origin">Provenienza: Showroom Milano</p>
-                    <p class="used-kitchen-description">Cucina di alta gamma in radica di noce con dettagli in ottone. Elettrodomestici integrati di ultima generazione. Utilizzata solo per esposizione.</p>
-                    <div class="used-kitchen-price">€ 9.500 (invece di € 22.000 nuovi)</div>
-                    <a href="cucina-lusso-usata.html" class="view-button">Dettagli</a>
-                </div>
-            </div>
-            
-            <!-- Cucina 6 -->
-            <div class="used-kitchen-card fade-in">
-                <a href="cucina-compatta-usata.html" class="used-kitchen-image-container">
-                    <span class="used-tag">RICONDIZIONATA</span>
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cucina Compatta Usata" class="used-kitchen-image">
-                </a>
-                <div class="used-kitchen-info">
-                    <h3 class="used-kitchen-name">Linea Compatta</h3>
-                    <p class="used-kitchen-origin">Provenienza: Appartamento studente Brescia</p>
-                    <p class="used-kitchen-description">Soluzione compatta e funzionale perfetta per spazi ridotti. Laccato bianco con dettagli cromati. Completa di tutti gli elettrodomestici.</p>
-                    <div class="used-kitchen-price">€ 1.800 (invece di € 4.500 nuovi)</div>
-                    <a href="cucina-compatta-usata.html" class="view-button">Dettagli</a>
-                </div>
-            </div>
+        <!-- Sezione Pronta Consegna -->
+        <div class="section-header fade-in" style="margin-top: 4rem;">
+            <h2 style="font-size: 2rem; color: var(--primary-dark); border-bottom: 2px solid var(--accent-medium); padding-bottom: 0.5rem; display: inline-block;">Pronta Consegna</h2>
         </div>
+        
+    <div class="kitchen-row">
+        <!-- Cucina 1 - Pronta Consegna -->
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-30 mb-md-80">
+            <div class="sn_kitchen_i">
+                <a href="cucina.html?slug=moderna-bianca" class="sn_kitchen_i_link" aria-label="Visualizza cucina moderna"></a>
+                <div class="sn_kitchen_i_title">
+                    <span>Linea Moderna</span>
+                    <i class="sn_sprite _external_big">
+                        <svg viewBox="0 0 80 80"><use xlink:href="#external-big"></use></svg>
+                    </i>
+                </div>
+                <div class="sn_kitchen_i_sw">
+                    <img src="Images/nuove/lineare/1/IMG_8227.JPEG" alt="Cucina Moderna">
+                    <div class="sn_kitchen_i_sw_nav">
+                        <div class="sn_swiper_nav _prev">
+                            <i class="sn_sprite _arrow_left">
+                                <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
+                            </i>
+                        </div>
+                        <div class="sn_swiper_pagination">
+                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                            <span class="swiper-pagination-bullet"></span>
+                            <span class="swiper-pagination-bullet"></span>
+                        </div>
+                        <div class="sn_swiper_nav _next">
+                            <i class="sn_sprite _arrow_right">
+                                <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
     </main>
 
     <!-- Sezione Perché Scegliere Cucine Seconda Mano -->
-    <section class="why-us fade-in" style="background: url('bedge-grunge.png') var(--primary-medium);">
-        <div class="why-us-container">
-            <h2 class="section-title">Vantaggi delle Cucine Seconda Mano</h2>
+<section class="why-us fade-in" style="background: url('bedge-grunge.png') var(--primary-medium);">
+    <div class="why-us-container">
+        <h2 class="section-title">Vantaggi delle Cucine Seconda Mano</h2>
 
-            <div class="excellence-grid">
-                <!-- Vantaggio 1 -->
-                <div class="excellence-card">
-                    <div class="excellence-visual">
-                        <div class="visual-container">
-                            <img src="quality-icon.svg" alt="Qualità" class="visual-icon">
-                            <div class="visual-line"></div>
-                        </div>
-                    </div>
-                    <div class="excellence-content">
-                        <h3 class="excellence-title">Qualità Controllata</h3>
-                        <p class="excellence-description">Ogni cucina viene selezionata, ispezionata e ricondizionata dai nostri esperti. Solo prodotti in ottime condizioni.</p>
-                        <div class="excellence-stats">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Garantite</span>
-                        </div>
+        <div class="excellence-grid">
+            <!-- Vantaggio 1 -->
+            <div class="excellence-card">
+                <div class="excellence-visual">
+                    <div class="visual-container">
+                        <!-- ⭐ Qualità -->
+                        <svg class="visual-icon" xmlns="http://www.w3.org/2000/svg" fill="#ff9800" viewBox="0 0 24 24" width="48" height="48">
+                            <path d="M12 17.27L18.18 21 16.54 13.97 
+                                     22 9.24l-7.19-.61L12 2 9.19 8.63 
+                                     2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg>
+                        <div class="visual-line"></div>
                     </div>
                 </div>
-
-                <!-- Vantaggio 2 -->
-                <div class="excellence-card">
-                    <div class="excellence-visual">
-                        <div class="visual-container">
-                            <img src="savings-icon.svg" alt="Risparmio" class="visual-icon">
-                            <div class="visual-line"></div>
-                        </div>
-                    </div>
-                    <div class="excellence-content">
-                        <h3 class="excellence-title">Risparmio</h3>
-                        <p class="excellence-description">Fino al 70% di risparmio rispetto al nuovo, per una qualità spesso equivalente o superiore.</p>
-                        <div class="excellence-stats">
-                            <span class="stat-number">50-70%</span>
-                            <span class="stat-label">In meno</span>
-                        </div>
+                <div class="excellence-content">
+                    <h3 class="excellence-title">Qualità Controllata</h3>
+                    <p class="excellence-description">Ogni cucina viene selezionata, ispezionata e ricondizionata dai nostri esperti. Solo prodotti in ottime condizioni.</p>
+                    <div class="excellence-stats">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Garantite</span>
                     </div>
                 </div>
+            </div>
 
-                <!-- Vantaggio 3 -->
-                <div class="excellence-card">
-                    <div class="excellence-visual">
-                        <div class="visual-container">
-                            <img src="eco-icon.svg" alt="Eco" class="visual-icon">
-                            <div class="visual-line"></div>
-                        </div>
-                    </div>
-                    <div class="excellence-content">
-                        <h3 class="excellence-title">Ecosostenibilità</h3>
-                        <p class="excellence-description">Riduci l'impatto ambientale dando una seconda vita a prodotti di qualità.</p>
-                        <div class="excellence-stats">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Riciclate</span>
-                        </div>
+            <!-- Vantaggio 2 -->
+            <div class="excellence-card">
+                <div class="excellence-visual">
+                    <div class="visual-container">
+                        <!-- 💰 Risparmio -->
+                        <svg class="visual-icon" xmlns="http://www.w3.org/2000/svg" fill="#4caf50" viewBox="0 0 24 24" width="48" height="48">
+                            <path d="M12 1C5.925 1 1 5.925 1 12s4.925 
+                                     11 11 11 11-4.925 11-11S18.075 1 12 1zm1 
+                                     17.93V20h-2v-1.07A8.001 8.001 0 0 1 
+                                     4.07 13H6v-2H4.07A8.001 8.001 0 0 1 
+                                     11 4.07V3h2v1.07A8.001 8.001 0 0 1 
+                                     19.93 11H18v2h1.93A8.001 8.001 0 0 1 
+                                     13 18.93z"/>
+                        </svg>
+                        <div class="visual-line"></div>
                     </div>
                 </div>
-
-                <!-- Vantaggio 4 -->
-                <div class="excellence-card">
-                    <div class="excellence-visual">
-                        <div class="visual-container">
-                            <img src="service-icon.svg" alt="Servizio" class="visual-icon">
-                            <div class="visual-line"></div>
-                        </div>
+                <div class="excellence-content">
+                    <h3 class="excellence-title">Risparmio</h3>
+                    <p class="excellence-description">Fino al 70% di risparmio rispetto al nuovo, per una qualità spesso equivalente o superiore.</p>
+                    <div class="excellence-stats">
+                        <span class="stat-number">50-70%</span>
+                        <span class="stat-label">In meno</span>
                     </div>
-                    <div class="excellence-content">
-                        <h3 class="excellence-title">Servizio Completo</h3>
-                        <p class="excellence-description">Trasporto, montaggio e garanzia come sul nuovo. La tua cucina usata come nuova.</p>
-                        <div class="excellence-stats">
-                            <span class="stat-number">24M</span>
-                            <span class="stat-label">Garanzia</span>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Vantaggio 3 -->
+            <div class="excellence-card">
+                <div class="excellence-visual">
+                    <div class="visual-container">
+                        <!-- 🌱 Eco -->
+                        <svg class="visual-icon" xmlns="http://www.w3.org/2000/svg" fill="#8bc34a" viewBox="0 0 24 24" width="48" height="48">
+                            <path d="M12 2C8 5 6 9 6 13a6 6 0 0 0 
+                                     12 0c0-4-2-8-6-11zm0 2c3 3 5 6 5 
+                                     9a5 5 0 0 1-10 0c0-3 2-6 5-9z"/>
+                        </svg>
+                        <div class="visual-line"></div>
+                    </div>
+                </div>
+                <div class="excellence-content">
+                    <h3 class="excellence-title">Ecosostenibilità</h3>
+                    <p class="excellence-description">Riduci l'impatto ambientale dando una seconda vita a prodotti di qualità.</p>
+                    <div class="excellence-stats">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Riciclate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vantaggio 4 -->
+            <div class="excellence-card">
+                <div class="excellence-visual">
+                    <div class="visual-container">
+                        <!-- 🛠 Servizio -->
+                        <svg class="visual-icon" xmlns="http://www.w3.org/2000/svg" fill="#2196f3" viewBox="0 0 24 24" width="48" height="48">
+                            <path d="M22.7 19.3l-5.4-5.4a7.5 7.5 0 0 0-1.6-9.5 
+                                     7.5 7.5 0 0 0-9.5 1.6L7 7l3 3-2 2-3-3-1.1 
+                                     1.1a7.5 7.5 0 0 0 1.6 9.5 7.5 7.5 0 0 0 
+                                     9.5-1.6l5.4 5.4 2.3-2.3z"/>
+                        </svg>
+                        <div class="visual-line"></div>
+                    </div>
+                </div>
+                <div class="excellence-content">
+                    <h3 class="excellence-title">Servizio Completo</h3>
+                    <p class="excellence-description">Trasporto, montaggio e garanzia come sul nuovo. La tua cucina usata come nuova.</p>
+                    <div class="excellence-stats">
+                        <span class="stat-number">24M</span>
+                        <span class="stat-label">Garanzia</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer (igual que en la página principal) -->
     <footer class="footer" id="contatti">
