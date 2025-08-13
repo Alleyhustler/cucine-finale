@@ -1,370 +1,157 @@
 {
   "products": [
     {
-      "slug": "moderna-bianca",
-      "name": "Linea Moderna Bianca",
-      "shortDescription": "Design contemporaneo con finiture laccate e dettagli in acciaio",
-      "description": "<p>La Linea Moderna Bianca rappresenta l'essenza del design contemporaneo, con le sue linee pulite e la finitura laccata che dona luminosità all'ambiente. I dettagli in acciaio satinato aggiungono un tocco di eleganza e modernità.</p><p>Realizzata con materiali di alta qualità, questa cucina unisce estetica e funzionalità, offrendo soluzioni intelligenti per l'organizzazione degli spazi e la massima praticità d'uso.</p>",
-      "heroImage": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.0&auto=format&fit=crop&w=1600&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.0&auto=format&fit=crop&w=400&q=80",
+      "id": 1,
+      "slug": "cucina-moderna-elegante",
+      "name": "Cucina Moderna Elegante",
+      "shortDescription": "Design contemporaneo con finiture di alta qualità",
+      "description": "Una cucina dal design moderno e raffinato, caratterizzata da linee pulite e materiali di prima scelta. Perfetta per chi cerca funzionalità ed estetica in un unico ambiente. Le ante in laminato resistente si abbinano perfettamente al top in quarzo, creando un equilibrio perfetto tra bellezza e praticità.",
+      "price": "A partire da €15.000",
+      "category": "moderna",
+      "thumbnail": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
       "images": [
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.0&auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1556909114-43be147b212f?ixlib=rb-4.0.0&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909114-0d47b85731a4?ixlib=rb-4.0.0&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909114-4d4a4a4a4a4a?ixlib=rb-4.0.0&auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&h=600&fit=crop"
       ],
       "features": [
         {
-          "title": "Materiali di Alta Qualità",
-          "description": "Finiture laccate ad alta resistenza e acciaio inox satinato per un risultato duraturo nel tempo."
+          "title": "Ante in Laminato HPL",
+          "description": "Ante moderne in laminato ad alta pressione, resistenti e facili da pulire"
         },
         {
-          "title": "Design Ergonomico",
-          "description": "Pensato per ottimizzare ogni movimento, con ante a battente soft-close e cassetti estraibili completamente."
+          "title": "Top in Quarzo Composito",
+          "description": "Piano di lavoro in quarzo composito anti-macchia e resistente ai graffi"
         },
         {
-          "title": "Illuminazione Integrata",
-          "description": "LED a basso consumo integrato sotto le pensiline per una illuminazione perfetta dell'area di lavoro."
+          "title": "Elettrodomestici Inclusi",
+          "description": "Set completo di elettrodomestici di marca con classe energetica A++"
+        },
+        {
+          "title": "Illuminazione LED",
+          "description": "Sistema di illuminazione LED integrato sottopensile"
+        },
+        {
+          "title": "Cerniere Soft Close",
+          "description": "Cerniere Blum con chiusura ammortizzata per ante e cassetti"
         }
       ],
       "specifications": [
         {
+          "category": "Dimensioni",
+          "details": [
+            "Lunghezza: 300-450 cm (personalizzabile)",
+            "Profondità: 60 cm standard",
+            "Altezza pensili: 72 cm",
+            "Altezza totale: 230 cm"
+          ]
+        },
+        {
           "category": "Materiali",
           "details": [
-            "Ante in MDF laccato bianco opaco",
-            "Struttura in legno massello di betulla",
-            "Piani di lavoro in quarzo o laminato ad alta resistenza",
-            "Maniglie in acciaio inox satinato"
+            "Ante: Laminato HPL spessore 20mm",
+            "Top: Quarzo composito 30mm",
+            "Struttura: Pannello truciolare classe E1",
+            "Cerniere: Blum con chiusura soft"
           ]
         },
         {
-          "category": "Misure Standard",
+          "category": "Elettrodomestici",
           "details": [
-            "Altezza totale: 220 cm",
-            "Profondità basi: 60 cm",
-            "Profondità pensili: 35 cm",
-            "Altezza piano di lavoro: 90 cm"
+            "Forno ventilato multifunzione A++",
+            "Piano cottura a induzione 4 zone",
+            "Lavastoviglie classe A+++",
+            "Cappa aspirante con LED integrato"
           ]
         },
         {
-          "category": "Personalizzazioni",
+          "category": "Accessori Inclusi",
           "details": [
-            "Colori disponibili: bianco, grigio chiaro, antracite",
-            "Opzioni piani: quarzo, granito, laminato",
-            "Sistemi di apertura: maniglie standard o push-to-open"
+            "Cestelli estraibili per basi",
+            "Portaposate organizer",
+            "Illuminazione LED sottopensile",
+            "Gocciolatoio integrato",
+            "Sistema di apertura push-pull"
           ]
         }
       ],
-      "relatedProducts": [
-        "classica-legno",
-        "minimal-grigio",
-        "industriale-cemento"
-      ]
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
     },
     {
-      "slug": "classica-legno",
-      "name": "Linea Classica Legno",
-      "shortDescription": "Legni pregiati e dettagli artigianali per una cucina senza tempo",
-      "description": "<p>La Linea Classica Legno unisce la tradizione dell'artigianato italiano alla qualità dei materiali naturali. Realizzata con legni masselli selezionati, questa cucina dona calore ed eleganza a qualsiasi ambiente.</p><p>I dettagli artigianali, come le modanature lavorate a mano e le finiture in ottone, rendono ogni elemento un pezzo unico, perfetto per chi cerca carattere e personalità.</p>",
-      "heroImage": "https://images.unsplash.com/photo-1556909195-f691848ea5c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1556909195-f691848ea5c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "id": 2,
+      "slug": "cucina-classica-tradizionale",
+      "name": "Cucina Classica Tradizionale",
+      "shortDescription": "Design senza tempo con ante in legno massello",
+      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "price": "A partire da €18.500",
+      "category": "classica",
+      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
       "images": [
-        "https://images.unsplash.com/photo-1556909195-f691848ea5c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1556909195-43be147b212f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909195-0d47b85731a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909195-4d4a4a4a4a4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1556909191-89a5c0c3d5bf?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop"
       ],
       "features": [
         {
-          "title": "Legni Pregiati",
-          "description": "Legno massello di rovere o noce con finitura naturale o tinta, selezionato per venature e tonalità uniformi."
+          "title": "Legno Massello di Castagno",
+          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
         },
         {
-          "title": "Dettagli Artigianali",
-          "description": "Modanature lavorate a mano, ante con incastri a coda di rondine e finiture in ottone massiccio."
+          "title": "Top in Granito Naturale",
+          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
         },
         {
-          "title": "Tecnologia Moderna",
-          "description": "Nonostante l'aspetto tradizionale, integra tutti i comfort della tecnologia moderna."
+          "title": "Maniglie in Ottone",
+          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+        },
+        {
+          "title": "Finitura Personalizzabile",
+          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+        },
+        {
+          "title": "Zoccolatura in Legno",
+          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
         }
       ],
       "specifications": [
         {
-          "category": "Materiali",
+          "category": "Dimensioni",
           "details": [
-            "Legno massello di rovere o noce",
-            "Finiture in ottone massiccio",
-            "Piani in granito o marmo naturale",
-            "Verniciatura a poro aperto"
+            "Lunghezza: 320-500 cm (modulare)",
+            "Profondità: 60 cm standard, 65 cm per isola",
+            "Altezza pensili: 75 cm",
+            "Altezza totale: 235 cm"
           ]
         },
-        {
-          "category": "Misure Standard",
-          "details": [
-            "Altezza totale: 240 cm",
-            "Profondità basi: 65 cm",
-            "Profondità pensili: 40 cm",
-            "Altezza piano di lavoro: 90 cm"
-          ]
-        },
-        {
-          "category": "Personalizzazioni",
-          "details": [
-            "Tipi di legno: rovere, noce, ciliegio",
-            "Finitura: naturale, tinta chiara, tinta scura",
-            "Dettagli: modanature classiche o semplici"
-          ]
-        }
-      ],
-      "relatedProducts": [
-        "moderna-bianca",
-        "country-rustica",
-        "lusso-marmo"
-      ]
-    },
-    {
-      "slug": "lusso-marmo",
-      "name": "Linea Lusso Marmo",
-      "shortDescription": "Materiali esclusivi e design su misura per una cucina di prestigio",
-      "description": "<p>La Linea Lusso Marmo rappresenta il top della gamma, con materiali di altissimo pregio e soluzioni completamente personalizzabili. I piani in marmo naturale e le finiture in ottone satinato creano un'atmosfera di assoluto prestigio.</p><p>Ogni dettaglio è curato nei minimi particolari, dall'illuminazione scenografica ai sistemi di apertura silenziosi, per un'esperienza d'uso senza compromessi.</p>",
-      "heroImage": "https://images.unsplash.com/photo-1556909197-f5046c8025b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1556909197-f5046c8025b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1556909197-f5046c8025b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1556909197-43be147b212f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909197-0d47b85731a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909197-4d4a4a4a4a4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ],
-      "features": [
-        {
-          "title": "Materiali Esclusivi",
-          "description": "Marmi naturali selezionati, legni pregiati e finiture in ottone satinato per un risultato di assoluto prestigio."
-        },
-        {
-          "title": "Design Su Misura",
-          "description": "Ogni elemento è progettato sulle specifiche esigenze del cliente, con soluzioni uniche e personalizzate."
-        },
-        {
-          "title": "Tecnologia Avanzata",
-          "description": "Integra i più avanzati sistemi di cottura, refrigerazione e illuminazione, perfettamente mimetizzati nel design."
-        }
-      ],
-      "specifications": [
         {
           "category": "Materiali",
           "details": [
-            "Piani in marmo naturale a scelta",
-            "Ante in legno massello o laccato opaco",
-            "Finiture in ottone satinato",
-            "Vetro temperato per alcune superfici"
+            "Ante: Legno massello di castagno 22mm",
+            "Top: Granito naturale 40mm",
+            "Struttura: Legno multistrato 18mm",
+            "Maniglie: Ottone anticato lavorato a mano"
           ]
         },
         {
-          "category": "Misure",
+          "category": "Elettrodomestici",
           "details": [
-            "Realizzata su misura per ogni ambiente",
-            "Altezze personalizzabili",
-            "Profondità variabile"
+            "Forno tradizionale con grill A+",
+            "Piano cottura in ghisa 5 fuochi",
+            "Lavastoviglie integrata classe A++",
+            "Cappa camino in rame battuto"
           ]
         },
         {
-          "category": "Optional",
+          "category": "Dettagli Artigianali",
           "details": [
-            "Sistemi di illuminazione scenografica",
-            "Elettrodomestici integrati",
-            "Sistemi di apertura motorizzati",
-            "Isola centrale con piano in marmo"
+            "Cornici bugnate sui frontali",
+            "Colonne scanalate decorative",
+            "Mensole in legno massello",
+            "Piedini torniti regolabili"
           ]
         }
       ],
-      "relatedProducts": [
-        "classica-legno",
-        "industriale-cemento",
-        "moderna-bianca"
-      ]
-    },
-    {
-      "slug": "minimal-grigio",
-      "name": "Linea Minimal Grigio",
-      "shortDescription": "Essenzialità e funzionalità in una cucina dalle linee geometriche pure",
-      "description": "<p>La Linea Minimal Grigio incarna la filosofia 'less is more' con le sue linee geometriche essenziali e la palette cromatica ridotta. La finitura opaca grigio antracite dona un aspetto contemporaneo e sofisticato.</p><p>Ogni elemento è stato progettato per massimizzare lo spazio disponibile e ottimizzare i movimenti, senza rinunciare allo stile e all'eleganza.</p>",
-      "heroImage": "https://images.unsplash.com/photo-1556909197-45951e4d3ddf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1556909197-45951e4d3ddf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1556909197-45951e4d3ddf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1556909197-43be147b212f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909197-0d47b85731a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909197-4d4a4a4a4a4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ],
-      "features": [
-        {
-          "title": "Design Essenziale",
-          "description": "Linee geometriche pure e assenza di decorazioni superflue per un look pulito e contemporaneo."
-        },
-        {
-          "title": "Massima Funzionalità",
-          "description": "Ogni centimetro è ottimizzato per offrire il massimo spazio di lavoro e di conservazione."
-        },
-        {
-          "title": "Finiture Opache",
-          "description": "Superfici opache che nascondono ditate e segni, perfette per la vita quotidiana."
-        }
-      ],
-      "specifications": [
-        {
-          "category": "Materiali",
-          "details": [
-            "Ante in MDF laccato grigio antracite opaco",
-            "Struttura in legno massello di betulla",
-            "Piani di lavoro in laminato ad alta resistenza",
-            "Sistemi di apertura push-to-open"
-          ]
-        },
-        {
-          "category": "Misure Standard",
-          "details": [
-            "Altezza totale: 220 cm",
-            "Profondità basi: 60 cm",
-            "Profondità pensili: 35 cm",
-            "Altezza piano di lavoro: 90 cm"
-          ]
-        },
-        {
-          "category": "Personalizzazioni",
-          "details": [
-            "Colori disponibili: grigio antracite, bianco opaco, nero opaco",
-            "Opzioni piani: laminato, quarzo",
-            "Sistemi di apertura: push-to-open o maniglie minimali"
-          ]
-        }
-      ],
-      "relatedProducts": [
-        "moderna-bianca",
-        "industriale-cemento",
-        "country-rustica"
-      ]
-    },
-    {
-      "slug": "country-rustica",
-      "name": "Linea Country Rustica",
-      "shortDescription": "Calore e accoglienza ispirati alle tradizioni rurali con un tocco contemporaneo",
-      "description": "<p>La Linea Country Rustica evoca l'atmosfera delle cucine di campagna, con legni dal carattere marcato e finiture che esaltano la naturalezza del materiale. I dettagli in ferro battuto e le superfici leggermente invecchiate creano un ambiente caldo e accogliente.</p><p>Nonostante l'ispirazione tradizionale, questa cucina integra tutte le comodità della vita moderna, con elettrodomestici di ultima generazione perfettamente integrati nel design.</p>",
-      "heroImage": "https://images.unsplash.com/photo-1556909197-4965ba40c61e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1556909197-4965ba40c61e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1556909197-4965ba40c61e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1556909197-43be147b212f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909197-0d47b85731a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909197-4d4a4a4a4a4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ],
-      "features": [
-        {
-          "title": "Legno Rustico",
-          "description": "Legno massello con finitura a poro aperto che esalta le venature naturali e il carattere del materiale."
-        },
-        {
-          "title": "Dettagli Artigianali",
-          "description": "Maniglie in ferro battuto, ante con bordi arrotondati e finiture leggermente invecchiate per un look autentico."
-        },
-        {
-          "title": "Comfort Moderno",
-          "description": "Nonostante l'aspetto tradizionale, integra tutti i comfort della tecnologia moderna."
-        }
-      ],
-      "specifications": [
-        {
-          "category": "Materiali",
-          "details": [
-            "Legno massello di pino o rovere",
-            "Finiture in ferro battuto",
-            "Piani in legno massello o pietra naturale",
-            "Verniciatura a poro aperto"
-          ]
-        },
-        {
-          "category": "Misure Standard",
-          "details": [
-            "Altezza totale: 240 cm",
-            "Profondità basi: 65 cm",
-            "Profondità pensili: 40 cm",
-            "Altezza piano di lavoro: 90 cm"
-          ]
-        },
-        {
-          "category": "Personalizzazioni",
-          "details": [
-            "Tipi di legno: pino, rovere, castagno",
-            "Finitura: naturale, invecchiata, tinta",
-            "Dettagli: ferro battuto o ottone"
-          ]
-        }
-      ],
-      "relatedProducts": [
-        "classica-legno",
-        "industriale-cemento",
-        "minimal-grigio"
-      ]
-    },
-    {
-      "slug": "industriale-cemento",
-      "name": "Linea Industriale Cemento",
-      "shortDescription": "Metalli, cemento e legno si combinano per un look urbano e sofisticato",
-      "description": "<p>La Linea Industriale Cemento prende ispirazione dai loft urbani, con materiali grezzi come il cemento lisciato, il metallo ossidato e il legno massello. Il risultato è un ambiente dal carattere forte e deciso, perfetto per chi ama gli spazi con personalità.</p><p>Le finiture opache e le texture marcate creano un contrasto interessante con gli elettrodomestici lucidi e le superfici riflettenti, per un equilibrio perfetto tra rustico e moderno.</p>",
-      "heroImage": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      "images": [
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1556909114-43be147b212f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909114-0d47b85731a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909114-4d4a4a4a4a4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ],
-      "features": [
-        {
-          "title": "Materiali Industriali",
-          "description": "Cemento lisciato, metallo ossidato e legno massello per un look urbano e sofisticato."
-        },
-        {
-          "title": "Design Caratterizzato",
-          "description": "Texture marcate e finiture opache creano un ambiente dal carattere forte e deciso."
-        },
-        {
-          "title": "Contrasti Moderni",
-          "description": "Equilibrio perfetto tra materiali grezzi e superfici riflettenti per un risultato contemporaneo."
-        }
-      ],
-      "specifications": [
-        {
-          "category": "Materiali",
-          "details": [
-            "Piani in cemento lisciato o effetto cemento",
-            "Ante in legno massello o metallo",
-            "Finiture in acciaio ossidato o verniciato",
-            "Dettagli in vetro temperato"
-          ]
-        },
-        {
-          "category": "Misure Standard",
-          "details": [
-            "Altezza totale: 230 cm",
-            "Profondità basi: 65 cm",
-            "Profondità pensili: 40 cm",
-            "Altezza piano di lavoro: 90 cm"
-          ]
-        },
-        {
-          "category": "Personalizzazioni",
-          "details": [
-            "Effetti superficie: cemento liscio, grezzo, ossidato",
-            "Combinazioni materiali: legno/metallo, cemento/metallo",
-            "Illuminazione integrata industriale"
-          ]
-        }
-      ],
-      "relatedProducts": [
-        "minimal-grigio",
-        "lusso-marmo",
-        "moderna-bianca"
-      ]
+      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
     }
   ]
 }

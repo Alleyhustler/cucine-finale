@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-        /* Stili identici alla pagina principale */
         * {
             margin: 0;
             padding: 0;
@@ -29,52 +28,22 @@
             background: url('bedge-grunge.png') var(--white);
             color: var(--primary-dark);
             overflow-x: hidden;
+            padding-top: 90px; /* Spazio per header fisso */
         }
 
-        /* Header Styles */
+        /* Header Styles - PULITO SENZA IMMAGINE DI SFONDO */
         .header {
             position: fixed;
-            top: 20px;
+            top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 0.5rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(0px);
-            height: 70px;
+            padding: 1rem 0;
+            background: url('bedge-grunge.png') var(--white);
+            box-shadow: 0 2px 10px rgba(44, 52, 36, 0.1);
+            height: 80px;
             display: flex;
             align-items: center;
-        }
-
-        .header.visible {
-            opacity: 1;
-        }
-
-        .header.scrolled {
-            background: url('bedge-grunge.png') rgba(255, 255, 255, 0);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 8px 32px rgba(44, 52, 36, 0.1);
-            height: 60px;
-            top: 0;
-        }
-
-        .header.scrolled .nav-link,
-        .header.scrolled .logo,
-        .header.scrolled .menu-line {
-            color: white;
-        }
-
-        .header.scrolled .cta-button {
-            color: white;
-            border-color: var(--primary-dark);
-        }
-
-        .header.scrolled .cta-button::before {
-            background: var(--primary-dark);
-        }
-
-        .header.scrolled .cta-button:hover {
-            color: var(--white);
         }
 
         .header-content {
@@ -89,8 +58,7 @@
         .header-left {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            margin-left: -200px;
+            gap: 1rem;
         }
 
         .menu-toggle {
@@ -109,7 +77,7 @@
         .menu-line {
             width: 28px;
             height: 2px;
-            background: white;
+            background: var(--primary-dark);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -128,7 +96,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #2C3424;
+            color: var(--primary-dark);
             text-decoration: none;
             letter-spacing: 2px;
             position: relative;
@@ -157,7 +125,7 @@
         }
 
         .nav-link {
-            color: #2C3424;
+            color: var(--primary-dark);
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
@@ -188,16 +156,15 @@
         }
 
         .cta-button {
-            background: url('bedge-grunge.png') var(--primary-dark);
+            background: var(--primary-dark);
             color: white;
             padding: 12px 20px;
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 1px;
-            margin-right: -200px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-            border: 2px solid white;
+            border: 2px solid var(--primary-dark);
             overflow: hidden;
             z-index: 1;
             font-size: 0.9rem;
@@ -210,7 +177,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--primary-dark);
+            background: var(--primary-medium);
             transform: translateX(-100%);
             transition: transform 0.4s ease;
             z-index: -1;
@@ -289,77 +256,117 @@
             visibility: visible;
         }
 
-        /* Product Page Specific Styles */
-        .product-hero {
-            height: 70vh;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            padding: 4rem 2rem;
-        }
-
-        .product-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.3);
-        }
-
-        .product-hero-content {
-            position: relative;
-            z-index: 2;
+        /* MAIN CONTENT - LAYOUT PULITO */
+        .main-content {
             max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
+            margin: 2rem auto;
+            padding: 0 2rem;
         }
 
-        .product-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        /* Breadcrumb */
+        .breadcrumb {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--primary-medium);
         }
 
-        .product-subtitle {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            color: var(--accent-light);
-            max-width: 600px;
+        .breadcrumb a {
+            color: var(--primary-medium);
+            text-decoration: none;
         }
 
-        .product-content {
-            padding: 6rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
+        .breadcrumb a:hover {
+            color: var(--primary-dark);
         }
 
-        .product-grid {
+        /* LAYOUT PRINCIPALE: 3 IMMAGINI A SINISTRA + DETTAGLI A DESTRA */
+        .product-main {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
+            margin-bottom: 4rem;
         }
 
+        /* Galleria delle 3 immagini */
+        .product-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 1fr 1fr;
+            gap: 1rem;
+            height: 600px;
+        }
+
+        .gallery-main {
+            grid-column: span 2;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.15);
+        }
+
+        .gallery-thumb {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(44, 52, 36, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-thumb:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.2);
+        }
+
+        .gallery-main img,
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-thumb:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Dettagli del prodotto */
         .product-details {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
-        .product-description {
+        .product-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .product-subtitle {
             font-size: 1.2rem;
+            color: var(--primary-medium);
+            margin-bottom: 2rem;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+        }
+
+        .product-description {
+            font-size: 1.1rem;
             line-height: 1.8;
             color: var(--primary-medium);
+            margin-bottom: 2rem;
         }
 
         .product-features {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
 
         .feature-item {
@@ -369,7 +376,7 @@
         }
 
         .feature-icon {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--primary-dark);
             margin-top: 0.2rem;
         }
@@ -379,116 +386,81 @@
         }
 
         .feature-title {
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
             color: var(--primary-dark);
         }
 
         .feature-desc {
             color: var(--primary-medium);
-            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
-        .product-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 30px rgba(44, 52, 36, 0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .main-image {
-            grid-column: span 2;
-            height: 400px;
-        }
-
-        .product-cta {
-            background: url('bedge-grunge.png') var(--primary-dark);
-            padding: 3rem 2rem;
-            color: var(--white);
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-        .cta-title {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-buttons {
+        .product-actions {
             display: flex;
-            gap: 1.5rem;
-            justify-content: center;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
-        .cta-btn {
-            padding: 12px 30px;
-            background: var(--white);
-            color: var(--primary-dark);
+        .btn-primary {
+            background: var(--primary-dark);
+            color: white;
+            padding: 15px 30px;
             text-decoration: none;
             font-weight: 600;
-            border: 2px solid var(--white);
+            border: 2px solid var(--primary-dark);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-medium);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 52, 36, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-dark);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--primary-dark);
             transition: all 0.3s ease;
         }
 
-        .cta-btn:hover {
-            background: transparent;
-            color: var(--white);
+        .btn-secondary:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-2px);
         }
 
-        .cta-btn.secondary {
-            background: transparent;
-            color: var(--white);
-            border-color: var(--white);
+        /* SEZIONI SOTTO */
+        .section {
+            margin-bottom: 4rem;
+            padding: 3rem 0;
         }
 
-        .cta-btn.secondary:hover {
-            background: var(--white);
-            color: var(--primary-dark);
-        }
-
-        .product-specs {
-            margin-top: 4rem;
-        }
-
-        .specs-title {
+        .section-title {
             font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--primary-dark);
+            font-weight: 700;
             text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-dark);
         }
 
+        /* Specifiche tecniche */
         .specs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .spec-card {
             background: var(--white);
             padding: 2rem;
+            border-radius: 8px;
             box-shadow: 0 5px 15px rgba(44, 52, 36, 0.1);
             border-left: 4px solid var(--primary-dark);
         }
@@ -514,45 +486,31 @@
             color: var(--primary-dark);
         }
 
-        /* Related Products */
-        .related-products {
-            padding: 4rem 2rem;
-            background: url('bedge-grunge.png') var(--white);
-        }
-
-        .related-title {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--primary-dark);
-        }
-
+        /* Prodotti correlati */
         .related-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
         .related-card {
             background: var(--white);
-            border-radius: 0;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(44, 52, 36, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.1);
+            transition: all 0.3s ease;
         }
 
         .related-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 60px rgba(44, 52, 36, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(44, 52, 36, 0.2);
         }
 
         .related-image {
-            height: 250px;
             width: 100%;
+            height: 200px;
             object-fit: cover;
-            transition: all 0.5s ease;
+            transition: transform 0.3s ease;
         }
 
         .related-card:hover .related-image {
@@ -564,7 +522,7 @@
         }
 
         .related-name {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: var(--primary-dark);
@@ -572,8 +530,8 @@
 
         .related-desc {
             color: var(--primary-medium);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
 
         .related-link {
@@ -583,14 +541,13 @@
             color: var(--white);
             text-decoration: none;
             font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
-            border: 2px solid var(--primary-dark);
         }
 
         .related-link:hover {
-            background: transparent;
-            color: var(--primary-dark);
+            background: var(--primary-medium);
+            transform: translateY(-2px);
         }
 
         /* Footer */
@@ -613,7 +570,7 @@
             font-weight: 600;
             margin-bottom: 1.5rem;
             letter-spacing: 1px;
-            color: var(--black);
+            color: var(--white);
         }
 
         .footer-links {
@@ -623,7 +580,7 @@
         }
 
         .footer-link {
-            color: #4C583E;
+            color: var(--accent-light);
             text-decoration: none;
             transition: all 0.3s ease;
             font-size: 1.1rem;
@@ -636,7 +593,6 @@
 
         .contact-info {
             display: flex;
-            color: #4C583E;
             flex-direction: column;
             gap: 1rem;
         }
@@ -645,73 +601,8 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            color: #4C583E;
+            color: var(--accent-light);
             font-size: 1.1rem;
-        }
-
-        .email-signup {
-            display: flex;
-            gap: 1rem;
-            color: #4C583E;
-            margin-top: 1rem;
-        }
-
-        .email-input {
-            flex: 1;
-            padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(61, 58, 58, 0.3);
-            color: #4C583E;
-            font-family: "Philosopher", sans-serif;
-        }
-
-        .email-input::placeholder {
-            color: rgba(27, 25, 25, 0.7);
-        }
-
-        .email-submit {
-            padding: 12px 24px;
-            background: var(--accent-medium);
-            color: #4C583E;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: "Philosopher", sans-serif;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .email-submit:hover {
-            background: var(--accent-light);
-            color: var(--primary-dark);
-            transform: translateY(-2px);
-            color: #4C583E;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            color: #4C583E;
-            margin-top: 1rem;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.5rem;
-        }
-
-        .social-link:hover {
-            background: var(--accent-light);
-            color: var(--primary-dark);
-            transform: translateY(-3px);
         }
 
         .footer-bottom {
@@ -719,7 +610,7 @@
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
-            color: #4C583E;
+            color: var(--accent-light);
         }
 
         /* Modal Styles */
@@ -747,7 +638,7 @@
 
         .modal {
             background: url('bedge-grunge.png') var(--white);
-            border-radius: 0;
+            border-radius: 8px;
             width: 90%;
             max-width: 500px;
             max-height: 90vh;
@@ -792,25 +683,6 @@
             padding: 1.5rem;
         }
 
-        .contact-info {
-            margin: 1.5rem 0;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            color: var(--primary-dark);
-            font-size: 1.1rem;
-        }
-
-        .modal-note {
-            font-style: italic;
-            margin: 1.5rem 0;
-            color: var(--primary-medium);
-        }
-
         .preventivo-form {
             display: flex;
             flex-direction: column;
@@ -822,7 +694,8 @@
             padding: 12px 16px;
             border: 1px solid var(--accent-light);
             font-family: "Arvo", serif;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 4px;
         }
 
         .preventivo-form textarea {
@@ -831,7 +704,7 @@
         }
 
         .submit-button {
-            background: var(--primary-medium);
+            background: var(--primary-dark);
             color: white;
             padding: 14px;
             border: none;
@@ -840,50 +713,50 @@
             font-weight: 600;
             letter-spacing: 1px;
             transition: all 0.3s ease;
+            border-radius: 4px;
         }
 
         .submit-button:hover {
-            background: var(--primary-dark);
+            background: var(--primary-medium);
             transform: translateY(-2px);
         }
 
-        /* Responsive Styles */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .product-grid {
+            .product-main {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
             .product-gallery {
-                order: -1;
-                margin-bottom: 3rem;
+                height: 500px;
             }
             
-            .main-image {
-                height: 300px;
-            }
-            
-            .gallery-item {
-                height: 200px;
+            .nav-desktop {
+                display: none;
             }
         }
 
         @media (max-width: 768px) {
-            .product-hero {
-                height: 50vh;
-                padding: 2rem;
+            .main-content {
+                padding: 0 1rem;
             }
             
-            .header-left {
-                margin-left: 0;
+            .product-gallery {
+                height: 400px;
             }
             
-            .cta-button {
-                margin-right: 0;
+            .product-title {
+                font-size: 2rem;
             }
             
-            .cta-buttons {
+            .product-actions {
                 flex-direction: column;
-                align-items: center;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
             }
             
             .mobile-menu {
@@ -893,35 +766,29 @@
         }
 
         @media (max-width: 480px) {
-            .product-hero {
-                height: 40vh;
+            .product-gallery {
+                height: 300px;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-main {
+                grid-column: span 1;
+            }
+            
+            .gallery-thumb {
+                display: none;
             }
             
             .product-title {
-                font-size: 2.2rem;
-            }
-            
-            .product-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .product-content {
-                padding: 3rem 1rem;
-            }
-            
-            .gallery-item {
-                height: 150px;
-            }
-            
-            .main-image {
-                height: 250px;
+                font-size: 1.8rem;
             }
         }
 
-        /* Animation Styles */
+        /* Animazioni */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
             transition: all 0.6s ease;
         }
 
@@ -932,7 +799,7 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header PULITO -->
     <header class="header" id="header">
         <div class="header-content">
             <div class="header-left">
@@ -970,56 +837,72 @@
         </div>
     </nav>
 
-    <!-- Product Hero Section -->
-    <section class="product-hero" id="product-hero">
-        <div class="product-hero-content">
-            <h1 class="product-title fade-in" id="product-title">Nome Cucina</h1>
-            <p class="product-subtitle fade-in" id="product-subtitle">Descrizione breve della cucina</p>
-        </div>
-    </section>
+    <!-- CONTENUTO PRINCIPALE PULITO -->
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a> > 
+            <a href="cucine-nuove.html">Cucine Nuove</a> > 
+            <span>Cucina Moderna Elegante</span>
+        </nav>
 
-    <!-- Product Content -->
-    <section class="product-content">
-        <div class="product-grid">
-            <div class="product-details">
-                <div class="product-description fade-in" id="product-description">
-                    <p>Descrizione dettagliata della cucina verrà inserita qui...</p>
+        <!-- LAYOUT PRINCIPALE: 3 IMMAGINI A SINISTRA + DETTAGLI A DESTRA -->
+        <section class="product-main fade-in">
+            <!-- Galleria delle 3 immagini -->
+            <div class="product-gallery" id="productGallery">
+                <div class="gallery-main">
+                    <img src="" alt="Cucina principale" id="mainImage">
                 </div>
+                <div class="gallery-thumb" id="thumb1">
+                    <img src="" alt="Vista 1">
+                </div>
+                <div class="gallery-thumb" id="thumb2">
+                    <img src="" alt="Vista 2">
+                </div>
+            </div>
+
+            <!-- Dettagli del prodotto -->
+            <div class="product-details">
+                <h1 class="product-title" id="productTitle">Caricamento...</h1>
+                <p class="product-subtitle" id="productSubtitle">Caricamento dettagli...</p>
                 
-                <div class="product-features fade-in" id="product-features">
+                <div class="product-price" id="productPrice">
+                    Prezzo in caricamento...
+                </div>
+
+                <div class="product-description" id="productDescription">
+                    <p>Caricamento descrizione...</p>
+                </div>
+
+                <div class="product-features" id="productFeatures">
                     <!-- Features will be populated by JavaScript -->
                 </div>
+
+                <div class="product-actions">
+                    <a href="#preventivo" class="btn-primary" id="ctaPreventivo">Richiedi Preventivo</a>
+                    <a href="tel:+393391703591" class="btn-secondary">Chiama Ora</a>
+                </div>
             </div>
-            
-            <div class="product-gallery fade-in" id="product-gallery">
-                <!-- Gallery images will be populated by JavaScript -->
-            </div>
-        </div>
+        </section>
+
+        <!-- SEZIONI SOTTO -->
         
-        <div class="product-specs fade-in">
-            <h2 class="specs-title">Specifiche Tecniche</h2>
-            <div class="specs-grid" id="product-specs">
+        <!-- Specifiche Tecniche -->
+        <section class="section fade-in">
+            <h2 class="section-title">Specifiche Tecniche</h2>
+            <div class="specs-grid" id="productSpecs">
                 <!-- Specifications will be populated by JavaScript -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="product-cta fade-in">
-        <h2 class="cta-title">Interessato a questa cucina?</h2>
-        <div class="cta-buttons">
-            <a href="#preventivo" class="cta-btn" id="ctaPreventivo">Richiedi un preventivo</a>
-            <a href="cucine-nuove.html" class="cta-btn secondary">Vedi altre cucine</a>
-        </div>
-    </section>
-
-    <!-- Related Products -->
-    <section class="related-products fade-in">
-        <h2 class="related-title">Altre cucine che potrebbero piacerti</h2>
-        <div class="related-grid" id="related-products">
-            <!-- Related products will be populated by JavaScript -->
-        </div>
-    </section>
+        <!-- Prodotti Correlati -->
+        <section class="section fade-in">
+            <h2 class="section-title">Altre Cucine che Potrebbero Piacerti</h2>
+            <div class="related-grid" id="relatedProducts">
+                <!-- Related products will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" id="contatti">
@@ -1055,27 +938,24 @@
             
             <div class="footer-section">
                 <h3>Socials</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61576278827754" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/cucine.italia/" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@cucineitalia" class="social-link"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://share.google/A3HR21mBeUiB6YImR" class="social-link"><i class="fab fa-google"></i></a>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/profile.php?id=61576278827754" class="footer-link">Facebook</a>
+                    <a href="https://www.instagram.com/cucine.italia/" class="footer-link">Instagram</a>
+                    <a href="https://www.tiktok.com/@cucineitalia" class="footer-link">TikTok</a>
+                    <a href="https://share.google/A3HR21mBeUiB6YImR" class="footer-link">Google</a>
                 </div>
             </div>
             
             <div class="footer-section">
                 <h3>Newsletter</h3>
-                <p style="color: #4C583E; margin-bottom: 1rem;">
+                <p style="color: var(--accent-light); margin-bottom: 1rem;">
                     Resta aggiornato sulle nostre novità e offerte esclusive.
                 </p>
-                <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="email-signup">
+                <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" style="display: flex; gap: 1rem; margin-top: 1rem;">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="Nuova iscrizione newsletter">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://iltuosito.com/grazie-newsletter.html">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="email" name="Email" class="email-input" placeholder="La tua email" required>
-                    <button type="submit" class="email-submit">Iscriviti</button>
+                    <input type="email" name="Email" placeholder="La tua email" required style="flex: 1; padding: 10px; border: 1px solid var(--accent-light); background: rgba(255,255,255,0.1); color: var(--white);">
+                    <button type="submit" style="padding: 10px 20px; background: var(--accent-light); color: var(--primary-dark); border: none; cursor: pointer; font-weight: 600;">Iscriviti</button>
                 </form>
             </div>
         </div>
@@ -1087,38 +967,39 @@
 
     <!-- Modal for Preventivo -->
     <div class="modal-overlay" id="preventivoModal">
-      <div class="modal">
-        <div class="modal-header">
-          <h3>Richiedi un Preventivo</h3>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <p>Contattaci direttamente per un preventivo personalizzato:</p>
-          <div class="contact-info">
-            <div class="contact-item">
-              <span>📞</span>
-              <span>+39 339 170 3591<br>+39 349 694 7616</span>
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Richiedi un Preventivo</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
             </div>
-            <div class="contact-item">
-              <span>📧</span>
-              <span>info.cucineitalia@gmail.com</span>
+            <div class="modal-body">
+                <p>Contattaci direttamente per un preventivo personalizzato:</p>
+                <div class="contact-info" style="margin: 1.5rem 0;">
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>+39 339 170 3591<br>+39 349 694 7616</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>info.cucineitalia@gmail.com</span>
+                    </div>
+                </div>
+                <p style="font-style: italic; margin: 1.5rem 0; color: var(--primary-medium);">
+                    Oppure compila il form sottostante e ti risponderemo entro 24 ore.
+                </p>
+                <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="preventivo-form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nuova richiesta di preventivo dal sito">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="text" name="Nome" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="Telefono" placeholder="Telefono">
+                    <textarea name="Richiesta" placeholder="Descrivi la tua richiesta" required></textarea>
+                    <button type="submit" class="submit-button">Invia Richiesta</button>
+                </form>
             </div>
-          </div>
-          <p class="modal-note">Oppure compila il form sottostante e ti risponderemo entro 24 ore.</p>
-          <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="preventivo-form">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Nuova richiesta di preventivo dal sito">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://iltuosito.com/grazie.html">
-            <input type="text" name="_honey" style="display:none">
-            <input type="text" name="Nome" placeholder="Nome">
-            <input type="email" name="email" placeholder="Email">
-            <input type="tel" name="Telefono" placeholder="Telefono">
-            <textarea name="Richiesta" placeholder="Descrivi la tua richiesta"></textarea>
-            <button type="submit" class="submit-button">Invia Richiesta</button>
-          </form>
         </div>
-      </div>
     </div>
 
     <!-- Font Awesome for icons -->
@@ -1126,163 +1007,10 @@
 
     <!-- JavaScript -->
     <script>
-        // Function to get URL parameters
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        // Funzione per cambiare l'immagine principale
+        function changeMainImage(src) {
+            document.getElementById('mainImage').src = src;
         }
-
-    async function loadProductData() {
-        const slug = getUrlParameter('slug');
-        console.log('Slug from URL:', slug);
-
-        if (!slug) {
-            console.error('Nessun slug trovato nell\'URL');
-            showError('Nessun prodotto specificato');
-            return;
-        }
-
-        try {
-            console.log('Caricamento products.json...');
-            const response = await fetch('data/cucine.json');
-            
-            if (!response.ok) {
-                throw new Error(`Errore nel caricamento del JSON: ${response.status}`);
-            }
-            
-            const data = await response.json();
-            console.log('Dati JSON caricati:', data);
-            
-            const product = data.products.find(p => p.slug === slug);
-            console.log('Prodotto trovato:', product);
-            
-            if (!product) {
-                showError(`Prodotto "${slug}" non trovato`);
-                return;
-            }
-
-            // Popola la pagina con i dati del prodotto
-            document.title = `${product.name} | Cucine Italia`;
-            document.getElementById('product-hero').style.backgroundImage = `url('${product.heroImage}')`;
-            document.getElementById('product-title').textContent = product.name;
-            document.getElementById('product-subtitle').textContent = product.shortDescription;
-            document.getElementById('product-description').innerHTML = product.description;
-
-            // Popola le features
-            const featuresContainer = document.getElementById('product-features');
-            featuresContainer.innerHTML = ''; // Pulisci il contenuto
-            product.features.forEach(feature => {
-                const featureItem = document.createElement('div');
-                featureItem.className = 'feature-item';
-                featureItem.innerHTML = `
-                    <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
-                    <div class="feature-text">
-                        <h4 class="feature-title">${feature.title}</h4>
-                        <p class="feature-desc">${feature.description}</p>
-                    </div>
-                `;
-                featuresContainer.appendChild(featureItem);
-            });
-
-            // Popola la gallery
-            const galleryContainer = document.getElementById('product-gallery');
-            galleryContainer.innerHTML = ''; // Pulisci il contenuto
-            product.images.forEach((image, index) => {
-                const galleryItem = document.createElement('div');
-                galleryItem.className = index === 0 ? 'gallery-item main-image' : 'gallery-item';
-                galleryItem.innerHTML = `<img src="${image}" alt="${product.name} - Immagine ${index + 1}">`;
-                galleryContainer.appendChild(galleryItem);
-            });
-
-            // Popola le specifiche
-            const specsContainer = document.getElementById('product-specs');
-            specsContainer.innerHTML = ''; // Pulisci il contenuto
-            product.specifications.forEach(spec => {
-                const specCard = document.createElement('div');
-                specCard.className = 'spec-card';
-                const specItems = spec.details.map(item => `<li>${item}</li>`).join('');
-                specCard.innerHTML = `
-                    <h3 class="spec-title">${spec.category}</h3>
-                    <ul class="spec-list">${specItems}</ul>
-                `;
-                specsContainer.appendChild(specCard);
-            });
-
-            // Carica prodotti correlati
-            loadRelatedProducts(data.products, product.relatedProducts);
-
-        } catch (error) {
-            console.error('Errore nel caricamento dei dati:', error);
-            showError('Errore nel caricamento dei dati del prodotto');
-        }
-    }
-
-    function showError(message) {
-        // Mostra un messaggio di errore invece di reindirizzare
-        const heroContent = document.querySelector('.product-hero-content');
-        heroContent.innerHTML = `
-            <h1 class="product-title" style="color: #ff0000;">Errore</h1>
-            <p class="product-subtitle">${message}</p>
-            <a href="cucine-nuove.html" class="cta-btn" style="margin-top: 20px;">Torna alle cucine</a>
-        `;
-    }
-
-        // Function to load related products
-        function loadRelatedProducts(allProducts, relatedSlugs) {
-            const relatedContainer = document.getElementById('related-products');
-            const relatedProducts = allProducts.filter(p => relatedSlugs.includes(p.slug));
-            
-            relatedProducts.forEach(product => {
-                const relatedCard = document.createElement('div');
-                relatedCard.className = 'related-card';
-                relatedCard.innerHTML = `
-                    <a href="cucina.html?slug=${product.slug}">
-                        <img src="${product.thumbnail}" alt="${product.name}" class="related-image">
-                    </a>
-                    <div class="related-info">
-                        <h3 class="related-name">${product.name}</h3>
-                        <p class="related-desc">${product.shortDescription}</p>
-                        <a href="cucina.html?slug=${product.slug}" class="related-link">Scopri di più</a>
-                    </div>
-                `;
-                relatedContainer.appendChild(relatedCard);
-            });
-        }
-
-        // Header scroll animation
-        let lastScroll = 0;
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            const currentScroll = window.scrollY;
-            
-            if (currentScroll <= 0) {
-                header.classList.add('visible');
-                header.classList.remove('scrolled');
-                return;
-            }
-            
-            if (currentScroll > lastScroll) {
-                if (currentScroll > 100) {
-                    header.classList.add('visible', 'scrolled');
-                }
-            } else {
-                header.classList.add('visible');
-                if (currentScroll > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Show header on page load
-        window.addEventListener('load', function() {
-            document.getElementById('header').classList.add('visible');
-        });
 
         // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
@@ -1313,21 +1041,35 @@
             });
         });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+        // Modal functionality
+        const preventivoButton = document.getElementById('preventivoButton');
+        const ctaPreventivo = document.getElementById('ctaPreventivo');
+        const preventivoModal = document.getElementById('preventivoModal');
+        const modalClose = document.getElementById('modalClose');
+
+        // Open modal when clicking "Richiedi un preventivo"
+        [preventivoButton, ctaPreventivo].forEach(button => {
+            if (button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    preventivoModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+        });
+
+        // Close modal when clicking X button
+        modalClose.addEventListener('click', function() {
+            preventivoModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close modal when clicking outside
+        preventivoModal.addEventListener('click', function(e) {
+            if (e.target === preventivoModal) {
+                preventivoModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
 
         // Intersection Observer for fade-in animations
@@ -1349,37 +1091,204 @@
             observer.observe(el);
         });
 
-        // Modal functionality
-        const preventivoButton = document.getElementById('preventivoButton');
-        const ctaPreventivo = document.getElementById('ctaPreventivo');
-        const preventivoModal = document.getElementById('preventivoModal');
-        const modalClose = document.querySelector('.modal-close');
-
-        // Open modal when clicking "Richiedi un preventivo"
-        [preventivoButton, ctaPreventivo].forEach(button => {
-            button.addEventListener('click', function(e) {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                preventivoModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
-        // Close modal when clicking X button
-        modalClose.addEventListener('click', function() {
-            preventivoModal.classList.remove('active');
-            document.body.style.overflow = '';
-        });
+        // Function to get URL parameters (per integrare con il tuo sistema esistente)
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
 
-        // Close modal when clicking outside
-        preventivoModal.addEventListener('click', function(e) {
-            if (e.target === preventivoModal) {
-                preventivoModal.classList.remove('active');
-                document.body.style.overflow = '';
+        // Carica i dati del prodotto dal JSON
+        async function loadProductData() {
+            const slug = getUrlParameter('slug');
+            console.log('Slug from URL:', slug);
+
+            if (!slug) {
+                console.error('Nessun slug trovato nell\'URL');
+                showError('Nessun prodotto specificato');
+                return;
             }
-        });
 
-        // Load product data when page loads
-        document.addEventListener('DOMContentLoaded', loadProductData);
+            try {
+                console.log('Caricamento data/cucine.json...');
+                const response = await fetch('data/cucine.json');
+                
+                if (!response.ok) {
+                    throw new Error(`Errore nel caricamento del JSON: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Dati JSON caricati:', data);
+                
+                const product = data.products.find(p => p.slug === slug);
+                console.log('Prodotto trovato:', product);
+                
+                if (!product) {
+                    showError(`Prodotto "${slug}" non trovato`);
+                    return;
+                }
+
+                // Popola la pagina con i dati del prodotto
+                updateProductPage(product, data.products);
+
+            } catch (error) {
+                console.error('Errore nel caricamento dei dati:', error);
+                showError('Errore nel caricamento dei dati del prodotto');
+            }
+        }
+
+        // Aggiorna la pagina con i dati del prodotto
+        function updateProductPage(product, allProducts) {
+            // Aggiorna titolo pagina
+            document.title = `${product.name} | Cucine Italia`;
+            
+            // Aggiorna breadcrumb
+            const breadcrumb = document.querySelector('.breadcrumb');
+            breadcrumb.innerHTML = `
+                <a href="index.html">Home</a> > 
+                <a href="cucine-nuove.html">Cucine Nuove</a> > 
+                <span>${product.name}</span>
+            `;
+            
+            // Aggiorna contenuti principali
+            document.getElementById('productTitle').textContent = product.name;
+            document.getElementById('productSubtitle').textContent = product.shortDescription;
+            document.getElementById('productPrice').textContent = product.price || 'Prezzo su richiesta';
+            document.getElementById('productDescription').innerHTML = `<p>${product.description}</p>`;
+
+            // Aggiorna galleria immagini
+            const mainImage = document.getElementById('mainImage');
+            const thumb1 = document.getElementById('thumb1');
+            const thumb2 = document.getElementById('thumb2');
+            
+            if (product.images && product.images.length > 0) {
+                mainImage.src = product.images[0];
+                mainImage.alt = `${product.name} - Immagine principale`;
+                
+                if (product.images[1]) {
+                    thumb1.querySelector('img').src = product.images[1];
+                    thumb1.querySelector('img').alt = `${product.name} - Vista 1`;
+                    thumb1.onclick = () => changeMainImage(product.images[1]);
+                    thumb1.style.display = 'block';
+                } else {
+                    thumb1.style.display = 'none';
+                }
+                
+                if (product.images[2]) {
+                    thumb2.querySelector('img').src = product.images[2];
+                    thumb2.querySelector('img').alt = `${product.name} - Vista 2`;
+                    thumb2.onclick = () => changeMainImage(product.images[2]);
+                    thumb2.style.display = 'block';
+                } else {
+                    thumb2.style.display = 'none';
+                }
+            }
+
+            // Popola le features
+            const featuresContainer = document.getElementById('productFeatures');
+            featuresContainer.innerHTML = '';
+            
+            if (product.features && product.features.length > 0) {
+                product.features.forEach(feature => {
+                    const featureItem = document.createElement('div');
+                    featureItem.className = 'feature-item';
+                    featureItem.innerHTML = `
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <div class="feature-title">${feature.title}</div>
+                            <div class="feature-desc">${feature.description}</div>
+                        </div>
+                    `;
+                    featuresContainer.appendChild(featureItem);
+                });
+            }
+
+            // Popola le specifiche tecniche
+            const specsContainer = document.getElementById('productSpecs');
+            specsContainer.innerHTML = '';
+            
+            if (product.specifications && product.specifications.length > 0) {
+                product.specifications.forEach(spec => {
+                    const specCard = document.createElement('div');
+                    specCard.className = 'spec-card';
+                    
+                    const specItems = spec.details.map(item => `<li>${item}</li>`).join('');
+                    specCard.innerHTML = `
+                        <h3 class="spec-title">${spec.category}</h3>
+                        <ul class="spec-list">${specItems}</ul>
+                    `;
+                    specsContainer.appendChild(specCard);
+                });
+            }
+
+            // Carica prodotti correlati
+            loadRelatedProducts(allProducts, product.relatedProducts || []);
+        }
+
+        // Funzione per caricare i prodotti correlati
+        function loadRelatedProducts(allProducts, relatedSlugs) {
+            const relatedContainer = document.getElementById('relatedProducts');
+            relatedContainer.innerHTML = '';
+            
+            // Se non ci sono prodotti correlati specificati, prendi i primi 3
+            let relatedProducts = [];
+            if (relatedSlugs.length > 0) {
+                relatedProducts = allProducts.filter(p => relatedSlugs.includes(p.slug));
+            } else {
+                relatedProducts = allProducts.slice(0, 3);
+            }
+            
+            relatedProducts.forEach(product => {
+                const relatedCard = document.createElement('div');
+                relatedCard.className = 'related-card';
+                relatedCard.innerHTML = `
+                    <a href="cucina.html?slug=${product.slug}">
+                        <img src="${product.thumbnail || product.images[0]}" alt="${product.name}" class="related-image">
+                    </a>
+                    <div class="related-info">
+                        <h3 class="related-name">${product.name}</h3>
+                        <p class="related-desc">${product.shortDescription}</p>
+                        <a href="cucina.html?slug=${product.slug}" class="related-link">Scopri di più</a>
+                    </div>
+                `;
+                relatedContainer.appendChild(relatedCard);
+            });
+        }
+
+        // Funzione per mostrare errore
+        function showError(message) {
+            const mainContent = document.querySelector('.main-content');
+            mainContent.innerHTML = `
+                <div style="text-align: center; padding: 4rem 2rem;">
+                    <h1 style="color: #ff0000; font-size: 2rem; margin-bottom: 1rem;">Errore</h1>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--primary-medium);">${message}</p>
+                    <a href="cucine-nuove.html" class="btn-primary">Torna alle cucine</a>
+                </div>
+            `;
+        }
+
+        // Inizializza la pagina
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProductData();
+        });
     </script>
 </body>
 </html>
