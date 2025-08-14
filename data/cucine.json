@@ -8,7 +8,7 @@
       "description": "Una cucina dal design moderno e raffinato, caratterizzata da linee pulite e materiali di prima scelta. Perfetta per chi cerca funzionalità ed estetica in un unico ambiente. Le ante in laminato resistente si abbinano perfettamente al top in quarzo, creando un equilibrio perfetto tra bellezza e praticità.",
       "price": "Pronta Consegna",
       "category": "moderna",
-      "thumbnail": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+      "thumbnail": "/Images/nuove/lineare/1/IMG_8229.JPEG",
       "images": [
         "/Images/nuove/lineare/1/IMG_8227.JPEG",
         "/Images/nuove/lineare/1/IMG_8229.JPEG",
@@ -85,7 +85,7 @@
       "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "thumbnail": "/Images/nuove/lineare/1/IMG_8238.JPEG",
       "images": [
         "/Images/nuove/lineare/1/IMG_8238.JPEG",
         "/Images/nuove/lineare/1/IMG_8239.JPEG",
@@ -161,9 +161,9 @@
       "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "thumbnail": "/Images/nuove/lineare/3/IMG_8244.JPEG",
       "images": [
-        "Images/nuove/lineare/3/IMG_8244.JPEG",
+        "/Images/nuove/lineare/3/IMG_8244.JPEG",
         "/Images/nuove/lineare/3/IMG_8239.JPEG",
         "/Images/nuove/lineare/3/IMG_8240.JPEG"
       ],
@@ -238,9 +238,9 @@
       "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "thumbnail": "/Images/nuove/lineare/4/IMG_8246.JPEG",
       "images": [
-        "Images/nuove/lineare/4/IMG_8246.JPEG",
+        "/Images/nuove/lineare/4/IMG_8246.JPEG",
         "/Images/nuove/lineare/4/IMG_8247.JPEG",
         "/Images/nuove/lineare/4/IMG_8248.JPEG"
       ],
@@ -314,9 +314,9 @@
       "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "thumbnail": "/Images/nuove/lineare/5/IMG_8249.JPEG",
       "images": [
-        "Images/nuove/lineare/5/IMG_8249.JPEG",
+        "/Images/nuove/lineare/5/IMG_8249.JPEG",
         "/Images/nuove/lineare/5/IMG_8251.JPEG",
         "/Images/nuove/lineare/5/IMG_8250.JPEG"
       ],
@@ -390,9 +390,9 @@
       "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "thumbnail": "Images/nuove/lineare/6/IMG_8252.JPEG",
       "images": [
-        "Images/nuove/lineare/6/IMG_8252.JPEG",
+        "/Images/nuove/lineare/6/IMG_8252.JPEG",
         "/Images/nuove/lineare/6/IMG_8253.JPEG",
         "/Images/nuove/lineare/6/IMG_8254.JPEG"
       ],
