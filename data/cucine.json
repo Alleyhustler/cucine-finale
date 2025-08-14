@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "slug": "moderna-bianca",
+      "slug": "Ombra-Lux",
       "name": "Cucina Moderna Elegante",
       "shortDescription": "Design contemporaneo con finiture di alta qualità",
       "description": "Una cucina dal design moderno e raffinato, caratterizzata da linee pulite e materiali di prima scelta. Perfetta per chi cerca funzionalità ed estetica in un unico ambiente. Le ante in laminato resistente si abbinano perfettamente al top in quarzo, creando un equilibrio perfetto tra bellezza e praticità.",
@@ -10,7 +10,7 @@
       "category": "moderna",
       "thumbnail": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
       "images": [
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+        "../images/nuove/lineare/1/img_8227.jpeg",
         "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&h=600&fit=crop"
       ],
