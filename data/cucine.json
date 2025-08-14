@@ -3,16 +3,16 @@
     {
       "id": 1,
       "slug": "Ombra-Lux",
-      "name": "Cucina Moderna Elegante",
+      "name": "Cucina Ombra Lux",
       "shortDescription": "Design contemporaneo con finiture di alta qualità",
       "description": "Una cucina dal design moderno e raffinato, caratterizzata da linee pulite e materiali di prima scelta. Perfetta per chi cerca funzionalità ed estetica in un unico ambiente. Le ante in laminato resistente si abbinano perfettamente al top in quarzo, creando un equilibrio perfetto tra bellezza e praticità.",
-      "price": "A partire da €15.000",
+      "price": "Pronta Consegna",
       "category": "moderna",
       "thumbnail": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
       "images": [
         "/Images/nuove/lineare/1/IMG_8227.JPEG",
-        "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&h=600&fit=crop"
+        "/Images/nuove/lineare/1/IMG_8229.JPEG",
+        "/Images/nuove/lineare/1/IMG_8230.JPEG"
       ],
       "features": [
         {
@@ -79,17 +79,17 @@
     },
     {
       "id": 2,
-      "slug": "cucina-classica-tradizionale",
-      "name": "Cucina Classica Tradizionale",
+      "slug": "Verde-Noce",
+      "name": "Verde Noce",
       "shortDescription": "Design senza tempo con ante in legno massello",
       "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
-      "price": "A partire da €18.500",
+      "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
       "images": [
-        "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1556909191-89a5c0c3d5bf?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop"
+        "/Images/nuove/lineare/1/IMG_8238.JPEG",
+        "/Images/nuove/lineare/1/IMG_8239.JPEG",
+        "/Images/nuove/lineare/1/IMG_8240.JPEG"
       ],
       "features": [
         {
@@ -149,9 +149,390 @@
             "Mensole in legno massello",
             "Piedini torniti regolabili"
           ]
+        } 
+      ],
+      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 3,
+      "slug": "Bianco-Cenere",
+      "name": "Bianco Cenere",
+      "shortDescription": "Design senza tempo con ante in legno massello",
+      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "images": [
+        "Images/nuove/lineare/2/IMG_8244.JPEG",
+        "/Images/nuove/lineare/1/IMG_8239.JPEG",
+        "/Images/nuove/lineare/1/IMG_8240.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Legno Massello di Castagno",
+          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+        },
+        {
+          "title": "Top in Granito Naturale",
+          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+        },
+        {
+          "title": "Maniglie in Ottone",
+          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+        },
+        {
+          "title": "Finitura Personalizzabile",
+          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+        },
+        {
+          "title": "Zoccolatura in Legno",
+          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
         }
+      ],
+      "specifications": [
+        {
+          "category": "Dimensioni",
+          "details": [
+            "Lunghezza: 320-500 cm (modulare)",
+            "Profondità: 60 cm standard, 65 cm per isola",
+            "Altezza pensili: 75 cm",
+            "Altezza totale: 235 cm"
+          ]
+        },
+        {
+          "category": "Materiali",
+          "details": [
+            "Ante: Legno massello di castagno 22mm",
+            "Top: Granito naturale 40mm",
+            "Struttura: Legno multistrato 18mm",
+            "Maniglie: Ottone anticato lavorato a mano"
+          ]
+        },
+        {
+          "category": "Elettrodomestici",
+          "details": [
+            "Forno tradizionale con grill A+",
+            "Piano cottura in ghisa 5 fuochi",
+            "Lavastoviglie integrata classe A++",
+            "Cappa camino in rame battuto"
+          ]
+        },
+        {
+          "category": "Dettagli Artigianali",
+          "details": [
+            "Cornici bugnate sui frontali",
+            "Colonne scanalate decorative",
+            "Mensole in legno massello",
+            "Piedini torniti regolabili"
+          ]
+        } 
+      ],
+      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 2,
+      "slug": "Verde-Noce",
+      "name": "Verde Noce",
+      "shortDescription": "Design senza tempo con ante in legno massello",
+      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "images": [
+        "/Images/nuove/lineare/1/IMG_8244.JPEG",
+        "/Images/nuove/lineare/1/IMG_8243.JPEG",
+        "/Images/nuove/lineare/1/IMG_8245.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Legno Massello di Castagno",
+          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+        },
+        {
+          "title": "Top in Granito Naturale",
+          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+        },
+        {
+          "title": "Maniglie in Ottone",
+          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+        },
+        {
+          "title": "Finitura Personalizzabile",
+          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+        },
+        {
+          "title": "Zoccolatura in Legno",
+          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
+        }
+      ],
+      "specifications": [
+        {
+          "category": "Dimensioni",
+          "details": [
+            "Lunghezza: 320-500 cm (modulare)",
+            "Profondità: 60 cm standard, 65 cm per isola",
+            "Altezza pensili: 75 cm",
+            "Altezza totale: 235 cm"
+          ]
+        },
+        {
+          "category": "Materiali",
+          "details": [
+            "Ante: Legno massello di castagno 22mm",
+            "Top: Granito naturale 40mm",
+            "Struttura: Legno multistrato 18mm",
+            "Maniglie: Ottone anticato lavorato a mano"
+          ]
+        },
+        {
+          "category": "Elettrodomestici",
+          "details": [
+            "Forno tradizionale con grill A+",
+            "Piano cottura in ghisa 5 fuochi",
+            "Lavastoviglie integrata classe A++",
+            "Cappa camino in rame battuto"
+          ]
+        },
+        {
+          "category": "Dettagli Artigianali",
+          "details": [
+            "Cornici bugnate sui frontali",
+            "Colonne scanalate decorative",
+            "Mensole in legno massello",
+            "Piedini torniti regolabili"
+          ]
+        } 
+      ],
+      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 4,
+      "slug": "Classica-Avorio",
+      "name": "Classica Avorio",
+      "shortDescription": "Design senza tempo con ante in legno massello",
+      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "images": [
+        "Images/nuove/lineare/2/IMG_8246.JPEG",
+        "/Images/nuove/lineare/1/IMG_8247.JPEG",
+        "/Images/nuove/lineare/1/IMG_8248.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Legno Massello di Castagno",
+          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+        },
+        {
+          "title": "Top in Granito Naturale",
+          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+        },
+        {
+          "title": "Maniglie in Ottone",
+          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+        },
+        {
+          "title": "Finitura Personalizzabile",
+          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+        },
+        {
+          "title": "Zoccolatura in Legno",
+          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
+        }
+      ],
+      "specifications": [
+        {
+          "category": "Dimensioni",
+          "details": [
+            "Lunghezza: 320-500 cm (modulare)",
+            "Profondità: 60 cm standard, 65 cm per isola",
+            "Altezza pensili: 75 cm",
+            "Altezza totale: 235 cm"
+          ]
+        },
+        {
+          "category": "Materiali",
+          "details": [
+            "Ante: Legno massello di castagno 22mm",
+            "Top: Granito naturale 40mm",
+            "Struttura: Legno multistrato 18mm",
+            "Maniglie: Ottone anticato lavorato a mano"
+          ]
+        },
+        {
+          "category": "Elettrodomestici",
+          "details": [
+            "Forno tradizionale con grill A+",
+            "Piano cottura in ghisa 5 fuochi",
+            "Lavastoviglie integrata classe A++",
+            "Cappa camino in rame battuto"
+          ]
+        },
+        {
+          "category": "Dettagli Artigianali",
+          "details": [
+            "Cornici bugnate sui frontali",
+            "Colonne scanalate decorative",
+            "Mensole in legno massello",
+            "Piedini torniti regolabili"
+          ]
+        } 
+      ],
+      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 5,
+      "slug": "Nero-Rovere",
+      "name": "Nero Rovere",
+      "shortDescription": "Design senza tempo con ante in legno massello",
+      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "images": [
+        "Images/nuove/lineare/2/IMG_8249.JPEG",
+        "/Images/nuove/lineare/1/IMG_8251.JPEG",
+        "/Images/nuove/lineare/1/IMG_8250.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Legno Massello di Castagno",
+          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+        },
+        {
+          "title": "Top in Granito Naturale",
+          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+        },
+        {
+          "title": "Maniglie in Ottone",
+          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+        },
+        {
+          "title": "Finitura Personalizzabile",
+          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+        },
+        {
+          "title": "Zoccolatura in Legno",
+          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
+        }
+      ],
+      "specifications": [
+        {
+          "category": "Dimensioni",
+          "details": [
+            "Lunghezza: 320-500 cm (modulare)",
+            "Profondità: 60 cm standard, 65 cm per isola",
+            "Altezza pensili: 75 cm",
+            "Altezza totale: 235 cm"
+          ]
+        },
+        {
+          "category": "Materiali",
+          "details": [
+            "Ante: Legno massello di castagno 22mm",
+            "Top: Granito naturale 40mm",
+            "Struttura: Legno multistrato 18mm",
+            "Maniglie: Ottone anticato lavorato a mano"
+          ]
+        },
+        {
+          "category": "Elettrodomestici",
+          "details": [
+            "Forno tradizionale con grill A+",
+            "Piano cottura in ghisa 5 fuochi",
+            "Lavastoviglie integrata classe A++",
+            "Cappa camino in rame battuto"
+          ]
+        },
+        {
+          "category": "Dettagli Artigianali",
+          "details": [
+            "Cornici bugnate sui frontali",
+            "Colonne scanalate decorative",
+            "Mensole in legno massello",
+            "Piedini torniti regolabili"
+          ]
+        } 
+      ],
+      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 6,
+      "slug": "Perla-Bianca",
+      "name": "Perla Bianca",
+      "shortDescription": "Design senza tempo con ante in legno massello",
+      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "https://images.unsplash.com/photo-1565538420881-648a4d5b8f9e?w=400&h=300&fit=crop",
+      "images": [
+        "Images/nuove/lineare/2/IMG_8252.JPEG",
+        "/Images/nuove/lineare/1/IMG_8253.JPEG",
+        "/Images/nuove/lineare/1/IMG_8254.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Legno Massello di Castagno",
+          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+        },
+        {
+          "title": "Top in Granito Naturale",
+          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+        },
+        {
+          "title": "Maniglie in Ottone",
+          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+        },
+        {
+          "title": "Finitura Personalizzabile",
+          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+        },
+        {
+          "title": "Zoccolatura in Legno",
+          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
+        }
+      ],
+      "specifications": [
+        {
+          "category": "Dimensioni",
+          "details": [
+            "Lunghezza: 320-500 cm (modulare)",
+            "Profondità: 60 cm standard, 65 cm per isola",
+            "Altezza pensili: 75 cm",
+            "Altezza totale: 235 cm"
+          ]
+        },
+        {
+          "category": "Materiali",
+          "details": [
+            "Ante: Legno massello di castagno 22mm",
+            "Top: Granito naturale 40mm",
+            "Struttura: Legno multistrato 18mm",
+            "Maniglie: Ottone anticato lavorato a mano"
+          ]
+        },
+        {
+          "category": "Elettrodomestici",
+          "details": [
+            "Forno tradizionale con grill A+",
+            "Piano cottura in ghisa 5 fuochi",
+            "Lavastoviglie integrata classe A++",
+            "Cappa camino in rame battuto"
+          ]
+        },
+        {
+          "category": "Dettagli Artigianali",
+          "details": [
+            "Cornici bugnate sui frontali",
+            "Colonne scanalate decorative",
+            "Mensole in legno massello",
+            "Piedini torniti regolabili"
+          ]
+        } 
       ],
       "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
     }
   ]
 }
+  
