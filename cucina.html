@@ -279,150 +279,53 @@
             color: var(--primary-dark);
         }
 
-        /* LAYOUT PRINCIPALE: GALLERIA MODERNA + DETTAGLI A DESTRA */
+        /* LAYOUT PRINCIPALE: 3 IMMAGINI A SINISTRA + DETTAGLI A DESTRA */
         .product-main {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
             margin-bottom: 4rem;
         }
 
-        /* GALLERIA MODERNA CON LAYOUT VERTICALE */
+        /* Galleria delle 3 immagini */
         .product-gallery {
             display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 1.5rem;
-            height: 650px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 1fr 1fr;
+            gap: 1rem;
+            height: 600px;
         }
 
-        /* Thumbnails verticali */
-        .gallery-thumbnails {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            height: fit-content;
+        .gallery-main {
+            grid-column: span 2;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.15);
         }
 
         .gallery-thumb {
-            width: 100px;
-            height: 100px;
             overflow: hidden;
-            border-radius: 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(44, 52, 36, 0.1);
             cursor: pointer;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 3px solid transparent;
-            background: linear-gradient(var(--white), var(--white)) padding-box,
-                        linear-gradient(45deg, var(--primary-dark), var(--accent-medium)) border-box;
+            transition: all 0.3s ease;
         }
 
-        .gallery-thumb.active {
-            border-color: var(--primary-dark);
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.25);
+        .gallery-thumb:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.2);
         }
 
-        .gallery-thumb:hover:not(.active) {
-            transform: scale(1.02) translateY(-2px);
-            border-color: var(--accent-medium);
-            box-shadow: 0 5px 15px rgba(44, 52, 36, 0.15);
-        }
-
+        .gallery-main img,
         .gallery-thumb img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.4s ease;
+            transition: transform 0.3s ease;
         }
 
         .gallery-thumb:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Immagine principale moderna */
-        .gallery-main {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(44, 52, 36, 0.15);
-            background: var(--white);
-            height: 650px;
-        }
-
-        .gallery-main::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, 
-                transparent 0%, 
-                rgba(255,255,255,0.1) 45%, 
-                rgba(255,255,255,0.3) 50%, 
-                rgba(255,255,255,0.1) 55%, 
-                transparent 100%);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .gallery-main:hover::before {
-            transform: translateX(100%);
-        }
-
-        .gallery-main img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .gallery-main:hover img {
-            transform: scale(1.03);
-        }
-
-        /* Badge di qualità */
-        .quality-badge {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(44, 52, 36, 0.9);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            backdrop-filter: blur(10px);
-            z-index: 3;
-        }
-
-        /* Zoom indicator */
-        .zoom-indicator {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            color: var(--primary-dark);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            z-index: 3;
-        }
-
-        .zoom-indicator:hover {
-            background: var(--primary-dark);
-            color: white;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         /* Dettagli del prodotto */
@@ -430,7 +333,6 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            padding: 1rem 0;
         }
 
         .product-title {
@@ -886,7 +788,7 @@
             transform: translateY(-2px);
         }
 
-        /* RESPONSIVE - Adattamento per la nuova galleria */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
             .product-main {
                 grid-template-columns: 1fr;
@@ -894,13 +796,7 @@
             }
             
             .product-gallery {
-                grid-template-columns: 80px 1fr;
                 height: 500px;
-            }
-            
-            .gallery-thumb {
-                width: 80px;
-                height: 80px;
             }
             
             .nav-desktop {
@@ -914,21 +810,7 @@
             }
             
             .product-gallery {
-                grid-template-columns: 1fr;
-                grid-template-rows: 400px auto;
-                height: auto;
-                gap: 1rem;
-            }
-            
-            .gallery-thumbnails {
-                flex-direction: row;
-                justify-content: center;
-                gap: 8px;
-            }
-            
-            .gallery-thumb {
-                width: 70px;
-                height: 70px;
+                height: 400px;
             }
             
             .product-title {
@@ -951,22 +833,22 @@
         }
 
         @media (max-width: 480px) {
-            .gallery-main {
+            .product-gallery {
                 height: 300px;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-main {
+                grid-column: span 1;
             }
             
             .gallery-thumb {
-                width: 60px;
-                height: 60px;
+                display: none;
             }
             
             .product-title {
                 font-size: 1.8rem;
-            }
-            
-            .quality-badge {
-                font-size: 0.75rem;
-                padding: 6px 12px;
             }
         }
 
@@ -999,6 +881,22 @@
             <nav class="nav-desktop">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
+                <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+                <a href="servizi.html" class="nav-link">Servizi</a>
+                <a href="index.html#contatti" class="nav-link">Contatti</a>
+                <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
+            </nav>
+            
+            <a href="#preventivo" class="cta-button" id="preventivoButton">Richiedi un preventivo</a>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="logo">Cucine Italia</a>
+        <div class="mobile-nav">
+            <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
             <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
             <a href="servizi.html" class="nav-link">Servizi</a>
             <a href="index.html#contatti" class="nav-link">Contatti</a>
@@ -1015,69 +913,43 @@
             <span>Cucina Moderna Elegante</span>
         </nav>
 
-        <!-- LAYOUT PRINCIPALE: GALLERIA MODERNA + DETTAGLI A DESTRA -->
+        <!-- LAYOUT PRINCIPALE: 3 IMMAGINI A SINISTRA + DETTAGLI A DESTRA -->
         <section class="product-main fade-in">
-            <!-- Galleria moderna con layout verticale -->
+            <!-- Galleria delle 3 immagini -->
+<!-- Galleria delle immagini - Versione migliorata -->
             <div class="product-gallery" id="productGallery">
-                <!-- Immagine principale con effetti moderni -->
                 <div class="gallery-main">
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800" alt="Cucina principale" id="mainImage">
-                    <div class="quality-badge">Qualità Premium</div>
-                    <div class="zoom-indicator" id="zoomBtn">🔍</div>
+                    <img src="" alt="Cucina principale" id="mainImage">
                 </div>
-                
-                <!-- Thumbnails verticali -->
-                <div class="gallery-thumbnails">
-                    <div class="gallery-thumb active" id="thumb1" onclick="changeMainImage('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800', this)">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200" alt="Vista 1">
-                    </div>
-                    <div class="gallery-thumb" id="thumb2" onclick="changeMainImage('https://images.unsplash.com/photo-1565538420269-d2c329a0a9d3?w=800', this)">
-                        <img src="https://images.unsplash.com/photo-1565538420269-d2c329a0a9d3?w=200" alt="Vista 2">
-                    </div>
-                    <div class="gallery-thumb" id="thumb3" onclick="changeMainImage('https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800', this)">
-                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=200" alt="Vista 3">
-                    </div>
-                    <div class="gallery-thumb" id="thumb4" onclick="changeMainImage('https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=800', this)">
-                        <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=200" alt="Vista 4">
-                    </div>
+                <div class="gallery-thumb active" id="thumb1">
+                    <img src="" alt="Vista 1">
+                    <div class="thumb-overlay"></div>
+                </div>
+                <div class="gallery-thumb" id="thumb2">
+                    <img src="" alt="Vista 2">
+                    <div class="thumb-overlay"></div>
+                </div>
+                <div class="gallery-thumb" id="thumb3">
+                    <img src="" alt="Vista 3">
+                    <div class="thumb-overlay"></div>
                 </div>
             </div>
 
             <!-- Dettagli del prodotto -->
             <div class="product-details">
-                <h1 class="product-title" id="productTitle">Cucina Moderna Elegante</h1>
-                <p class="product-subtitle" id="productSubtitle">Design contemporaneo con finiture di lusso</p>
+                <h1 class="product-title" id="productTitle">Caricamento...</h1>
+                <p class="product-subtitle" id="productSubtitle">Caricamento dettagli...</p>
                 
                 <div class="product-price" id="productPrice">
-                    € 8.500,00
+                    Prezzo in caricamento...
                 </div>
 
                 <div class="product-description" id="productDescription">
-                    <p>Questa cucina moderna rappresenta l'eccellenza del design italiano, combinando funzionalità e bellezza in un'armonia perfetta. Realizzata con materiali di prima qualità e finiture raffinate.</p>
+                    <p>Caricamento descrizione...</p>
                 </div>
 
                 <div class="product-features" id="productFeatures">
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">
-                            <div class="feature-title">Materiali Premium</div>
-                            <div class="feature-desc">Laccato opaco con inserti in legno massello</div>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">
-                            <div class="feature-title">Elettrodomestici Inclusi</div>
-                            <div class="feature-desc">Set completo di elettrodomestici di marca europea</div>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">
-                            <div class="feature-title">Installazione Professionale</div>
-                            <div class="feature-desc">Montaggio e installazione inclusi nel prezzo</div>
-                        </div>
-                    </div>
+                    <!-- Features will be populated by JavaScript -->
                 </div>
 
                 <div class="product-actions">
@@ -1093,33 +965,7 @@
         <section class="section fade-in">
             <h2 class="section-title">Specifiche Tecniche</h2>
             <div class="specs-grid" id="productSpecs">
-                <div class="spec-card">
-                    <h3 class="spec-title">Dimensioni</h3>
-                    <ul class="spec-list">
-                        <li>Larghezza: 360 cm</li>
-                        <li>Profondità: 65 cm</li>
-                        <li>Altezza: 230 cm</li>
-                        <li>Isola centrale: 200x100 cm</li>
-                    </ul>
-                </div>
-                <div class="spec-card">
-                    <h3 class="spec-title">Materiali</h3>
-                    <ul class="spec-list">
-                        <li>Ante in laccato opaco</li>
-                        <li>Piano in quarzo</li>
-                        <li>Struttura in multistrato</li>
-                        <li>Maniglie in acciaio satinato</li>
-                    </ul>
-                </div>
-                <div class="spec-card">
-                    <h3 class="spec-title">Elettrodomestici</h3>
-                    <ul class="spec-list">
-                        <li>Piano cottura a induzione 4 fuochi</li>
-                        <li>Forno multifunzione A++</li>
-                        <li>Lavastoviglie 60cm A+++</li>
-                        <li>Frigorifero combinato classe A++</li>
-                    </ul>
-                </div>
+                <!-- Specifications will be populated by JavaScript -->
             </div>
         </section>
 
@@ -1127,36 +973,7 @@
         <section class="section fade-in">
             <h2 class="section-title">Altre Cucine che Potrebbero Piacerti</h2>
             <div class="related-grid" id="relatedProducts">
-                <div class="related-card">
-                    <a href="cucina.html?slug=cucina-classica-luxury">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400" alt="Cucina Classica" class="related-image">
-                    </a>
-                    <div class="related-info">
-                        <h3 class="related-name">Cucina Classica Luxury</h3>
-                        <p class="related-desc">Eleganza senza tempo con dettagli artigianali</p>
-                        <a href="cucina.html?slug=cucina-classica-luxury" class="related-link">Scopri di più</a>
-                    </div>
-                </div>
-                <div class="related-card">
-                    <a href="cucina.html?slug=cucina-minimal-design">
-                        <img src="https://images.unsplash.com/photo-1565538420269-d2c329a0a9d3?w=400" alt="Cucina Minimal" class="related-image">
-                    </a>
-                    <div class="related-info">
-                        <h3 class="related-name">Cucina Minimal Design</h3>
-                        <p class="related-desc">Design pulito e funzionalità ottimale</p>
-                        <a href="cucina.html?slug=cucina-minimal-design" class="related-link">Scopri di più</a>
-                    </div>
-                </div>
-                <div class="related-card">
-                    <a href="cucina.html?slug=cucina-country-chic">
-                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400" alt="Cucina Country" class="related-image">
-                    </a>
-                    <div class="related-info">
-                        <h3 class="related-name">Cucina Country Chic</h3>
-                        <p class="related-desc">Stile rustico con comfort moderni</p>
-                        <a href="cucina.html?slug=cucina-country-chic" class="related-link">Scopri di più</a>
-                    </div>
-                </div>
+                <!-- Related products will be populated by JavaScript -->
             </div>
         </section>
     </main>
@@ -1196,6 +1013,8 @@
             <div class="footer-section">
                 <h3>Socials</h3>
             <div class="social-links">
+
+
                 <a href="https://www.facebook.com/profile.php?id=61576278827754" class="social-link"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/cucine.italia/" class="social-link"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.tiktok.com/@cucineitalia" class="social-link"><i class="fab fa-tiktok"></i></a>
@@ -1279,24 +1098,9 @@
 
     <!-- JavaScript -->
     <script>
-        // Funzione migliorata per cambiare l'immagine principale
-        function changeMainImage(src, thumbElement) {
-            const mainImage = document.getElementById('mainImage');
-            
-            // Rimuovi la classe active da tutti i thumbnails
-            document.querySelectorAll('.gallery-thumb').forEach(thumb => {
-                thumb.classList.remove('active');
-            });
-            
-            // Aggiungi la classe active al thumbnail cliccato
-            thumbElement.classList.add('active');
-            
-            // Cambia l'immagine principale con effetto fade
-            mainImage.style.opacity = '0.7';
-            setTimeout(() => {
-                mainImage.src = src;
-                mainImage.style.opacity = '1';
-            }, 150);
+        // Funzione per cambiare l'immagine principale
+        function changeMainImage(src) {
+            document.getElementById('mainImage').src = src;
         }
 
         // Mobile menu toggle
@@ -1356,20 +1160,6 @@
             if (e.target === preventivoModal) {
                 preventivoModal.classList.remove('active');
                 document.body.style.overflow = '';
-            }
-        });
-
-        // Zoom functionality (basic implementation)
-        document.getElementById('zoomBtn').addEventListener('click', function() {
-            const mainImage = document.getElementById('mainImage');
-            if (mainImage.style.transform === 'scale(1.5)') {
-                mainImage.style.transform = 'scale(1)';
-                mainImage.style.cursor = 'default';
-                this.textContent = '🔍';
-            } else {
-                mainImage.style.transform = 'scale(1.5)';
-                mainImage.style.cursor = 'zoom-out';
-                this.textContent = '🔍';
             }
         });
 
@@ -1475,33 +1265,32 @@
             document.getElementById('productPrice').textContent = product.price || 'Prezzo su richiesta';
             document.getElementById('productDescription').innerHTML = `<p>${product.description}</p>`;
 
-            // Aggiorna galleria immagini con il nuovo layout
+            // Aggiorna galleria immagini
             const mainImage = document.getElementById('mainImage');
-            const thumbnails = document.querySelectorAll('.gallery-thumb');
+            const thumb1 = document.getElementById('thumb1');
+            const thumb2 = document.getElementById('thumb2');
             
             if (product.images && product.images.length > 0) {
                 mainImage.src = product.images[0];
                 mainImage.alt = `${product.name} - Immagine principale`;
                 
-                // Aggiorna i thumbnails con le immagini del prodotto
-                thumbnails.forEach((thumb, index) => {
-                    if (product.images[index]) {
-                        const img = thumb.querySelector('img');
-                        img.src = product.images[index];
-                        img.alt = `${product.name} - Vista ${index + 1}`;
-                        thumb.onclick = () => changeMainImage(product.images[index], thumb);
-                        thumb.style.display = 'block';
-                        
-                        // Il primo thumbnail è attivo di default
-                        if (index === 0) {
-                            thumb.classList.add('active');
-                        } else {
-                            thumb.classList.remove('active');
-                        }
-                    } else {
-                        thumb.style.display = 'none';
-                    }
-                });
+                if (product.images[1]) {
+                    thumb1.querySelector('img').src = product.images[1];
+                    thumb1.querySelector('img').alt = `${product.name} - Vista 1`;
+                    thumb1.onclick = () => changeMainImage(product.images[1]);
+                    thumb1.style.display = 'block';
+                } else {
+                    thumb1.style.display = 'none';
+                }
+                
+                if (product.images[2]) {
+                    thumb2.querySelector('img').src = product.images[2];
+                    thumb2.querySelector('img').alt = `${product.name} - Vista 2`;
+                    thumb2.onclick = () => changeMainImage(product.images[2]);
+                    thumb2.style.display = 'block';
+                } else {
+                    thumb2.style.display = 'none';
+                }
             }
 
             // Popola le features
@@ -1589,12 +1378,6 @@
 
         // Inizializza la pagina
         document.addEventListener('DOMContentLoaded', function() {
-            // Se non c'è uno slug, usa i dati demo
-            const slug = getUrlParameter('slug');
-            if (!slug) {
-                console.log('Nessun slug trovato, usando dati demo');
-                return; // I dati demo sono già nel HTML
-            }
             loadProductData();
         });
     </script>
