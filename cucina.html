@@ -287,45 +287,94 @@
             margin-bottom: 4rem;
         }
 
-        /* Galleria delle 3 immagini */
+        /* GALLERIA IMMAGINI MIGLIORATA */
         .product-gallery {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 2fr 1fr 1fr;
-            gap: 1rem;
+            grid-template-columns: 80px 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 1.5rem;
             height: 600px;
+            position: relative;
         }
 
         .gallery-main {
-            grid-column: span 2;
+            grid-column: 2;
+            grid-row: 1 / span 3;
             overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(44, 52, 36, 0.2);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            background: var(--accent-light);
+        }
+
+        .gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, opacity 0.3s ease;
+        }
+
+        .gallery-main:hover img {
+            transform: scale(1.02);
         }
 
         .gallery-thumb {
+            width: 100%;
+            height: 100%;
             overflow: hidden;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(44, 52, 36, 0.1);
             cursor: pointer;
-            transition: all 0.3s ease;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(44, 52, 36, 0.1);
+            border: 2px solid transparent;
         }
 
-        .gallery-thumb:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.2);
-        }
-
-        .gallery-main img,
         .gallery-thumb img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-thumb:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 52, 36, 0.15);
+            border-color: var(--primary-dark);
         }
 
         .gallery-thumb:hover img {
             transform: scale(1.05);
+        }
+
+        .gallery-thumb.active {
+            border-color: var(--primary-dark);
+        }
+
+        .thumb-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 52, 36, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-thumb:hover .thumb-overlay,
+        .gallery-thumb.active .thumb-overlay {
+            background: rgba(44, 52, 36, 0);
+        }
+
+        /* Animazione cambio immagine */
+        @keyframes fadeIn {
+            from { opacity: 0.6; }
+            to { opacity: 1; }
+        }
+
+        .gallery-main img.fade-in {
+            animation: fadeIn 0.5s ease forwards;
         }
 
         /* Dettagli del prodotto */
@@ -797,6 +846,8 @@
             
             .product-gallery {
                 height: 500px;
+                grid-template-columns: 70px 1fr;
+                gap: 1rem;
             }
             
             .nav-desktop {
@@ -811,6 +862,7 @@
             
             .product-gallery {
                 height: 400px;
+                grid-template-columns: 60px 1fr;
             }
             
             .product-title {
@@ -832,19 +884,27 @@
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             .product-gallery {
-                height: 300px;
-                grid-template-rows: 1fr;
                 grid-template-columns: 1fr;
+                grid-template-rows: auto 80px 80px;
+                height: auto;
             }
             
             .gallery-main {
-                grid-column: span 1;
+                grid-column: 1;
+                grid-row: 1;
+                height: 350px;
             }
             
             .gallery-thumb {
-                display: none;
+                display: inline-block;
+                width: calc(33.33% - 10px);
+                margin-right: 10px;
+            }
+            
+            .gallery-thumb:last-child {
+                margin-right: 0;
             }
             
             .product-title {
@@ -915,8 +975,7 @@
 
         <!-- LAYOUT PRINCIPALE: 3 IMMAGINI A SINISTRA + DETTAGLI A DESTRA -->
         <section class="product-main fade-in">
-            <!-- Galleria delle 3 immagini -->
-<!-- Galleria delle immagini - Versione migliorata -->
+            <!-- Galleria delle immagini - Versione migliorata -->
             <div class="product-gallery" id="productGallery">
                 <div class="gallery-main">
                     <img src="" alt="Cucina principale" id="mainImage">
@@ -1098,9 +1157,48 @@
 
     <!-- JavaScript -->
     <script>
-        // Funzione per cambiare l'immagine principale
-        function changeMainImage(src) {
-            document.getElementById('mainImage').src = src;
+        // Funzione migliorata per cambiare l'immagine principale
+        function changeMainImage(src, thumbId) {
+            const mainImage = document.getElementById('mainImage');
+            
+            // Aggiungi classe per animazione
+            mainImage.classList.add('fade-in');
+            
+            // Cambia l'immagine dopo un piccolo ritardo per permettere all'animazione di partire
+            setTimeout(() => {
+                mainImage.src = src;
+                
+                // Rimuovi la classe dopo l'animazione
+                setTimeout(() => {
+                    mainImage.classList.remove('fade-in');
+                }, 500);
+            }, 50);
+            
+            // Aggiorna lo stato attivo delle miniature
+            document.querySelectorAll('.gallery-thumb').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            
+            if (thumbId) {
+                document.getElementById(thumbId).classList.add('active');
+            }
+        }
+
+        // Inizializza la galleria
+        function initGallery() {
+            const thumbs = document.querySelectorAll('.gallery-thumb');
+            
+            thumbs.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    const imgSrc = this.querySelector('img').src;
+                    changeMainImage(imgSrc, this.id);
+                });
+            });
+            
+            // Attiva la prima miniatura per default
+            if (thumbs.length > 0) {
+                thumbs[0].classList.add('active');
+            }
         }
 
         // Mobile menu toggle
@@ -1269,6 +1367,7 @@
             const mainImage = document.getElementById('mainImage');
             const thumb1 = document.getElementById('thumb1');
             const thumb2 = document.getElementById('thumb2');
+            const thumb3 = document.getElementById('thumb3');
             
             if (product.images && product.images.length > 0) {
                 mainImage.src = product.images[0];
@@ -1277,7 +1376,6 @@
                 if (product.images[1]) {
                     thumb1.querySelector('img').src = product.images[1];
                     thumb1.querySelector('img').alt = `${product.name} - Vista 1`;
-                    thumb1.onclick = () => changeMainImage(product.images[1]);
                     thumb1.style.display = 'block';
                 } else {
                     thumb1.style.display = 'none';
@@ -1286,10 +1384,17 @@
                 if (product.images[2]) {
                     thumb2.querySelector('img').src = product.images[2];
                     thumb2.querySelector('img').alt = `${product.name} - Vista 2`;
-                    thumb2.onclick = () => changeMainImage(product.images[2]);
                     thumb2.style.display = 'block';
                 } else {
                     thumb2.style.display = 'none';
+                }
+
+                if (product.images[3]) {
+                    thumb3.querySelector('img').src = product.images[3];
+                    thumb3.querySelector('img').alt = `${product.name} - Vista 3`;
+                    thumb3.style.display = 'block';
+                } else {
+                    thumb3.style.display = 'none';
                 }
             }
 
@@ -1378,6 +1483,7 @@
 
         // Inizializza la pagina
         document.addEventListener('DOMContentLoaded', function() {
+            initGallery();
             loadProductData();
         });
     </script>
