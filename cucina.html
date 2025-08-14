@@ -279,53 +279,225 @@
             color: var(--primary-dark);
         }
 
-        /* LAYOUT PRINCIPALE: 3 IMMAGINI A SINISTRA + DETTAGLI A DESTRA */
-        .product-main {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
-        }
-
-        /* Galleria delle 3 immagini */
+        /* NUOVA GALLERIA IMMAGINI MIGLIORATA */
         .product-gallery {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 2fr 1fr 1fr;
-            gap: 1rem;
-            height: 600px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
+            height: auto;
         }
 
         .gallery-main {
-            grid-column: span 2;
+            position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(44, 52, 36, 0.2);
+            aspect-ratio: 16/9;
+            background: var(--accent-light);
         }
 
-        .gallery-thumb {
+        .image-zoom-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(44, 52, 36, 0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
 
-        .gallery-thumb:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.2);
-        }
-
-        .gallery-main img,
-        .gallery-thumb img {
+        .zoom-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
+            cursor: zoom-in;
         }
 
-        .gallery-thumb:hover img {
-            transform: scale(1.05);
+        .zoom-lens {
+            position: absolute;
+            border: 2px solid rgba(255,255,255,0.8);
+            background: rgba(255,255,255,0.3);
+            cursor: zoom-in;
+            display: none;
+            width: 150px;
+            height: 150px;
+            pointer-events: none;
+        }
+
+        .image-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            z-index: 10;
+        }
+
+        .nav-arrow {
+            background: rgba(255,255,255,0.8);
+            color: var(--primary-dark);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-arrow:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .image-counter {
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .thumb-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 52, 36, 0.1);
+        }
+
+        .thumb-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .thumb-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 52, 36, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .thumb-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.2);
+        }
+
+        .thumb-container:hover .thumb-image {
+            transform: scale(1.1);
+        }
+
+        .thumb-container:hover .thumb-overlay {
+            opacity: 1;
+        }
+
+        /* Modal per visualizzazione fullscreen */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: zoom 0.3s;
+        }
+
+        @keyframes zoom {
+            from {transform: translate(-50%, -50%) scale(0.9)}
+            to {transform: translate(-50%, -50%) scale(1)}
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-medium);
+            transform: rotate(90deg);
+        }
+
+        .modal-prev, .modal-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s;
+            user-select: none;
+            background: rgba(0,0,0,0.3);
+            border-radius: 0 5px 5px 0;
+        }
+
+        .modal-next {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .modal-prev:hover, .modal-next:hover {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .modal-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            padding: 10px 0;
+            background: rgba(0,0,0,0.5);
         }
 
         /* Dettagli del prodotto */
@@ -795,8 +967,12 @@
                 gap: 2rem;
             }
             
-            .product-gallery {
-                height: 500px;
+            .gallery-thumbs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .thumb-container:nth-child(3) {
+                display: none;
             }
             
             .nav-desktop {
@@ -809,8 +985,13 @@
                 padding: 0 1rem;
             }
             
-            .product-gallery {
-                height: 400px;
+            .gallery-main {
+                aspect-ratio: 4/3;
+            }
+            
+            .nav-arrow {
+                width: 35px;
+                height: 35px;
             }
             
             .product-title {
@@ -833,18 +1014,16 @@
         }
 
         @media (max-width: 480px) {
-            .product-gallery {
-                height: 300px;
-                grid-template-rows: 1fr;
+            .gallery-thumbs {
                 grid-template-columns: 1fr;
             }
             
-            .gallery-main {
-                grid-column: span 1;
+            .thumb-container {
+                aspect-ratio: 16/9;
             }
             
-            .gallery-thumb {
-                display: none;
+            .thumb-container:nth-child(3) {
+                display: block;
             }
             
             .product-title {
@@ -915,23 +1094,52 @@
 
         <!-- LAYOUT PRINCIPALE: 3 IMMAGINI A SINISTRA + DETTAGLI A DESTRA -->
         <section class="product-main fade-in">
-            <!-- Galleria delle 3 immagini -->
-<!-- Galleria delle immagini - Versione migliorata -->
+            <!-- NUOVA GALLERIA IMMAGINI MIGLIORATA -->
             <div class="product-gallery" id="productGallery">
+                <!-- Immagine principale con zoom -->
                 <div class="gallery-main">
-                    <img src="" alt="Cucina principale" id="mainImage">
+                    <div class="image-zoom-container">
+                        <img src="" alt="Cucina principale" id="mainImage" class="zoom-image">
+                        <div class="zoom-lens"></div>
+                    </div>
+                    <div class="image-nav">
+                        <button class="nav-arrow prev" onclick="cycleImages(-1)">❮</button>
+                        <div class="image-counter">
+                            <span id="currentImage">1</span>/<span id="totalImages">3</span>
+                        </div>
+                        <button class="nav-arrow next" onclick="cycleImages(1)">❯</button>
+                    </div>
                 </div>
-                <div class="gallery-thumb active" id="thumb1">
-                    <img src="" alt="Vista 1">
-                    <div class="thumb-overlay"></div>
+                
+                <!-- Thumbnails con effetto hover migliorato -->
+                <div class="gallery-thumbs">
+                    <div class="thumb-container" id="thumb1">
+                        <img src="" alt="Vista 1" class="thumb-image">
+                        <div class="thumb-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="thumb-container" id="thumb2">
+                        <img src="" alt="Vista 2" class="thumb-image">
+                        <div class="thumb-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="thumb-container" id="thumb3" style="display:none">
+                        <img src="" alt="Vista 3" class="thumb-image">
+                        <div class="thumb-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-thumb" id="thumb2">
-                    <img src="" alt="Vista 2">
-                    <div class="thumb-overlay"></div>
-                </div>
-                <div class="gallery-thumb" id="thumb3">
-                    <img src="" alt="Vista 3">
-                    <div class="thumb-overlay"></div>
+                
+                <!-- Modal per visualizzazione fullscreen -->
+                <div class="gallery-modal" id="galleryModal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                    <div class="modal-caption"></div>
+                    <a class="modal-prev">❮</a>
+                    <a class="modal-next">❯</a>
                 </div>
             </div>
 
@@ -1098,9 +1306,164 @@
 
     <!-- JavaScript -->
     <script>
-        // Funzione per cambiare l'immagine principale
-        function changeMainImage(src) {
-            document.getElementById('mainImage').src = src;
+        // Funzionalità di zoom sull'immagine principale
+        function setupImageZoom() {
+            const zoomContainer = document.querySelector('.image-zoom-container');
+            const img = document.getElementById('mainImage');
+            const lens = document.querySelector('.zoom-lens');
+            
+            if (!img || !lens) return;
+            
+            // Calcola il rapporto tra l'immagine originale e quella ingrandita
+            const zoom = 2;
+            const imgRect = img.getBoundingClientRect();
+            
+            // Crea l'immagine ingrandita
+            lens.style.backgroundImage = `url(${img.src})`;
+            lens.style.backgroundSize = `${img.width * zoom}px ${img.height * zoom}px`;
+            
+            // Mostra/nascondi la lente di zoom
+            img.addEventListener('mousemove', moveLens);
+            img.addEventListener('mouseenter', () => lens.style.display = 'block');
+            img.addEventListener('mouseleave', () => lens.style.display = 'none');
+            
+            function moveLens(e) {
+                e.preventDefault();
+                
+                // Posizione del cursore
+                const pos = getCursorPos(e);
+                let x = pos.x - (lens.offsetWidth / 2);
+                let y = pos.y - (lens.offsetHeight / 2);
+                
+                // Impedisci alla lente di uscire dall'immagine
+                x = Math.max(0, Math.min(x, img.width - lens.offsetWidth));
+                y = Math.max(0, Math.min(y, img.height - lens.offsetHeight));
+                
+                // Posiziona la lente
+                lens.style.left = `${x}px`;
+                lens.style.top = `${y}px`;
+                
+                // Mostra la parte ingrandita
+                lens.style.backgroundPosition = `-${x * zoom}px -${y * zoom}px`;
+            }
+            
+            function getCursorPos(e) {
+                const a = img.getBoundingClientRect();
+                return {
+                    x: e.pageX - a.left - window.pageXOffset,
+                    y: e.pageY - a.top - window.pageYOffset
+                };
+            }
+        }
+
+        // Funzionalità modal fullscreen
+        function setupModalGallery() {
+            const modal = document.getElementById('galleryModal');
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.querySelector('.modal-caption');
+            const closeBtn = document.querySelector('.gallery-modal .modal-close');
+            const prevBtn = document.querySelector('.modal-prev');
+            const nextBtn = document.querySelector('.modal-next');
+            
+            if (!modal) return;
+            
+            // Apri modal al click sull'immagine principale
+            document.getElementById('mainImage').addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            });
+            
+            // Apri modal al click sulle thumbnails
+            document.querySelectorAll('.thumb-image').forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    currentModalIndex = Array.from(document.querySelectorAll('.thumb-container')).indexOf(this.parentElement);
+                });
+            });
+            
+            // Chiudi modal
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+            
+            // Navigazione modal
+            let currentModalIndex = 0;
+            const thumbs = document.querySelectorAll('.thumb-container');
+            
+            function showModalImage(index) {
+                if (index >= thumbs.length) index = 0;
+                if (index < 0) index = thumbs.length - 1;
+                currentModalIndex = index;
+                
+                const thumb = thumbs[index];
+                if (thumb) {
+                    const img = thumb.querySelector('img');
+                    modalImg.src = img.src;
+                    captionText.innerHTML = img.alt;
+                }
+            }
+            
+            prevBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                showModalImage(currentModalIndex - 1);
+            });
+            
+            nextBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                showModalImage(currentModalIndex + 1);
+            });
+            
+            // Chiudi al click fuori dall'immagine
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+            
+            // Navigazione con tastiera
+            document.addEventListener('keydown', function(e) {
+                if (modal.style.display === "block") {
+                    if (e.key === "Escape") {
+                        modal.style.display = "none";
+                    } else if (e.key === "ArrowLeft") {
+                        showModalImage(currentModalIndex - 1);
+                    } else if (e.key === "ArrowRight") {
+                        showModalImage(currentModalIndex + 1);
+                    }
+                }
+            });
+        }
+
+        // Cicla tra le immagini con le frecce
+        function cycleImages(direction) {
+            const thumbs = Array.from(document.querySelectorAll('.thumb-container:not([style*="display: none"])'));
+            if (thumbs.length < 2) return;
+            
+            const mainImg = document.getElementById('mainImage');
+            const currentSrc = mainImg.src;
+            let currentIndex = -1;
+            
+            thumbs.forEach((thumb, index) => {
+                const img = thumb.querySelector('img');
+                if (img.src === currentSrc) currentIndex = index;
+            });
+            
+            let newIndex = currentIndex + direction;
+            if (newIndex < 0) newIndex = thumbs.length - 1;
+            if (newIndex >= thumbs.length) newIndex = 0;
+            
+            const newImg = thumbs[newIndex].querySelector('img');
+            changeMainImage(newImg.src);
+            updateImageCounter(newIndex + 1);
+        }
+
+        // Aggiorna il contatore immagini
+        function updateImageCounter(current, total) {
+            document.getElementById('currentImage').textContent = current || 1;
+            document.getElementById('totalImages').textContent = total || document.querySelectorAll('.thumb-container:not([style*="display: none"])').length;
         }
 
         // Mobile menu toggle
@@ -1265,34 +1628,46 @@
             document.getElementById('productPrice').textContent = product.price || 'Prezzo su richiesta';
             document.getElementById('productDescription').innerHTML = `<p>${product.description}</p>`;
 
-            // Aggiorna galleria immagini
+            // Aggiorna galleria immagini con il nuovo layout
             const mainImage = document.getElementById('mainImage');
-            const thumb1 = document.getElementById('thumb1');
-            const thumb2 = document.getElementById('thumb2');
+            const thumbs = [
+                document.getElementById('thumb1'),
+                document.getElementById('thumb2'),
+                document.getElementById('thumb3')
+            ];
             
             if (product.images && product.images.length > 0) {
+                // Immagine principale
                 mainImage.src = product.images[0];
                 mainImage.alt = `${product.name} - Immagine principale`;
                 
-                if (product.images[1]) {
-                    thumb1.querySelector('img').src = product.images[1];
-                    thumb1.querySelector('img').alt = `${product.name} - Vista 1`;
-                    thumb1.onclick = () => changeMainImage(product.images[1]);
-                    thumb1.style.display = 'block';
-                } else {
-                    thumb1.style.display = 'none';
+                // Thumbnails
+                product.images.forEach((img, index) => {
+                    if (thumbs[index]) {
+                        const thumbImg = thumbs[index].querySelector('img');
+                        thumbImg.src = img;
+                        thumbImg.alt = `${product.name} - Vista ${index + 1}`;
+                        thumbs[index].onclick = () => {
+                            changeMainImage(img);
+                            updateImageCounter(index + 1);
+                        };
+                        thumbs[index].style.display = 'block';
+                    }
+                });
+                
+                // Nascondi thumbs non utilizzate
+                for (let i = product.images.length; i < thumbs.length; i++) {
+                    if (thumbs[i]) thumbs[i].style.display = 'none';
                 }
                 
-                if (product.images[2]) {
-                    thumb2.querySelector('img').src = product.images[2];
-                    thumb2.querySelector('img').alt = `${product.name} - Vista 2`;
-                    thumb2.onclick = () => changeMainImage(product.images[2]);
-                    thumb2.style.display = 'block';
-                } else {
-                    thumb2.style.display = 'none';
-                }
+                // Aggiorna contatore
+                updateImageCounter(1, product.images.length);
             }
-
+            
+            // Inizializza le nuove funzionalità
+            setupImageZoom();
+            setupModalGallery();
+            
             // Popola le features
             const featuresContainer = document.getElementById('productFeatures');
             featuresContainer.innerHTML = '';
@@ -1374,6 +1749,18 @@
                     <a href="cucine-nuove.html" class="btn-primary">Torna alle cucine</a>
                 </div>
             `;
+        }
+
+        // Modifica la funzione changeMainImage per supportare il nuovo layout
+        function changeMainImage(src) {
+            const mainImg = document.getElementById('mainImage');
+            mainImg.src = src;
+            
+            // Aggiorna lo sfondo della lente di zoom
+            const lens = document.querySelector('.zoom-lens');
+            if (lens) {
+                lens.style.backgroundImage = `url(${src})`;
+            }
         }
 
         // Inizializza la pagina
