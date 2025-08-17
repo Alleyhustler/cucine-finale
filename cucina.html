@@ -154,6 +154,7 @@
         .nav-link:hover::before {
             width: 100%;
         }
+    
 
         .cta-button {
             background: var(--primary-dark);
@@ -1044,21 +1045,17 @@
                 <p style="color: var(--accent-medium); margin-bottom: 1rem;">
                     Resta aggiornato sulle nostre novità e offerte esclusive.
                 </p>
-                <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="preventivo-form">
-                <!-- Protezioni e impostazioni -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Nuova richiesta di preventivo dal sito">
-                <input type="hidden" name="_template" value="table">
-                <!-- Honeypot anti-spam -->
-                <input type="text" name="_honey" style="display:none">
+<form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="email-signup">
+  <!-- Configurazioni e protezioni -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Nuova iscrizione newsletter">
+  <input type="hidden" name="_template" value="table">
+  <input type="text" name="_honey" style="display:none">
 
-                <input type="text" name="Nome" placeholder="Nome">
-                <input type="email" name="Email" placeholder="Email Address" required>
-                <input type="tel" name="Telefono" placeholder="Telefono">
-                <textarea name="Richiesta" placeholder="Descrivi la tua richiesta"></textarea>
+  <input type="email" name="Email" class="email-input" placeholder="La tua email" required>
+  <button type="submit" class="email-submit">Iscriviti</button>
+</form>
 
-                <button type="submit" class="submit-button">Invia Richiesta</button>
-                </form>
 
             </div>
         </div>
