@@ -1653,11 +1653,18 @@
                         <span>info.cucineitalia@gmail.com</span>
                     </div>
                     <div class="contact-item">
-                        <span>📞</span>
-                        <span>+39 339 170 3591
-                                                        <br>+39 349 694 7616<br>
+                    <span>📞</span>
+                    <span>
+                        <a href="https://wa.me/393391703591" target="_blank">
+                            +39 339 170 3591
+                        </a>
+                        <br>
+                        <a href="https://wa.me/393496947616" target="_blank">
+                            +39 349 694 7616
+                        </a>
+                        <br>
+                    </span>
 
-                        </span>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
@@ -1704,18 +1711,17 @@
   <p style="color: #4C583E; margin-bottom: 1rem;">
     Resta aggiornato sulle nostre novità e offerte esclusive.
   </p>
+<form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="email-signup">
+  <!-- Configurazioni e protezioni -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Nuova iscrizione newsletter">
+  <input type="hidden" name="_template" value="table">
+  <input type="text" name="_honey" style="display:none">
 
-  <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="email-signup">
-    <!-- Configurazioni e protezioni -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Nuova iscrizione newsletter">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://iltuosito.com/grazie-newsletter.html">
-    <input type="text" name="_honey" style="display:none">
+  <input type="email" name="Email" class="email-input" placeholder="La tua email" required>
+  <button type="submit" class="email-submit">Iscriviti</button>
+</form>
 
-    <input type="email" name="Email" class="email-input" placeholder="La tua email" required>
-    <button type="submit" class="email-submit">Iscriviti</button>
-  </form>
 </div>
 
         </div>
@@ -1736,11 +1742,19 @@
       <p>Contattaci direttamente per un preventivo personalizzato:</p>
       <div class="contact-info">
         <div class="contact-item">
-          <span>📞</span>
-          <span>+39 339 170 3591
-                                        <br>+39 349 694 7616<br>
+        <span>📞</span>
+        <span>
+            <a href="https://wa.me/393391703591" target="_blank">
+                +39 339 170 3591
+            </a>
+            <br>
+            <a href="https://wa.me/393496947616" target="_blank">
+                +39 349 694 7616
+            </a>
+            <br>
+        </span>
 
-          </span>
+
         </div>
         <div class="contact-item">
           <span>📧</span>
@@ -1930,4 +1944,72 @@ preventivoModal.addEventListener('click', function(e) {
             observer.observe(gallery);
         }
     </script>
+
+    <!-- Popup Modal -->
+<div id="thankYouPopup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <h2> Grazie!</h2>
+    <p>Il tuo messaggio è stato inviato con successo.</p>
+    <button onclick="closePopup()">Chiudi</button>
+  </div>
+</div>
+
+<style>
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .popup-content {
+    background: url('bedge-grunge.png') var(--white);
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 450px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  .popup-content h2 {
+    margin-bottom: 10px;
+    color: var(--primary-medium);
+  }
+  .popup-content button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  // Intercept ALL forms that use FormSubmit
+  document.querySelectorAll("form[action*='formsubmit.co']").forEach(form => {
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault(); // stop normal redirect
+
+      let formData = new FormData(form);
+      try {
+        await fetch(form.action, {
+          method: form.method,
+          body: formData
+        });
+        // Show popup
+        document.getElementById("thankYouPopup").style.display = "flex";
+        form.reset(); // clear form
+      } catch (err) {
+        alert("❌ Si è verificato un errore, riprova.");
+      }
+    });
+  });
+
+  function closePopup() {
+    document.getElementById("thankYouPopup").style.display = "none";
+  }
+</script>
+
 </body>
