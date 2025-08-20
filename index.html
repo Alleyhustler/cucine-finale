@@ -8,6 +8,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
+
+        
         * {
             margin: 0;
             padding: 0;
@@ -98,6 +100,7 @@
         }
 
         .menu-toggle {
+            
             display: flex;
             flex-direction: column;
             gap: 6px;
@@ -1055,6 +1058,9 @@
         white-space: nowrap; /* Prevent text wrapping */
     }
     
+        .nav-desktop {
+        display: none;
+    }
             
             .menu-toggle {
                 padding: 6px;
@@ -1064,9 +1070,7 @@
                 width: 24px;
             }
             
-            .nav-desktop {
-                display: none;
-            }
+
 
     .hero-content {
         padding: 0 1rem;
@@ -1092,7 +1096,6 @@
 
             .gallery-item {
                 width: 300px;
-                height: 225px;
             }
 
             .footer-container {
@@ -1112,6 +1115,10 @@
                 width: 80%;
                 left: -80%;
             }
+
+                .mobile-preventivo-text {
+        display: block; /* Show on mobile */
+    }
         }
 
         @media (max-width: 480px) {
@@ -1189,6 +1196,26 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Show only on mobile */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .logo-section {
+        position: relative;
+    }
+    
+    .mobile-preventivo-text {
+        display: block;
+    }
+}
+
+/* Large desktop - Ensure desktop nav is visible */
+@media (min-width: 1201px) {
+    .nav-desktop {
+        display: flex;
+    }
+    
+
+}
 
         /* Modal Styles */
 .modal-overlay {
@@ -1314,7 +1341,69 @@
   background: var(--primary-dark);
   transform: translateY(-2px);
 }
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
 
+.mobile-preventivo-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-family: "Arvo", serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+    margin-top: -2px;
+    position: absolute;
+    top: 100%;
+    
+    left: 0;
+    white-space: nowrap;
+}
+
+.mobile-preventivo-text::after {
+    content: "→";
+    margin-left: 6px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.mobile-preventivo-text:hover {
+    color: var(--accent-light);
+}
+
+.mobile-preventivo-text:hover::after {
+    transform: translateX(3px);
+}
+
+/* Hide when scrolled */
+.header.scrolled .mobile-preventivo-text {
+    display: none;
+}
+
+/* Show ONLY on mobile screens */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .mobile-preventivo-text {
+        display: block; /* Show on mobile */
+    }
+}
+
+/* Hide when header is scrolled (even on mobile) */
+.header.scrolled .mobile-preventivo-text {
+    display: none !important;
+}
+
+/* Ensure it's completely hidden on desktop */
+@media (min-width: 1201px) {
+    .mobile-preventivo-text {
+        display: none !important;
+    }
+}
 
     </style>
 </head>
@@ -1322,14 +1411,17 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="header-content">
-            <div class="header-left">
-                <div class="menu-toggle" id="menuToggle">
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                </div>
-                <a href="index.html" class="logo"> Cucine&nbsp;Italia</a>
-            </div>
+    <div class="header-left">
+        <div class="menu-toggle" id="menuToggle">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="logo-section">
+            <a href="index.html" class="logo"> Cucine&nbsp;Italia</a>
+            <div class="mobile-preventivo-text" id="mobilePreventivoText">Richiedi preventivo</div>
+        </div>
+    </div>
             
             <nav class="nav-desktop">
                 <a href="index.html" class="nav-link">Home</a>
@@ -1451,7 +1543,7 @@
                         <div class="review-content">
                             <div class="client-name">Elisa Parodi</div>
                             <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Bellissimo mix di colori e materiali. Funzionale e facile da tenere in ordine."</div>
+                            <div class="review-text">"Bellissimo mix di colori e materiali. Funzionale e facile da tenere in ordine. i miei figli la adorano :)"</div>
                             <div class="review-date">22 Dicembre 2024</div>
                         </div>
                     </div>
@@ -1508,7 +1600,7 @@
                         <div class="review-content">
                             <div class="client-name">Matteo Ricci</div>
                             <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Pratica, ben illuminata e con cassetti capienti. Ogni giorno apprezzo la scelta."</div>
+                            <div class="review-text">"Pratica, ben illuminata e con cassetti capienti. Veramente un ottima scelta, cordiali, veloci e sopratutto economici."</div>
                             <div class="review-date">15 Novembre 2024</div>
                         </div>
                     </div>
@@ -1830,6 +1922,10 @@
 </div>
 
     <script>
+        document.getElementById('mobilePreventivoText')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('preventivoModal').classList.add('active');
+});
         // Header scroll animation
         let lastScroll = 0;
         window.addEventListener('scroll', function() {

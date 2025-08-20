@@ -114,7 +114,7 @@
         .menu-line {
             width: 28px;
             height: 2px;
-            background: white;
+            background: var(--primary-dark);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -881,6 +881,186 @@
 }
 
         /* Mobile Responsive */
+        @media (min-width: 324px) and (max-width: 1200px) {
+                .hero {
+        background-attachment: scroll; /* Remove parallax on mobile */
+        min-height: 80vh; /* Slightly shorter than full viewport */
+        background-size: cover;
+        background-position: 0.0001% center; /* Adjust focal point */
+        padding: 2rem 1rem;
+    }
+
+        .hero {
+        aspect-ratio: 9/16; /* Portrait orientation ratio */
+        height: auto;
+    }
+            .header {
+                height: 60px;
+            }
+            
+            .header-left {
+                margin-left: 0px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+    .cta-button {
+        margin-right: 0; /* Remove negative margin */
+        padding: 8px 10px; /* Slightly larger padding */
+        font-size: 0.6rem; /* Slightly larger font */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+    
+            
+            .menu-toggle {
+                padding: 6px;
+            }
+            
+            .menu-line {
+                width: 24px;
+            }
+            
+            .nav-desktop {
+                display: none;
+            }
+
+    .hero-content {
+        padding: 0 1rem;
+        bottom: 2rem; /* Position from bottom */
+    }
+        .hero-title, .hero-subtitle {
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+            .hero {
+                padding: 2rem 1rem;
+                background-attachment: scroll;
+            }
+
+            .categories-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .feature-card {
+                padding: 2rem 1rem;
+            }
+
+            .gallery-item {
+                width: 300px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .email-signup {
+                flex-direction: column;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .mobile-menu {
+                width: 80%;
+                left: -80%;
+            }
+
+
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .categories, .why-us {
+                padding: 4rem 1rem;
+            }
+
+            
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+                /* Optimized Header for Small Screens (iPhone SE and similar) */
+        @media (min-width: 324px) and (max-width: 427px) {
+            .logo {
+                font-size: 2rem;
+                letter-spacing: 0.6px;
+            }
+
+            .header.scrolled {
+                height: 45px;
+            }
+
+            
+            .cta-button {
+                display: none;
+            }
+            
+            .menu-line {
+                width: 22px;
+            }
+
+ 
+        }
+
+                /* Large Phones (iPhone Pro Max, Plus models) */
+        @media (min-width: 428px) and (max-width: 767px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                display: none;
+            }
+            
+            
+            .mobile-menu {
+                width: 300px;
+                left: -300px;
+            }
+        }
+
+        /* Smooth scrolling and animations */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Show only on mobile */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .logo-section {
+        position: relative;
+    }
+    
+    .mobile-preventivo-text {
+        display: block;
+    }
+}
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
                 .hero {
         background-attachment: scroll; /* Remove parallax on mobile */
@@ -990,6 +1170,22 @@
             .section-title {
                 font-size: 2rem;
             }
+        }
+
+        /* Smooth scrolling and animations */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Smooth scrolling and animations */
@@ -1247,6 +1443,14 @@
         height: 20px;
     }
 
+        .sn_kitchen_i_title::after {
+    content: "→";
+    margin-left: 6px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
     .sn_kitchen_i_sw {
         position: relative;
         overflow: hidden;
@@ -1301,6 +1505,76 @@
             padding: 15px 15px 5px; /* Padding ridotto per mobile */
         }
     }
+
+            .mobile-preventivo-text {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    font-weight: 400;
+    font-family: "Arvo", serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+    margin-top: -2px;
+    position: absolute;
+    top: 100%;
+    
+    left: 0;
+    white-space: nowrap;
+}
+
+.mobile-preventivo-text::after {
+    content: "→";
+    margin-left: 6px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.mobile-preventivo-text:hover {
+    color: var(--accent-light);
+}
+
+.mobile-preventivo-text:hover::after {
+    transform: translateX(3px);
+}
+
+/* Hide when scrolled */
+.header.scrolled .mobile-preventivo-text {
+    display: none;
+}
+
+/* Show ONLY on mobile screens */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .mobile-preventivo-text {
+        display: block; /* Show on mobile */
+    }
+}
+
+/* Hide when header is scrolled (even on mobile) */
+.header.scrolled .mobile-preventivo-text {
+    display: none !important;
+}
+
+/* Ensure it's completely hidden on desktop */
+@media (min-width: 1201px) {
+    .mobile-preventivo-text {
+        display: none !important;
+    }
+}
+
+        /* Show only on mobile */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .logo-section {
+        position: relative;
+    }
+    
+    .mobile-preventivo-text {
+        display: block;
+    }
+}
+
+
 </style>
 
     <!-- Incluye todos los demás estilos de la página principal aquí -->
@@ -1316,7 +1590,10 @@
                     <div class="menu-line"></div>
                     <div class="menu-line"></div>
                 </div>
-                <a href="#" class="logo">Cucine Italia</a>
+                <div class="logo-section">
+                    <a href="index.html" class="logo"> Cucine&nbsp;Italia</a>
+                    <div class="mobile-preventivo-text" id="mobilePreventivoText">Richiedi preventivo</div>
+                </div>
             </div>
             
             <nav class="nav-desktop">
@@ -1375,11 +1652,6 @@
                                 <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                             </i>
                         </div>
-                        <div class="sn_swiper_pagination">
-                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                            <span class="swiper-pagination-bullet"></span>
-                            <span class="swiper-pagination-bullet"></span>
-                        </div>
                         <div class="sn_swiper_nav _next">
                             <i class="sn_sprite _arrow_right">
                                 <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1408,11 +1680,7 @@
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                                 </i>
                             </div>
-                            <div class="sn_swiper_pagination">
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                            </div>
+
                             <div class="sn_swiper_nav _next">
                                 <i class="sn_sprite _arrow_right">
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1440,11 +1708,7 @@
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                                 </i>
                             </div>
-                            <div class="sn_swiper_pagination">
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                            </div>
+
                             <div class="sn_swiper_nav _next">
                                 <i class="sn_sprite _arrow_right">
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1472,11 +1736,7 @@
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                                 </i>
                             </div>
-                            <div class="sn_swiper_pagination">
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                            </div>
+
                             <div class="sn_swiper_nav _next">
                                 <i class="sn_sprite _arrow_right">
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1504,11 +1764,7 @@
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                                 </i>
                             </div>
-                            <div class="sn_swiper_pagination">
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                            </div>
+
                             <div class="sn_swiper_nav _next">
                                 <i class="sn_sprite _arrow_right">
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1536,11 +1792,7 @@
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                                 </i>
                             </div>
-                            <div class="sn_swiper_pagination">
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                            </div>
+
                             <div class="sn_swiper_nav _next">
                                 <i class="sn_sprite _arrow_right">
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1571,11 +1823,7 @@
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                                 </i>
                             </div>
-                            <div class="sn_swiper_pagination">
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                            </div>
+
                             <div class="sn_swiper_nav _next">
                                 <i class="sn_sprite _arrow_right">
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1603,11 +1851,7 @@
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                                 </i>
                             </div>
-                            <div class="sn_swiper_pagination">
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                            </div>
+
                             <div class="sn_swiper_nav _next">
                                 <i class="sn_sprite _arrow_right">
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1645,11 +1889,7 @@
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
                                 </i>
                             </div>
-                            <div class="sn_swiper_pagination">
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                                <span class="swiper-pagination-bullet"></span>
-                            </div>
+
                             <div class="sn_swiper_nav _next">
                                 <i class="sn_sprite _arrow_right">
                                     <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
@@ -1687,9 +1927,16 @@
                     </div>
                     <div class="contact-item">
                         <span>📞</span>
-                        <span>+39 339 170 3591
-                            <br>+39 349 694 7616<br>
-                        </span>
+                    <span>
+                        <a href="https://wa.me/393391703591" target="_blank">
+                            +39 339 170 3591
+                        </a>
+                        <br>
+                        <a href="https://wa.me/393496947616" target="_blank">
+                            +39 349 694 7616
+                        </a>
+                        <br>
+                    </span>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
