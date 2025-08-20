@@ -1023,19 +1023,21 @@
 
 
         /* Mobile Responsive */
-        @media (min-width: 768px) and (max-width: 1023px) {
+        @media (min-width: 324px) and (max-width: 1200px) {
+                .hero {
+        background-attachment: scroll; /* Remove parallax on mobile */
+        min-height: 80vh; /* Slightly shorter than full viewport */
+        background-size: cover;
+        background-position: 0.0001% center; /* Adjust focal point */
+        padding: 2rem 1rem;
+    }
 
-            .hero {
-                background-attachment: scroll; /* Remove parallax on mobile */
-                min-height: 80vh; /* Slightly shorter than full viewport */
-                background-size: cover;
-                background-position: 0.0001% center; /* Adjust focal point */
-                padding: 2rem 1rem;
-            }
-
+        .hero {
+        aspect-ratio: 9/16; /* Portrait orientation ratio */
+        height: auto;
+    }
             .header {
-                height: 70px;
-                top:20px
+                height: 60px;
             }
             
             .header-left {
@@ -1043,12 +1045,15 @@
             }
             
             .logo {
-                font-size: 2.5rem;
+                font-size: 1.5rem;
             }
             
-            .cta-button {
-                display: none;
-            }
+    .cta-button {
+        margin-right: 0; /* Remove negative margin */
+        padding: 8px 10px; /* Slightly larger padding */
+        font-size: 0.6rem; /* Slightly larger font */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
     
             
             .menu-toggle {
@@ -1063,14 +1068,14 @@
                 display: none;
             }
 
-            .hero-content {
-                padding: 0 1rem;
-                bottom: 2rem; /* Position from bottom */
-            }
-                .hero-title, .hero-subtitle {
-                max-width: 100%;
-                word-wrap: break-word;
-            }
+    .hero-content {
+        padding: 0 1rem;
+        bottom: 2rem; /* Position from bottom */
+    }
+        .hero-title, .hero-subtitle {
+        max-width: 100%;
+        word-wrap: break-word;
+    }
             .hero {
                 padding: 2rem 1rem;
                 background-attachment: scroll;
@@ -1107,18 +1112,6 @@
                 width: 80%;
                 left: -80%;
             }
-
-            .excellence-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .excellence-card {
-                padding: 1.5rem;
-            }
-
-            
-        
         }
 
         @media (max-width: 480px) {
