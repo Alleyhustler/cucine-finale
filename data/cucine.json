@@ -14,53 +14,53 @@
         "/Images/nuove/lineare/1/IMG_8229.JPEG",
         "/Images/nuove/lineare/1/IMG_8230.JPEG"
       ],
-      "features": [
-        {
-          "title": "Legno Massello di Castagno",
-          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
-        },
-        {
-          "title": "Top in Granito Naturale",
-          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
-        },
-        {
-          "title": "Maniglie in Ottone",
-          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
-        },
-        {
-          "title": "Finitura Personalizzabile",
-          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
-        },
-        {
-          "title": "Zoccolatura in Legno",
-          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
-        }
-      ],
+    "features": [
+      {
+        "title": "Stile Industriale Moderno",
+        "description": "Finitura cemento materico che dona un carattere urbano e contemporaneo alla cucina"
+      },
+      {
+        "title": "Piano in Marmo Oriental",
+        "description": "Top in laminato effetto marmo Oriental, elegante e resistente, perfetto per ogni tipo di preparazione"
+      },
+      {
+        "title": "Dettagli in Nero Opaco",
+        "description": "Lavello e piano cottura in nero che creano un contrasto sofisticato con le superfici chiare"
+      },
+      {
+        "title": "Funzione Pizza Integrata",
+        "description": "Forno ventilato con programma dedicato per cottura perfetta di pizze e lievitati"
+      },
+      {
+        "title": "Illuminazione LED",
+        "description": "Sistema di luci sottopensile che valorizza il piano di lavoro e rende l’ambiente più accogliente"
+      }
+    ],
       "specs": {
-        "Dimensioni": [
-          "Lunghezza: 360 cm (personalizzabile)",
-          "Profondità: 60 cm standard",
-          "Altezza totale: 230 cm"
-        ],
-        "Materiali": [
-          "Ante: Laminato HPL Noce Cannellata in finitura verde salvia",
-          "Top: Piano Latinato Graniglia",
-          "Cerniere: Blum con chiusura soft"
-        ],
-        "Elettrodomestici": [
-          "Forno ventilato multifunzione A++",
-          "Piano cottura a induzione 4 zone",
-          "microonde grill integrato",
-          "Lavastoviglie classe A+++",
-          "Frigorifero Da Incasso 320L",
-          "Cappa aspirante con LED integrato"
-        ],
-        "Accessori Inclusi": [
-          "Cestelli estraibili per basi",
-          "Portaposate organizer",
-          "Illuminazione LED sottopensile",
-          "Sistema di apertura push-pull"
-        ]
+      "Dimensioni": [
+        "Lunghezza: 360 cm (personalizzabile)",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm"
+      ],
+      "Materiali": [
+        "Ante: Laminato effetto cemento con texture materica",
+        "Top: Laminato finitura marmo Oriental",
+        "Lavello: Composito nero con vasca integrata",
+        "Piano cottura: Smaltato nero"
+      ],
+      "Elettrodomestici": [
+        "Forno ventilato multifunzione con funzione pizza",
+        "Piano cottura 4 fuochi smaltato",
+        "Lavastoviglie integrata classe A++",
+        "Frigorifero 300L No Frost",
+        "Cappa integrata con illuminazione LED"
+      ],
+      "Accessori Inclusi": [
+        "Pensili con sistema di apertura ammortizzata",
+        "Cassetti con guide soft-close",
+        "Illuminazione LED sottopensile",
+        "Modulo dispensa con ripiani regolabili"
+      ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
     },
