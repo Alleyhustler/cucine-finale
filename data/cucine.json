@@ -36,45 +36,33 @@
           "description": "Cerniere Blum con chiusura ammortizzata per ante e cassetti"
         }
       ],
-      "specs": [
-        {
-          "category": "Dimensioni",
-          "details": [
-            "Lunghezza: 300-450 cm (personalizzabile)",
-            "Profondità: 60 cm standard",
-            "Altezza pensili: 72 cm",
-            "Altezza totale: 230 cm"
-          ]
-        },
-        {
-          "category": "Materiali",
-          "details": [
-            "Ante: Laminato HPL spessore 20mm",
-            "Top: Quarzo composito 30mm",
-            "Struttura: Pannello truciolare classe E1",
-            "Cerniere: Blum con chiusura soft"
-          ]
-        },
-        {
-          "category": "Elettrodomestici",
-          "details": [
-            "Forno ventilato multifunzione A++",
-            "Piano cottura a induzione 4 zone",
-            "Lavastoviglie classe A+++",
-            "Cappa aspirante con LED integrato"
-          ]
-        },
-        {
-          "category": "Accessori Inclusi",
-          "details": [
-            "Cestelli estraibili per basi",
-            "Portaposate organizer",
-            "Illuminazione LED sottopensile",
-            "Gocciolatoio integrato",
-            "Sistema di apertura push-pull"
-          ]
-        }
-      ],
+      "specs": {
+        "Dimensioni": [
+          "Lunghezza: 300-450 cm (personalizzabile)",
+          "Profondità: 60 cm standard",
+          "Altezza pensili: 72 cm",
+          "Altezza totale: 230 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato HPL spessore 20mm",
+          "Top: Quarzo composito 30mm",
+          "Struttura: Pannello truciolare classe E1",
+          "Cerniere: Blum con chiusura soft"
+        ],
+        "Elettrodomestici": [
+          "Forno ventilato multifunzione A++",
+          "Piano cottura a induzione 4 zone",
+          "Lavastoviglie classe A+++",
+          "Cappa aspirante con LED integrato"
+        ],
+        "Accessori Inclusi": [
+          "Cestelli estraibili per basi",
+          "Portaposate organizer",
+          "Illuminazione LED sottopensile",
+          "Gocciolatoio integrato",
+          "Sistema di apertura push-pull"
+        ]
+      },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
     },
     {
