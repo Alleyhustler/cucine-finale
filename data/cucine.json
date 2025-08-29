@@ -4,8 +4,8 @@
       "id": 1,
       "slug": "Ombra-Lux",
       "name": "Cucina Ombra Lux",
-      "shortDescription": "Design contemporaneo con finiture di alta qualità",
-      "description": "Una cucina dal design moderno e raffinato, caratterizzata da linee pulite e materiali di prima scelta. Perfetta per chi cerca funzionalità ed estetica in un unico ambiente. Le ante in laminato resistente si abbinano perfettamente al top in quarzo, creando un equilibrio perfetto tra bellezza e praticità.",
+      "shortDescription": "Maya, Latinato con noce cannellata e verde salvia",
+      "description": "Una cucina dal design elegante, caratterizzata da tonalità delicate e contrasti raffinati. Le superfici materiche dialogano con dettagli moderni, creando un ambiente luminoso e accogliente. Perfetta per chi cerca uno spazio pratico ma con una forte personalità estetica, firmata dalla qualità Master Kitchen.",
       "price": "Pronta Consegna",
       "category": "moderna",
       "thumbnail": "/Images/nuove/lineare/1/IMG_8229.JPEG",
@@ -38,28 +38,27 @@
       ],
       "specs": {
         "Dimensioni": [
-          "Lunghezza: 300-450 cm (personalizzabile)",
+          "Lunghezza: 360 cm (personalizzabile)",
           "Profondità: 60 cm standard",
-          "Altezza pensili: 72 cm",
           "Altezza totale: 230 cm"
         ],
         "Materiali": [
-          "Ante: Laminato HPL spessore 20mm",
-          "Top: Quarzo composito 30mm",
-          "Struttura: Pannello truciolare classe E1",
+          "Ante: Laminato HPL Noce Cannellata in finitura verde salvia",
+          "Top: Piano Latinato Graniglia",
           "Cerniere: Blum con chiusura soft"
         ],
         "Elettrodomestici": [
           "Forno ventilato multifunzione A++",
           "Piano cottura a induzione 4 zone",
+          "microonde grill integrato",
           "Lavastoviglie classe A+++",
+          "Frigorifero Da Incasso 320L",
           "Cappa aspirante con LED integrato"
         ],
         "Accessori Inclusi": [
           "Cestelli estraibili per basi",
           "Portaposate organizer",
           "Illuminazione LED sottopensile",
-          "Gocciolatoio integrato",
           "Sistema di apertura push-pull"
         ]
       },

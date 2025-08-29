@@ -585,7 +585,6 @@
         .product-features {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
             margin-bottom: 2rem;
         }
 
@@ -678,10 +677,10 @@
         }
 
         .spec-card {
-            background: var(--white);
+            background: url(bedge-grunge.png) #ffffff;
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(44, 52, 36, 0.1);
+            box-shadow: 0 5px 15px rgb(44 52 36);
             border-left: 4px solid var(--primary-dark);
         }
 
@@ -706,68 +705,159 @@
             color: var(--primary-dark);
         }
 
-        /* Prodotti correlati */
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
 
-        .related-card {
-            background: var(--white);
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.1);
-            transition: all 0.3s ease;
-        }
+/* Card Cucina per prodotti correlati */
+.sn_kitchen_i {
+    position: relative;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 34%);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+}
 
-        .related-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(44, 52, 36, 0.2);
-        }
+.sn_kitchen_i:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
-        .related-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
+.sn_kitchen_i_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
 
-        .related-card:hover .related-image {
-            transform: scale(1.05);
-        }
+.sn_kitchen_i_title {
+    padding: 20px 20px 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .related-info {
-            padding: 1.5rem;
-        }
+.sn_kitchen_i_title i {
+    width: 20px;
+    height: 20px;
+}
 
-        .related-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary-dark);
-        }
+.sn_kitchen_i_title::after {
+    content: "→";
+    margin-left: 6px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
 
-        .related-desc {
-            color: var(--primary-medium);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
+.sn_kitchen_i_sw {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    flex-grow: 1;
+}
 
-        .related-link {
-            display: inline-block;
-            padding: 8px 20px;
-            background: var(--primary-dark);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
+.sn_kitchen_i_sw img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
 
-        .related-link:hover {
-            background: var(--primary-medium);
-            transform: translateY(-2px);
-        }
+.sn_kitchen_i:hover .sn_kitchen_i_sw img {
+    transform: scale(1.05);
+}
+
+.sn_kitchen_i_sw_nav {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.sn_swiper_pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--white);
+}
+
+.sn_swiper_nav {
+    color: var(--white);
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.sn_swiper_nav:hover {
+    color: var(--accent-light);
+    transform: scale(1.1);
+}
+
+/* Descrizione cucina */
+.kitchen-description {
+    padding: 0 20px 15px;
+    color: var(--primary-medium);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Sprite icons */
+.sn_sprite {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.sn_sprite._external_big svg {
+    fill: var(--primary-dark);
+}
+
+.sn_sprite._arrow_left,
+.sn_sprite._arrow_right {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive per prodotti correlati */
+@media (max-width: 767px) {
+    .sn_kitchen_i_title {
+        font-size: 1.2rem;
+        padding: 15px 15px 5px;
+    }
+    
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
 
 /* Footer */
 .footer {
