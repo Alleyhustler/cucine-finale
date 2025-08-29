@@ -4,7 +4,7 @@
       "id": 1,
       "slug": "Ombra-Lux",
       "name": "Cucina Ombra Lux",
-      "shortDescription": "Maya, Latinato con noce cannellata e verde salvia",
+      "shortDescription": "Nexus, Latinato cemento tenda",
       "description": "Una cucina dal design elegante, caratterizzata da tonalità delicate e contrasti raffinati. Le superfici materiche dialogano con dettagli moderni, creando un ambiente luminoso e accogliente. Perfetta per chi cerca uno spazio pratico ma con una forte personalità estetica, firmata dalla qualità Master Kitchen.",
       "price": "Pronta Consegna",
       "category": "moderna",
@@ -13,6 +13,70 @@
         "/Images/nuove/lineare/1/IMG_8227.JPEG",
         "/Images/nuove/lineare/1/IMG_8229.JPEG",
         "/Images/nuove/lineare/1/IMG_8230.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Legno Massello di Castagno",
+          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+        },
+        {
+          "title": "Top in Granito Naturale",
+          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+        },
+        {
+          "title": "Maniglie in Ottone",
+          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+        },
+        {
+          "title": "Finitura Personalizzabile",
+          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+        },
+        {
+          "title": "Zoccolatura in Legno",
+          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lunghezza: 360 cm (personalizzabile)",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato HPL Noce Cannellata in finitura verde salvia",
+          "Top: Piano Latinato Graniglia",
+          "Cerniere: Blum con chiusura soft"
+        ],
+        "Elettrodomestici": [
+          "Forno ventilato multifunzione A++",
+          "Piano cottura a induzione 4 zone",
+          "microonde grill integrato",
+          "Lavastoviglie classe A+++",
+          "Frigorifero Da Incasso 320L",
+          "Cappa aspirante con LED integrato"
+        ],
+        "Accessori Inclusi": [
+          "Cestelli estraibili per basi",
+          "Portaposate organizer",
+          "Illuminazione LED sottopensile",
+          "Sistema di apertura push-pull"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
+    },
+    {
+      "id": 2,
+      "slug": "Verde-Noce",
+      "name": "Verde Noce",
+      "shortDescription": "Maya, Latinato con noce cannellata e verde salvia",
+      "description": "Una cucina dal design elegante, caratterizzata da tonalità delicate e contrasti raffinati. Le superfici materiche dialogano con dettagli moderni, creando un ambiente luminoso e accogliente. Perfetta per chi cerca uno spazio pratico ma con una forte personalità estetica, firmata dalla qualità Master Kitchen.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/nuove/lineare/1/IMG_8238.JPEG",
+      "images": [
+        "/Images/nuove/lineare/2/IMG_8238.JPEG",
+        "/Images/nuove/lineare/2/IMG_8239.JPEG",
+        "/Images/nuove/lineare/2/IMG_8240.JPEG"
       ],
       "features": [
         {
@@ -63,82 +127,6 @@
         ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
-    },
-    {
-      "id": 2,
-      "slug": "Verde-Noce",
-      "name": "Verde Noce",
-      "shortDescription": "Design senza tempo con ante in legno massello",
-      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
-      "price": "Pronta Consegna",
-      "category": "classica",
-      "thumbnail": "/Images/nuove/lineare/1/IMG_8238.JPEG",
-      "images": [
-        "/Images/nuove/lineare/2/IMG_8238.JPEG",
-        "/Images/nuove/lineare/2/IMG_8239.JPEG",
-        "/Images/nuove/lineare/2/IMG_8240.JPEG"
-      ],
-      "features": [
-        {
-          "title": "Legno Massello di Castagno",
-          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
-        },
-        {
-          "title": "Top in Granito Naturale",
-          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
-        },
-        {
-          "title": "Maniglie in Ottone",
-          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
-        },
-        {
-          "title": "Finitura Personalizzabile",
-          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
-        },
-        {
-          "title": "Zoccolatura in Legno",
-          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
-        }
-      ],
-      "specifications": [
-        {
-          "category": "Dimensioni",
-          "details": [
-            "Lunghezza: 320-500 cm (modulare)",
-            "Profondità: 60 cm standard, 65 cm per isola",
-            "Altezza pensili: 75 cm",
-            "Altezza totale: 235 cm"
-          ]
-        },
-        {
-          "category": "Materiali",
-          "details": [
-            "Ante: Legno massello di castagno 22mm",
-            "Top: Granito naturale 40mm",
-            "Struttura: Legno multistrato 18mm",
-            "Maniglie: Ottone anticato lavorato a mano"
-          ]
-        },
-        {
-          "category": "Elettrodomestici",
-          "details": [
-            "Forno tradizionale con grill A+",
-            "Piano cottura in ghisa 5 fuochi",
-            "Lavastoviglie integrata classe A++",
-            "Cappa camino in rame battuto"
-          ]
-        },
-        {
-          "category": "Dettagli Artigianali",
-          "details": [
-            "Cornici bugnate sui frontali",
-            "Colonne scanalate decorative",
-            "Mensole in legno massello",
-            "Piedini torniti regolabili"
-          ]
-        } 
-      ],
-      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
     },
     {
       "id": 3,
