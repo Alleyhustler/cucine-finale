@@ -487,69 +487,148 @@
             color: var(--primary-dark);
         }
 
-        /* Prodotti correlati */
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
+    /* Prodotti correlati - Nuovo stile sn_kitchen_i */
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
 
-        .related-card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(44, 52, 36, 0.1);
-            transition: all 0.3s ease;
-        }
+    /* Card Cucina - Stile aggiornato */
+    .related-card {
+        position: relative;
+        box-shadow: 0 5px 15px rgb(0 0 0 / 34%);
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: var(--white);
+        overflow: hidden;
+    }
 
-        .related-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(44, 52, 36, 0.2);
-        }
+    .related-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
 
-        .related-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
+    /* Link assoluto che copre tutta la card */
+    .related-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        text-decoration: none;
+    }
 
-        .related-card:hover .related-image {
-            transform: scale(1.05);
-        }
+    /* Titolo della cucina */
+    .related-name {
+        padding: 20px 20px 5px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
 
-        .related-info {
-            padding: 1.5rem;
-        }
+    .related-name::after {
+        content: "→";
+        margin-left: 6px;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
 
+    /* Container immagine */
+    .related-image-container {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    .related-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .related-card:hover .related-image {
+        transform: scale(1.05);
+    }
+
+    /* Descrizione (se necessaria) */
+    .related-desc {
+        padding: 0 20px 20px;
+        color: var(--primary-medium);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    /* Navigazione immagini (se più immagini disponibili) */
+    .related-nav {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .related-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .related-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: rgba(255,255,255,0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .related-pagination-bullet.active {
+        background: var(--white);
+    }
+
+    .related-nav-button {
+        color: var(--white);
+        cursor: pointer;
+        padding: 0 10px;
+        transition: all 0.3s ease;
+    }
+
+    .related-nav-button:hover {
+        opacity: 0.8;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 767px) {
         .related-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary-dark);
+            font-size: 1.2rem;
+            padding: 15px 15px 5px;
         }
-
+        
         .related-desc {
-            color: var(--primary-medium);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
+            padding: 0 15px 15px;
         }
+    }
 
-        .related-link {
-            display: inline-block;
-            padding: 8px 20px;
-            background: var(--primary-dark);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .related-link:hover {
-            background: var(--primary-medium);
-            transform: translateY(-2px);
-        }
+    /* Rimozione margini come nell'esempio */
+    .mb-30,
+    .mb-md-80 {
+        margin-bottom: 0 !important;
+    }
 
 /* Footer */
 .footer {
