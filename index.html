@@ -236,8 +236,8 @@
         .mobile-menu {
             position: fixed;
             top: 0;
-            width: 280px; /* Reduced from 500px for small screens */
-            left: -280px;
+            width: 580px; /* Reduced from 500px for small screens */
+            left: -580px;
             height: 100vh;
             background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
             backdrop-filter: blur(20px);
@@ -485,6 +485,18 @@
 
         .category-card:hover .category-link::after {
             transform: translateX(5px);
+        }
+
+        .link-icon {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 18px;
+            color: #fff;          /* cambia colore a piacere */
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            padding: 4px 6px;
+            line-height: 1;
         }
 
 /* Why Choose Us Section - Corrected Version */
@@ -1462,27 +1474,27 @@
     <section class="categories" id="categories">
     <div class="categories-container">
 
-                <!-- Card 2 -->
-        <a href="cucine-nuove.html" class="category-card fade-in" id="cucine-nuove" style="text-decoration:none; color:inherit;">
+    <!-- Card 2 -->
+    <a href="cucine-nuove.html" class="category-card fade-in" id="cucine-nuove" style="text-decoration:none; color:inherit; position:relative;">
+        <span class="link-icon">↗</span>
         <img src="Images/home/nuove.webp" alt="Cucine Nuove" class="category-image">
         <div class="category-content">
             <h3 class="category-title">Cucine Nuove</h3>
-            <p class="category-description">Design contemporaneo e innovazione tecnologica. Realizza la cucina dei tuoi sogni con materiali premium.</p>
+            <p class="category-description">Design contemporaneo e innovazione tecnologica.</p>
             <span class="category-link">Esplora ora</span>
         </div>
-        </a>
-
+    </a>
 
         <!-- Card 1 -->
         <a href="SecondaMano.html" class="category-card fade-in" id="cucine-Seconda Mano" style="text-decoration:none; color:inherit;">
+                    <span class="link-icon">↗</span>
         <img src="Images/home/secondamano.webp" alt="Cucine Seconda Mano" class="category-image">
         <div class="category-content">
             <h3 class="category-title">Cucine Seconda Mano</h3>
-            <p class="category-description">Cucine di qualità superiore ricondizionate con cura maniacale. Ogni pezzo racconta una storia di eccellenza.</p>
+            <p class="category-description">Cucine di qualità superiore ricondizionate con cura maniacale.</p>
             <span class="category-link">Scopri di più</span>
         </div>
         </a>
-
 
 
     </div>
