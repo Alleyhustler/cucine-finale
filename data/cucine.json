@@ -209,8 +209,8 @@
       "id": 4,
       "slug": "Classica-Avorio",
       "name": "Classica Avorio",
-      "shortDescription": "Design senza tempo con ante in legno massello",
-      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "shortDescription": "Dafne, laminato rovere. miele e bianco",
+      "description": "La Cucina Dafne in rovere miele e bianco si distingue per la sua luminosità e per il calore delle tonalità naturali. L’alternanza tra finiture chiare e venature del legno rende l’ambiente accogliente e raffinato, mentre il piano in marmo bianco regala eleganza senza tempo. I dettagli in acciaio inox completano la composizione con funzionalità e resistenza, creando una cucina che unisce tradizione e modernità.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/nuove/lineare/4/IMG_8246.JPEG",
@@ -221,72 +221,60 @@
       ],
       "features": [
         {
-          "title": "Legno Massello di Castagno",
-          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+          "title": "Tonalità Naturali",
+          "description": "Rovere miele e bianco che creano un ambiente luminoso, caldo e accogliente"
         },
         {
-          "title": "Top in Granito Naturale",
-          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+          "title": "Eleganza del Marmo Bianco",
+          "description": "Top in laminato effetto marmo bianco, resistente e raffinato, che valorizza la cucina"
         },
         {
-          "title": "Maniglie in Ottone",
-          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+          "title": "Dettagli in Acciaio Inox",
+          "description": "Lavello e piano cottura in inox, pratici e durevoli nel tempo"
         },
         {
-          "title": "Finitura Personalizzabile",
-          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+          "title": "Forno Statico Integrato",
+          "description": "Perfetto per cotture tradizionali e uniformi con semplicità d’uso"
         },
         {
-          "title": "Zoccolatura in Legno",
-          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
+          "title": "Illuminazione Moderna",
+          "description": "Luci LED sottopensile che esaltano il piano di lavoro e creano atmosfera"
         }
       ],
-      "specifications": [
-        {
-          "category": "Dimensioni",
-          "details": [
-            "Lunghezza: 320-500 cm (modulare)",
-            "Profondità: 60 cm standard, 65 cm per isola",
-            "Altezza pensili: 75 cm",
-            "Altezza totale: 235 cm"
-          ]
-        },
-        {
-          "category": "Materiali",
-          "details": [
-            "Ante: Legno massello di castagno 22mm",
-            "Top: Granito naturale 40mm",
-            "Struttura: Legno multistrato 18mm",
-            "Maniglie: Ottone anticato lavorato a mano"
-          ]
-        },
-        {
-          "category": "Elettrodomestici",
-          "details": [
-            "Forno tradizionale con grill A+",
-            "Piano cottura in ghisa 5 fuochi",
-            "Lavastoviglie integrata classe A++",
-            "Cappa camino in rame battuto"
-          ]
-        },
-        {
-          "category": "Dettagli Artigianali",
-          "details": [
-            "Cornici bugnate sui frontali",
-            "Colonne scanalate decorative",
-            "Mensole in legno massello",
-            "Piedini torniti regolabili"
-          ]
-        } 
+      "specs": {
+      "Dimensioni": [
+        "Lunghezza: 300 cm (personalizzabile)",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm"
       ],
-      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+      "Materiali": [
+        "Ante: Laminato effetto rovere miele e bianco",
+        "Top: Laminato finitura marmo bianco",
+        "Lavello: Acciaio inox satinato",
+        "Piano cottura: Acciaio inox"
+      ],
+      "Elettrodomestici": [
+        "Forno statico da incasso",
+        "Piano cottura 4 fuochi inox",
+        "Lavello inox integrato",
+        "Frigorifero 240L",
+        "Cappa aspirante con LED"
+      ],
+      "Accessori Inclusi": [
+        "Pensili con apertura push-pull",
+        "Cassetti con guide ammortizzate soft-close",
+        "Ripiani interni regolabili",
+        "Illuminazione LED sottopensile"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
     },
     {
       "id": 5,
       "slug": "Nero-Rovere",
       "name": "Nero Rovere",
-      "shortDescription": "Design senza tempo con ante in legno massello",
-      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "shortDescription": "Dafne, laminato rovere grigio e anracite",
+      "description": "La Cucina Dafne esprime un’eleganza sobria e moderna grazie al rovere grigio abbinato all’antracite, tonalità che donano profondità e raffinatezza all’ambiente. Il piano in marmo nero arricchisce la composizione con un tocco di prestigio, mentre l’acciaio inox di lavello e piano cottura porta praticità e durata nel tempo. Una cucina dal design equilibrato, pensata per chi cerca funzionalità e stile contemporaneo in uno spazio compatto e lineare.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/nuove/lineare/5/IMG_8249.JPEG",
@@ -297,65 +285,53 @@
       ],
       "features": [
         {
-          "title": "Legno Massello di Castagno",
-          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+          "title": "Rovere Grigio e Antracite",
+          "description": "Ante in laminato che combinano calore materico e modernità, creando un ambiente elegante e accogliente"
         },
         {
-          "title": "Top in Granito Naturale",
-          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+          "title": "Piano in Marmo Nero",
+          "description": "Top in laminato effetto marmo nero, resistente e raffinato, che valorizza l’intera composizione"
         },
         {
-          "title": "Maniglie in Ottone",
-          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+          "title": "Acciaio Inox Professionale",
+          "description": "Lavello e piano cottura in inox, scelti per resistenza, igiene e praticità quotidiana"
         },
         {
-          "title": "Finitura Personalizzabile",
-          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+          "title": "Forno Statico Integrato",
+          "description": "Ampio forno da incasso 240L ideale per cotture tradizionali e uniformi"
         },
         {
-          "title": "Zoccolatura in Legno",
-          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
+          "title": "Soluzioni Salvaspazio",
+          "description": "Elementi interni regolabili e moduli funzionali che ottimizzano l’organizzazione"
         }
       ],
-      "specifications": [
-        {
-          "category": "Dimensioni",
-          "details": [
-            "Lunghezza: 320-500 cm (modulare)",
-            "Profondità: 60 cm standard, 65 cm per isola",
-            "Altezza pensili: 75 cm",
-            "Altezza totale: 235 cm"
-          ]
-        },
-        {
-          "category": "Materiali",
-          "details": [
-            "Ante: Legno massello di castagno 22mm",
-            "Top: Granito naturale 40mm",
-            "Struttura: Legno multistrato 18mm",
-            "Maniglie: Ottone anticato lavorato a mano"
-          ]
-        },
-        {
-          "category": "Elettrodomestici",
-          "details": [
-            "Forno tradizionale con grill A+",
-            "Piano cottura in ghisa 5 fuochi",
-            "Lavastoviglie integrata classe A++",
-            "Cappa camino in rame battuto"
-          ]
-        },
-        {
-          "category": "Dettagli Artigianali",
-          "details": [
-            "Cornici bugnate sui frontali",
-            "Colonne scanalate decorative",
-            "Mensole in legno massello",
-            "Piedini torniti regolabili"
-          ]
-        } 
+      "specs": {
+      "Dimensioni": [
+        "Lunghezza: 300 cm (personalizzabile)",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm"
       ],
-      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+      "Materiali": [
+        "Ante: Laminato effetto rovere grigio e antracite",
+        "Top: Laminato finitura marmo nero",
+        "Lavello: Acciaio inox spazzolato",
+        "Piano cottura: Acciaio inox"
+      ],
+      "Elettrodomestici": [
+        "Forno statico da incasso 240L",
+        "Piano cottura 4 fuochi inox",
+        "Lavello inox integrato",
+        "Frigorifero abbinabile su richiesta",
+        "Cappa aspirante con illuminazione LED"
+      ],
+      "Accessori Inclusi": [
+        "Cassetti con guide ammortizzate soft-close",
+        "Pensili con apertura push-pull",
+        "Ripiani interni regolabili in altezza",
+        "Illuminazione LED sottopensile"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
     },
     {
       "id": 6,
