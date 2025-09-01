@@ -337,8 +337,8 @@
       "id": 6,
       "slug": "Perla-Bianca",
       "name": "Perla Bianca",
-      "shortDescription": "Design senza tempo con ante in legno massello",
-      "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
+      "shortDescription": "Perla latinato bianco opaco",
+      "description": "Perla è una soluzione di seconda mano dal design lineare e minimalista. Le superfici in laminato bianco opaco, abbinate al piano e schienale coordinati, creano un ambiente luminoso e pulito. La praticità del lavello in acciaio con miscelatore si unisce alla modernità del piano cottura a induzione, mentre il forno statico completa la composizione con funzionalità essenziale. Una cucina compatta e attuale, ideale per chi cerca semplicità ed efficienza.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/angolare/2/IMG_8256.JPEG",
@@ -349,65 +349,52 @@
       ],
       "features": [
         {
-          "title": "Legno Massello di Castagno",
-          "description": "Ante realizzate in legno massello di castagno italiano con lavorazione artigianale"
+          "title": "Design Essenziale",
+          "description": "Ante in laminato bianco opaco che donano luminosità e sobrietà"
         },
         {
-          "title": "Top in Granito Naturale",
-          "description": "Piano di lavoro in granito naturale lucido, resistente e duraturo"
+          "title": "Piano Coordinato",
+          "description": "Top e schienale in laminato abbinato per continuità estetica"
         },
         {
-          "title": "Maniglie in Ottone",
-          "description": "Maniglie forgiate in ottone anticato per un tocco di eleganza"
+          "title": "Lavello Inox",
+          "description": "Lavello in acciaio inox con miscelatore, resistente e pratico"
         },
         {
-          "title": "Finitura Personalizzabile",
-          "description": "Possibilità di scegliere tra diverse finiture e colorazioni del legno"
+          "title": "Induzione Moderna",
+          "description": "Piano cottura a induzione che garantisce velocità ed efficienza"
         },
         {
-          "title": "Zoccolatura in Legno",
-          "description": "Zoccolatura coordinata in legno massello per continuità estetica"
+          "title": "Forno Statico",
+          "description": "Soluzione semplice e funzionale per cotture tradizionali"
         }
       ],
-      "specifications": [
-        {
-          "category": "Dimensioni",
-          "details": [
-            "Lunghezza: 320-500 cm (modulare)",
-            "Profondità: 60 cm standard, 65 cm per isola",
-            "Altezza pensili: 75 cm",
-            "Altezza totale: 235 cm"
-          ]
-        },
-        {
-          "category": "Materiali",
-          "details": [
-            "Ante: Legno massello di castagno 22mm",
-            "Top: Granito naturale 40mm",
-            "Struttura: Legno multistrato 18mm",
-            "Maniglie: Ottone anticato lavorato a mano"
-          ]
-        },
-        {
-          "category": "Elettrodomestici",
-          "details": [
-            "Forno tradizionale con grill A+",
-            "Piano cottura in ghisa 5 fuochi",
-            "Lavastoviglie integrata classe A++",
-            "Cappa camino in rame battuto"
-          ]
-        },
-        {
-          "category": "Dettagli Artigianali",
-          "details": [
-            "Cornici bugnate sui frontali",
-            "Colonne scanalate decorative",
-            "Mensole in legno massello",
-            "Piedini torniti regolabili"
-          ]
-        } 
+      "specs": {
+      "Dimensioni": [
+        "Lunghezza: 294 cm",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm"
       ],
-      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+      "Materiali": [
+        "Ante: Laminato bianco opaco",
+        "Top: Laminato coordinato con schienale",
+        "Lavello: Acciaio inox con miscelatore"
+      ],
+      "Elettrodomestici": [
+        "Forno statico da incasso",
+        "Piano cottura a induzione",
+        "Lavello inox",
+        "Cappa aspirante integrata",
+        "Frigorifero abbinabile su richiesta"
+      ],
+      "Accessori Inclusi": [
+        "Pensili con apertura push-pull",
+        "Cassetti con guide soft-close",
+        "Ripiani interni regolabili",
+        "Illuminazione LED sottopensile"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
     },
     {
       "id": 7,
@@ -478,8 +465,8 @@
       "id": 8,
       "slug": "Vaniglia-Noce",
       "name": "Vaniglia Noce",
-      "shortDescription": "Dafne laminato quercia bianca",
-      "description": "Una cucina che evoca il calore e l'accoglienza delle case di campagna, con ante in legno naturale e dettagli artigianali. Il piano in pietra lavica aggiunge un tocco di robustezza e autenticità, mentre gli elettrodomestici integrati garantiscono funzionalità moderna. Ideale per chi ama uno stile rustico senza rinunciare alla praticità quotidiana.",
+      "shortDescription": "ABS bianco opaco",
+      "description": "Vaniglia noce è una composizione di seconda mano dal design essenziale e pulito. Le superfici in ABS bianco opaco donano luminosità e sobrietà, mentre il piano in laminato assicura praticità e resistenza quotidiana. Gli elettrodomestici in acciaio inox – lavello, piano cottura e forno statico nuovo – completano la cucina con un tocco moderno e funzionale. Con i suoi 265 cm di lunghezza lineare, offre tutto il necessario in uno spazio compatto ed equilibrato.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/lineare/1/IMG_8252.JPEG",
@@ -490,50 +477,50 @@
       ],
       "features": [
         {
-          "title": "Abbinamento Naturale",
-          "description": "Finiture in quercia e quercia bianca che esaltano la luminosità e il calore dell’ambiente"
-        },
-        {
-          "title": "Top Bianca Roccia",
-          "description": "Piano in laminato effetto roccia bianca, resistente e dal look contemporaneo"
-        },
-        {
-          "title": "Inox a Vista",
-          "description": "Lavello, piano cottura e forno in acciaio inox per un aspetto moderno e professionale"
+          "title": "Bianco Opaco Senza Tempo",
+          "description": "Ante in ABS bianco opaco per un aspetto sobrio, luminoso e versatile"
         },
         {
           "title": "Compatta e Funzionale",
-          "description": "Soluzione angolare ideale per ottimizzare gli spazi senza rinunciare alla praticità"
+          "description": "Lunghezza 265 cm con tutto il necessario per la cucina quotidiana"
         },
         {
-          "title": "Illuminazione Integrata",
-          "description": "Luci LED sottopensile per valorizzare il piano di lavoro e rendere l’ambiente accogliente"
+          "title": "Elettrodomestici in Acciaio",
+          "description": "Lavello, piano cottura e forno in inox per resistenza e praticità"
+        },
+        {
+          "title": "Forno Statico Nuovo",
+          "description": "Forno in acciaio inox appena installato, pronto per un utilizzo duraturo"
+        },
+        {
+          "title": "Lavastoviglie Inclusa",
+          "description": "Lavastoviglie da 60 cm integrata per comfort e comodità"
         }
       ],
       "specs": {
       "Dimensioni": [
-        "Lato 1: 215 cm",
-        "Lato 2: 245 cm",
+        "Lunghezza: 265 cm",
         "Profondità: 60 cm standard",
         "Altezza totale: 230 cm"
       ],
       "Materiali": [
-        "Ante: Laminato effetto quercia e quercia bianca",
-        "Top: Laminato finitura bianca roccia",
-        "Lavello: Acciaio inox satinato",
+        "Ante: ABS bianco opaco",
+        "Top: Laminato finitura neutra",
+        "Lavello: Acciaio inox con miscelatore",
         "Piano cottura: Acciaio inox"
       ],
       "Elettrodomestici": [
-        "Forno statico da incasso inox",
+        "Forno statico in acciaio (nuovo)",
         "Piano cottura 4 fuochi inox",
-        "Lavello inox integrato",
-        "Frigorifero 240L",
+        "Lavello inox con miscelatore",
+        "Lavastoviglie 60 cm",
+        "Frigorifero abbinabile su richiesta",
         "Cappa aspirante con LED"
       ],
       "Accessori Inclusi": [
         "Cassetti con guide soft-close",
         "Pensili con apertura push-pull",
-        "Ripiani interni regolabili",
+        "Ripiani regolabili interni",
         "Illuminazione LED sottopensile"
       ]
       },
