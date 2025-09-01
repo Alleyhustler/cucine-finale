@@ -408,6 +408,68 @@
         } 
       ],
       "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 7,
+      "slug": "Noce-Naturale",
+      "name": "Noce Naturale",
+      "shortDescription": "Stile rustico con finiture in legno naturale",
+      "description": "Una cucina che evoca il calore e l'accoglienza delle case di campagna, con ante in legno naturale e dettagli artigianali. Il piano in pietra lavica aggiunge un tocco di robustezza e autenticità, mentre gli elettrodomestici integrati garantiscono funzionalità moderna. Ideale per chi ama uno stile rustico senza rinunciare alla praticità quotidiana.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "/Images/nuove/lineare/7/IMG_8263.JPEG",
+      "images": [
+        "/Images/nuove/lineare/7/IMG_8263.JPEG",
+        "/Images/nuove/lineare/7/IMG_8262.JPEG",
+        "/Images/nuove/lineare/7/IMG_8264.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Legno Naturale",
+          "description": "Ante in legno massello con finitura naturale che esaltano le venature del legno"
+        },
+        {
+          "title": "Piano in Pietra Lavica",
+          "description": "Top in pietra lavica, resistente al calore e facile da pulire"
+        },
+        {
+          "title": "Dettagli Artigianali",
+          "description": "Maniglie in ferro battuto e dettagli decorativi che richiamano lo stile rustico"
+        },
+        {
+          "title": "Elettrodomestici Integrati",
+          "description": "Set completo di elettrodomestici di marca con classe energetica A++"
+        },
+        {
+          "title": "Illuminazione Calda",
+          "description": "Luci LED con tonalità calda che creano un'atmosfera accogliente"
+        }
+      ],
+      "specs": {
+      "Dimensioni": [
+        "Lunghezza: 320-500 cm (modulare)",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 235 cm"
+      ],
+      "Materiali": [
+        "Ante: Legno massello con finitura naturale",
+        "Top: Pietra lavica spazzolata",
+        "Maniglie: Ferro battuto"
+      ],
+      "Elettrodomestici": [
+        "Forno tradizionale con grill A+",
+        "Piano cottura in ghisa 5 fuochi",
+        "Lavastoviglie integrata classe A++",
+        "Cappa aspirante in acciaio inox"
+      ],
+      "Accessori Inclusi": [
+        "Cassetti con guide soft-close",
+        "Pensili con apertura ammortizzata",
+        "Ripiani interni regolabili",
+        "Illuminazione LED sottopensile"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
     }
   ]
 }
