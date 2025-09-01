@@ -425,46 +425,49 @@
       ],
       "features": [
         {
-          "title": "Legno Naturale",
-          "description": "Ante in legno massello con finitura naturale che esaltano le venature del legno"
+          "title": "Abbinamento Naturale",
+          "description": "Finiture in quercia e quercia bianca che esaltano la luminosità e il calore dell’ambiente"
         },
         {
-          "title": "Piano in Pietra Lavica",
-          "description": "Top in pietra lavica, resistente al calore e facile da pulire"
+          "title": "Top Bianca Roccia",
+          "description": "Piano in laminato effetto roccia bianca, resistente e dal look contemporaneo"
         },
         {
-          "title": "Dettagli Artigianali",
-          "description": "Maniglie in ferro battuto e dettagli decorativi che richiamano lo stile rustico"
+          "title": "Inox a Vista",
+          "description": "Lavello, piano cottura e forno in acciaio inox per un aspetto moderno e professionale"
         },
         {
-          "title": "Elettrodomestici Integrati",
-          "description": "Set completo di elettrodomestici di marca con classe energetica A++"
+          "title": "Compatta e Funzionale",
+          "description": "Soluzione angolare ideale per ottimizzare gli spazi senza rinunciare alla praticità"
         },
         {
-          "title": "Illuminazione Calda",
-          "description": "Luci LED con tonalità calda che creano un'atmosfera accogliente"
+          "title": "Illuminazione Integrata",
+          "description": "Luci LED sottopensile per valorizzare il piano di lavoro e rendere l’ambiente accogliente"
         }
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 320-500 cm (modulare)",
+        "Lato 1: 215 cm",
+        "Lato 2: 245 cm",
         "Profondità: 60 cm standard",
-        "Altezza totale: 235 cm"
+        "Altezza totale: 230 cm"
       ],
       "Materiali": [
-        "Ante: Legno massello con finitura naturale",
-        "Top: Pietra lavica spazzolata",
-        "Maniglie: Ferro battuto"
+        "Ante: Laminato effetto quercia e quercia bianca",
+        "Top: Laminato finitura bianca roccia",
+        "Lavello: Acciaio inox satinato",
+        "Piano cottura: Acciaio inox"
       ],
       "Elettrodomestici": [
-        "Forno tradizionale con grill A+",
-        "Piano cottura in ghisa 5 fuochi",
-        "Lavastoviglie integrata classe A++",
-        "Cappa aspirante in acciaio inox"
+        "Forno statico da incasso inox",
+        "Piano cottura 4 fuochi inox",
+        "Lavello inox integrato",
+        "Frigorifero 240L",
+        "Cappa aspirante con LED"
       ],
       "Accessori Inclusi": [
         "Cassetti con guide soft-close",
-        "Pensili con apertura ammortizzata",
+        "Pensili con apertura push-pull",
         "Ripiani interni regolabili",
         "Illuminazione LED sottopensile"
       ]
