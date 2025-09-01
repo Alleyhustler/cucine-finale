@@ -2146,17 +2146,6 @@
                             alt="${related.name}">
                         ${related.images && related.images.length > 1 ? `
                             <div class="sn_kitchen_i_sw_nav">
-                                <div class="sn_swiper_nav sn_swiper_prev">
-                                    <div class="sn_sprite _arrow_left">‹</div>
-                                </div>
-                                <div class="sn_swiper_pagination">
-                                    ${related.images.map((_, index) => 
-                                        `<span class="swiper-pagination-bullet ${index === 0 ? 'swiper-pagination-bullet-active' : ''}"></span>`
-                                    ).join('')}
-                                </div>
-                                <div class="sn_swiper_nav sn_swiper_next">
-                                    <div class="sn_sprite _arrow_right">›</div>
-                                </div>
                             </div>
                         ` : ''}
                     </div>
