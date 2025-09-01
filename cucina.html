@@ -2030,7 +2030,7 @@
             // Populate related products
             const relatedContainer = document.getElementById('relatedProducts');
             relatedContainer.innerHTML = '';
-            
+
             // Filter out current product and get random related products
             const relatedProducts = allProducts
                 .filter(p => p.slug !== product.slug)
@@ -2039,19 +2039,115 @@
 
             relatedProducts.forEach(related => {
                 const relatedCard = document.createElement('div');
-                relatedCard.className = 'related-card';
+                relatedCard.className = 'sn_kitchen_i';
                 relatedCard.innerHTML = `
-                    <img src="${related.images?.[0] || 'images/placeholder.jpg'}" 
-                         alt="${related.name}" class="related-image">
-                    <div class="related-info">
-                        <h4 class="related-name">${related.name}</h4>
-                        <p class="related-desc">${related.shortDescription}</p>
-                        <a href="product.html?slug=${related.slug}" class="related-link">
-                            Scopri di più
-                        </a>
+                    <a href="product.html?slug=${related.slug}" class="sn_kitchen_i_link"></a>
+                    <div class="sn_kitchen_i_title">
+                        ${related.name}
+                        <div class="sn_sprite _external_big">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="sn_kitchen_i_sw">
+                        <img src="${related.images?.[0] || 'images/placeholder.jpg'}" 
+                            alt="${related.name}">
+                        ${related.images && related.images.length > 1 ? `
+                            <div class="sn_kitchen_i_sw_nav">
+                                <div class="sn_swiper_nav sn_swiper_prev">
+                                    <div class="sn_sprite _arrow_left">‹</div>
+                                </div>
+                                <div class="sn_swiper_pagination">
+                                    ${related.images.map((_, index) => 
+                                        `<span class="swiper-pagination-bullet ${index === 0 ? 'swiper-pagination-bullet-active' : ''}"></span>`
+                                    ).join('')}
+                                </div>
+                                <div class="sn_swiper_nav sn_swiper_next">
+                                    <div class="sn_sprite _arrow_right">›</div>
+                                </div>
+                            </div>
+                        ` : ''}
+                    </div>
+                    <div class="kitchen-description">
+                        ${related.shortDescription}
                     </div>
                 `;
                 relatedContainer.appendChild(relatedCard);
+            });
+
+            // Add image carousel functionality for related products
+            document.querySelectorAll('#relatedProducts .sn_kitchen_i').forEach((card, cardIndex) => {
+                const related = relatedProducts[cardIndex];
+                if (!related.images || related.images.length <= 1) return;
+
+                let currentImageIndex = 0;
+                const img = card.querySelector('img');
+                const bullets = card.querySelectorAll('.swiper-pagination-bullet');
+                const prevBtn = card.querySelector('.sn_swiper_prev');
+                const nextBtn = card.querySelector('.sn_swiper_next');
+
+                function updateImage(index) {
+                    currentImageIndex = index;
+                    img.src = related.images[currentImageIndex];
+                    
+                    // Update pagination bullets
+                    bullets.forEach((bullet, i) => {
+                        bullet.classList.toggle('swiper-pagination-bullet-active', i === currentImageIndex);
+                    });
+                }
+
+                // Previous image
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : related.images.length - 1;
+                        updateImage(newIndex);
+                    });
+                }
+
+                // Next image  
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const newIndex = currentImageIndex < related.images.length - 1 ? currentImageIndex + 1 : 0;
+                        updateImage(newIndex);
+                    });
+                }
+
+                // Pagination bullets
+                bullets.forEach((bullet, index) => {
+                    bullet.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        updateImage(index);
+                    });
+                });
+
+                // Auto-slide functionality (optional)
+                let autoSlideInterval;
+                
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(() => {
+                        const newIndex = currentImageIndex < related.images.length - 1 ? currentImageIndex + 1 : 0;
+                        updateImage(newIndex);
+                    }, 4000); // Change image every 4 seconds
+                }
+
+                function stopAutoSlide() {
+                    if (autoSlideInterval) {
+                        clearInterval(autoSlideInterval);
+                    }
+                }
+
+                // Start auto-slide when not hovering
+                card.addEventListener('mouseenter', stopAutoSlide);
+                card.addEventListener('mouseleave', startAutoSlide);
+                
+                // Start auto-slide initially
+                startAutoSlide();
             });
         }
 
