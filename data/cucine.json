@@ -341,11 +341,11 @@
       "description": "Una cucina che unisce la tradizione italiana con la funzionalità moderna. Le ante in legno massello di castagno, lavorate artigianalmente, donano calore e personalità all'ambiente. Perfetta per chi ama lo stile classico ma non vuole rinunciare alle comodità moderne.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "Images/nuove/lineare/6/IMG_8252.JPEG",
+      "thumbnail": "/Images/usate/angolare/2/IMG_8256.JPEG",
       "images": [
-        "/Images/nuove/lineare/6/IMG_8252.JPEG",
-        "/Images/nuove/lineare/6/IMG_8253.JPEG",
-        "/Images/nuove/lineare/6/IMG_8254.JPEG"
+        "/Images/usate/angolare/2/IMG_8256.JPEG",
+        "/Images/usate/angolare/2/IMG_8257.JPEG",
+        "/Images/usate/angolare/2/IMG_8258.JPEG"
       ],
       "features": [
         {
@@ -482,11 +482,11 @@
       "description": "Una cucina che evoca il calore e l'accoglienza delle case di campagna, con ante in legno naturale e dettagli artigianali. Il piano in pietra lavica aggiunge un tocco di robustezza e autenticità, mentre gli elettrodomestici integrati garantiscono funzionalità moderna. Ideale per chi ama uno stile rustico senza rinunciare alla praticità quotidiana.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "/Images/nuove/angolare/3/IMG_8263.JPEG",
+      "thumbnail": "/Images/usate/lineare/1/IMG_8252.JPEG",
       "images": [
-        "/Images/nuove/angolare/3/IMG_8263.JPEG",
-        "/Images/nuove/angolare/3/IMG_8262.JPEG",
-        "/Images/nuove/angolare/3/IMG_8264.JPEG"
+        "/Images/usate/lineare/1/IMG_8252.JPEG",
+        "/Images/usate/lineare/1/IMG_8253.JPEG",
+        "/Images/usate/lineare/1/IMG_8254.JPEG"
       ],
       "features": [
         {
