@@ -1450,6 +1450,123 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+
+        /* Mini Mappa Styling */
+.store-location {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: url('bedge-grunge.png') #f8f9f8;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-dark);
+}
+
+.location-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-family: "Philosopher", sans-serif;
+}
+
+.location-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.mini-map {
+    flex: 0 0 300px;
+}
+
+.static-map {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(44, 52, 36, 0.2);
+    transition: all 0.3s ease;
+}
+
+.static-map:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(44, 52, 36, 0.3);
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 150px;
+    background: var(--accent-light);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(44, 52, 36, 0.2);
+}
+
+.map-placeholder:hover {
+    background: var(--accent-medium);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(44, 52, 36, 0.3);
+}
+
+.map-placeholder i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.address-info {
+    flex: 1;
+}
+
+.address {
+    font-size: 1.1rem;
+    color: var(--primary-medium);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.address i {
+    color: var(--primary-dark);
+}
+
+.map-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--primary-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.map-link:hover {
+    background: var(--primary-medium);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .location-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mini-map {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    
+    .address {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -1549,6 +1666,31 @@
                 <div class="product-actions">
                     <a href="#preventivo" class="btn-primary" id="ctaPreventivo">Richiedi Preventivo</a>
                     <a href="tel:+393391703591" class="btn-secondary">Chiama Ora</a>
+                </div>
+                <!-- Aggiungi questo codice dopo .product-actions e prima della sezione "Specifiche Tecniche" -->
+
+                <div class="store-location fade-in">
+                    <h3 class="location-title">Dove Trovarci</h3>
+                    <div class="location-content">
+                        <div class="mini-map">
+                            <a href="https://maps.google.com/?q=Via+Torino+71+Gallarate+21013+Varese+Italia" target="_blank" rel="noopener">
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Via+Torino+71,Gallarate,VA&zoom=15&size=300x150&maptype=roadmap&markers=color:red%7CVia+Torino+71,Gallarate,VA&key=YOUR_KEY_HERE" 
+                                    alt="Mappa della nostra posizione" class="static-map">
+                            </a>
+                        </div>
+                        <div class="address-info">
+                            <p class="address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Via Torino 71, 21013 Gallarate (VA)
+                            </p>
+                            <a href="https://maps.google.com/?q=Via+Torino+71+Gallarate+21013+Varese+Italia" 
+                            target="_blank" 
+                            rel="noopener" 
+                            class="map-link">
+                                Apri in Google Maps
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
