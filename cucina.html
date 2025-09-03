@@ -1450,81 +1450,90 @@
             opacity: 1;
             transform: translateY(0);
         }
+
         /* Stile per la mini mappa */
+/* Stile per la mini mappa */
 .mini-map-container {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--accent-light);
-    width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--accent-light);
+  width: 100%;
+  max-width: 400px; /* Limita la larghezza massima */
 }
 
 .map-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.8rem;
-    color: var(--primary-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--primary-dark);
 }
 
 .static-map {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(44, 52, 36, 0.15);
-    transition: all 0.3s ease;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(44, 52, 36, 0.15);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 350px; /* Larghezza massima ridotta */
+  height: 180px; /* Altezza fissa per forma rettangolare */
 }
 
 .static-map:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(44, 52, 36, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(44, 52, 36, 0.25);
 }
 
 .static-map img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene le proporzioni tagliando se necessario */
+  display: block;
 }
 
 .map-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(44, 52, 36, 0.85);
-    color: white;
-    padding: 8px;
-    font-size: 0.8rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(44, 52, 36, 0.85);
+  color: white;
+  padding: 8px;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .static-map:hover .map-overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .map-address {
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
-    color: var(--primary-medium);
-    line-height: 1.4;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--primary-medium);
+  line-height: 1.4;
 }
 
 .map-link {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; /* Per permettere al container di adattarsi */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .mini-map-container {
-        margin-top: 1rem;
-        padding-top: 1rem;
-    }
-    
-    .static-map img {
-        max-height: 120px;
-        object-fit: cover;
-    }
+  .mini-map-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    max-width: 100%;
+  }
+  
+  .static-map {
+    max-width: 100%;
+    height: 140px; /* Altezza ridotta per mobile */
+  }
 }
     </style>
 </head>
@@ -1629,14 +1638,14 @@
                 </div>
                 <!-- Aggiungi questo codice dentro il div con classe "product-actions" -->
                 <div class="mini-map-container">
-                    <h4 class="map-title">Dove Trovarci</h4>
-                    <a href="https://maps.google.com/?q=Via+torino+71+gallarate+21013+varese+italia" target="_blank" class="map-link">
-                        <div class="static-map">
-                            <img src="Images/home/Poz.jpg" alt="Mappa della nostra posizione">
-                            <div class="map-overlay">Clicca per vedere su Google Maps</div>
-                        </div>
-                    </a>
-                    <p class="map-address">Via Torino 71, 21013 Gallarate VA, Italia</p>
+                <h4 class="map-title">Dove Trovarci</h4>
+                <a href="https://maps.google.com/?q=Via+torino+71+gallarate+21013+varese+italia" target="_blank" class="map-link">
+                    <div class="static-map">
+                    <img src="Images/home/Poz.jpg" alt="Mappa della nostra posizione">
+                    <div class="map-overlay">Clicca per vedere su Google Maps</div>
+                    </div>
+                </a>
+                <p class="map-address">Via Torino 71, 21013 Gallarate VA, Italia</p>
                 </div>
                 
             </div>
