@@ -860,6 +860,73 @@
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 13,
+      "slug": "Nebbia",
+      "name": "Nebbia",
+      "shortDescription": "Luce laminato bianco lucido",
+      "description": "La Cucina Aurora è una soluzione di seconda mano dal carattere luminoso e moderno. Le superfici in laminato bianco lucido riflettono la luce e ampliano lo spazio, mentre la penisola con tre sgabelli e calpestio in vetro Kolbe crea un ambiente conviviale e funzionale. Gli elettrodomestici rinnovati – forno ventilato Candy, piano cottura a gas in vetro bianco isEasy e microonde Cerotec – rendono la cucina aggiornata ed efficiente. Un lavello in resina bianca con miscelatore completa la composizione, garantendo praticità e resistenza. Una scelta perfetta per chi cerca design e funzionalità a un prezzo accessibile.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "/Images/usate/angolare/4/3.jpg",
+      "images": [
+        "/Images/usate/angolare/4/3.jpg",
+        "/Images/usate/angolare/4/1.jpg",
+        "Images/usate/angolare/4/2.jpg"
+      ],
+      "features": [
+        {
+          "title": "Superfici Luminose",
+          "description": "Laminato bianco lucido che amplia visivamente lo spazio e dona luminosità"
+        },
+        {
+          "title": "Penisola Conviviale",
+          "description": "Elemento penisola con tre sgabelli e piano in vetro Kolbe, ideale per pasti veloci e momenti in compagnia"
+        },
+        {
+          "title": "Elettrodomestici Nuovi",
+          "description": "Forno ventilato Candy, piano cottura in vetro bianco isEasy e microonde Cerotec inclusi e appena installati"
+        },
+        {
+          "title": "Dettagli in Vetro",
+          "description": "Piano cottura e microonde in vetro bianco per un tocco moderno ed elegante"
+        },
+        {
+          "title": "Lavello in Resina Bianca",
+          "description": "Resistente, pratico e coordinato con lo stile luminoso della cucina"
+        }
+      ],
+      "specs": {
+      "Dimensioni": [
+        "Lunghezza: 256,60 cm (personalizzabile con penisola)",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm",
+        "Penisola: 120 cm con 3 sgabelli"
+      ],
+      "Materiali": [
+        "Ante: Laminato bianco lucido",
+        "Top: Laminato finitura bianca",
+        "Schienale: Laminato bianco coordinato",
+        "Lavello: Resina bianca con miscelatore",
+        "Dettagli: Penisola con vetro Kolbe"
+      ],
+      "Elettrodomestici": [
+        "Forno ventilato Candy (nuovo)",
+        "Piano cottura 4 fuochi a gas in vetro bianco isEasy (nuovo)",
+        "Microonde Cerotec in vetro bianco (nuovo)",
+        "Lavello resina bianca",
+        "Frigorifero abbinabile su richiesta",
+        "Cappa aspirante integrata"
+      ],
+      "Accessori Inclusi": [
+        "Penisola conviviale con tre sgabelli",
+        "Cassetti con guide soft-close",
+        "Pensili con apertura push-pull",
+        "Illuminazione LED sottopensile"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
     }
   ]
 }
