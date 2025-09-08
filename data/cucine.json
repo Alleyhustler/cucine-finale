@@ -597,8 +597,8 @@
       "id": 10,
       "slug": "Linea-Luce",
       "name": "Linea Luce",
-      "shortDescription": "Luce laminato bianco lucido",
-      "description": "La Cucina Aurora è una soluzione di seconda mano dal carattere luminoso e moderno. Le superfici in laminato bianco lucido riflettono la luce e ampliano lo spazio, mentre la penisola con tre sgabelli e calpestio in vetro Kolbe crea un ambiente conviviale e funzionale. Gli elettrodomestici rinnovati – forno ventilato Candy, piano cottura a gas in vetro bianco isEasy e microonde Cerotec – rendono la cucina aggiornata ed efficiente. Un lavello in resina bianca con miscelatore completa la composizione, garantendo praticità e resistenza. Una scelta perfetta per chi cerca design e funzionalità a un prezzo accessibile.",
+      "shortDescription": "Luce Moderna bianco lucido",
+      "description": "La Cucina Linea Luce si caratterizza per il suo stile moderno e funzionale, pensato per ambienti contemporanei. Le linee pulite e le superfici luminose rendono lo spazio accogliente e pratico, mentre gli elettrodomestici Beko – forno, microonde e frigorifero da incasso – garantiscono affidabilità e tecnologia. Una soluzione equilibrata che unisce design e comodità quotidiana.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/lineare/2/2.jpg",
@@ -609,53 +609,49 @@
       ],
       "features": [
         {
-          "title": "Superfici Luminose",
-          "description": "Laminato bianco lucido che amplia visivamente lo spazio e dona luminosità"
+          "title": "Stile Moderno",
+          "description": "Linee pulite e luminose che valorizzano ambienti contemporanei"
         },
         {
-          "title": "Penisola Conviviale",
-          "description": "Elemento penisola con tre sgabelli e piano in vetro Kolbe, ideale per pasti veloci e momenti in compagnia"
+          "title": "Elettrodomestici Beko",
+          "description": "Forno, microonde e frigorifero da incasso di ultima generazione"
         },
         {
-          "title": "Elettrodomestici Nuovi",
-          "description": "Forno ventilato Candy, piano cottura in vetro bianco isEasy e microonde Cerotec inclusi e appena installati"
+          "title": "Funzionalità Integrata",
+          "description": "Composizione studiata per offrire praticità e design in un unico ambiente"
         },
         {
-          "title": "Dettagli in Vetro",
-          "description": "Piano cottura e microonde in vetro bianco per un tocco moderno ed elegante"
+          "title": "Illuminazione LED",
+          "description": "Luci sottopensile che migliorano la visibilità sul piano di lavoro"
         },
         {
-          "title": "Lavello in Resina Bianca",
-          "description": "Resistente, pratico e coordinato con lo stile luminoso della cucina"
+          "title": "Personalizzazione",
+          "description": "Possibilità di scegliere finiture e colori per adattarla a ogni spazio"
         }
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 256,60 cm (personalizzabile con penisola)",
+        "Lunghezza: 300 cm (personalizzabile)",
         "Profondità: 60 cm standard",
-        "Altezza totale: 230 cm",
-        "Penisola: 120 cm con 3 sgabelli"
+        "Altezza totale: 230 cm"
       ],
       "Materiali": [
-        "Ante: Laminato bianco lucido",
-        "Top: Laminato finitura bianca",
-        "Schienale: Laminato bianco coordinato",
-        "Lavello: Resina bianca con miscelatore",
-        "Dettagli: Penisola con vetro Kolbe"
+        "Ante: Laminato finitura moderna (colori personalizzabili)",
+        "Top: Laminato resistente al calore",
+        "Schienale: Coordinato con il top"
       ],
       "Elettrodomestici": [
-        "Forno ventilato Candy (nuovo)",
-        "Piano cottura 4 fuochi a gas in vetro bianco isEasy (nuovo)",
-        "Microonde Cerotec in vetro bianco (nuovo)",
-        "Lavello resina bianca",
-        "Frigorifero abbinabile su richiesta",
+        "Forno Beko multifunzione",
+        "Microonde Beko integrato",
+        "Frigorifero da incasso Beko",
+        "Piano cottura abbinabile su richiesta",
         "Cappa aspirante integrata"
       ],
       "Accessori Inclusi": [
-        "Penisola conviviale con tre sgabelli",
-        "Cassetti con guide soft-close",
-        "Pensili con apertura push-pull",
-        "Illuminazione LED sottopensile"
+        "Cassetti con chiusura ammortizzata",
+        "Pensili moderni con apertura push-pull",
+        "Illuminazione LED sottopensile",
+        "Ripiani regolabili"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -664,8 +660,8 @@
       "id": 11,
       "slug": "Notte-Rovere",
       "name": "Notte Rovere",
-      "shortDescription": "Luce laminato bianco lucido",
-      "description": "La Cucina Aurora è una soluzione di seconda mano dal carattere luminoso e moderno. Le superfici in laminato bianco lucido riflettono la luce e ampliano lo spazio, mentre la penisola con tre sgabelli e calpestio in vetro Kolbe crea un ambiente conviviale e funzionale. Gli elettrodomestici rinnovati – forno ventilato Candy, piano cottura a gas in vetro bianco isEasy e microonde Cerotec – rendono la cucina aggiornata ed efficiente. Un lavello in resina bianca con miscelatore completa la composizione, garantendo praticità e resistenza. Una scelta perfetta per chi cerca design e funzionalità a un prezzo accessibile.",
+      "shortDescription": "Il calore del legno, l’eleganza del nero.",
+      "description": "La Cucina Notte Rovere unisce la forza materica del legno rovere con il contrasto deciso del nero, creando un ambiente moderno e raffinato. Le venature naturali del legno dominano la composizione, mentre i dettagli scuri donano profondità ed eleganza. Gli elettrodomestici integrati – forno Candy, cappa moderna e frigorifero da incasso – completano la cucina con efficienza e stile. Una scelta ideale per chi ama l’estetica naturale senza rinunciare al design contemporaneo.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/lineare/3/3.jpg",
@@ -676,52 +672,49 @@
       ],
       "features": [
         {
-          "title": "Superfici Luminose",
-          "description": "Laminato bianco lucido che amplia visivamente lo spazio e dona luminosità"
+          "title": "Rovere Naturale",
+          "description": "Finitura in rovere che valorizza la cucina con calore e autenticità"
         },
         {
-          "title": "Penisola Conviviale",
-          "description": "Elemento penisola con tre sgabelli e piano in vetro Kolbe, ideale per pasti veloci e momenti in compagnia"
+          "title": "Contrasto Elegante",
+          "description": "Dettagli in nero che donano modernità e raffinatezza"
         },
         {
-          "title": "Elettrodomestici Nuovi",
-          "description": "Forno ventilato Candy, piano cottura in vetro bianco isEasy e microonde Cerotec inclusi e appena installati"
+          "title": "Forno Candy",
+          "description": "Forno multifunzione integrato per garantire versatilità in cucina"
         },
         {
-          "title": "Dettagli in Vetro",
-          "description": "Piano cottura e microonde in vetro bianco per un tocco moderno ed elegante"
+          "title": "Cappa Moderna",
+          "description": "Cappa Olta/Olka con illuminazione LED per un’aspirazione efficiente e silenziosa"
         },
         {
-          "title": "Lavello in Resina Bianca",
-          "description": "Resistente, pratico e coordinato con lo stile luminoso della cucina"
+          "title": "Design Contemporaneo",
+          "description": "Linee pulite e materiali a contrasto che si adattano a spazi moderni"
         }
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 256,60 cm (personalizzabile con penisola)",
+        "Lunghezza: 400 cm (personalizzabile)",
         "Profondità: 60 cm standard",
-        "Altezza totale: 230 cm",
-        "Penisola: 120 cm con 3 sgabelli"
+        "Altezza totale: 230 cm"
       ],
       "Materiali": [
-        "Ante: Laminato bianco lucido",
-        "Top: Laminato finitura bianca",
-        "Schienale: Laminato bianco coordinato",
-        "Lavello: Resina bianca con miscelatore",
-        "Dettagli: Penisola con vetro Kolbe"
+        "Ante: Laminato effetto rovere naturale",
+        "Top: Laminato nero opaco",
+        "Schienale: Coordinato in nero",
+        "Dettagli: Contrasto legno/nero"
       ],
       "Elettrodomestici": [
-        "Forno ventilato Candy (nuovo)",
-        "Piano cottura 4 fuochi a gas in vetro bianco isEasy (nuovo)",
-        "Microonde Cerotec in vetro bianco (nuovo)",
-        "Lavello resina bianca",
-        "Frigorifero abbinabile su richiesta",
-        "Cappa aspirante integrata"
+        "Forno Candy multifunzione",
+        "Piano cottura abbinabile (induzione o gas)",
+        "Cappa Olta/Olka moderna con LED",
+        "Frigorifero da incasso",
+        "Lavastoviglie integrabile su richiesta"
       ],
       "Accessori Inclusi": [
-        "Penisola conviviale con tre sgabelli",
         "Cassetti con guide soft-close",
         "Pensili con apertura push-pull",
+        "Ripiani interni regolabili",
         "Illuminazione LED sottopensile"
       ]
       },
@@ -731,8 +724,8 @@
       "id": 12,
       "slug": "Linfa-Biancore",
       "name": "Linfa Biancore",
-      "shortDescription": "Luce laminato bianco lucido",
-      "description": "La Cucina Aurora è una soluzione di seconda mano dal carattere luminoso e moderno. Le superfici in laminato bianco lucido riflettono la luce e ampliano lo spazio, mentre la penisola con tre sgabelli e calpestio in vetro Kolbe crea un ambiente conviviale e funzionale. Gli elettrodomestici rinnovati – forno ventilato Candy, piano cottura a gas in vetro bianco isEasy e microonde Cerotec – rendono la cucina aggiornata ed efficiente. Un lavello in resina bianca con miscelatore completa la composizione, garantendo praticità e resistenza. Una scelta perfetta per chi cerca design e funzionalità a un prezzo accessibile.",
+      "shortDescription": "Il calore del legno e la purezza del bianco.",
+      "description": "La Cucina Linfa e Biancore è un progetto d’arredo che fonde l’intensità del legno marrone con la luminosità del bianco, creando un equilibrio tra naturalezza e leggerezza. Le superfici calde e venate del legno richiamano la linfa vitale, mentre il bianco dona ariosità e modernità all’ambiente. Dotata di forno Candy e frigorifero da incasso, questa cucina abbina funzionalità e design in un connubio raffinato adatto a ogni spazio contemporaneo.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/angolare/3/3.jpg",
@@ -743,54 +736,48 @@
       ],
       "features": [
         {
-          "title": "Superfici Luminose",
-          "description": "Laminato bianco lucido che amplia visivamente lo spazio e dona luminosità"
+          "title": "Doppia Finitura",
+          "description": "Contrasto tra legno marrone e bianco per un design equilibrato"
         },
         {
-          "title": "Penisola Conviviale",
-          "description": "Elemento penisola con tre sgabelli e piano in vetro Kolbe, ideale per pasti veloci e momenti in compagnia"
+          "title": "Forno Candy",
+          "description": "Multifunzione per cotture versatili e precise"
         },
         {
-          "title": "Elettrodomestici Nuovi",
-          "description": "Forno ventilato Candy, piano cottura in vetro bianco isEasy e microonde Cerotec inclusi e appena installati"
+          "title": "Frigo da Incasso",
+          "description": "Perfettamente integrato per un look pulito e ordinato"
         },
         {
-          "title": "Dettagli in Vetro",
-          "description": "Piano cottura e microonde in vetro bianco per un tocco moderno ed elegante"
+          "title": "Design Armonioso",
+          "description": "Equilibrio tra calore naturale e freschezza contemporanea"
         },
         {
-          "title": "Lavello in Resina Bianca",
-          "description": "Resistente, pratico e coordinato con lo stile luminoso della cucina"
+          "title": "Personalizzabile",
+          "description": "Possibilità di adattare misure e accessori secondo le esigenze"
         }
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 256,60 cm (personalizzabile con penisola)",
+        "Lunghezza: 386 x 125 cm ",
         "Profondità: 60 cm standard",
-        "Altezza totale: 230 cm",
-        "Penisola: 120 cm con 3 sgabelli"
+        "Altezza totale: 230 cm"
       ],
       "Materiali": [
-        "Ante: Laminato bianco lucido",
-        "Top: Laminato finitura bianca",
-        "Schienale: Laminato bianco coordinato",
-        "Lavello: Resina bianca con miscelatore",
-        "Dettagli: Penisola con vetro Kolbe"
+        "Ante: Laminato effetto legno marrone e bianco opaco",
+        "Top: Laminato coordinato",
+        "Schienale: In abbinamento al piano"
       ],
       "Elettrodomestici": [
-        "Forno ventilato Candy (nuovo)",
-        "Piano cottura 4 fuochi a gas in vetro bianco isEasy (nuovo)",
-        "Microonde Cerotec in vetro bianco (nuovo)",
-        "Lavello resina bianca",
-        "Frigorifero abbinabile su richiesta",
-        "Cappa aspirante integrata"
+        "Forno Candy multifunzione",
+        "Frigorifero da incasso",
+        "Lavastoviglie integrabile su richiesta"
       ],
       "Accessori Inclusi": [
-        "Penisola conviviale con tre sgabelli",
-        "Cassetti con guide soft-close",
+        "Cassetti con chiusura ammortizzata",
         "Pensili con apertura push-pull",
-        "Illuminazione LED sottopensile"
-      ]
+        "Ripiani regolabili",
+        "Illuminazione opzionale a LED"
+]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
     },
@@ -798,8 +785,8 @@
       "id": 13,
       "slug": "Riflessi-Naturali",
       "name": "Riflessi Naturali",
-      "shortDescription": "Luce laminato bianco lucido",
-      "description": "La Cucina Aurora è una soluzione di seconda mano dal carattere luminoso e moderno. Le superfici in laminato bianco lucido riflettono la luce e ampliano lo spazio, mentre la penisola con tre sgabelli e calpestio in vetro Kolbe crea un ambiente conviviale e funzionale. Gli elettrodomestici rinnovati – forno ventilato Candy, piano cottura a gas in vetro bianco isEasy e microonde Cerotec – rendono la cucina aggiornata ed efficiente. Un lavello in resina bianca con miscelatore completa la composizione, garantendo praticità e resistenza. Una scelta perfetta per chi cerca design e funzionalità a un prezzo accessibile.",
+      "shortDescription": "“Il calore del legno incontra la luminosità degli specchi.",
+      "description": "La Cucina Riflessi Naturali unisce il fascino intramontabile del legno con l’eleganza contemporanea dei pensili specchiati. Il legno, in una tonalità calda e neutra, crea un’atmosfera accogliente senza risultare né troppo scura né troppo chiara. Gli inserti a specchio ampliano visivamente lo spazio e donano luminosità, trasformando la cucina in un ambiente raffinato e arioso. Con forno Samsung e frigorifero da incasso, questa composizione offre praticità e stile per chi cerca un design moderno con dettagli unici.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/lineare/4/3.jpg",
@@ -810,51 +797,45 @@
       ],
       "features": [
         {
-          "title": "Superfici Luminose",
-          "description": "Laminato bianco lucido che amplia visivamente lo spazio e dona luminosità"
+          "title": "Legno Neutro",
+          "description": "Tonalità calda e versatile che si adatta a qualsiasi ambiente"
         },
         {
-          "title": "Penisola Conviviale",
-          "description": "Elemento penisola con tre sgabelli e piano in vetro Kolbe, ideale per pasti veloci e momenti in compagnia"
+          "title": "Pensili a Specchio",
+          "description": "Superfici riflettenti che donano luminosità e profondità visiva"
         },
         {
-          "title": "Elettrodomestici Nuovi",
-          "description": "Forno ventilato Candy, piano cottura in vetro bianco isEasy e microonde Cerotec inclusi e appena installati"
+          "title": "Forno Samsung",
+          "description": "Tecnologia avanzata per cotture precise e uniformi"
         },
         {
-          "title": "Dettagli in Vetro",
-          "description": "Piano cottura e microonde in vetro bianco per un tocco moderno ed elegante"
+          "title": "Frigo da Incasso",
+          "description": "Integrazione totale per un’estetica pulita e armoniosa"
         },
         {
-          "title": "Lavello in Resina Bianca",
-          "description": "Resistente, pratico e coordinato con lo stile luminoso della cucina"
+          "title": "Stile Unico",
+          "description": "Mix esclusivo di materiali per un design elegante e contemporaneo"
         }
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 256,60 cm (personalizzabile con penisola)",
+        "Lunghezza: 420 cm",
         "Profondità: 60 cm standard",
-        "Altezza totale: 230 cm",
-        "Penisola: 120 cm con 3 sgabelli"
+        "Altezza totale: 230 cm"
       ],
       "Materiali": [
-        "Ante: Laminato bianco lucido",
-        "Top: Laminato finitura bianca",
-        "Schienale: Laminato bianco coordinato",
-        "Lavello: Resina bianca con miscelatore",
-        "Dettagli: Penisola con vetro Kolbe"
+        "Ante: Laminato effetto legno marrone neutro",
+        "Pensili: Finitura specchiata",
+        "Top: Laminato coordinato con schienale in abbinamento"
       ],
       "Elettrodomestici": [
-        "Forno ventilato Candy (nuovo)",
-        "Piano cottura 4 fuochi a gas in vetro bianco isEasy (nuovo)",
-        "Microonde Cerotec in vetro bianco (nuovo)",
-        "Lavello resina bianca",
-        "Frigorifero abbinabile su richiesta",
-        "Cappa aspirante integrata"
+        "Forno Samsung multifunzione",
+        "Frigorifero da incasso",
+        "Piano cottura integrabile a scelta"
       ],
       "Accessori Inclusi": [
-        "Penisola conviviale con tre sgabelli",
-        "Cassetti con guide soft-close",
+        "Cassetti a estrazione totale con chiusura soft",
+        "Ripiani regolabili",
         "Pensili con apertura push-pull",
         "Illuminazione LED sottopensile"
       ]
@@ -865,8 +846,8 @@
       "id": 14,
       "slug": "Nebbia",
       "name": "Nebbia",
-      "shortDescription": "Luce laminato bianco lucido",
-      "description": "La Cucina Aurora è una soluzione di seconda mano dal carattere luminoso e moderno. Le superfici in laminato bianco lucido riflettono la luce e ampliano lo spazio, mentre la penisola con tre sgabelli e calpestio in vetro Kolbe crea un ambiente conviviale e funzionale. Gli elettrodomestici rinnovati – forno ventilato Candy, piano cottura a gas in vetro bianco isEasy e microonde Cerotec – rendono la cucina aggiornata ed efficiente. Un lavello in resina bianca con miscelatore completa la composizione, garantendo praticità e resistenza. Una scelta perfetta per chi cerca design e funzionalità a un prezzo accessibile.",
+      "shortDescription": "Tonalità leggere, linee essenziali: la cucina che respira modernità.",
+      "description": "La Cucina Nebbia si distingue per il suo stile moderno, semplice e pulito. Le superfici combinano sfumature che oscillano tra verde-grigio e beige-bianco, creando un effetto cromatico delicato e avvolgente. Questa scelta di colori neutri e naturali dona luminosità e calma all’ambiente, perfetta per chi ama vivere in spazi sobri e raffinati. Con forno Ignis e frigorifero da incasso, offre tutto ciò che serve in un design minimale ma funzionale.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/angolare/4/3.jpg",
@@ -877,53 +858,47 @@
       ],
       "features": [
         {
-          "title": "Superfici Luminose",
-          "description": "Laminato bianco lucido che amplia visivamente lo spazio e dona luminosità"
+          "title": "Palette Naturale",
+          "description": "Colori che si muovono tra verde-grigio e beige per un’atmosfera rilassante"
         },
         {
-          "title": "Penisola Conviviale",
-          "description": "Elemento penisola con tre sgabelli e piano in vetro Kolbe, ideale per pasti veloci e momenti in compagnia"
+          "title": "Stile Moderno",
+          "description": "Linee essenziali e superfici lisce per un look contemporaneo"
         },
         {
-          "title": "Elettrodomestici Nuovi",
-          "description": "Forno ventilato Candy, piano cottura in vetro bianco isEasy e microonde Cerotec inclusi e appena installati"
+          "title": "Forno Ignis",
+          "description": "Affidabilità e semplicità per le cotture di tutti i giorni"
         },
         {
-          "title": "Dettagli in Vetro",
-          "description": "Piano cottura e microonde in vetro bianco per un tocco moderno ed elegante"
+          "title": "Frigo da Incasso",
+          "description": "Completamente integrato per mantenere la pulizia visiva"
         },
         {
-          "title": "Lavello in Resina Bianca",
-          "description": "Resistente, pratico e coordinato con lo stile luminoso della cucina"
+          "title": "Design Pulito",
+          "description": "Minimalismo e armonia tra forme e materiali"
         }
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 256,60 cm (personalizzabile con penisola)",
+        "Lunghezza: 305 x 168",
         "Profondità: 60 cm standard",
-        "Altezza totale: 230 cm",
-        "Penisola: 120 cm con 3 sgabelli"
+        "Altezza totale: 230 cm"
       ],
       "Materiali": [
-        "Ante: Laminato bianco lucido",
-        "Top: Laminato finitura bianca",
-        "Schienale: Laminato bianco coordinato",
-        "Lavello: Resina bianca con miscelatore",
-        "Dettagli: Penisola con vetro Kolbe"
+        "Ante: Laminato finitura verde-grigio con dettagli beige/bianco",
+        "Top: Laminato coordinato",
+        "Schienale: In abbinamento al piano"
       ],
       "Elettrodomestici": [
-        "Forno ventilato Candy (nuovo)",
-        "Piano cottura 4 fuochi a gas in vetro bianco isEasy (nuovo)",
-        "Microonde Cerotec in vetro bianco (nuovo)",
-        "Lavello resina bianca",
-        "Frigorifero abbinabile su richiesta",
-        "Cappa aspirante integrata"
+        "Forno Ignis statico",
+        "Frigorifero da incasso",
+        "Lavastoviglie integrabile su richiesta"
       ],
       "Accessori Inclusi": [
-        "Penisola conviviale con tre sgabelli",
-        "Cassetti con guide soft-close",
+        "Cassetti con chiusura soft",
         "Pensili con apertura push-pull",
-        "Illuminazione LED sottopensile"
+        "Ripiani regolabili",
+        "Illuminazione LED opzionale"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
