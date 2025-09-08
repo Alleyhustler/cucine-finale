@@ -907,8 +907,8 @@
       "id": 15,
       "slug": "Mezzanotte",
       "name": "Mezzanotte",
-      "shortDescription": "Luce laminato bianco lucido",
-      "description": "La Cucina Aurora è una soluzione di seconda mano dal carattere luminoso e moderno. Le superfici in laminato bianco lucido riflettono la luce e ampliano lo spazio, mentre la penisola con tre sgabelli e calpestio in vetro Kolbe crea un ambiente conviviale e funzionale. Gli elettrodomestici rinnovati – forno ventilato Candy, piano cottura a gas in vetro bianco isEasy e microonde Cerotec – rendono la cucina aggiornata ed efficiente. Un lavello in resina bianca con miscelatore completa la composizione, garantendo praticità e resistenza. Una scelta perfetta per chi cerca design e funzionalità a un prezzo accessibile.",
+      "shortDescription": "Eleganza totale in nero: design puro e dettagli distintivi.”",
+      "description": "La Cucina Mezzanotte di Lube rappresenta l’apice del design moderno e minimalista. Caratterizzata da un total black che avvolge ogni superficie, questa cucina si distingue per l’originalità dei dettagli: piccole incisioni a forma di pizzetto sporgono su ogni anta, creando un gioco di luci e ombre che arricchisce l’estetica senza compromettere la funzionalità. Il frigorifero da incasso completa l’armonia visiva, mentre il forno Ignis offre prestazioni elevate in un contesto elegante e contemporaneo.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/lineare/5/1.jpg",
@@ -919,53 +919,47 @@
       ],
       "features": [
         {
-          "title": "Superfici Luminose",
-          "description": "Laminato bianco lucido che amplia visivamente lo spazio e dona luminosità"
+          "title": "Design Total Black",
+          "description": "Superfici nere per un effetto scenografico e sofisticato"
         },
         {
-          "title": "Penisola Conviviale",
-          "description": "Elemento penisola con tre sgabelli e piano in vetro Kolbe, ideale per pasti veloci e momenti in compagnia"
+          "title": "Incisioni a Pizzetto",
+          "description": "Dettagli distintivi che arricchiscono l’estetica senza compromettere la funzionalità"
         },
         {
-          "title": "Elettrodomestici Nuovi",
-          "description": "Forno ventilato Candy, piano cottura in vetro bianco isEasy e microonde Cerotec inclusi e appena installati"
+          "title": "Forno Ignis",
+          "description": "Tecnologia avanzata per cotture precise e uniformi"
         },
         {
-          "title": "Dettagli in Vetro",
-          "description": "Piano cottura e microonde in vetro bianco per un tocco moderno ed elegante"
+          "title": "Frigo da Incasso",
+          "description": "Integrazione totale per un’estetica pulita e armoniosa"
         },
         {
-          "title": "Lavello in Resina Bianca",
-          "description": "Resistente, pratico e coordinato con lo stile luminoso della cucina"
+          "title": "Stile Minimalista",
+          "description": "Linee essenziali e superfici lisce per un look contemporaneo"
         }
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 256,60 cm (personalizzabile con penisola)",
+        "Lunghezza: 315 cm",
         "Profondità: 60 cm standard",
-        "Altezza totale: 230 cm",
-        "Penisola: 120 cm con 3 sgabelli"
+        "Altezza totale: 230 cm"
       ],
       "Materiali": [
-        "Ante: Laminato bianco lucido",
-        "Top: Laminato finitura bianca",
-        "Schienale: Laminato bianco coordinato",
-        "Lavello: Resina bianca con miscelatore",
-        "Dettagli: Penisola con vetro Kolbe"
+        "Ante: Laminato effetto legno scuro con incisioni a pizzetto",
+        "Top: Laminato coordinato",
+        "Schienale: In abbinamento al piano"
       ],
       "Elettrodomestici": [
-        "Forno ventilato Candy (nuovo)",
-        "Piano cottura 4 fuochi a gas in vetro bianco isEasy (nuovo)",
-        "Microonde Cerotec in vetro bianco (nuovo)",
-        "Lavello resina bianca",
-        "Frigorifero abbinabile su richiesta",
-        "Cappa aspirante integrata"
+        "Forno Ignis multifunzione",
+        "Frigorifero da incasso",
+        "Piano cottura a induzione integrabile"
       ],
       "Accessori Inclusi": [
-        "Penisola conviviale con tre sgabelli",
-        "Cassetti con guide soft-close",
+        "Cassetti con chiusura soft",
         "Pensili con apertura push-pull",
-        "Illuminazione LED sottopensile"
+        "Ripiani regolabili",
+        "Illuminazione LED opzionale"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
