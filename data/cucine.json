@@ -907,7 +907,7 @@
       "id": 15,
       "slug": "Mezzanotte",
       "name": "Mezzanotte",
-      "shortDescription": "Eleganza totale in nero: design puro e dettagli distintivi.”",
+      "shortDescription": "Eleganza totale in nero: design puro e dettagli distintivi.",
       "description": "La Cucina Mezzanotte di Lube rappresenta l’apice del design moderno e minimalista. Caratterizzata da un total black che avvolge ogni superficie, questa cucina si distingue per l’originalità dei dettagli: piccole incisioni a forma di pizzetto sporgono su ogni anta, creando un gioco di luci e ombre che arricchisce l’estetica senza compromettere la funzionalità. Il frigorifero da incasso completa l’armonia visiva, mentre il forno Ignis offre prestazioni elevate in un contesto elegante e contemporaneo.",
       "price": "Pronta Consegna",
       "category": "classica",
@@ -960,6 +960,67 @@
         "Pensili con apertura push-pull",
         "Ripiani regolabili",
         "Illuminazione LED opzionale"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 16,
+      "slug": "Nube",
+      "name": "Nube",
+      "shortDescription": "Leggera come una nuvola, solida come una cucina moderna",
+      "description": "La Cucina Nube si distingue per il suo design moderno e minimalista, arricchito da una tonalità chiara e delicata che richiama la morbidezza delle nuvole. Con i suoi 320 cm di sviluppo lineare, offre ampi spazi di lavoro e contenimento, garantendo funzionalità senza rinunciare all’eleganza. Forno Candy e frigorifero da incasso si integrano perfettamente, mantenendo un’estetica pulita e contemporanea.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "/Images/usate/lineare/6/3.jpg",
+      "images": [
+        "/Images/usate/lineare/6/3.jpg",
+        "/Images/usate/lineare/6/2.jpg",
+        "Images/usate/lineare/6/1.jpg"
+      ],
+      "features": [
+        {
+          "title": "Colore Nube",
+          "description": "Una tonalità chiara ed elegante che illumina l’ambiente"
+        },
+        {
+          "title": "Stile Moderno",
+          "description": "Linee essenziali e design contemporaneo per un look raffinato"
+        },
+        {
+          "title": "Forno Candy",
+          "description": "Affidabilità e praticità per le cotture quotidiane"
+        },
+        {
+          "title": "Frigo da Incasso",
+          "description": "Perfettamente integrato per un’estetica ordinata"
+        },
+        {
+          "title": "Ampia Composizione",
+          "description": "320 cm di spazio lineare per contenimento e funzionalità"
+        }
+      ],
+      "specs": {
+      "Dimensioni": [
+        "Lunghezza: 320 cm",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm"
+      ],
+      "Materiali": [
+        "Ante: Laminato finitura color nube",
+        "Top: Laminato coordinato",
+        "Schienale: In abbinamento al piano"
+      ],
+      "Elettrodomestici": [
+        "Forno Candy statico",
+        "Frigorifero da incasso",
+        "Piano cottura integrabile a scelta"
+      ],
+      "Accessori Inclusi": [
+        "Cassetti con chiusura soft",
+        "Pensili con apertura push-pull",
+        "Ripiani regolabili",
+        "Illuminazione LED sottopensile"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
