@@ -915,7 +915,7 @@
       "images": [
         "/Images/usate/lineare/5/1.jpg",
         "/Images/usate/lineare/5/2.jpg",
-        "Images/usate/lineare/5/3.jpg"
+        "/Images/usate/lineare/5/3.jpg"
       ],
       "features": [
         {
@@ -972,11 +972,11 @@
       "description": "La Cucina Nube si distingue per il suo design moderno e minimalista, arricchito da una tonalità chiara e delicata che richiama la morbidezza delle nuvole. Con i suoi 320 cm di sviluppo lineare, offre ampi spazi di lavoro e contenimento, garantendo funzionalità senza rinunciare all’eleganza. Forno Candy e frigorifero da incasso si integrano perfettamente, mantenendo un’estetica pulita e contemporanea.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "/Images/usate/lineare/6/3.jpg",
+      "thumbnail": "/Images/usate/lineare/6/3.png",
       "images": [
-        "/Images/usate/lineare/6/3.jpg",
-        "/Images/usate/lineare/6/2.jpg",
-        "Images/usate/lineare/6/1.jpg"
+        "/Images/usate/lineare/6/3.png",
+        "/Images/usate/lineare/6/2.png",
+        "/Images/usate/lineare/6/1.png"
       ],
       "features": [
         {
