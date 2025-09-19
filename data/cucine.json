@@ -1085,6 +1085,129 @@
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 16,
+      "slug": "Nube",
+      "name": "Nube",
+      "shortDescription": "Leggera come una nuvola, solida come una cucina moderna",
+      "description": "La Cucina Nube si distingue per il suo design moderno e minimalista, arricchito da una tonalità chiara e delicata che richiama la morbidezza delle nuvole. Con i suoi 320 cm di sviluppo lineare, offre ampi spazi di lavoro e contenimento, garantendo funzionalità senza rinunciare all’eleganza. Forno Candy e frigorifero da incasso si integrano perfettamente, mantenendo un’estetica pulita e contemporanea.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "/Images/usate/lineare/6/3.png",
+      "images": [
+        "/Images/usate/lineare/6/3.png",
+        "/Images/usate/lineare/6/2.png",
+        "/Images/usate/lineare/6/1.png"
+      ],
+      "features": [
+        {
+          "title": "Colore Nube",
+          "description": "Una tonalità chiara ed elegante che illumina l’ambiente"
+        },
+        {
+          "title": "Stile Moderno",
+          "description": "Linee essenziali e design contemporaneo per un look raffinato"
+        },
+        {
+          "title": "Forno Candy",
+          "description": "Affidabilità e praticità per le cotture quotidiane"
+        },
+        {
+          "title": "Frigo da Incasso",
+          "description": "Perfettamente integrato per un’estetica ordinata"
+        },
+        {
+          "title": "Ampia Composizione",
+          "description": "320 cm di spazio lineare per contenimento e funzionalità"
+        }
+      ],
+      "specs": {
+      "Dimensioni": [
+        "Lunghezza: 320 cm",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm"
+      ],
+      "Materiali": [
+        "Ante: Laminato finitura color nube",
+        "Top: Laminato coordinato",
+        "Schienale: In abbinamento al piano"
+      ],
+      "Elettrodomestici": [
+        "Forno Candy statico",
+        "Frigorifero da incasso",
+        "Piano cottura integrabile a scelta"
+      ],
+      "Accessori Inclusi": [
+        "Cassetti con chiusura soft",
+        "Pensili con apertura push-pull",
+        "Ripiani regolabili",
+        "Illuminazione LED sottopensile"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 18,
+      "slug": "Angolo-di-Legno",
+      "name": "Angolo di Legno",
+      "shortDescription": "Compatta, moderna e naturale: il calore del legno in poco spazio.",
+      "description": "La Cucina Angolo di Legno è una composizione moderna a L, pensata per ottimizzare gli spazi senza rinunciare al design. Con dimensioni compatte ma funzionali (335 x 193,5 cm), abbina la praticità di un microonde Electrolux e una cappa Elica alla semplicità di un piano cottura elettrico. L’assenza del forno tradizionale la rende ideale per chi cerca un ambiente di lavoro snello, perfetto per piccoli appartamenti o soluzioni smart living. Le finiture in legno esaltano la naturalezza dello stile, regalando un tocco caldo e accogliente a un’anima modernissima.",
+      "price": "Pronta Consegna",
+      "category": "classica",
+      "thumbnail": "/Images/usate/angolare/5/1.png",
+      "images": [
+        "/Images/usate/angolare/5/1.png",
+        "/Images/usate/angolare/5/2.png",
+        "/Images/usate/angolare/5/3.png"
+      ],
+      "features": [
+        {
+          "title": "Struttura ad Angolo",
+          "description": "Composizione moderna a L che sfrutta al meglio gli spazi"
+        },
+        {
+          "title": "Finitura in Legno",
+          "description": "Tonalità calde e naturali per un ambiente accogliente"
+        },
+        {
+          "title": "Elettrodomestici Essenziali",
+          "description": "Microonde Electrolux e cappa Elica per praticità quotidiana"
+        },
+        {
+          "title": "Piano Cottura Elettrico",
+          "description": "Soluzione semplice e funzionale per ogni esigenza"
+        },
+        {
+          "title": "Design Compatto",
+          "description": "Ideale per piccoli appartamenti o cucine minimaliste"
+        }
+      ],
+      "specs": {
+      "Dimensioni": [
+        "Lato lungo: 335 cm",
+        "Lato corto: 193,5 cm",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm"
+      ],
+      "Materiali": [
+        "Ante: Laminato effetto legno",
+        "Top: Laminato coordinato",
+        "Schienale: In abbinamento al piano"
+      ],
+      "Elettrodomestici": [
+        "Microonde Electrolux integrato",
+        "Cappa Elica moderna",
+        "Piano cottura elettrico"
+      ],
+      "Accessori Inclusi": [
+        "Cassetti ad estrazione totale con chiusura soft",
+        "Pensili con apertura push-pull",
+        "Ripiani regolabili",
+        "Illuminazione LED sottopensile"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
     }
   ]
 }
