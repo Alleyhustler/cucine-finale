@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arredamento di Lusso - Cucine Italia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #2C3424;
+            --primary-medium: #4C583E;
+            --accent-medium: #959581;
+            --accent-light: #DADED8;
+            --white: #ffffff;
+            --black: #000000;
+        }
+
+        body {
+            font-family: "Arvo", serif;
+            line-height: 1.6;
+            background: url('bedge-grunge.png') var(--white);
+            color: var(--primary-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 20px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0.5rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(0px);
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header.visible {
+            opacity: 1;
+        }
+
+        .header.scrolled {
+            background: url('bedge-grunge.png') #4f5f3d57;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(44, 52, 36, 0.1);
+            height: 60px;
+            top: 0;
+        }
+
+        .header.scrolled .nav-link,
+        .header.scrolled .logo,
+        .header.scrolled .menu-line {
+            color: white;
+        }
+
+        .header.scrolled .cta-button {
+            color: white;
+            border-color: var(--primary-dark);
+        }
+
+        .header.scrolled .cta-button::before {
+            background: var(--primary-dark);
+        }
+
+        .header.scrolled .cta-button:hover {
+            color: var(--white);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: -200px;
+        }
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px 5px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-line {
+            width: 28px;
+            height: 2px;
+            background: var(--primary-dark);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .menu-toggle.active .menu-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-toggle.active .menu-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active .menu-line:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            transform: translateY(8px);
+        }
+        
+        .logo-subtitle {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            opacity: 0.85;
+            margin-top: 4px;
+            line-height: 1;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-dark), var(--accent-medium));
+            transition: width 0.3s ease;
+        }
+
+        .logo:hover::after {
+            width: 100%;
+        }
+
+        .nav-desktop {
+            display: flex;
+            gap: 1.5rem;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-link {
+            color: #2C3424;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent-medium);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-medium);
+            transform: translateY(-2px);
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: url('bedge-grunge.png') var(--primary-dark);
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-right: -200px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            border: 2px solid white;
+            overflow: hidden;
+            z-index: 1;
+            font-size: 0.9rem;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .cta-button:hover::before {
+            transform: translateX(0);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            width: 500px;
+            left: -500px;
+            height: 100vh;
+            background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1001;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu .logo {
+            color: var(--white);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav .nav-link {
+            color: var(--white);
+            font-size: 1.2rem;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav .nav-link:hover {
+            background: rgba(255,255,255,0.1);
+            padding-left: 1.5rem;
+        }
+
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('anima.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0rem;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+            animation: slideInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.8rem);
+            color: var(--accent-light);
+            font-weight: 400;
+            animation: slideInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+            line-height: 1.3;
+            margin-top: 0.1rem;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            padding: 8rem 2rem 4rem;
+            background: url('bedge-grunge.png') var(--white);
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .page-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--primary-medium);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Grid System */
+        .kitchen-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        @media (min-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-4 {
+                flex: 0 0 33.33333%;
+                max-width: 33.33333%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .col-xl-3 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+
+        .mb-30 {
+            margin-bottom: 30px !important;
+        }
+
+        @media (min-width: 768px) {
+            .mb-md-80 {
+                margin-bottom: 80px !important;
+            }
+        }
+
+        /* Card Styles */
+        .sn_kitchen_i {
+            position: relative;
+            box-shadow: 0 5px 15px rgb(0 0 0 / 34%);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sn_kitchen_i:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .sn_kitchen_i_link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .mb-30,
+        .mb-md-80 {
+            margin-bottom: 0 !important;
+        }
+
+        .sn_kitchen_i_title {
+            padding: 20px 20px 5px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sn_kitchen_i_title i {
+            width: 20px;
+            height: 20px;
+        }
+
+        .sn_kitchen_i_title::after {
+            content: "→";
+            margin-left: 6px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .sn_kitchen_i_sw {
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .sn_kitchen_i_sw img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Section Header */
+        .section-header {
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--accent-medium);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .footer {
+            background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+            color: var(--primary-medium);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            color: var(--black);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-link {
+            color: #4C583E;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .footer-link:hover {
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .contact-info {
+            display: flex;
+            color: #4C583E;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #4C583E;
+            font-size: 1.1rem;
+        }
+
+        .email-signup {
+            display: flex;
+            gap: 1rem;
+            color: #4C583E;
+            margin-top: 1rem;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(61, 58, 58, 0.3);
+            color: #4C583E;
+            font-family: "Philosopher", sans-serif;
+        }
+
+        .email-input::placeholder {
+            color: rgba(27, 25, 25, 0.7);
+        }
+
+        .email-submit {
+            padding: 12px 24px;
+            background: var(--accent-medium);
+            color: #4C583E;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Philosopher", sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .email-submit:hover {
+            background: var(--accent-light);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            color: #4C583E;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .social-link:hover {
+            background: var(--accent-light);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            color: #4C583E;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: url('bedge-grunge.png') var(--white);
+            border-radius: 0;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--accent-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--primary-medium);
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--primary-dark);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-note {
+            font-style: italic;
+            margin: 1.5rem 0;
+            color: var(--primary-medium);
+        }
+
+        .preventivo-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .preventivo-form input,
+        .preventivo-form textarea {
+            padding: 12px 16px;
+            border: 1px solid var(--accent-light);
+            font-family: "Arvo", serif;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .preventivo-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: var(--primary-medium);
+            color: white;
+            padding: 14px;
+            border: none;
+            cursor: pointer;
+            font-family: "Arvo", serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .mobile-preventivo-text {
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            font-weight: 400;
+            font-family: "Arvo", serif;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: none;
+            margin-top: -2px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        .mobile-preventivo-text::after {
+            content: "→";
+            margin-left: 6px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .mobile-preventivo-text:hover {
+            color: var(--accent-light);
+        }
+
+        .mobile-preventivo-text:hover::after {
+            transform: translateX(3px);
+        }
+
+        .header.scrolled .mobile-preventivo-text {
+            display: none;
+        }
+
+        @media (min-width: 324px) and (max-width: 1200px) {
+            .logo-section {
+                position: relative;
+            }
+            
+            .mobile-preventivo-text {
+                display: block;
+            }
+        }
+
+        .header.scrolled .mobile-preventivo-text {
+            display: none !important;
+        }
+
+        @media (min-width: 1201px) {
+            .mobile-preventivo-text {
+                display: none !important;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1200px) {
+            .hero {
+                background-attachment: scroll;
+                min-height: 80vh;
+                background-size: cover;
+                background-position: 0.0001% center;
+                padding: 2rem 1rem;
+            }
+
+            .hero {
+                aspect-ratio: 9/16;
+                height: auto;
+            }
+
+            .header {
+                height: 60px;
+            }
+            
+            .header-left {
+                margin-left: 0px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .cta-button {
+                margin-right: 0;
+                padding: 8px 10px;
+                font-size: 0.6rem;
+                white-space: nowrap;
+            }
+            
+            .menu-toggle {
+                padding: 6px;
+            }
+            
+            .menu-line {
+                width: 24px;
+            }
+            
+            .nav-desktop {
+                display: none;
+            }
+
+            .hero-content {
+                padding: 0 1rem;
+                bottom: 2rem;
+            }
+
+            .hero-title, .hero-subtitle {
+                max-width: 100%;
+                word-wrap: break-word;
+            }
+
+            .mobile-menu {
+                width: 80%;
+                left: -80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .main-content {
+                padding: 4rem 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (min-width: 324px) and (max-width: 427px) {
+            .logo {
+                font-size: 2rem;
+                letter-spacing: 0.6px;
+            }
+
+            .header.scrolled {
+                height: 45px;
+            }
+            
+            .cta-button {
+                display: none;
+            }
+            
+            .menu-line {
+                width: 22px;
+            }
+        }
+
+        @media (min-width: 428px) and (max-width: 767px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                display: none;
+            }
+            
+            .mobile-menu {
+                width: 300px;
+                left: -300px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="menu-toggle" id="menuToggle">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+                <div class="logo-section">
+                    <a href="index.html" class="logo">
+                        Cucine&nbsp;Italia
+                        <span class="logo-subtitle">Arredamenti Brambilla</span>
+                    </a>
+                    <div class="mobile-preventivo-text" id="mobilePreventivoText">Richiedi preventivo</div>
+                </div>
+            </div>
+            
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
+                <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+                <a href="arredamento.html" class="nav-link">Arredamento</a>
+                <a href="servizi.html" class="nav-link">Servizi</a>
+                <a href="index.html#contatti" class="nav-link">Contatti</a>
+                <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
+            </nav>
+            
+            <a href="#preventivo" class="cta-button" id="preventivoButton">Richiedi un preventivo</a>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <nav class="mobile-menu" id="mobileMenu">
+                    <a href="index.html" class="logo">
+                        Cucine&nbsp;Italia
+                        <span class="logo-subtitle">Arredamenti Brambilla</span>
+                    </a>
+        <div class="mobile-nav">
+            <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
+            <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+            <a href="arredamento.html" class="nav-link">Arredamento</a>
+            <a href="servizi.html" class="nav-link">Servizi</a>
+            <a href="index.html#contatti" class="nav-link">Contatti</a>
+            <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="page-header fade-in">
+            <h1 class="page-title">Arredamento</h1>
+            <p class="page-subtitle">Scopri la nostra selezione di mobili per ogni ambiente della casa, con design raffinato e qualità superiore.</p>
+        </div>
+        
+        <!-- Sezione Camera da Letto -->
+        <div class="section-header fade-in" style="margin-top: 4rem;">
+            <h2>Camera da Letto</h2>
+        </div>
+        
+        <div class="kitchen-row">
+            <!-- Esempio Camera 1 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-30 mb-md-80">
+                <div class="sn_kitchen_i">
+                    <a href="cucina.html?slug=Armadio" class="sn_kitchen_i_link" aria-label="Visualizza camera da letto"></a>
+                    <div class="sn_kitchen_i_title">
+                        <span>Armadio</span>
+                    </div>
+                    <div class="sn_kitchen_i_sw">
+                        <img src="Images/home/anima.jpg" alt="Camera da Letto Elegance">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Sezione Bagno -->
+        <div class="section-header fade-in" style="margin-top: 2rem;">
+            <h2>Bagno</h2>
+        </div>
+        
+        <div class="kitchen-row">
+            <!-- Esempio Bagno 1 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-30 mb-md-80">
+                <div class="sn_kitchen_i">
+                    <a href="#" class="sn_kitchen_i_link" aria-label="Visualizza bagno"></a>
+                    <div class="sn_kitchen_i_title">
+                        <span>Bagno Minimal</span>
+                    </div>
+                    <div class="sn_kitchen_i_sw">
+                        <img src="https://via.placeholder.com/400x300?text=Bagno+Minimal" alt="Bagno Minimal">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Esempio Bagno 2 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-30 mb-md-80">
+                <div class="sn_kitchen_i">
+                    <a href="#" class="sn_kitchen_i_link" aria-label="Visualizza bagno"></a>
+                    <div class="sn_kitchen_i_title">
+                        <span>Bagno Contemporary</span>
+                    </div>
+                    <div class="sn_kitchen_i_sw">
+                        <img src="https://via.placeholder.com/400x300?text=Bagno+Contemporary" alt="Bagno Contemporary">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sezione Soggiorno -->
+        <div class="section-header fade-in" style="margin-top: 2rem;">
+            <h2>Soggiorno</h2>
+        </div>
+        
+        <div class="kitchen-row">
+            <!-- Esempio Soggiorno 1 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-30 mb-md-80">
+                <div class="sn_kitchen_i">
+                    <a href="#" class="sn_kitchen_i_link" aria-label="Visualizza soggiorno"></a>
+                    <div class="sn_kitchen_i_title">
+                        <span>Living Moderno</span>
+                    </div>
+                    <div class="sn_kitchen_i_sw">
+                        <img src="https://via.placeholder.com/400x300?text=Living+Moderno" alt="Soggiorno Moderno">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Esempio Soggiorno 2 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-30 mb-md-80">
+                <div class="sn_kitchen_i">
+                    <a href="#" class="sn_kitchen_i_link" aria-label="Visualizza soggiorno"></a>
+                    <div class="sn_kitchen_i_title">
+                        <span>Living Classico</span>
+                    </div>
+                    <div class="sn_kitchen_i_sw">
+                        <img src="https://via.placeholder.com/400x300?text=Living+Classico" alt="Soggiorno Classico">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contatti">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <div class="footer-links">
+                    <a href="SecondaMano.html" class="footer-link">Cucine Seconda Mano</a>
+                    <a href="cucine-nuove.html" class="footer-link">Cucine Nuove</a>
+                    <a href="arredamento.html" class="footer-link">Arredamento</a>
+                    <a href="servizi.html" class="footer-link">Servizi</a>
+                    <a href="index.html#contatti" class="footer-link">Contatti</a>
+                    <a href="index.html#perche-noi" class="footer-link">Perché Noi?</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contatti</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>info.cucineitalia@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>
+                            <a href="https://wa.me/393391703591" target="_blank">+39 339 170 3591</a>
+                            <br>
+                            <a href="https://wa.me/393496947616" target="_blank">+39 349 694 7616</a>
+                        </span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Via Torino 71, 21013 Gallarate VA</span>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="footer-section">
+                <h3>Socials</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61576278827754" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/cucine.italia/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@cucineitalia" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://share.google/A3HR21mBeUiB6YImR" class="social-link"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: #4C583E; margin-bottom: 1rem;">
+                    Resta aggiornato sulle nostre novità e offerte esclusive.
+                </p>
+                <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="email-signup">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nuova iscrizione newsletter">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="email" name="Email" class="email-input" placeholder="La tua email" required>
+                    <button type="submit" class="email-submit">Iscriviti</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cucine Italia. Tutti i diritti riservati. Creato con passione per l'eccellenza.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Preventivo -->
+    <div class="modal-overlay" id="preventivoModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Richiedi un Preventivo</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Contattaci direttamente per un preventivo personalizzato:</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>
+                            <a href="https://wa.me/393391703591" target="_blank">+39 339 170 3591</a>
+                            <br>
+                            <a href="https://wa.me/393496947616" target="_blank">+39 349 694 7616</a>
+                        </span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>info.cucineitalia@gmail.com</span>
+                    </div>
+                </div>
+                <p class="modal-note">Oppure compila il form sottostante e ti risponderemo entro 24 ore.</p>
+                <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="preventivo-form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nuova richiesta di preventivo dal sito">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="text" name="Nome" placeholder="Nome">
+                    <input type="email" name="Email" placeholder="Email Address" required>
+                    <input type="tel" name="Telefono" placeholder="Telefono">
+                    <textarea name="Richiesta" placeholder="Descrivi la tua richiesta"></textarea>
+                    <button type="submit" class="submit-button">Invia Richiesta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Header scroll animation
+        let lastScroll = 0;
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const currentScroll = window.scrollY;
+            
+            if (currentScroll <= 0) {
+                header.classList.add('visible');
+                header.classList.remove('scrolled');
+                return;
+            }
+            
+            if (currentScroll > lastScroll) {
+                if (currentScroll > 100) {
+                    header.classList.add('visible', 'scrolled');
+                }
+            } else {
+                header.classList.add('visible');
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        window.addEventListener('load', function() {
+            document.getElementById('header').classList.add('visible');
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileOverlay.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.querySelectorAll('.mobile-nav .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Modal handling
+        const preventivoButton = document.querySelector('.cta-button');
+        const mobilePreventivoText = document.getElementById('mobilePreventivoText');
+        const preventivoModal = document.getElementById('preventivoModal');
+        const modalClose = document.querySelector('.modal-close');
+
+        preventivoButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            preventivoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        if (mobilePreventivoText) {
+            mobilePreventivoText.addEventListener('click', function(e) {
+                e.preventDefault();
+                preventivoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        modalClose.addEventListener('click', function() {
+            preventivoModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        preventivoModal.addEventListener('click', function(e) {
+            if (e.target === preventivoModal) {
+                preventivoModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>
