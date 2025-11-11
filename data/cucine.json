@@ -38,7 +38,7 @@
     ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 360 cm (personalizzabile)",
+        "Lunghezza: 350 cm (personalizzabile)",
         "Profondità: 60 cm standard",
         "Altezza totale: 230 cm"
       ],
@@ -58,7 +58,7 @@
       "Accessori Inclusi": [
         "Pensili con sistema di apertura ammortizzata",
         "Cassetti con guide soft-close",
-        "Illuminazione LED sottopensile",
+        "Illuminazione LED sottopensile a richiesta",
         "Modulo dispensa con ripiani regolabili"
       ]
       },
@@ -122,7 +122,7 @@
         "Accessori Inclusi": [
           "Cestelli estraibili per basi",
           "Portaposate organizer",
-          "Illuminazione LED sottopensile",
+          "Illuminazione LED sottopensile a richiesta",
           "Sistema di apertura push-pull"
         ]
       },
@@ -264,7 +264,7 @@
         "Pensili con apertura push-pull",
         "Cassetti con guide ammortizzate soft-close",
         "Ripiani interni regolabili",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
@@ -328,7 +328,7 @@
         "Cassetti con guide ammortizzate soft-close",
         "Pensili con apertura push-pull",
         "Ripiani interni regolabili in altezza",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
@@ -338,7 +338,7 @@
       "slug": "Perla-Bianca",
       "name": "Perla Bianca",
       "shortDescription": "Perla latinato bianco opaco",
-      "description": "Perla è una soluzione di seconda mano dal design lineare e minimalista. Le superfici in laminato bianco opaco, abbinate al piano e schienale coordinati, creano un ambiente luminoso e pulito. La praticità del lavello in acciaio con miscelatore si unisce alla modernità del piano cottura a induzione, mentre il forno statico completa la composizione con funzionalità essenziale. Una cucina compatta e attuale, ideale per chi cerca semplicità ed efficienza.",
+      "description": "Perla è una soluzione di seconda mano dal design angolare e minimalista. Le superfici in laminato bianco opaco, abbinate al piano e schienale coordinati, creano un ambiente luminoso e pulito. La praticità del lavello in acciaio con miscelatore si unisce alla modernità del piano cottura a induzione, mentre il forno statico completa la composizione con funzionalità essenziale. Una cucina compatta e attuale, ideale per chi cerca semplicità ed efficienza.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/angolare/2/IMG_8256.JPEG",
@@ -391,7 +391,7 @@
         "Pensili con apertura push-pull",
         "Cassetti con guide soft-close",
         "Ripiani interni regolabili",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
@@ -456,7 +456,7 @@
         "Cassetti con guide soft-close",
         "Pensili con apertura push-pull",
         "Ripiani interni regolabili",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -521,7 +521,7 @@
         "Cassetti con guide soft-close",
         "Pensili con apertura push-pull",
         "Ripiani regolabili interni",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -564,10 +564,10 @@
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 256,60 cm (personalizzabile con penisola)",
+        "Lunghezza: 256,60 cm ; 230,5 L ; 156 R",
         "Profondità: 60 cm standard",
         "Altezza totale: 230 cm",
-        "Penisola: 120 cm con 3 sgabelli"
+        "Penisola: 230 cm con 3 sgabelli"
       ],
       "Materiali": [
         "Ante: Laminato bianco lucido",
@@ -588,7 +588,7 @@
         "Penisola conviviale con tre sgabelli",
         "Cassetti con guide soft-close",
         "Pensili con apertura push-pull",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -631,7 +631,7 @@
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 300 cm (personalizzabile)",
+        "Lunghezza: 360 cm (personalizzabile)",
         "Profondità: 60 cm standard",
         "Altezza totale: 230 cm"
       ],
@@ -644,13 +644,14 @@
         "Forno Beko multifunzione",
         "Microonde Beko integrato",
         "Frigorifero da incasso Beko",
-        "Piano cottura abbinabile su richiesta",
-        "Cappa aspirante integrata"
+        "Piano cottura abbinabile",
+        "Cappa aspirante integrata",
+        "Lavastoviglie A++"
       ],
       "Accessori Inclusi": [
         "Cassetti con chiusura ammortizzata",
         "Pensili moderni con apertura push-pull",
-        "Illuminazione LED sottopensile",
+        "Illuminazione LED sottopensile a richiesta",
         "Ripiani regolabili"
       ]
       },
@@ -706,16 +707,16 @@
       ],
       "Elettrodomestici": [
         "Forno Candy multifunzione",
-        "Piano cottura abbinabile (induzione o gas)",
+        "Piano cottura",
         "Cappa Olta/Olka moderna con LED",
         "Frigorifero da incasso",
-        "Lavastoviglie integrabile su richiesta"
+        "Lavastoviglie Atlantic"
       ],
       "Accessori Inclusi": [
         "Cassetti con guide soft-close",
         "Pensili con apertura push-pull",
         "Ripiani interni regolabili",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -837,7 +838,7 @@
         "Cassetti a estrazione totale con chiusura soft",
         "Ripiani regolabili",
         "Pensili con apertura push-pull",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -880,7 +881,7 @@
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 305 x 168",
+        "Lunghezza: 365 x 168",
         "Profondità: 60 cm standard",
         "Altezza totale: 230 cm"
       ],
@@ -892,6 +893,8 @@
       "Elettrodomestici": [
         "Forno Ignis statico",
         "Frigorifero da incasso",
+        "Piano cottura a induzione (sostituibile)",
+        "Cappa aspirante moderna con LED",
         "Lavastoviglie integrabile su richiesta"
       ],
       "Accessori Inclusi": [
@@ -953,7 +956,9 @@
       "Elettrodomestici": [
         "Forno Ignis multifunzione",
         "Frigorifero da incasso",
-        "Piano cottura a induzione integrabile"
+        "Piano cottura a induzione integrabile",
+        "Cappa moderna con LED",
+        "Lavastoviglie Whirlpool"
       ],
       "Accessori Inclusi": [
         "Cassetti con chiusura soft",
@@ -1020,7 +1025,7 @@
         "Cassetti con chiusura soft",
         "Pensili con apertura push-pull",
         "Ripiani regolabili",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -1074,14 +1079,16 @@
       ],
       "Elettrodomestici": [
         "Lavastoviglie Hotpoint integrata",
-        "Frigorifero da incasso",
-        "Forno e piano cottura integrabili su richiesta"
+        "Frigorifero (Disponibile su richiesta)",
+        "Forno e piano cottura integrabili su richiesta",
+        "Cappa aspirante integrata",
+        "Lavastoviglie Hotpoint"
       ],
       "Accessori Inclusi": [
         "Cassetti ad estrazione totale con chiusura soft",
         "Pensili con apertura push-pull",
         "Ripiani interni regolabili",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -1142,7 +1149,7 @@
         "Cassetti con chiusura soft",
         "Pensili con apertura push-pull",
         "Ripiani regolabili",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
@@ -1152,7 +1159,7 @@
       "slug": "Angolo-di-Legno",
       "name": "Angolo di Legno",
       "shortDescription": "Compatta, moderna e naturale: il calore del legno in poco spazio.",
-      "description": "La Cucina Angolo di Legno è una composizione moderna a L, pensata per ottimizzare gli spazi senza rinunciare al design. Con dimensioni compatte ma funzionali (335 x 193,5 cm), abbina la praticità di un microonde Electrolux e una cappa Elica alla semplicità di un piano cottura elettrico. L’assenza del forno tradizionale la rende ideale per chi cerca un ambiente di lavoro snello, perfetto per piccoli appartamenti o soluzioni smart living. Le finiture in legno esaltano la naturalezza dello stile, regalando un tocco caldo e accogliente a un’anima modernissima.",
+      "description": "La Cucina Angolo di Legno è una composizione moderna a L, pensata per ottimizzare gli spazi senza rinunciare al design. Con dimensioni compatte ma funzionali (240  x 193,5 cm), abbina la praticità di un microonde Electrolux e una cappa Elica alla semplicità di un piano cottura elettrico. L’assenza del forno tradizionale la rende ideale per chi cerca un ambiente di lavoro snello, perfetto per piccoli appartamenti o soluzioni smart living. Le finiture in legno esaltano la naturalezza dello stile, regalando un tocco caldo e accogliente a un’anima modernissima.",
       "price": "Pronta Consegna",
       "category": "classica",
       "thumbnail": "/Images/usate/angolare/5/1.png",
@@ -1185,7 +1192,7 @@
       ],
       "specs": {
       "Dimensioni": [
-        "Lato lungo: 335 cm",
+        "Lato lungo: 240  cm",
         "Lato corto: 193,5 cm",
         "Profondità: 60 cm standard",
         "Altezza totale: 230 cm"
@@ -1198,13 +1205,15 @@
       "Elettrodomestici": [
         "Microonde Electrolux integrato",
         "Cappa Elica moderna",
-        "Piano cottura elettrico"
+        "Piano cottura elettrico",
+        "Frigorifero da incasso",
+        "Lavastoviglie Electrolux"
       ],
       "Accessori Inclusi": [
         "Cassetti ad estrazione totale con chiusura soft",
         "Pensili con apertura push-pull",
         "Ripiani regolabili",
-        "Illuminazione LED sottopensile"
+        "Illuminazione LED sottopensile a richiesta"
       ]
       },
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
