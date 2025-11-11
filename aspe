@@ -63,6 +63,9 @@
         height: 60px; /* Keep the scrolled height the same as original */
         top: 0; /* Remove the top spacing when scrolled */
         }
+        .header.scrolled .logo {
+            transform: translateY(8px); /* Keep the same position when scrolled */
+        }
 
         .header.scrolled .nav-link,
         .header.scrolled .logo,
@@ -93,11 +96,12 @@
         }
 
         .header-left {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-left: -200px;
-        }
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: -200px;
+    min-height: 70px; /* Ensure consistent height */
+}
 
         .menu-toggle {
             
@@ -131,14 +135,31 @@
         .menu-toggle.active .menu-line:nth-child(3) {
             transform: rotate(-45deg) translate(8px, -8px);
         }
-
+        .header.scrolled .logo-subtitle {
+            transform: translateY(-8px); /* Only subtitle moves up */
+            opacity: 0.9; /* Slightly increase opacity when scrolled */
+        }
         .logo {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             color: white;
             text-decoration: none;
             letter-spacing: 2px;
             position: relative;
+            display: inline-block;
+            transform: translateY(8px);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .logo-subtitle {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            opacity: 0.85;
+            margin-top: 4px;
+            line-height: 1;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .logo::after {
@@ -1044,20 +1065,23 @@
         min-height: 80vh; /* Slightly shorter than full viewport */
         background-size: cover;
         background-position: 0.0001% center; /* Adjust focal point */
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
-
+    .header .logo {
+        margin-top: 40px;
+    }
         .hero {
         aspect-ratio: 9/16; /* Portrait orientation ratio */
         height: auto;
     }
             .header {
-                height: 60px;
+                height: 40px;
             }
             
-            .header-left {
-                margin-left: 0px;
-            }
+    .header-left {
+        margin-left: 0px;
+        min-height: 60px; /* Consistent mobile height */
+    }
             
             .logo {
                 font-size: 1.5rem;
@@ -1212,11 +1236,11 @@
         /* Show only on mobile */
 @media (min-width: 324px) and (max-width: 1200px) {
     .logo-section {
-        position: relative;
+        align-items: flex-start;
     }
     
     .mobile-preventivo-text {
-        display: block;
+        display: block; /* Show on mobile */
     }
 }
 
@@ -1353,28 +1377,32 @@
   background: var(--primary-dark);
   transform: translateY(-2px);
 }
-.logo-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+        }
+                .header.scrolled .logo-section {
+            transform: translateY(-8px); /* Moves the entire logo section up */
+        }
 
 .mobile-preventivo-text {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #c7b650;
     font-weight: 400;
     font-family: "Arvo", serif;
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: none;
-    margin-top: -2px;
-    position: absolute;
-    top: 100%;
-    
-    left: 0;
+    margin-top: 25px; /* Reduced from -2px */
+    position: relative; /* Changed from absolute */
+    top: auto; /* Remove absolute positioning */
+    left: auto; /* Remove absolute positioning */
     white-space: nowrap;
+    line-height: 1.2;
 }
 
 .mobile-preventivo-text::after {
@@ -1386,12 +1414,13 @@
 }
 
 .mobile-preventivo-text:hover {
-    color: var(--accent-light);
+    color: #c7b650;
 }
 
 .mobile-preventivo-text:hover::after {
     transform: translateX(3px);
 }
+
 
 /* Hide when scrolled */
 .header.scrolled .mobile-preventivo-text {
@@ -1417,9 +1446,110 @@
     }
 }
 
+/* Fix for mobile header when scrolled */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .header.scrolled .logo {
+        transform: translateY(-13px) !important; /* Move logo up to align with menu */
+        font-size: 30px;
+    }
+
+    .logo {
+            transform: translateY(3px);
+
+    }  
+
+    .logo-subtitle {
+        margin-top: -6px;
+    }
+    
+    .header.scrolled .logo-subtitle {
+        transform: translateY(-3px) !important; /* Move subtitle up to stay with logo */
+        opacity: 0.9;
+                font-size: 9px;
+    }
+    
+    /* Optional: Adjust header height when scrolled for better fit */
+    .header.scrolled {
+        height: 50px;
+    }
+    
+    .header.scrolled .header-left {
+        min-height: 55px;
+    }
+}
+
+/* Location Banner */
+.location-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: url('bedge-grunge.png') var(--primary-dark);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--accent-medium);
+    max-width: 300px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.location-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
+
+.location-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.location-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.location-text {
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.location-address {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.location-city {
+    opacity: 0.9;
+    font-size: 0.8rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .location-banner {
+        bottom: 15px;
+        right: 15px;
+        left: 15px;
+        max-width: none;
+    }
+}
     </style>
 </head>
+
 <body>
+    <!-- Location Banner -->
+<div class="location-banner" onclick="openMaps()">
+    <div class="location-content">
+        <div class="location-icon">📍</div>
+        <div class="location-text">
+            <div class="location-address">Via Torino 71</div>
+            <div class="location-city">21013 Gallarate VA</div>
+        </div>
+    </div>
+</div>
     <!-- Header -->
     <header class="header" id="header">
         <div class="header-content">
@@ -1430,7 +1560,10 @@
             <div class="menu-line"></div>
         </div>
         <div class="logo-section">
-            <a href="index.html" class="logo"> Cucine&nbsp;Italia</a>
+<a href="index.html" class="logo">
+    Cucine&nbsp;Italia
+    <span class="logo-subtitle">Arredamenti Brambilla</span>
+</a>
             <div class="mobile-preventivo-text" id="mobilePreventivoText">Richiedi preventivo</div>
         </div>
     </div>
@@ -1452,7 +1585,10 @@
     <!-- Mobile Menu -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
     <nav class="mobile-menu" id="mobileMenu">
-                <a href="index.html" class="logo"> Cucine&nbsp;Italia</a>
+<a href="index.html" class="logo">
+    Cucine&nbsp;Italia
+    <span class="logo-subtitle">Arredamenti Brambilla</span>
+</a>
         <div class="mobile-nav">
                 <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
@@ -2165,6 +2301,13 @@ preventivoModal.addEventListener('click', function(e) {
   function closePopup() {
     document.getElementById("thankYouPopup").style.display = "none";
   }
+
+  // Open maps function
+function openMaps() {
+    const address = "Via Torino 71, 21013 Gallarate VA";
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    window.open(mapsUrl, '_blank');
+}
 </script>
 
 </body>
