@@ -1345,11 +1345,11 @@
       "description": "Cucina moderna ad angolo caratterizzata da una elegante finitura grigio spento abbinata a dettagli effetto legno, per un ambiente sobrio, caldo e attuale. La configurazione angolare offre ottima funzionalità e sfrutta al meglio gli spazi. Non include frigorifero e microonde, ma è predisposta per l'integrazione.",
       "price": "Usata",
       "category": "moderna",
-      "thumbnail": "/Images/usate/angolo-grigio/thumbnail.jpg",
+      "thumbnail": "/Images/usate/angolare/6/IMG_9479.JPEG",
       "images": [
-        "/Images/usate/angolo-grigio/1.jpg",
-        "/Images/usate/angolo-grigio/2.jpg",
-        "/Images/usate/angolo-grigio/3.jpg"
+        "/Images/usate/angolare/6/IMG_9479",
+        "/Images/usate/angolare/6/IMG_9480",
+        "/Images/usate/angolare/6/IMG_9482"
       ],
       "features": [
         {
@@ -1405,11 +1405,11 @@
       "description": "Cucina moderna angolare con finitura grigio sabbia, una tonalità elegante e neutra che si adatta a diversi stili abitativi. La configurazione permette di sfruttare al massimo gli spazi domestici mantenendo funzionalità e ordine. Non include frigorifero e microonde, ma è predisposta e facilmente integrabile.",
       "price": "Usata",
       "category": "moderna",
-      "thumbnail": "/Images/usate/grigio-sabbia/thumbnail.jpg",
+      "thumbnail": "/Images/usate/angolare/7/3.png",
       "images": [
-        "/Images/usate/grigio-sabbia/1.jpg",
-        "/Images/usate/grigio-sabbia/2.jpg",
-        "/Images/usate/grigio-sabbia/3.jpg"
+        "/Images/usate/angolare/7/3.png",
+        "/Images/usate/angolare/7/1.png",
+        "/Images/usate/angolare/7/2.png"
       ],
       "features": [
         {
@@ -1459,8 +1459,8 @@
     },
     {
       "id": "Arredamento 1",
-      "slug": "Armadio",
-      "name": "Armadio",
+      "slug": "Armdaio-Pantera",
+      "name": "Armdaio Pantera",
       "shortDescription": "Compatta, moderna e naturale: il calore del legno in poco spazio.",
       "description": "La Cucina Angolo di Legno è una composizione moderna a L, pensata per ottimizzare gli spazi senza rinunciare al design. Con dimensioni compatte ma funzionali (335 x 193,5 cm), abbina la praticità di un microonde Electrolux e una cappa Elica alla semplicità di un piano cottura elettrico. L’assenza del forno tradizionale la rende ideale per chi cerca un ambiente di lavoro snello, perfetto per piccoli appartamenti o soluzioni smart living. Le finiture in legno esaltano la naturalezza dello stile, regalando un tocco caldo e accogliente a un’anima modernissima.",
       "price": "Pronta Consegna",
