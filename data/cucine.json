@@ -1219,6 +1219,245 @@
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
     },
     {
+      "id": 19,
+      "slug": "Bianco-Lucida",
+      "name": "Bianco Lucida",
+      "shortDescription": "Bianco lucido, lineare 400 + 205 cm",
+      "description": "Composizione moderna lineare in finitura bianco lucido, ideale per spazi luminosi e ambienti dal design pulito e minimal. Offre ampio spazio contenitivo e superfici pratiche da pulire. Possibilità di integrare frigorifero e microonde per completare la funzionalità.",
+      "price": "Usata",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/bianco-lucida/thumbnail.jpg",
+      "images": [
+        "/Images/usate/bianco-lucida/1.jpg",
+        "/Images/usate/bianco-lucida/2.jpg",
+        "/Images/usate/bianco-lucida/3.jpg"
+      ],
+      "features": [
+        {
+          "title": "Finitura Bianco Lucido",
+          "description": "Superfici luminose e moderne, facili da abbinare con qualsiasi stile d'arredo"
+        },
+        {
+          "title": "Ampia Composizione Lineare",
+          "description": "Lunghezza totale 400 + 205 cm per massimo contenimento e praticità"
+        },
+        {
+          "title": "Personalizzabile con Elettrodomestici",
+          "description": "Possibilità di aggiungere frigorifero e microonde su richiesta"
+        },
+        {
+          "title": "Soluzione Perfetta per Ambienti Moderni",
+          "description": "Design pulito e minimal adatto ad appartamenti, uffici, B&B e open space"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lunghezza: 400 cm + 205 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm circa"
+        ],
+        "Materiali": [
+          "Ante: Laminato lucido bianco",
+          "Top: Laminato effetto pietra o similare (da verificare)",
+          "Lavello: In acciaio inox o equivalente"
+        ],
+        "Elettrodomestici": [
+          "Forno multifunzione",
+          "Piano cottura fuochi Elettrico in vetro",
+          "Lavastoviglie A++ 60 cm",
+          "Cappa aspirante con LED integrato",
+          "Senza frigorifero incluso (aggiungibile)",
+          "Senza microonde incluso (aggiungibile)"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi",
+          "Cassetti con guide standard",
+          "Maniglie moderne o profilo gola (specifica da confermare)"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 20,
+      "slug": "Bianco-Nordic",
+      "name": "Bianco Nordic",
+      "shortDescription": "Bianco + legno leggero, linea moderna con penisola",
+      "description": "Composizione moderna con finitura bianco e legno naturale chiaro in stile Nordic, caratterizzata da linee pulite e un design accogliente. La configurazione lineare con penisola offre praticità, spazio di lavoro aggiuntivo e una zona conviviale ideale per living open space. Non include frigorifero, ma è predisposta per integrazione.",
+      "price": "Usata",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/bianco-nordic/thumbnail.jpg",
+      "images": [
+        "/Images/usate/bianco-nordic/1.jpg",
+        "/Images/usate/bianco-nordic/2.jpg",
+        "/Images/usate/bianco-nordic/3.jpg"
+      ],
+      "features": [
+        {
+          "title": "Design Nordic Moderno",
+          "description": "Tonalità bianco + legno chiaro che trasmettono ordine, calore e luminosità"
+        },
+        {
+          "title": "Composizione Lineare con Penisola",
+          "description": "Base lineare da 143 cm + 337 cm con penisola 184x93 ideale per cucina e living"
+        },
+        {
+          "title": "Ampio Piano Operativo",
+          "description": "Superficie comoda per preparazioni e utilizzo piccoli elettrodomestici"
+        },
+        {
+          "title": "Personalizzabile",
+          "description": "Predisposta per inserimento frigorifero a libera scelta"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lunghezza blocco cucina: 143 cm + 337 cm",
+          "Dimensioni penisola: 184 x 93 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm circa"
+        ],
+        "Materiali": [
+          "Ante: Laminato bianco + finitura legno chiaro Nordic",
+          "Top: Laminato effetto legno o pietra chiara (da verificare)",
+          "Lavello: Acciaio o composito (da confermare)"
+        ],
+        "Elettrodomestici": [
+          "Forno Ignis statico",
+          "Piano cottura fuochi elettrico in vetro",
+          "Lavastoviglie A++ 60 cm",
+          "Cappa aspirante con LED integrato",
+          "Senza frigorifero incluso (aggiungibile)",
+          "Microonde integrato"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi e colonne",
+          "Ampio piano penisola multifunction",
+          "Cassetti standard o soft-close (da verificare)"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 21,
+      "slug": "Angolo-Grigio",
+      "name": "Angolo Grigio",
+      "shortDescription": "Grigio spento + legno, composizione angolare",
+      "description": "Cucina moderna ad angolo caratterizzata da una elegante finitura grigio spento abbinata a dettagli effetto legno, per un ambiente sobrio, caldo e attuale. La configurazione angolare offre ottima funzionalità e sfrutta al meglio gli spazi. Non include frigorifero e microonde, ma è predisposta per l'integrazione.",
+      "price": "Usata",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/angolo-grigio/thumbnail.jpg",
+      "images": [
+        "/Images/usate/angolo-grigio/1.jpg",
+        "/Images/usate/angolo-grigio/2.jpg",
+        "/Images/usate/angolo-grigio/3.jpg"
+      ],
+      "features": [
+        {
+          "title": "Tonalità Grigio Spento + Dettagli Legno",
+          "description": "Palette moderna e accogliente con ottima resa estetica anche in ambienti piccoli"
+        },
+        {
+          "title": "Composizione Angolare",
+          "description": "Sfrutta al massimo lo spazio con una configurazione funzionale e organizzata"
+        },
+        {
+          "title": "Predisposta per Elettrodomestici",
+          "description": "Frigo e microonde non inclusi ma installabili senza modifiche strutturali"
+        },
+        {
+          "title": "Soluzione Ideale per Living Moderni",
+          "description": "Perfetta per appartamenti, open space, taverne o ristrutturazioni"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lunghezza lato 1: 377 cm",
+          "Lunghezza lato 2: 210 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm circa"
+        ],
+        "Materiali": [
+          "Ante: Laminato grigio spento + dettagli effetto legno",
+          "Top: Laminato coordinato o effetto pietra (da verificare)",
+          "Lavello: Acciaio o composito (da confermare)"
+        ],
+        "Elettrodomestici": [
+          "Forno multifunzione",
+          "Piano cottura",
+          "Lavastoviglie A++ 60 cm",
+          "Cappa aspirante con LED integrato",
+          "Senza frigorifero incluso (aggiungibile)",
+          "Senza microonde incluso (aggiungibile)"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi",
+          "Ripiani e moduli angolari",
+          "Cassetti standard o soft-close (da verificare)"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 22,
+      "slug": "Grigio-Sabbia",
+      "name": "Grigio Sabbia",
+      "shortDescription": "Finitura grigio sabbia, composizione angolare",
+      "description": "Cucina moderna angolare con finitura grigio sabbia, una tonalità elegante e neutra che si adatta a diversi stili abitativi. La configurazione permette di sfruttare al massimo gli spazi domestici mantenendo funzionalità e ordine. Non include frigorifero e microonde, ma è predisposta e facilmente integrabile.",
+      "price": "Usata",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/grigio-sabbia/thumbnail.jpg",
+      "images": [
+        "/Images/usate/grigio-sabbia/1.jpg",
+        "/Images/usate/grigio-sabbia/2.jpg",
+        "/Images/usate/grigio-sabbia/3.jpg"
+      ],
+      "features": [
+        {
+          "title": "Tonalità Grigio Sabbia",
+          "description": "Colore moderno e morbido, perfetto per ambienti luminosi e minimal"
+        },
+        {
+          "title": "Composizione Angolare",
+          "description": "Ottimizza gli spazi creando una postazione di lavoro a due lati"
+        },
+        {
+          "title": "Predisposizione Elettrodomestici",
+          "description": "Frigorifero e microonde non inclusi ma installabili facilmente"
+        },
+        {
+          "title": "Stile Adattabile",
+          "description": "Si abbina bene con colori chiari, legno naturale, bianco e pietra"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lunghezza lato principale: 218 cm",
+          "Lunghezza lato destro (R): 210 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm circa"
+        ],
+        "Materiali": [
+          "Ante: Laminato grigio sabbia",
+          "Top: Laminato neutro o pietra chiara (da verificare)",
+          "Lavello: Acciaio o composito (da confermare)"
+        ],
+        "Elettrodomestici": [
+          "Forno multifunzione",
+          "Piano cottura",
+          "Lavastoviglie A++ 60 cm",
+          "Cappa aspirante con LED integrato",
+          "Senza frigorifero incluso (aggiungibile)",
+          "Senza microonde incluso (aggiungibile)"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi",
+          "Moduli angolari",
+          "Cassetti standard o soft-close (da verificare)"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
       "id": "Arredamento 1",
       "slug": "Armadio",
       "name": "Armadio",
