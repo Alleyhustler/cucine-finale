@@ -63,14 +63,12 @@
             width: 95%;
             max-width: 1400px;
             margin: 0 auto;
-                padding: 0 15px; /* Un po' di margine laterale */
-
         }
 
         .header-left {
             display: flex;
             align-items: center;
-    gap: 15px; /* Spazio tra menu e logo */
+            gap: 1rem;
         }
 
         .menu-toggle {
@@ -125,13 +123,6 @@
             margin-top: 4px;
             line-height: 1;
         }
-
-        .logo-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative; 
-}
 
         .logo::after {
             content: '';
@@ -1230,6 +1221,9 @@
         }
 
         @media (max-width: 768px) {
+
+                /* 1. Hide Description and Features on Mobile */
+
             body {
                 padding-top: 70px;
             }
@@ -1410,18 +1404,21 @@
             }
         }
 
-.mobile-preventivo-text {
-    position: absolute;
-    top: 28px; /* Posizionato sotto il logo */
-    left: 0;
-    font-size: 0.75rem;
-    white-space: nowrap;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease;
-    color: var(--primary-medium);
-    pointer-events: auto;
-}
+        .mobile-preventivo-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+            font-family: "Arvo", serif;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: none;
+            margin-top: -2px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            white-space: nowrap;
+        }
 
         .mobile-preventivo-text::after {
             content: "→";
@@ -1441,10 +1438,8 @@
 
         /* Hide when scrolled */
         .header.scrolled .mobile-preventivo-text {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-5px);
-}
+            display: none;
+        }
 
         /* Show ONLY on mobile screens */
         @media (min-width: 324px) and (max-width: 1200px) {
@@ -1613,10 +1608,6 @@
     line-height: 1.3;
 }
 
-#mobileSpecsContainer {
-    display: none;
-}
-
 .location-address {
     font-weight: 600;
     margin-bottom: 2px;
@@ -1630,73 +1621,6 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-        /* Nascondi descrizione e icone features originali */
-    #productDescription, 
-    #productFeatures {
-        display: none !important;
-    }
-
-    /* Nascondi la sezione Specifiche GRANDE in fondo (per evitare il doppio) */
-    #mainSpecsSection {
-        display: none !important;
-    }
-
-    /* Mostra il nuovo container compatto */
-    #mobileSpecsContainer {
-        display: block;
-        margin-bottom: 1.5rem;
-        background: rgba(255, 255, 255, 0.5); /* Leggero sfondo */
-        border-radius: 8px;
-        padding: 10px 0;
-    }
-
-    #mobileSpecsContainer .section-title {
-        font-size: 1.2rem;
-        text-align: left;
-        margin-bottom: 10px;
-        padding-left: 10px;
-        color: var(--primary-dark);
-    }
-
-    #mobileSpecsContainer .spec-card {
-        padding: 8px 15px;
-        margin-bottom: 0;
-        background: transparent;
-        box-shadow: none;
-        border: none;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
-        border-radius: 0;
-    }
-    
-    #mobileSpecsContainer .spec-card:last-child {
-        border-bottom: none;
-    }
-
-    #mobileSpecsContainer .spec-title {
-        font-size: 0.95rem;
-        margin-bottom: 4px;
-        color: var(--primary-dark);
-        font-weight: 700;
-    }
-
-    #mobileSpecsContainer .spec-list li {
-        font-size: 0.85rem;
-        margin-bottom: 2px;
-        color: var(--primary-medium);
-    }
-
-    /* Header Mobile Adjustments */
-    .header {
-        height: 70px; /* Altezza fissa stabile */
-    }
-    
-    .logo {
-        font-size: 1.4rem; /* Logo leggermente più piccolo per evitare a capo */
-    }
-    
-    .menu-toggle {
-        margin-right: 5px;
-    }
     .location-banner {
         bottom: 20px; /* Sopra eventuali menu bottom */
         right: 15px;
@@ -1744,8 +1668,9 @@
 @media (max-width: 768px) {
     /* 1. Hide Description and Features on Mobile */
     #productDescription, 
-    #productFeatures {
+    #productFeatures,    #full-specs-section {
         display: none !important;
+        
     }
 
     /* 2. Show the Mobile Specs Container */
@@ -1939,7 +1864,8 @@
         <!-- SEZIONI SOTTO -->
         
         <!-- Specifiche Tecniche -->
-        <section class="section fade-in">
+        <!-- Specifiche Tecniche -->
+        <section class="section fade-in" id="full-specs-section">
             <h2 class="section-title">Specifiche Tecniche</h2>
             <div class="specs-grid" id="productSpecs">
                 <!-- Specifications will be populated by JavaScript -->
@@ -2485,6 +2411,7 @@
 
                         // Populate specifications
             // Populate specifications (BOTH Desktop and Mobile)
+// Populate specifications (BOTH Desktop and Mobile)
             const specsContainer = document.getElementById('productSpecs'); // Desktop/Bottom container
             const mobileSpecsGrid = document.getElementById('mobileSpecsGrid'); // New Mobile/Top container
                         
@@ -2501,18 +2428,21 @@
                         </ul>
                     `;
 
-                    // 1. Append to Bottom Section (Desktop)
+                    // 1. Append to Bottom Section (Desktop) - SHOW ALL
                     const specCard = document.createElement('div');
                     specCard.className = 'spec-card';
                     specCard.innerHTML = cardHTML;
                     specsContainer.appendChild(specCard);
 
-                    // 2. Append to Mobile Section (Top)
+                    // 2. Append to Mobile Section (Top) - FILTER SPECIFIC CATEGORIES ONLY
                     if(mobileSpecsGrid) {
-                        const mobileCard = document.createElement('div');
-                        mobileCard.className = 'spec-card'; // We use the same class but style it differently via CSS media query
-                        mobileCard.innerHTML = cardHTML;
-                        mobileSpecsGrid.appendChild(mobileCard);
+                        // Check if the category is "Dimensioni" or "Elettrodomestici"
+                        if (category === "Dimensioni" || category === "Elettrodomestici") {
+                            const mobileCard = document.createElement('div');
+                            mobileCard.className = 'spec-card';
+                            mobileCard.innerHTML = cardHTML;
+                            mobileSpecsGrid.appendChild(mobileCard);
+                        }
                     }
                 });
             }
