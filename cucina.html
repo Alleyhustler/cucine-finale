@@ -1654,6 +1654,79 @@
         gap: 8px;
     }
 }
+
+/* --- NEW CSS FOR MOBILE SPECS --- */
+
+/* By default (Desktop), hide the mobile specs container */
+#mobileSpecsContainer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* 1. Hide Description and Features on Mobile */
+    #productDescription, 
+    #productFeatures {
+        display: none !important;
+    }
+
+    /* 2. Show the Mobile Specs Container */
+    #mobileSpecsContainer {
+        display: block;
+        margin-bottom: 2rem;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid var(--accent-light);
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+    /* 3. Style it to be compact (not long and annoying) */
+    #mobileSpecsContainer .section-title {
+        font-size: 1.3rem; /* Smaller title */
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    #mobileSpecsContainer .specs-grid {
+        display: block; /* Stack vertically, no grid gaps */
+        gap: 0;
+    }
+
+    #mobileSpecsContainer .spec-card {
+        background: transparent;
+        box-shadow: none;
+        padding: 10px 0;
+        border: none;
+        border-left: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    #mobileSpecsContainer .spec-card:last-child {
+        border-bottom: none;
+    }
+
+    #mobileSpecsContainer .spec-title {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: var(--primary-dark);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #mobileSpecsContainer .spec-list li {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+        line-height: 1.4;
+    }
+    
+    /* Optional: Hide the original bottom specs section on mobile to avoid duplication */
+    /* Add ID="mainSpecsSection" to the bottom section in HTML first */
+    #mainSpecsSection {
+        display: none;
+    }
+}
     </style>
 </head>
 <body>
@@ -1753,6 +1826,15 @@
 
                 <div class="product-features" id="productFeatures">
                     <!-- Features will be populated by JavaScript -->
+                </div>
+
+
+                                <!-- NEW ADDITION START -->
+                <div id="mobileSpecsContainer">
+                    <h2 class="section-title">Specifiche Tecniche</h2>
+                    <div class="specs-grid" id="mobileSpecsGrid">
+                        <!-- Will be populated by JS -->
+                    </div>
                 </div>
 
                 <div class="product-actions">
