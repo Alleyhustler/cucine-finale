@@ -1459,6 +1459,126 @@
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
     },
     {
+      "id": 23,
+      "slug": "Noce-Speziato",
+      "name": "Noce Speziato",
+      "shortDescription": "Finitura noce speziato, composizione lineare da 420 cm",
+      "description": "Cucina lineare da 420 cm in finitura noce speziato, una tonalità calda e naturale ideale per ambienti moderni o classici. La struttura offre ampi spazi contenitivi, basi e pensili, con forno, piano cottura e cappa già presenti. La lavastoviglie non è inclusa, ma tutti gli altri elementi essenziali sono già installati. Una soluzione solida e funzionale, perfetta per chi cerca una cucina completa in stile legno semplice.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/lineare/10/2.png",
+      "images": [
+        "/Images/usate/lineare/10/2.png",
+        "/Images/usate/lineare/10/1.png",
+        "/Images/usate/lineare/10/3.png"
+      ],
+      "features": [
+        {
+          "title": "Finitura Noce Speziato",
+          "description": "Calda tonalità di marrone con venature naturali, adatta a cucine classiche e moderne."
+        },
+        {
+          "title": "Composizione Lineare",
+          "description": "L’intera cucina si sviluppa su una parete da 420 cm, ottimizzando ogni centimetro."
+        },
+        {
+          "title": "Elettrodomestici Inclusi (tranne lavastoviglie)",
+          "description": "Forno, piano cottura e cappa presenti; lavastoviglie non installata."
+        },
+        {
+          "title": "Stile Versatile",
+          "description": "Il color noce si abbina a bianco, nero, beige, pietra e pavimenti in legno."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lunghezza totale: 420 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm circa (pensili + base)"
+        ],
+        "Materiali": [
+          "Ante: Laminato effetto Noce Speziato",
+          "Top: Laminato marrone neutro o effetto legno (da confermare)",
+          "Lavello: Acciaio inox"
+        ],
+        "Elettrodomestici": [
+          "Forno multifunzione (incluso)",
+          "Piano cottura (incluso)",
+          "Cappa aspirante (inclusa)",
+          "Lavastoviglie NON presente",
+          "Frigorifero: incluso"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi",
+          "Cassetti standard (soft-close da verificare)",
+          "Ripiani interni",
+          "Zoccolo di finitura"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
+      "id": 24,
+      "slug": "Pietra-Tortora",
+      "name": "Pietra Tortora",
+      "shortDescription": "Finitura Pietra Tortora, composizione angolare 365 x 225 cm",
+      "description": "Cucina angolare 365 x 225 cm in finitura Pietra Tortora, caratterizzata da un elegante mix di marrone e verde che dona un look naturale e moderno all’ambiente. La configurazione sfrutta al meglio gli spazi con ampie basi, pensili e piano di lavoro. Forno, piano cottura, cappa e frigorifero sono già inclusi; manca solo il microonde. Una soluzione completa e versatile, perfetta per chi cerca una cucina usata ma ben tenuta, con stile contemporaneo.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/angolare/8/1.png",
+      "images": [
+        "/Images/usate/angolare/8/1.png",
+        "/Images/usate/angolare/8/2.png",
+        "/Images/usate/angolare/8/3.png"
+      ],
+      "features": [
+        {
+          "title": "Finitura Pietra Tortora",
+          "description": "Elegante combinazione di marrone e verde, con un look naturale e moderno che valorizza qualsiasi ambiente."
+        },
+        {
+          "title": "Composizione Angolare",
+          "description": "Struttura 365 x 225 cm che sfrutta al massimo lo spazio con una zona lavoro distribuita su due lati."
+        },
+        {
+          "title": "Elettrodomestici Inclusi (tranne microonde)",
+          "description": "Forno, piano cottura, frigorifero e cappa sono già presenti; manca solo il microonde."
+        },
+        {
+          "title": "Stile Versatile",
+          "description": "Il contrasto marrone-verde si abbina perfettamente con bianco, nero, legno chiaro e superfici effetto pietra."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lato principale: 365 cm",
+          "Lato secondario: 225 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: circa 230 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato effetto Pietra Tortora",
+          "Top: Laminato o pietra effetto naturale (da verificare)",
+          "Lavello: Acciaio inox o composito (da confermare)"
+        ],
+        "Elettrodomestici": [
+          "Forno multifunzione A++ (incluso)",
+          "Piano cottura (incluso)",
+          "Cappa aspirante (inclusa)",
+          "Frigorifero (incluso)",
+          "Lavastoviglie (presente)",
+          "Microonde NON incluso"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi",
+          "Angolo attrezzato o ripiani",
+          "Cassetti standard o soft-close (da verificare)",
+          "Zoccolo e finiture frontali"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+    },
+    {
       "id": "Arredamento 1",
       "slug": "Armdaio-Pantera",
       "name": "Armdaio Pantera",
