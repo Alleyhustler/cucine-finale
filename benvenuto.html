@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Cucine Italia - Scegli la tua destinazione</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #2C3424;
+            --primary-medium: #4C583E;
+            --accent-medium: #959581;
+            --accent-light: #DADED8;
+            --white: #ffffff;
+            --gold: #c7b650;
+        }
+
+        body {
+            font-family: "Arvo", serif;
+            min-height: 100vh;
+            
+            /* --- SFONDO AGGIORNATO --- */
+            /* Usa l'immagine Hero del sito principale */
+            background: url('anima.webp') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed; /* Parallax effect */
+            
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Overlay scuro come nella Hero Section del sito principale */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5); /* Scurisce l'immagine per leggere il testo */
+            z-index: -1; /* Sta dietro al contenuto ma sopra lo sfondo */
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+
+        /* Animazione pulsante dell'overlay (opzionale, presa dal tuo sito) */
+        @keyframes gradientShift {
+            0%, 100% { background: rgba(0,0,0,0.5); }
+            50% { background: rgba(0,0,0,0.3); }
+        }
+
+        /* Logo semplificato */
+        .logo-container {
+            margin-bottom: 3rem;
+            animation: fadeInDown 1s ease forwards;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: inline-block;
+            position: relative;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+        }
+
+        .logo span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: var(--accent-light);
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        .logo::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 15px auto 0;
+            box-shadow: 0 0 10px rgba(199, 182, 80, 0.5);
+        }
+
+        /* Titolo della domanda */
+        .question {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            font-weight: 400;
+            color: var(--accent-light);
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Container delle opzioni */
+        .options-grid {
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Stile delle Card/Bottoni - Glassmorphism adattato allo sfondo Hero */
+        .option-card {
+            background: rgba(44, 52, 36, 0.219); /* Base verde scuro semi-trasparente */
+            backdrop-filter: blur(12px); /* Effetto sfocatura sfondo */
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Delay diverso per ogni card */
+        .option-card:nth-child(1) { animation-delay: 0.5s; }
+        .option-card:nth-child(2) { animation-delay: 0.7s; }
+
+        /* Effetto Hover / Active */
+        .option-card:hover, .option-card:active {
+            background: rgba(44, 52, 36, 0.7);
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Contenuto della card */
+        .card-content {
+            text-align: left;
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        /* Icone */
+        .card-icon {
+            font-size: 1.8rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--gold);
+            transition: transform 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .option-card:hover .card-icon {
+            transform: rotate(15deg) scale(1.1);
+            background: var(--gold);
+            color: var(--primary-dark);
+            border-color: var(--gold);
+        }
+
+        /* Footer minimal */
+        .mini-footer {
+            margin-top: 4rem;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            animation: fadeIn 1s ease 1s forwards;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+        }
+
+        .social-row {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .social-row a {
+            color: var(--white);
+            transition: color 0.3s;
+        }
+        
+        .social-row a:hover {
+            color: var(--gold);
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Shine Effect sulle card */
+        .option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: 0.5s;
+        }
+
+        .option-card:hover::before {
+            left: 100%;
+            transition: 0.7s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <div class="logo">
+            Cucine Italia
+            <span>Arredamenti Brambilla</span>
+        </div>
+    </div>
+
+    <h1 class="question">Cosa desideri fare?</h1>
+
+    <div class="options-grid">
+        
+        <!-- OPZIONE 1: RECENSIONE GOOGLE -->
+        <!-- IMPORTANTE: Inserisci il tuo link Google Recensioni qui -->
+        <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK" target="_blank" class="option-card">
+            <div class="card-content">
+                <span class="card-title">Lascia una Recensione</span>
+                <span class="card-subtitle">Condividi la tua esperienza su Google</span>
+            </div>
+            <div class="card-icon">
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </a>
+
+        <!-- OPZIONE 2: SITO WEB -->
+        <a href="index.html" class="option-card">
+            <div class="card-content">
+                <span class="card-title">Visitare il Sito Web</span>
+                <span class="card-subtitle">Scopri le nuove collezioni e offerte</span>
+            </div>
+            <div class="card-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="mini-footer">
+        <p>&copy; 2025 Cucine Italia. Eccellenza e Qualità.</p>
+        <div class="social-row">
+            <a href="https://www.instagram.com/cucine.italia/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61576278827754"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/393516086812"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
