@@ -2,8 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Cucine di Lusso</title>
 <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -258,8 +257,9 @@
         .mobile-menu {
             position: fixed;
             top: 0;
-            width: 580px; /* Reduced from 500px for small screens */
-            left: -580px;
+            width: 100%;       /* Occupa tutto lo schermo */
+            max-width: 400px;  /* Ma non diventare enorme su tablet */
+            left: -100%;   
             height: 100vh;
             background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
             backdrop-filter: blur(20px);
@@ -772,9 +772,16 @@
             }
         }
 
+        html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%; /* BLOCCA lo zoom automatico del testo su iPhone */
+    text-size-adjust: 100%;
+}
+
         .gallery-item {
             flex-shrink: 0;
-            width: 400px;
+            width: 85vw; /* Occupa l'85% della larghezza dello schermo, qualunque essa sia */
+            max-width: 400px; /* Non superare i 400px su schermi grandi */
             border-radius: 15px;
             overflow: hidden;
             position: relative;
@@ -1060,7 +1067,7 @@
 
 
         /* Mobile Responsive */
-        @media (min-width: 324px) and (max-width: 1200px) {
+        @media (max-width: 1200px) {
                 .hero {
         background-attachment: scroll; /* Remove parallax on mobile */
         min-height: 80vh; /* Slightly shorter than full viewport */
