@@ -82,21 +82,27 @@
             color: var(--white);
         }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 95%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        /* HEADER CONTENT: Fluido e senza limiti fissi */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100% !important;     /* Forza la larghezza totale */
+    max-width: none !important; /* Rimuove il blocco a 1400px */
+    margin: 0 auto;
+    padding: 0 2% !important;   /* Padding fluido per evitare tagli */
+    box-sizing: border-box;
+}
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-left: -200px;
-        }
+        /* HEADER LEFT: Rimosso il margine negativo */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0 !important; /* FONDAMENTALE: Questo riporta il logo visibile */
+    min-height: 70px;
+    flex-shrink: 0;
+}
 
         .menu-toggle {
             display: flex;
@@ -170,9 +176,12 @@
             display: flex;
             gap: 1.5rem;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
+            flex-shrink: 1;    /* Permette al menu di stringersi se necessario */
+            flex-wrap: nowrap;
         }
 
+        /* NAV LINK: Testo su una riga */
         .nav-link {
             color: #2C3424;
             text-decoration: none;
@@ -181,7 +190,9 @@
             position: relative;
             transition: all 0.3s ease;
             letter-spacing: 0.5px;
+            white-space: nowrap; /* CAMBIATO: Impedisce al testo di andare a capo */
         }
+
 
         .nav-link::before {
             content: '';
@@ -211,13 +222,15 @@
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 1px;
-            margin-right: -200px;
+            margin-right: 0;   /* CAMBIATO: Era -200px */
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             border: 2px solid white;
             overflow: hidden;
             z-index: 1;
             font-size: 0.9rem;
+            flex-shrink: 0;    /* Impedisce al bottone di schiacciarsi */
+            white-space: nowrap;
         }
 
         .cta-button::before {
@@ -241,6 +254,34 @@
         .cta-button:hover::before {
             transform: translateX(0);
         }
+    
+/* --- NUOVO: ZONA "LAPTOP GRANDE" (1601px - 1850px) --- */
+/* Questo risolve il problema a 1800px */
+@media (min-width: 1601px) and (max-width: 1850px) {
+    .header-content {
+        padding: 0 2%; /* Riduciamo leggermente i lati */
+    }
+    .nav-desktop {
+        gap: 1.2rem; /* Avviciniamo leggermente le voci menu */
+    }
+}
+
+/* --- ZONA TABLET/LAPTOP (1201px - 1600px) --- */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .header-content {
+        padding: 0 15px;
+    }
+    .nav-desktop {
+        gap: 0.8rem;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    .cta-button {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+}
 
         /* Mobile Menu */
         .mobile-menu {
