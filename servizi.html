@@ -76,21 +76,26 @@
             color: var(--white);
         }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 95%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100% !important;       /* Forza larghezza totale */
+    max-width: none !important;   /* Rimuove il limite 1400px */
+    margin: 0 auto;
+    padding: 0 3% !important;     /* Padding fluido */
+    box-sizing: border-box;
+}
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-left: -200px;
-        }
+/* HEADER LEFT: Rimuove il margine negativo che nascondeva il logo */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0 !important;    /* FONDAMENTALE: Riporta il logo dentro lo schermo */
+    min-height: 70px;
+    flex-shrink: 0;
+}
 
         .menu-toggle {
             display: flex;
@@ -159,22 +164,26 @@
             width: 100%;
         }
 
-        .nav-desktop {
-            display: flex;
-            gap: 1.5rem;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+.nav-desktop {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+}
 
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            position: relative;
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
-        }
+/* LINK MENU: Evita che vadano a capo */
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Importante */
+}
 
         .nav-link::before {
             content: '';
@@ -197,21 +206,50 @@
             width: 100%;
         }
 
-        .cta-button {
-            background: url('bedge-grunge.png') var(--primary-dark);
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-right: -200px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            border: 2px solid white;
-            overflow: hidden;
-            z-index: 1;
-            font-size: 0.9rem;
-        }
+.cta-button {
+    background: url('bedge-grunge.png') var(--primary-dark);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 0 !important; /* FONDAMENTALE: Rimuove il margine negativo */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 2px solid white;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    white-space: nowrap; /* Impedisce al testo di rompersi */
+}
+
+/* --- ZONA "LAPTOP GRANDE" (1601px - 1850px) --- */
+@media (min-width: 1601px) and (max-width: 1850px) {
+    .header-content {
+        padding: 0 2% !important;
+    }
+    .nav-desktop {
+        gap: 1.2rem;
+    }
+}
+
+/* --- ZONA TABLET/LAPTOP (1201px - 1600px) --- */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .header-content {
+        padding: 0 15px !important;
+    }
+    .nav-desktop {
+        gap: 0.8rem;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    .cta-button {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+}
 
         .cta-button::before {
             content: '';
