@@ -2,12 +2,14 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Cucine di Lusso</title>
 <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
+
+        
         * {
             margin: 0;
             padding: 0;
@@ -55,12 +57,14 @@
         }
 
         .header.scrolled {
-    background: url('bedge-grunge.png') rgba(255, 255, 255, 0);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 8px 32px rgba(44, 52, 36, 0.1);
-                height: 60px; /* Keep the scrolled height the same as original */
-                    top: 0; /* Remove the top spacing when scrolled */
-
+         background: url('bedge-grunge.png') #4f5f3d57;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 8px 32px rgba(44, 52, 36, 0.1);
+        height: 60px; /* Keep the scrolled height the same as original */
+        top: 0; /* Remove the top spacing when scrolled */
+        }
+        .header.scrolled .logo {
+            transform: translateY(8px); /* Keep the same position when scrolled */
         }
 
         .header.scrolled .nav-link,
@@ -92,13 +96,15 @@
         }
 
         .header-left {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-left: -200px;
-        }
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: -200px;
+    min-height: 70px; /* Ensure consistent height */
+}
 
         .menu-toggle {
+            
             display: flex;
             flex-direction: column;
             gap: 6px;
@@ -129,14 +135,31 @@
         .menu-toggle.active .menu-line:nth-child(3) {
             transform: rotate(-45deg) translate(8px, -8px);
         }
-
+        .header.scrolled .logo-subtitle {
+            transform: translateY(-8px); /* Only subtitle moves up */
+            opacity: 0.9; /* Slightly increase opacity when scrolled */
+        }
         .logo {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             color: white;
             text-decoration: none;
             letter-spacing: 2px;
             position: relative;
+            display: inline-block;
+            transform: translateY(8px);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .logo-subtitle {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            opacity: 0.85;
+            margin-top: 4px;
+            line-height: 1;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .logo::after {
@@ -234,16 +257,18 @@
         .mobile-menu {
             position: fixed;
             top: 0;
-            width: 500px;
-            left: -500px;
+            width: 100%;       /* Occupa tutto lo schermo */
+            max-width: 400px;  /* Ma non diventare enorme su tablet */
+            left: -100%;   
             height: 100vh;
-    background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));            backdrop-filter: blur(20px);
+            background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+            backdrop-filter: blur(20px);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1001;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .mobile-menu.active {
@@ -484,6 +509,18 @@
             transform: translateX(5px);
         }
 
+        .link-icon {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 18px;
+            color: #fff;          /* cambia colore a piacere */
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            padding: 4px 6px;
+            line-height: 1;
+        }
+
 /* Why Choose Us Section - Corrected Version */
 .why-us {
     padding: 8rem 2rem;
@@ -610,17 +647,9 @@
     opacity: 0.7;
     color: var(--white);
 }
+        /* Tablet Styles */
 
-@media (max-width: 768px) {
-    .excellence-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .excellence-card {
-        padding: 1.5rem;
-    }
-}
+
 
 
         .section-title {
@@ -743,9 +772,16 @@
             }
         }
 
+        html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%; /* BLOCCA lo zoom automatico del testo su iPhone */
+    text-size-adjust: 100%;
+}
+
         .gallery-item {
             flex-shrink: 0;
-            width: 400px;
+            width: 85vw; /* Occupa l'85% della larghezza dello schermo, qualunque essa sia */
+            max-width: 400px; /* Non superare i 400px su schermi grandi */
             border-radius: 15px;
             overflow: hidden;
             position: relative;
@@ -1018,27 +1054,42 @@
     color: #4C583E;
 }
 
+.nav-desktop {
+    display: none;
+}
+
+/* Show mobile menu toggle by default */
+.menu-toggle {
+    display: flex;
+}
+
+
+
+
         /* Mobile Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
                 .hero {
         background-attachment: scroll; /* Remove parallax on mobile */
         min-height: 80vh; /* Slightly shorter than full viewport */
         background-size: cover;
         background-position: 0.0001% center; /* Adjust focal point */
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
-
+    .header .logo {
+        margin-top: 40px;
+    }
         .hero {
         aspect-ratio: 9/16; /* Portrait orientation ratio */
         height: auto;
     }
             .header {
-                height: 60px;
+                height: 40px;
             }
             
-            .header-left {
-                margin-left: 0px;
-            }
+    .header-left {
+        margin-left: 0px;
+        min-height: 60px; /* Consistent mobile height */
+    }
             
             .logo {
                 font-size: 1.5rem;
@@ -1051,6 +1102,9 @@
         white-space: nowrap; /* Prevent text wrapping */
     }
     
+        .nav-desktop {
+        display: none;
+    }
             
             .menu-toggle {
                 padding: 6px;
@@ -1060,9 +1114,7 @@
                 width: 24px;
             }
             
-            .nav-desktop {
-                display: none;
-            }
+
 
     .hero-content {
         padding: 0 1rem;
@@ -1088,7 +1140,6 @@
 
             .gallery-item {
                 width: 300px;
-                height: 225px;
             }
 
             .footer-container {
@@ -1108,6 +1159,10 @@
                 width: 80%;
                 left: -80%;
             }
+
+                .mobile-preventivo-text {
+        display: block; /* Show on mobile */
+    }
         }
 
         @media (max-width: 480px) {
@@ -1130,6 +1185,46 @@
             }
         }
 
+                /* Optimized Header for Small Screens (iPhone SE and similar) */
+        @media (min-width: 324px) and (max-width: 427px) {
+            .logo {
+                font-size: 2rem;
+                letter-spacing: 0.6px;
+            }
+
+            .header.scrolled {
+                height: 45px;
+            }
+
+            
+            .cta-button {
+                display: none;
+            }
+            
+            .menu-line {
+                width: 22px;
+            }
+
+ 
+        }
+
+                /* Large Phones (iPhone Pro Max, Plus models) */
+        @media (min-width: 428px) and (max-width: 767px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                display: none;
+            }
+            
+            
+            .mobile-menu {
+                width: 300px;
+                left: -300px;
+            }
+        }
+
         /* Smooth scrolling and animations */
         html {
             scroll-behavior: smooth;
@@ -1145,6 +1240,26 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Show only on mobile */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .logo-section {
+        align-items: flex-start;
+    }
+    
+    .mobile-preventivo-text {
+        display: block; /* Show on mobile */
+    }
+}
+
+/* Large desktop - Ensure desktop nav is visible */
+@media (min-width: 1201px) {
+    .nav-desktop {
+        display: flex;
+    }
+    
+
+}
 
         /* Modal Styles */
 .modal-overlay {
@@ -1270,25 +1385,233 @@
   background: var(--primary-dark);
   transform: translateY(-2px);
 }
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+        }
+                .header.scrolled .logo-section {
+            transform: translateY(-8px); /* Moves the entire logo section up */
+        }
+
+.mobile-preventivo-text {
+    font-size: 0.9rem;
+    color: #c7b650;
+    font-weight: 400;
+    font-family: "Arvo", serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+    margin-top: 25px; /* Reduced from -2px */
+    position: relative; /* Changed from absolute */
+    top: auto; /* Remove absolute positioning */
+    left: auto; /* Remove absolute positioning */
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.mobile-preventivo-text::after {
+    content: "→";
+    margin-left: 6px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.mobile-preventivo-text:hover {
+    color: #c7b650;
+}
+
+.mobile-preventivo-text:hover::after {
+    transform: translateX(3px);
+}
+
+
+/* Hide when scrolled */
+.header.scrolled .mobile-preventivo-text {
+    display: none;
+}
+
+/* Show ONLY on mobile screens */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .mobile-preventivo-text {
+        display: block; /* Show on mobile */
+    }
+}
+
+/* Hide when header is scrolled (even on mobile) */
+.header.scrolled .mobile-preventivo-text {
+    display: none !important;
+}
+
+/* Ensure it's completely hidden on desktop */
+@media (min-width: 1201px) {
+    .mobile-preventivo-text {
+        display: none !important;
+    }
+}
+
+/* Fix for mobile header when scrolled */
+@media (min-width: 324px) and (max-width: 1200px) {
+    .header.scrolled .logo {
+        transform: translateY(-13px) !important; /* Move logo up to align with menu */
+        font-size: 30px;
+    }
+
+    .logo {
+            transform: translateY(3px);
+
+    }  
+
+    .logo-subtitle {
+        margin-top: -6px;
+    }
+    
+    .header.scrolled .logo-subtitle {
+        transform: translateY(-3px) !important; /* Move subtitle up to stay with logo */
+        opacity: 0.9;
+                font-size: 9px;
+    }
+    
+    /* Optional: Adjust header height when scrolled for better fit */
+    .header.scrolled {
+        height: 50px;
+    }
+    
+    .header.scrolled .header-left {
+        min-height: 55px;
+    }
+}
+
+/* Location Banner - Versione Ottimizzata */
+/* Location Banner - Versione Ottimizzata */
+.location-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: url('bedge-grunge.png');
+    background-blend-mode: overlay;
+    background-size: cover;
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 998;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 280px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.location-banner:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    border-color: var(--accent-light);
+}
+
+.location-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.location-text {
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.location-address {
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+}
+
+.location-city {
+    opacity: 0.85;
+    font-size: 0.75rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .location-banner {
+        bottom: 20px; /* Sopra eventuali menu bottom */
+        right: 15px;
+        left: auto;
+        max-width: 200px;
+        padding: 8px 12px;
+    }
+    
+    .location-text {
+        font-size: 0.75rem;
+    }
+    
+    .location-address {
+        font-size: 0.8rem;
+    }
+    
+    .location-city {
+        font-size: 0.7rem;
+    }
+    
+    .location-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .location-banner {
+        max-width: 160px;
+        padding: 6px 10px;
+    }
+    
+    .location-content {
+        gap: 8px;
+    }
+}
     </style>
 </head>
 <body>
+    <!-- Location Banner -->
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="header-content">
-            <div class="header-left">
-                <div class="menu-toggle" id="menuToggle">
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                </div>
-                <a href="#" class="logo"> Cucine Italia</a>
-            </div>
+    <div class="header-left">
+        <div class="menu-toggle" id="menuToggle">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="logo-section">
+<a href="index.html" class="logo">
+    Cucine&nbsp;Italia
+    <span class="logo-subtitle">Arredamenti Brambilla</span>
+</a>
+            <div class="mobile-preventivo-text" id="mobilePreventivoText">Richiedi preventivo</div>
+        </div>
+    </div>
             
             <nav class="nav-desktop">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+                <a href="arredamento.html" class="nav-link">Arredamento</a>
                 <a href="servizi.html" class="nav-link">Servizi</a>
                 <a href="index.html#contatti" class="nav-link">Contatti</a>
                 <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
@@ -1301,13 +1624,18 @@
     <!-- Mobile Menu -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
     <nav class="mobile-menu" id="mobileMenu">
-                <a href="#" class="logo"> Cucine Italia</a>
+<a href="index.html" class="logo">
+    Cucine&nbsp;Italia
+    <span class="logo-subtitle">Arredamenti Brambilla</span>
+</a>
         <div class="mobile-nav">
                 <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+                <a href="arredamento.html" class="nav-link">Arredamento</a>
                 <a href="servizi.html" class="nav-link">Servizi</a>
                 <a href="index.html#contatti" class="nav-link">Contatti</a>
                 <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
+
         </div>
     </nav>
 
@@ -1323,33 +1651,213 @@
     <section class="categories" id="categories">
     <div class="categories-container">
 
-                <!-- Card 2 -->
-        <a href="cucine-nuove.html" class="category-card fade-in" id="cucine-nuove" style="text-decoration:none; color:inherit;">
-        <img src="Images/home/nuove.webp" alt="Cucine Nuove" class="category-image">
+    <!-- Card 2 -->
+    <a href="cucine-nuove.html" class="category-card fade-in" id="cucine-nuove" style="text-decoration:none; color:inherit; position:relative;">
+        <span class="link-icon">↗</span>
+        <img src="Images/home/nuove.webp" alt="Cucine Nuove" class="category-image" loading="lazy">
         <div class="category-content">
             <h3 class="category-title">Cucine Nuove</h3>
-            <p class="category-description">Design contemporaneo e innovazione tecnologica. Realizza la cucina dei tuoi sogni con materiali premium.</p>
+            <p class="category-description">Design contemporaneo e innovazione tecnologica.</p>
             <span class="category-link">Esplora ora</span>
         </div>
-        </a>
-
+    </a>
 
         <!-- Card 1 -->
         <a href="SecondaMano.html" class="category-card fade-in" id="cucine-Seconda Mano" style="text-decoration:none; color:inherit;">
-        <img src="Images/home/secondamano.webp" alt="Cucine Seconda Mano" class="category-image">
+                    <span class="link-icon">↗</span>
+        <img src="Images/home/secondamano.webp" alt="Cucine Seconda Mano" class="category-image" loading="lazy">
         <div class="category-content">
             <h3 class="category-title">Cucine Seconda Mano</h3>
-            <p class="category-description">Cucine di qualità superiore ricondizionate con cura maniacale. Ogni pezzo racconta una storia di eccellenza.</p>
+            <p class="category-description">Cucine di qualità superiore ricondizionate con cura maniacale.</p>
             <span class="category-link">Scopri di più</span>
         </div>
         </a>
 
 
-
     </div>
     </section>
 
-        <!-- Why Choose Us Section -->
+    <!-- Gallery Section -->
+    <section class="gallery fade-in">
+        <h2 class="gallery-title">Le Nostre Realizzazioni e Recensioni</h2>
+        <div class="gallery-scroll">
+
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (1).webp" loading="lazy" alt="Cucina Moderna">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (1).webp" loading="lazy" alt="Paola Conti">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Paola Conti</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"Finalmente una cucina come la volevo: luminosa, spaziosa e con piani di lavoro resistenti. Montaggio veloce e preciso."</div>
+                            <div class="review-date">15 Gennaio 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (2).webp" loading="lazy"alt="Cucina Classica">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (2).webp" loading="lazy"alt="Sergio Lombardi">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Sergio Lombardi</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"Il legno ha un profumo fantastico e dà calore alla casa. Finiture curate e grande attenzione ai dettagli."</div>
+                            <div class="review-date">8 Gennaio 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (3).webp" loading="lazy"alt="Cucina Design">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (1).webp"loading="lazy" alt="Elisa Parodi">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Elisa Parodi</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"Bellissimo mix di colori e materiali. Funzionale e facile da tenere in ordine. i miei figli la adorano :)"</div>
+                            <div class="review-date">22 Dicembre 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (4).webp"loading="lazy" alt="Cucina Lusso">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (4).webp" loading="lazy"alt="Luca Ferrero">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Luca Ferrero</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"L’isola centrale è diventata il punto di ritrovo in casa. Materiali top e montaggio impeccabile."</div>
+                            <div class="review-date">10 Dicembre 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (5).webp" loading="lazy"alt="Cucina Elegante">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (5).webp"loading="lazy" alt="Chiara Moretti">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Chiara Moretti</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"Le ante opache sono bellissime e non lasciano impronte. Spazi interni organizzati alla perfezione."</div>
+                            <div class="review-date">28 Novembre 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (6).webp" loading="lazy"alt="Cucina Premium">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (6).webp"loading="lazy" alt="Matteo Ricci">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Matteo Ricci</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"Pratica, ben illuminata e con cassetti capienti. Veramente un ottima scelta, cordiali, veloci e sopratutto economici."</div>
+                            <div class="review-date">15 Novembre 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Duplicati per seamless scroll -->
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (7).webp"loading="lazy" alt="Cucina Moderna">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (7).webp"loading="lazy" alt="Silvia Fabbri">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Silvia Fabbri</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"Perfetta per il mio appartamento piccolo, ma con tutto lo spazio che serve. Consigliata."</div>
+                            <div class="review-date">12 Novembre 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (8).webp" loading="lazy"alt="Cucina Classica">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (8).webp" loading="lazy"alt="Giorgio Pellegrini">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Giorgio Pellegrini</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"Stile senza tempo e materiali solidi. La cucina sembra nuova anche dopo mesi di utilizzo intenso."</div>
+                            <div class="review-date">5 Novembre 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="Images/home/gallery/foto/1 (9).webp" loading="lazy"alt="Cucina Design">
+                </div>
+                <div class="review-section">
+                    <div class="client-review">
+                        <div class="client-pfp">
+                            <img src="Images/home/gallery/recensione/1 (9).webp" loading="lazy"alt="Irene Gatti">
+                        </div>
+                        <div class="review-content">
+                            <div class="client-name">Irene Gatti</div>
+                            <div class="review-stars">★★★★★</div>
+                            <div class="review-text">"Ho scelto questo modello per il piano in quarzo. Facile da pulire e bellissimo da vedere."</div>
+                            <div class="review-date">30 Ottobre 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
     <section class="why-us fade-in" id="perche-noi">
         <div class="why-us-container">
         <h2 class="section-title">Perché Sceglierci</h2>
@@ -1448,188 +1956,6 @@
 
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery fade-in">
-        <h2 class="gallery-title">Le Nostre Realizzazioni e Recensioni</h2>
-        <div class="gallery-scroll">
-
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (1).webp" loading="lazy" alt="Cucina Moderna">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (1).webp" loading="lazy" alt="Paola Conti">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Paola Conti</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Finalmente una cucina come la volevo: luminosa, spaziosa e con piani di lavoro resistenti. Montaggio veloce e preciso."</div>
-                            <div class="review-date">15 Gennaio 2025</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (2).webp" loading="lazy"alt="Cucina Classica">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (2).webp" loading="lazy"alt="Sergio Lombardi">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Sergio Lombardi</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Il legno ha un profumo fantastico e dà calore alla casa. Finiture curate e grande attenzione ai dettagli."</div>
-                            <div class="review-date">8 Gennaio 2025</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (3).webp" loading="lazy"alt="Cucina Design">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (3).webp"loading="lazy" alt="Elisa Parodi">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Elisa Parodi</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Bellissimo mix di colori e materiali. Funzionale e facile da tenere in ordine."</div>
-                            <div class="review-date">22 Dicembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (4).webp"loading="lazy" alt="Cucina Lusso">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (4).webp" loading="lazy"alt="Luca Ferrero">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Luca Ferrero</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"L’isola centrale è diventata il punto di ritrovo in casa. Materiali top e montaggio impeccabile."</div>
-                            <div class="review-date">10 Dicembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (5).webp" loading="lazy"alt="Cucina Elegante">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (5).webp"loading="lazy" alt="Chiara Moretti">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Chiara Moretti</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Le ante opache sono bellissime e non lasciano impronte. Spazi interni organizzati alla perfezione."</div>
-                            <div class="review-date">28 Novembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (6).webp" loading="lazy"alt="Cucina Premium">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (6).webp"loading="lazy" alt="Matteo Ricci">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Matteo Ricci</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Pratica, ben illuminata e con cassetti capienti. Ogni giorno apprezzo la scelta."</div>
-                            <div class="review-date">15 Novembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Duplicati per seamless scroll -->
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (7).webp"loading="lazy" alt="Cucina Moderna">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (7).webp"loading="lazy" alt="Silvia Fabbri">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Silvia Fabbri</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Perfetta per il mio appartamento piccolo, ma con tutto lo spazio che serve. Consigliata."</div>
-                            <div class="review-date">12 Novembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (8).webp" loading="lazy"alt="Cucina Classica">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (8).webp" loading="lazy"alt="Giorgio Pellegrini">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Giorgio Pellegrini</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Stile senza tempo e materiali solidi. La cucina sembra nuova anche dopo mesi di utilizzo intenso."</div>
-                            <div class="review-date">5 Novembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (9).webp" loading="lazy"alt="Cucina Design">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (9).webp" loading="lazy"alt="Irene Gatti">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Irene Gatti</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Ho scelto questo modello per il piano in quarzo. Facile da pulire e bellissimo da vedere."</div>
-                            <div class="review-date">30 Ottobre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-
 
 
     <!-- Footer -->
@@ -1655,11 +1981,18 @@
                         <span>info.cucineitalia@gmail.com</span>
                     </div>
                     <div class="contact-item">
-                        <span>📞</span>
-                        <span>+39 339 170 3591
-                                                        <br>+39 349 694 7616<br>
+                    <span>📞</span>
+                    <span>
+                        <a href="https://wa.me/393391703591" target="_blank">
+                            +39 339 170 3591
+                        </a>
+                        <br>
+                        <a href="https://wa.me/393496947616" target="_blank">
+                            +39 349 694 7616
+                        </a>
+                        <br>
+                    </span>
 
-                        </span>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
@@ -1706,18 +2039,17 @@
   <p style="color: #4C583E; margin-bottom: 1rem;">
     Resta aggiornato sulle nostre novità e offerte esclusive.
   </p>
+<form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="email-signup">
+  <!-- Configurazioni e protezioni -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Nuova iscrizione newsletter">
+  <input type="hidden" name="_template" value="table">
+  <input type="text" name="_honey" style="display:none">
 
-  <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="email-signup">
-    <!-- Configurazioni e protezioni -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Nuova iscrizione newsletter">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://iltuosito.com/grazie-newsletter.html">
-    <input type="text" name="_honey" style="display:none">
+  <input type="email" name="Email" class="email-input" placeholder="La tua email" required>
+  <button type="submit" class="email-submit">Iscriviti</button>
+</form>
 
-    <input type="email" name="Email" class="email-input" placeholder="La tua email" required>
-    <button type="submit" class="email-submit">Iscriviti</button>
-  </form>
 </div>
 
         </div>
@@ -1738,11 +2070,19 @@
       <p>Contattaci direttamente per un preventivo personalizzato:</p>
       <div class="contact-info">
         <div class="contact-item">
-          <span>📞</span>
-          <span>+39 339 170 3591
-                                        <br>+39 349 694 7616<br>
+        <span>📞</span>
+        <span>
+            <a href="https://wa.me/393391703591" target="_blank">
+                +39 339 170 3591
+            </a>
+            <br>
+            <a href="https://wa.me/393496947616" target="_blank">
+                +39 349 694 7616
+            </a>
+            <br>
+        </span>
 
-          </span>
+
         </div>
         <div class="contact-item">
           <span>📧</span>
@@ -1755,24 +2095,26 @@
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="Nuova richiesta di preventivo dal sito">
   <input type="hidden" name="_template" value="table">
-  <!-- Redirect di conferma -->
-  <input type="hidden" name="_next" value="https://iltuosito.com/grazie.html">
-  <!-- Honeypot anti-spam (opzionale) -->
+  <!-- Honeypot anti-spam -->
   <input type="text" name="_honey" style="display:none">
 
-  <input type="text" name="Nome" placeholder="Nome" >
-<input type="email" name="email" placeholder="Email Address">
-
+  <input type="text" name="Nome" placeholder="Nome">
+  <input type="email" name="Email" placeholder="Email Address" required>
   <input type="tel" name="Telefono" placeholder="Telefono">
   <textarea name="Richiesta" placeholder="Descrivi la tua richiesta"></textarea>
 
   <button type="submit" class="submit-button">Invia Richiesta</button>
 </form>
+
     </div>
   </div>
 </div>
 
     <script>
+        document.getElementById('mobilePreventivoText')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('preventivoModal').classList.add('active');
+});
         // Header scroll animation
         let lastScroll = 0;
         window.addEventListener('scroll', function() {
@@ -1932,4 +2274,87 @@ preventivoModal.addEventListener('click', function(e) {
             observer.observe(gallery);
         }
     </script>
+
+    <!-- Popup Modal -->
+<div id="thankYouPopup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <h2> Grazie!</h2>
+    <p>Il tuo messaggio è stato inviato con successo.</p>
+    <button onclick="closePopup()">Chiudi</button>
+  </div>
+</div>
+
+<style>
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .popup-content {
+    background: url('bedge-grunge.png') var(--white);
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 450px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  .popup-content h2 {
+    margin-bottom: 10px;
+    color: var(--primary-medium);
+  }
+  .popup-content button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  // Intercept ALL forms that use FormSubmit
+  document.querySelectorAll("form[action*='formsubmit.co']").forEach(form => {
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault(); // stop normal redirect
+
+      let formData = new FormData(form);
+      try {
+        await fetch(form.action, {
+          method: form.method,
+          body: formData
+        });
+        // Show popup
+        document.getElementById("thankYouPopup").style.display = "flex";
+        form.reset(); // clear form
+      } catch (err) {
+        alert("❌ Si è verificato un errore, riprova.");
+      }
+    });
+  });
+
+  function closePopup() {
+    document.getElementById("thankYouPopup").style.display = "none";
+  }
+
+  // Open maps function
+function openMaps() {
+    const address = "Via Torino 71, 21013 Gallarate VA";
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    window.open(mapsUrl, '_blank');
+}
+</script>
+<div class="location-banner" onclick="openMaps()">
+    <div class="location-content">
+        <div class="location-icon">📍</div>
+        <div class="location-text">
+            <div class="location-address">Via Torino 71</div>
+            <div class="location-city">21013 Gallarate VA</div>
+        </div>
+    </div>
+</div>
 </body>
