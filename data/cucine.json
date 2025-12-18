@@ -1690,6 +1690,64 @@
         ]
       },
       "relatedProducts": ["divano-minimal-beige", "divano-compatto-nero"]
+    },
+    {
+      "id": 27,
+      "slug": "Parete-Attrezzata-Bagliore",
+      "name": "Bagliore",
+      "shortDescription": "Parete attrezzata minimal, larghezza 210 cm",
+      "description": "Parete attrezzata minimal da 210 cm, denominata Bagliore, progettata per valorizzare il soggiorno con uno stile pulito ed essenziale. La composizione si sviluppa in modo equilibrato tra vani contenitivi e superfici a vista, offrendo una soluzione funzionale e raffinata per l’area living. Ideale per ambienti moderni, si integra facilmente con arredi contemporanei grazie alle sue linee lineari e alla configurazione compatta.",
+      "price": "Pronta Consegna",
+      "category": "moderno",
+      "thumbnail": "/Images/arredamento/Soggiorno/1/IMG_4585.JPEG",
+      "images": [
+        "/Images/arredamento/Soggiorno/1/IMG_4585.JPEG",
+        "/Images/arredamento/Soggiorno/1/IMG_4586.JPEG",
+        "/Images/arredamento/Soggiorno/1/IMG_4587.JPEG",
+        "/Images/arredamento/Soggiorno/1/IMG_4588.JPEG",
+        "/Images/arredamento/Soggiorno/1/IMG_4590.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Stile Minimal",
+          "description": "Design essenziale con volumi puliti, ideale per soggiorni moderni e ordinati."
+        },
+        {
+          "title": "Sviluppo Lineare 210 cm",
+          "description": "Composizione compatta che ottimizza lo spazio mantenendo un forte impatto estetico."
+        },
+        {
+          "title": "Funzionalità Contenitiva",
+          "description": "Vani chiusi e a giorno per organizzare TV, libri e oggetti decorativi."
+        },
+        {
+          "title": "Versatilità d’Arredo",
+          "description": "Adatta a diverse configurazioni di soggiorno, sia in ambienti piccoli che medi."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Larghezza totale: 210 cm",
+          "Profondità moduli: circa 40–45 cm",
+          "Altezza complessiva: variabile in base alla composizione"
+        ],
+        "Materiali": [
+          "Struttura: Pannelli in nobilitato",
+          "Frontali: Finitura minimal (opaca o lucida – da verificare)",
+          "Mensole: Coordinate alla struttura"
+        ],
+        "Composizione": [
+          "Base porta TV",
+          "Pensili sospesi",
+          "Vani a giorno"
+        ],
+        "Accessori Inclusi": [
+          "Schiena per modulo TV",
+          "Finiture laterali",
+          "Ferramenta di montaggio"
+        ]
+      },
+      "relatedProducts": ["parete-attrezzata-minimal-bianca", "soggiorno-moderno-compatto"]
     }
   ]
 }
