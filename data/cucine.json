@@ -1579,67 +1579,64 @@
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
     },
     {
-      "id": "Arredamento 1",
-      "slug": "Armdaio-Pantera",
-      "name": "Armdaio Pantera",
-      "shortDescription": "Compatta, moderna e naturale: il calore del legno in poco spazio.",
-      "description": "La Cucina Angolo di Legno è una composizione moderna a L, pensata per ottimizzare gli spazi senza rinunciare al design. Con dimensioni compatte ma funzionali (335 x 193,5 cm), abbina la praticità di un microonde Electrolux e una cappa Elica alla semplicità di un piano cottura elettrico. L’assenza del forno tradizionale la rende ideale per chi cerca un ambiente di lavoro snello, perfetto per piccoli appartamenti o soluzioni smart living. Le finiture in legno esaltano la naturalezza dello stile, regalando un tocco caldo e accogliente a un’anima modernissima.",
+      "id": 25,
+      "slug": "Armadio-Pantera",
+      "name": "Armadio Pantera",
+      "shortDescription": "Armadio moderno nero, larghezza 270 cm",
+      "description": "Armadio moderno da 270 cm in finitura nera, dal design elegante e deciso. Le linee pulite e la superficie scura donano un carattere contemporaneo all’ambiente, rendendolo ideale per camere da letto moderne e minimal. La composizione offre un’ottima capacità contenitiva grazie alla suddivisione interna studiata per abiti, accessori e biancheria. Soluzione versatile e raffinata, perfetta per chi cerca uno stile forte ma senza eccessi.",
       "price": "Pronta Consegna",
-      "category": "classica",
-      "thumbnail": "/Images/usate/angolare/5/1.png",
+      "category": "moderno",
+      "thumbnail": "/Images/arredamento/Armadio/1/IMG_4579.JPEG",
       "images": [
-        "/Images/usate/angolare/5/1.png",
-        "/Images/usate/angolare/5/2.png",
-        "/Images/usate/angolare/5/3.png"
+        "/Images/arredamento/Armadio/1/IMG_4579.JPEG",
+        "/Images/arredamento/Armadio/1/IMG_4580.JPEG",
+        "/Images/arredamento/Armadio/1/IMG_4581.JPEG",
+        "/images/arredamento/Armadio/1/IMG_4583.JPEG"
       ],
       "features": [
         {
-          "title": "Struttura ad Angolo",
-          "description": "Composizione moderna a L che sfrutta al meglio gli spazi"
+          "title": "Finitura Nera Moderna",
+          "description": "Superficie nera elegante e contemporanea, ideale per ambienti moderni e minimal."
         },
         {
-          "title": "Finitura in Legno",
-          "description": "Tonalità calde e naturali per un ambiente accogliente"
+          "title": "Larghezza 270 cm",
+          "description": "Ampia struttura che garantisce grande capacità contenitiva senza rinunciare all’estetica."
         },
         {
-          "title": "Elettrodomestici Essenziali",
-          "description": "Microonde Electrolux e cappa Elica per praticità quotidiana"
+          "title": "Design Pulito e Lineare",
+          "description": "Ante dal look essenziale che si integrano facilmente con diversi stili di arredamento."
         },
         {
-          "title": "Piano Cottura Elettrico",
-          "description": "Soluzione semplice e funzionale per ogni esigenza"
-        },
-        {
-          "title": "Design Compatto",
-          "description": "Ideale per piccoli appartamenti o cucine minimaliste"
+          "title": "Soluzione Versatile",
+          "description": "Perfetto per camere matrimoniali, stanze moderne o ambienti dal carattere deciso."
         }
       ],
       "specs": {
-      "Dimensioni": [
-        "Lato lungo: 335 cm",
-        "Lato corto: 193,5 cm",
-        "Profondità: 60 cm standard",
-        "Altezza totale: 230 cm"
-      ],
-      "Materiali": [
-        "Ante: Laminato effetto legno",
-        "Top: Laminato coordinato",
-        "Schienale: In abbinamento al piano"
-      ],
-      "Elettrodomestici": [
-        "Microonde Electrolux integrato",
-        "Cappa Elica moderna",
-        "Piano cottura elettrico"
-      ],
-      "Accessori Inclusi": [
-        "Cassetti ad estrazione totale con chiusura soft",
-        "Pensili con apertura push-pull",
-        "Ripiani regolabili",
-        "Illuminazione LED sottopensile"
-      ]
+        "Dimensioni": [
+          "Larghezza totale: 270 cm",
+          "Profondità: 60 cm standard",
+          "Altezza: circa 240 cm"
+        ],
+        "Materiali": [
+          "Struttura: Pannelli in nobilitato",
+          "Ante: Finitura nera opaca o lucida (da verificare)",
+          "Maniglie: Integrate o a gola (da confermare)"
+        ],
+        "Composizione Interna": [
+          "Ripiani interni",
+          "Barre appendiabiti",
+          "Vani contenitivi",
+          "Cassetti (presenti o predisposti – da verificare)"
+        ],
+        "Accessori Inclusi": [
+          "Schiena armadio",
+          "Zoccolo inferiore",
+          "Finiture laterali"
+        ]
       },
-      "relatedProducts": ["cucina-classica-tradizionale", "cucina-moderna-elegante"]
+      "relatedProducts": ["armadio-moderno-bianco", "armadio-scorrevole-grigio"]
     }
+
   ]
 }
   
