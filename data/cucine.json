@@ -1591,7 +1591,7 @@
         "/Images/arredamento/Armadio/1/IMG_4579.JPEG",
         "/Images/arredamento/Armadio/1/IMG_4580.JPEG",
         "/Images/arredamento/Armadio/1/IMG_4581.JPEG",
-        "/images/arredamento/Armadio/1/IMG_4583.JPEG"
+        "/Images/arredamento/Armadio/1/IMG_4583.JPEG"
       ],
       "features": [
         {
@@ -1635,8 +1635,62 @@
         ]
       },
       "relatedProducts": ["armadio-moderno-bianco", "armadio-scorrevole-grigio"]
+    },
+    {
+      "id": 26,
+      "slug": "Divano-Minimal-Grigio",
+      "name": "Divano Minimal Grigio",
+      "shortDescription": "Divano minimal grigio, larghezza 180 cm",
+      "description": "Divano minimal da 180 cm in tonalità grigia, caratterizzato da linee pulite e design essenziale. La seduta compatta e le proporzioni equilibrate lo rendono ideale per soggiorni moderni, open space di dimensioni contenute o ambienti dallo stile contemporaneo. Il colore grigio neutro garantisce massima versatilità negli abbinamenti, adattandosi facilmente a palette chiare o scure.",
+      "price": "Pronta Consegna",
+      "category": "moderno",
+      "thumbnail": "/images/arredamento/Armadio/1/IMG_4583.JPEG",
+      "images": [
+        "/Images/divani/minimal/grigio/1.png",
+        "/Images/divani/minimal/grigio/2.png",
+        "/Images/divani/minimal/grigio/3.png"
+      ],
+      "features": [
+        {
+          "title": "Design Minimal",
+          "description": "Linee essenziali e forma compatta per un look moderno e senza tempo."
+        },
+        {
+          "title": "Larghezza 180 cm",
+          "description": "Dimensione ideale per spazi ridotti senza rinunciare al comfort."
+        },
+        {
+          "title": "Colore Grigio Neutro",
+          "description": "Facile da abbinare con arredi moderni, legno, metallo o superfici chiare."
+        },
+        {
+          "title": "Comfort Quotidiano",
+          "description": "Seduta equilibrata adatta all’uso giornaliero in soggiorno o studio."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Larghezza: 180 cm",
+          "Profondità: circa 85–90 cm",
+          "Altezza schienale: circa 80–85 cm"
+        ],
+        "Materiali": [
+          "Rivestimento: Tessuto grigio",
+          "Struttura: Legno e pannelli multistrato",
+          "Imbottitura: Schiuma poliuretanica"
+        ],
+        "Configurazione": [
+          "Divano lineare",
+          "Posti: 2 / 2,5",
+          "Schienale fisso"
+        ],
+        "Accessori Inclusi": [
+          "Piedini standard",
+          "Cuscini schienale integrati"
+        ]
+      },
+      "relatedProducts": ["divano-minimal-beige", "divano-compatto-nero"]
     }
-
   ]
 }
   
