@@ -1580,6 +1580,71 @@
     },
     {
       "id": 25,
+      "slug": "Bianco-Nitida",
+      "name": "Bianco Nitida",
+      "shortDescription": "Cucina angolare 383 x 230 cm in elegante bianco luminoso",
+      "description": "Cucina angolare 383 x 230 cm in finitura Bianco Nitida, ideale per ambienti moderni e luminosi. Il colore bianco puro esalta la luce naturale e dona una sensazione di ordine e pulizia visiva. La composizione è funzionale e ben organizzata, con ampio piano di lavoro, basi capienti e pensili continui. La cucina è di seconda mano ma in ottime condizioni generali. Sono inclusi tutti gli elettrodomestici principali ad eccezione di frigorifero e microonde, che possono essere aggiunti su richiesta.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/angolare/10/1.png",
+      "images": [
+        "/Images/usate/angolare/10/1.png",
+        "/Images/usate/angolare/10/2.png",
+        "/Images/usate/angolare/10/3.png",
+        "/Images/usate/angolare/10/4.png"
+      ],
+      "features": [
+        {
+          "title": "Finitura Bianco Nitido",
+          "description": "Bianco brillante e uniforme che amplifica la luminosità dello spazio e si adatta facilmente a qualsiasi stile d’arredo."
+        },
+        {
+          "title": "Configurazione Angolare Ampia",
+          "description": "Sviluppo su due pareti da 383 x 230 cm, pensato per garantire praticità, fluidità nei movimenti e grande superficie di lavoro."
+        },
+        {
+          "title": "Elettrodomestici Quasi Completi",
+          "description": "Forno, piano cottura, cappa e lavastoviglie sono inclusi; frigorifero e microonde non presenti ma installabili su richiesta."
+        },
+        {
+          "title": "Seconda Mano Selezionata",
+          "description": "Cucina usata controllata e pronta per una nuova installazione, ideale per chi cerca qualità a un costo vantaggioso."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lato principale: 383 cm",
+          "Lato secondario: 230 cm",
+          "Profondità standard: 60 cm",
+          "Altezza complessiva: circa 225–230 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato bianco liscio",
+          "Struttura: Pannelli nobilitati resistenti all’umidità",
+          "Top: Laminato chiaro (verifica disponibile in showroom)"
+        ],
+        "Elettrodomestici": [
+          "Forno da incasso (incluso)",
+          "Piano cottura (incluso)",
+          "Cappa aspirante (inclusa)",
+          "Lavastoviglie (inclusa)",
+          "Frigorifero NON incluso (opzionale)",
+          "Microonde NON incluso (opzionale)"
+        ],
+        "Accessori Inclusi": [
+          "Pensili a tutta altezza",
+          "Cassetti e cestoni capienti",
+          "Zoccolo coordinato",
+          "Maniglie integrate o minimal (da verificare)"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-bianca",
+        "cucina-angolare-luminosa"
+      ]
+    },
+    {
+      "id": "AA-1",
       "slug": "Armadio-Pantera",
       "name": "Armadio Pantera",
       "shortDescription": "Armadio moderno nero, larghezza 270 cm",
@@ -1637,7 +1702,7 @@
       "relatedProducts": ["armadio-moderno-bianco", "armadio-scorrevole-grigio"]
     },
     {
-      "id": 26,
+      "id": "AD-1",
       "slug": "Divano-Minimal-Grigio",
       "name": "Divano Minimal Grigio",
       "shortDescription": "Divano minimal grigio, larghezza 180 cm",
@@ -1692,7 +1757,7 @@
       "relatedProducts": ["divano-minimal-beige", "divano-compatto-nero"]
     },
     {
-      "id": 27,
+      "id": "AS-1",
       "slug": "Parete-Attrezzata-Bagliore",
       "name": "Bagliore",
       "shortDescription": "Parete attrezzata minimal, larghezza 210 cm",
