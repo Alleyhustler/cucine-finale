@@ -1644,6 +1644,71 @@
       ]
     },
     {
+      "id": 26,
+      "slug": "Marrone-Moderno",
+      "name": "Marrone Moderno",
+      "shortDescription": "Cucina angolare 60 (colonna frigo) + 174 x 200 cm in stile moderno industrial",
+      "description": "Cucina angolare in finitura Marrone Moderno con richiami effetto ferro, ideale per ambienti dal carattere contemporaneo e industriale. La composizione si sviluppa con una colonna da 60 cm dedicata al frigorifero più due lati operativi da 174 x 200 cm, offrendo una disposizione compatta ma funzionale. Le superfici scure e materiche conferiscono personalità allo spazio cucina. La cucina è di seconda mano, in buono stato generale. Non sono presenti microonde e lavastoviglie, mentre gli altri elettrodomestici essenziali sono inclusi.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/angolare/9/2.png",
+      "images": [
+        "/Images/usate/angolare/9/2.png",
+        "/Images/usate/angolare/9/3.png",
+        "/Images/usate/angolare/9/1.png"
+      ],
+      "features": [
+        {
+          "title": "Stile Marrone & Ferro",
+          "description": "Finitura marrone intenso abbinata a dettagli effetto ferro per un look moderno ispirato allo stile industrial."
+        },
+        {
+          "title": "Composizione Angolare Compatta",
+          "description": "Struttura con colonna frigo da 60 cm e sviluppo angolare 174 x 200 cm, pensata per spazi funzionali e ben organizzati."
+        },
+        {
+          "title": "Elettrodomestici Essenziali Inclusi",
+          "description": "Forno, piano cottura e cappa sono presenti; microonde e lavastoviglie non inclusi."
+        },
+        {
+          "title": "Seconda Mano Funzionale",
+          "description": "Soluzione usata selezionata, ideale per chi cerca una cucina moderna con forte personalità a un costo contenuto."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Colonna frigorifero: 60 cm",
+          "Lato principale: 200 cm",
+          "Lato secondario: 174 cm",
+          "Profondità: 60 cm standard",
+          "Altezza complessiva: circa 225 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato marrone effetto materico",
+          "Dettagli: Finitura effetto ferro",
+          "Struttura interna: Nobilitato resistente"
+        ],
+        "Elettrodomestici": [
+          "Forno da incasso (incluso)",
+          "Piano cottura (incluso)",
+          "Cappa aspirante (inclusa)",
+          "Frigorifero (colonna predisposta)",
+          "Lavastoviglie NON inclusa",
+          "Microonde NON incluso"
+        ],
+        "Accessori Inclusi": [
+          "Pensili coordinati",
+          "Basi contenitive",
+          "Cassetti funzionali",
+          "Zoccolo abbinato alla finitura"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-industrial",
+        "cucina-angolare-scura"
+      ]
+    },
+    {
       "id": "AA-1",
       "slug": "Armadio-Pantera",
       "name": "Armadio Pantera",
