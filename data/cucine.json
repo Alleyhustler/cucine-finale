@@ -1773,6 +1773,77 @@
       ]
     },
     {
+      "id": 28,
+      "slug": "Bianco-Stellato",
+      "name": "Bianco Stellato",
+      "shortDescription": "Cucina angolare Bianco Stellato con colonna frigo + forno, elegante e luminosa",
+      "description": "Cucina angolare Bianco Stellato, tenuta molto bene, sempre pulita e perfettamente funzionante. La finitura bianca dona luminosità ed eleganza all’ambiente, rendendola adatta sia a spazi moderni che contemporanei. La composizione si sviluppa su due lati con rientro laterale e include una colonna frigo + forno integrata. Tutte le misure sono chiaramente visibili nelle foto dell’annuncio. La cucina è di seconda mano ma in ottime condizioni generali, pronta per una nuova installazione.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/angolare/11/e.png",
+      "images": [
+        "/Images/usate/angolare/11/e.png",
+        "/Images/usate/angolare/11/d.png",
+        "/Images/usate/angolare/11/c.png",
+        "/Images/usate/angolare/11/a.png",
+        "/Images/usate/angolare/11/b.png"
+      ],
+      "features": [
+        {
+          "title": "Bianco Elegante e Luminoso",
+          "description": "Finitura Bianco Stellato ideale per ampliare visivamente lo spazio e aumentare la luminosità dell’ambiente cucina."
+        },
+        {
+          "title": "Composizione Angolare Articolata",
+          "description": "Sviluppo su lato principale da 3,22 m e lato secondario da 2,05 m con rientro da 1,35 m per una disposizione funzionale."
+        },
+        {
+          "title": "Cappa Aspirante Nuova",
+          "description": "Cappa aspirante mai utilizzata, inclusa nella composizione."
+        },
+        {
+          "title": "Seconda Mano Selezionata",
+          "description": "Cucina usata in ottimo stato, completamente funzionante e ben mantenuta."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lato principale: 322 cm",
+          "Lato secondario: 205 cm",
+          "Rientro laterale: 135 cm",
+          "Base totale inferiore: 312 cm",
+          "Colonna frigo + forno: 124 cm",
+          "Profondità: 60 cm standard",
+          "Altezza complessiva: circa 225 cm"
+        ],
+        "Materiali": [
+          "Ante: Bianco Stellato",
+          "Struttura interna: Nobilitato resistente",
+          "Finitura: Liscia, facile da pulire"
+        ],
+        "Elettrodomestici": [
+          "Forno da incasso (incluso)",
+          "Piano cottura (incluso)",
+          "Cappa aspirante NUOVA (inclusa)",
+          "Lavello (incluso)",
+          "Frigorifero (in colonna dedicata)",
+          "Lavastoviglie Incluso",
+          "Microonde Incluso"
+        ],
+        "Accessori Inclusi": [
+          "Colonna frigo + forno",
+          "Pensili coordinati",
+          "Basi contenitive",
+          "Cassetti funzionali",
+          "Zoccolo abbinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-angolare-bianca",
+        "cucina-moderna-luminosa"
+      ]
+    },
+    {
       "id": "AA-1",
       "slug": "Armadio-Pantera",
       "name": "Armadio Pantera",
