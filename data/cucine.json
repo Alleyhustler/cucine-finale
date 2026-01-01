@@ -1709,6 +1709,70 @@
       ]
     },
     {
+      "id": 27,
+      "slug": "Sidero-Loft",
+      "name": "Sidero Loft",
+      "shortDescription": "Cucina lineare 330 cm in stile moderno loft, bianca con pensili in legno chiaro",
+      "description": "Cucina lineare Sidero Loft, nuova e mai utilizzata, caratterizzata da uno stile moderno loft con basi bianche e pensili in legno chiaro. La composizione si sviluppa su una lunghezza totale di 330 cm, offrendo una soluzione completa, funzionale ed esteticamente equilibrata. Ideale per ambienti moderni e luminosi. La cucina è pari al nuovo e viene ceduta esclusivamente per cambio arredamento. Tutti gli elettrodomestici principali sono inclusi.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/nuove/lineare/6/b.jpg",
+      "images": [
+        "/Images/nuove/lineare/6/b.jpg",
+        "/Images/nuove/lineare/6/d.jpg",
+        "/Images/nuove/lineare/6/e.jpg"
+      ],
+      "features": [
+        {
+          "title": "Stile Loft Moderno",
+          "description": "Combinazione di basi bianche e pensili in legno chiaro per un design moderno, caldo e contemporaneo."
+        },
+        {
+          "title": "Composizione Lineare Completa",
+          "description": "Sviluppo lineare da 330 cm che garantisce praticità e ampio spazio operativo."
+        },
+        {
+          "title": "Elettrodomestici Inclusi",
+          "description": "Forno, piano cottura, frigorifero, lavello e cappa sono inclusi nella composizione."
+        },
+        {
+          "title": "Nuova Mai Utilizzata",
+          "description": "Cucina nuova, mai montata né utilizzata, pari al nuovo e pronta per l’installazione."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Sviluppo lineare: 330 cm",
+          "Profondità: 60 cm standard",
+          "Altezza complessiva: circa 225 cm"
+        ],
+        "Materiali": [
+          "Ante basi: Bianco liscio",
+          "Pensili: Finitura legno chiaro",
+          "Struttura interna: Nobilitato ad alta resistenza"
+        ],
+        "Elettrodomestici": [
+          "Forno da incasso (incluso)",
+          "Piano cottura (incluso)",
+          "Cappa aspirante (inclusa)",
+          "Frigorifero (incluso)",
+          "Lavello (incluso)",
+          "Lavastoviglie",
+          "Microonde"
+        ],
+        "Accessori Inclusi": [
+          "Pensili coordinati",
+          "Basi contenitive",
+          "Cassetti funzionali",
+          "Zoccolo abbinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-lineare-moderna",
+        "cucina-loft-bianca"
+      ]
+    },
+    {
       "id": "AA-1",
       "slug": "Armadio-Pantera",
       "name": "Armadio Pantera",
