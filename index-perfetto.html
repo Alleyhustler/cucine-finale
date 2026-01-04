@@ -86,22 +86,27 @@
             color: var(--white);
         }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 95%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;  /* CAMBIATO: Occupa tutto lo schermo */
+    max-width: none; /* CAMBIATO: Rimuovi il limite */
+    margin: 0 auto;
+    padding: 0 45px; /* CAMBIATO: Questo padding simula i tuoi -200px. Aumentalo se li vuoi ancora più esterni! */
+    box-sizing: border-box; /* Importante per non creare scroll orizzontale */
+}
 
-        .header-left {
+.header-left {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-left: -200px;
-    min-height: 70px; /* Ensure consistent height */
+    margin-left: 0; /* CAMBIATO: Togli il -200px (ora usiamo il padding del contenitore) */
+    min-height: 70px;
+    flex-shrink: 0; /* Impedisce al logo di schiacciarsi */
 }
+
+
 
         .menu-toggle {
             
@@ -177,12 +182,12 @@
             width: 100%;
         }
 
-        .nav-desktop {
-            display: flex;
-            gap: 1.5rem;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+.nav-desktop {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 auto; /* Questo assicura che il menu resti PERFETTAMENTE al centro */
+    padding: 0 1rem;
+}
 
         .nav-link {
             color: white;
@@ -215,21 +220,22 @@
             width: 100%;
         }
 
-        .cta-button {
-            background: url('bedge-grunge.png') var(--primary-dark);
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-right: -200px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            border: 2px solid white;
-            overflow: hidden;
-            z-index: 1;
-            font-size: 0.9rem;
-        }
+.cta-button {
+    background: url('bedge-grunge.png') var(--primary-dark);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 0; /* CAMBIATO: Togli il -200px */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 2px solid white;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 0.9rem;
+    flex-shrink: 0; /* Impedisce al bottone di schiacciarsi */
+}
 
         .cta-button::before {
             content: '';
@@ -1063,7 +1069,24 @@
     display: flex;
 }
 
-
+/* Ottimizzazione per Laptop e schermi medi (da 1201px a 1500px) */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .header-content {
+        padding: 0 20px; /* Riduciamo lo spazio laterale per far stare tutto */
+    }
+    
+    .nav-desktop {
+        gap: 1rem; /* Avviciniamo leggermente i link */
+    }
+    
+    .nav-link {
+        font-size: 0.95rem; /* Rimpiccioliamo appena il testo */
+    }
+    
+    .logo {
+        font-size: 1.5rem; /* Adattiamo il logo */
+    }
+}
 
 
         /* Mobile Responsive */
@@ -1087,7 +1110,7 @@
             }
             
     .header-left {
-        margin-left: 0px;
+        margin-left: -30px;
         min-height: 60px; /* Consistent mobile height */
     }
             
@@ -1186,7 +1209,7 @@
         }
 
                 /* Optimized Header for Small Screens (iPhone SE and similar) */
-        @media (min-width: 324px) and (max-width: 427px) {
+        @media (min-width: 314px) and (max-width: 427px) {
             .logo {
                 font-size: 2rem;
                 letter-spacing: 0.6px;
@@ -1242,7 +1265,7 @@
         }
 
         /* Show only on mobile */
-@media (min-width: 324px) and (max-width: 1200px) {
+@media (min-width: 314px) and (max-width: 1200px) {
     .logo-section {
         align-items: flex-start;
     }
@@ -1436,7 +1459,7 @@
 }
 
 /* Show ONLY on mobile screens */
-@media (min-width: 324px) and (max-width: 1200px) {
+@media (min-width: 314px) and (max-width: 1200px) {
     .mobile-preventivo-text {
         display: block; /* Show on mobile */
     }
@@ -1455,7 +1478,7 @@
 }
 
 /* Fix for mobile header when scrolled */
-@media (min-width: 324px) and (max-width: 1200px) {
+@media (min-width: 314px) and (max-width: 1200px) {
     .header.scrolled .logo {
         transform: translateY(-13px) !important; /* Move logo up to align with menu */
         font-size: 30px;
@@ -1609,8 +1632,8 @@
             
             <nav class="nav-desktop">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+                <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="arredamento.html" class="nav-link">Arredamento</a>
                 <a href="servizi.html" class="nav-link">Servizi</a>
                 <a href="index.html#contatti" class="nav-link">Contatti</a>
@@ -1629,8 +1652,8 @@
     <span class="logo-subtitle">Arredamenti Brambilla</span>
 </a>
         <div class="mobile-nav">
-                <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+                <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="arredamento.html" class="nav-link">Arredamento</a>
                 <a href="servizi.html" class="nav-link">Servizi</a>
                 <a href="index.html#contatti" class="nav-link">Contatti</a>
