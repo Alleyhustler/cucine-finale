@@ -1844,6 +1844,73 @@
       ]
     },
     {
+      "id": 29,
+      "slug": "Nero-Opaco",
+      "name": "Nero Opaco",
+      "shortDescription": "Cucina lineare Nero Opaco con penisola 240 x 75 cm, completa di elettrodomestici",
+      "description": "Cucina completa lineare con penisola in finitura Nero Opaco, dal design moderno ed elegante. La composizione si sviluppa su una lunghezza lineare di 375 cm ed è completata da una penisola da 240 x 75 cm, ideale come piano di lavoro aggiuntivo o zona snack. La cucina è pari al nuovo, in condizioni eccellenti, sempre curata e perfettamente funzionante. Tutti gli elettrodomestici principali, incluso il microonde da incasso, sono inclusi. Disponibile subito con possibilità di trasporto e montaggio.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/lineare/11/4.png",
+      "images": [
+        "/Images/usate/lineare/11/4.png",
+        "/Images/usate/lineare/11/5.png",
+        "/Images/usate/lineare/11/3.png",
+        "/Images/usate/lineare/11/2.png",
+        "/Images/usate/lineare/11/1.png"
+      ],
+      "features": [
+        {
+          "title": "Design Nero Opaco",
+          "description": "Finitura nero opaco elegante e contemporanea, ideale per ambienti moderni e di carattere."
+        },
+        {
+          "title": "Composizione Lineare con Penisola",
+          "description": "Sviluppo lineare da 375 cm con penisola da 240 x 75 cm per maggiore funzionalità e spazio operativo."
+        },
+        {
+          "title": "Elettrodomestici Completi",
+          "description": "Cucina completa di forno multifunzione, piano cottura, cappa, lavastoviglie, frigorifero e microonde da incasso."
+        },
+        {
+          "title": "Pari al Nuovo",
+          "description": "Cucina in condizioni eccellenti, pari al nuovo e pronta per una nuova installazione."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Sviluppo lineare: 375 cm",
+          "Penisola: 240 x 75 cm",
+          "Profondità basi: 60 cm standard",
+          "Altezza complessiva: circa 225 cm"
+        ],
+        "Materiali": [
+          "Ante: Nero Opaco",
+          "Struttura interna: Nobilitato ad alta resistenza",
+          "Finitura: Opaca, moderna e facile da pulire"
+        ],
+        "Elettrodomestici": [
+          "Forno multifunzione (incluso, pari al nuovo)",
+          "Piano cottura (incluso)",
+          "Cappa aspirante (inclusa)",
+          "Lavastoviglie (inclusa)",
+          "Frigorifero (incluso)",
+          "Microonde da incasso (incluso)"
+        ],
+        "Accessori Inclusi": [
+          "Penisola coordinata",
+          "Pensili coordinati",
+          "Basi contenitive",
+          "Cassetti funzionali",
+          "Zoccolo abbinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-lineare-nera",
+        "cucina-moderna-con-penisola"
+      ]
+    },
+    {
       "id": "AA-1",
       "slug": "Armadio-Pantera",
       "name": "Armadio Pantera",
