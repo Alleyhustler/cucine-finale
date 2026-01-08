@@ -1501,16 +1501,28 @@
     display: inline-block;
 }
 
+/* --- FIX IMMAGINI UNIFORMI (Desktop & Mobile) --- */
     .sn_kitchen_i_sw {
         position: relative;
         overflow: hidden;
-        margin: 0; /* Rimosso completamente il margine */
+        margin: 0;
+        /* Questo crea un contenitore uniforme che si adatta a ogni schermo */
+        aspect-ratio: 4 / 3; 
+        width: 100%;
     }
 
     .sn_kitchen_i_sw img {
         width: 100%;
-        height: auto;
+        height: 100%;      /* Riempie il contenitore creato da aspect-ratio */
+        object-fit: cover; /* Fa lo "zoom" automatico senza deformare l'immagine */
+        object-position: center;
         display: block;
+        transition: transform 0.5s ease;
+    }
+
+    /* Effetto zoom leggero solo al passaggio del mouse */
+    .sn_kitchen_i:hover .sn_kitchen_i_sw img {
+        transform: scale(1.08);
     }
 
     .sn_kitchen_i_sw_nav {
@@ -2191,7 +2203,7 @@
                         </i>
                     </div>
                     <div class="sn_kitchen_i_sw mb-30">
-                        <img src="Images/nuove/catalogo/2/2.jpg" alt="Cucina Classica">
+                        <img src="Images/nuove/catalogo/2/11.jpg" alt="Cucina Classica">
                         <div class="sn_kitchen_i_sw_nav">
                             <div class="sn_swiper_nav _prev">
                                 <i class="sn_sprite _arrow_left">
@@ -2237,6 +2249,36 @@
                     </div>
                 </div>
             </div>
+
+                        <!-- Cucina 4 Catalogo -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-30 mb-md-80">
+                <div class="sn_kitchen_i">
+                    <a href="cucina.html?slug=LineaQuattro" class="sn_kitchen_i_link" aria-label="Visualizza cucina classica"></a>
+                    <div class="sn_kitchen_i_title mb-10">
+                        <span>LineaQuattro</span>
+                        <i class="sn_sprite _external_big">
+                            <svg viewBox="0 0 80 80"><use xlink:href="#external-big"></use></svg>
+                        </i>
+                    </div>
+                    <div class="sn_kitchen_i_sw mb-30">
+                        <img src="Images/nuove/catalogo/4/12.jpg" alt="Cucina Classica">
+                        <div class="sn_kitchen_i_sw_nav">
+                            <div class="sn_swiper_nav _prev">
+                                <i class="sn_sprite _arrow_left">
+                                    <svg viewBox="0 0 80 80"><use xlink:href="#arrow-left"></use></svg>
+                                </i>
+                            </div>
+
+                            <div class="sn_swiper_nav _next">
+                                <i class="sn_sprite _arrow_right">
+                                    <svg viewBox="0 0 80 80"><use xlink:href="#arrow-right"></use></svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div> <!-- FINE DEL KITCHEN-ROW -->
     </main>
 

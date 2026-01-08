@@ -1953,7 +1953,7 @@
       "description": "Questo modello rappresenta l'equilibrio perfetto tra estetica e praticità. La struttura è studiata per adattarsi armoniosamente a ogni tipo di spazio, offrendo infinite possibilità di configurazione. Ogni dettaglio, dalle finiture ai materiali, può essere modificato per rispecchiare il tuo gusto personale e le tue necessità funzionali.",
       "price": "Catalogo",
       "category": "classica",
-      "thumbnail": "/Images/nuove/catalogo/2/2.jpg",
+      "thumbnail": "/Images/nuove/catalogo/2/11.jpg",
       "images": [
         "/Images/nuove/catalogo/2/2.jpg",
         "/Images/nuove/catalogo/2/12.jpg",
@@ -2005,15 +2005,71 @@
       "id": "C-4",
       "slug": "YarisUno",
       "name": "YarisUno",
-      "shortDescription": "Soluzione d'arredo versatile e completamente personalizzabile",
-      "description": "Questo modello rappresenta l'equilibrio perfetto tra estetica e praticità. La struttura è studiata per adattarsi armoniosamente a ogni tipo di spazio, offrendo infinite possibilità di configurazione. Ogni dettaglio, dalle finiture ai materiali, può essere modificato per rispecchiare il tuo gusto personale e le tue necessità funzionali.",
+      "shortDescription": "Composizione modulare personalizzabile",
+      "description": "Il modello presentato è una base progettuale pensata per essere configurata su misura. Dimensioni, finiture e soluzioni funzionali possono variare in base alle necessità e alle richieste del cliente. Ogni cucina viene definita in fase di progettazione per garantire coerenza con lo spazio disponibile.",
       "price": "Catalogo",
       "category": "classica",
-      "thumbnail": "/Images/nuove/catalogo/2/2.jpg",
+      "thumbnail": "/Images/nuove/catalogo/3/1.jpg",
       "images": [
-        "/Images/nuove/catalogo/2/2.jpg",
-        "/Images/nuove/catalogo/2/12.jpg",
-        "/Images/nuove/catalogo/2/6.jpg"
+        "/Images/nuove/catalogo/3/1.jpg",
+        "/Images/nuove/catalogo/3/11.jpg",
+        "/Images/nuove/catalogo/3/6.jpg"
+      ],
+      "features": [
+        {
+          "title": "Progetto su Misura",
+          "description": "Realizziamo un progetto 3D personalizzato per adattare questo modello ai tuoi spazi e alle tue esigenze."
+        },
+        {
+          "title": "Materiali Selezionati",
+          "description": "Vasta gamma di materiali per ante e top, dal legno massello al gres, visionabili nel nostro showroom."
+        },
+        {
+          "title": "Elettrodomestici di Alta Gamma",
+          "description": "Scegli tra i migliori marchi tecnologici per rendere la tua cucina funzionale e all'avanguardia."
+        },
+        {
+          "title": "Sopralluogo Gratuito",
+          "description": "Un nostro tecnico verrà a casa tua per il rilievo preciso delle misure e la verifica degli impianti."
+        },
+        {
+          "title": "Consulenza Dedicata",
+          "description": "I nostri esperti ti guideranno nella scelta di colori, finiture e accessori per un risultato unico."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Progettazione 100% su misura",
+          "Richiedi un sopralluogo gratuito per rilevare le tue misure"
+        ],
+        "Materiali": [
+          "Ampio campionario di finiture e colori",
+          "Vieni a toccare con mano la qualità in showroom"
+        ],
+        "Elettrodomestici": [
+          "Configurazione libera con le marche che preferisci",
+          "Consulenza dedicata per la scelta del set ideale"
+        ],
+        "Accessori Inclusi": [
+          "Definibili in fase di preventivo",
+          "Contattaci per creare il tuo progetto personalizzato"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
+    },
+    {
+      "id": "C-5",
+      "slug": "LineaQuattro",
+      "name": "LineaQuattro",
+      "shortDescription": "Composizione modulare personalizzabile",
+      "description": "Il modello presentato è una base progettuale pensata per essere configurata su misura. Dimensioni, finiture e soluzioni funzionali possono variare in base alle necessità e alle richieste del cliente. Ogni cucina viene definita in fase di progettazione per garantire coerenza con lo spazio disponibile.",
+      "price": "Catalogo",
+      "category": "classica",
+      "thumbnail": "/Images/nuove/catalogo/3/1.jpg",
+      "images": [
+        "/Images/nuove/catalogo/3/1.jpg",
+        "/Images/nuove/catalogo/3/11.jpg",
+        "/Images/nuove/catalogo/3/6.jpg"
       ],
       "features": [
         {
