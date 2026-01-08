@@ -164,45 +164,33 @@
           "description": "Zoccolatura coordinata in legno massello per continuità estetica"
         }
       ],
-      "specifications": [
-        {
-          "category": "Dimensioni",
-          "details": [
-            "Lunghezza: 320-500 cm (modulare)",
-            "Profondità: 60 cm standard, 65 cm per isola",
-            "Altezza pensili: 75 cm",
-            "Altezza totale: 235 cm"
-          ]
-        },
-        {
-          "category": "Materiali",
-          "details": [
-            "Ante: Legno massello di castagno 22mm",
-            "Top: Granito naturale 40mm",
-            "Struttura: Legno multistrato 18mm",
-            "Maniglie: Ottone anticato lavorato a mano"
-          ]
-        },
-        {
-          "category": "Elettrodomestici",
-          "details": [
-            "Forno tradizionale con grill A+",
-            "Piano cottura in ghisa 5 fuochi",
-            "Lavastoviglie integrata classe A++",
-            "Cappa camino in rame battuto"
-          ]
-        },
-        {
-          "category": "Dettagli Artigianali",
-          "details": [
-            "Cornici bugnate sui frontali",
-            "Colonne scanalate decorative",
-            "Mensole in legno massello",
-            "Piedini torniti regolabili"
-          ]
-        } 
+      "specs": {
+      "Dimensioni": [
+        "Lunghezza: 300 cm (personalizzabile)",
+        "Profondità: 60 cm standard",
+        "Altezza totale: 230 cm"
       ],
-      "relatedProducts": ["cucina-rustica-country", "cucina-moderna-elegante"]
+      "Materiali": [
+        "Ante: Laminato effetto rovere miele e bianco",
+        "Top: Laminato finitura marmo bianco",
+        "Lavello: Acciaio inox satinato",
+        "Piano cottura: Acciaio inox"
+      ],
+      "Elettrodomestici": [
+        "Forno statico da incasso",
+        "Piano cottura 4 fuochi inox",
+        "Lavello inox integrato",
+        "Frigorifero 240L",
+        "Cappa aspirante con LED"
+      ],
+      "Accessori Inclusi": [
+        "Pensili con apertura push-pull",
+        "Cassetti con guide ammortizzate soft-close",
+        "Ripiani interni regolabili",
+        "Illuminazione LED sottopensile a richiesta"
+      ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
     },
 
     {
