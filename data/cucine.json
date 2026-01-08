@@ -2170,6 +2170,118 @@
       "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
     },
     {
+      "id": "C-7",
+      "slug": "Evo01",
+      "name": "Evo01",
+      "shortDescription": "Design essenziale con massima libertà progettuale",
+      "description": "Una cucina concepita per offrire libertà compositiva e coerenza estetica. Le linee pulite e l’impostazione modulare permettono di personalizzare ogni elemento, dalle superfici ai dettagli funzionali. La struttura si adatta facilmente a spazi e stili differenti, mantenendo un equilibrio tra praticità e ricercatezza.",
+      "price": "Catalogo",
+      "category": "classica",
+      "thumbnail": "/Images/nuove/catalogo/6/1.webp",
+      "images": [
+        "/Images/nuove/catalogo/6/1.webp",
+        "/Images/nuove/catalogo/6/2.webp",
+        "/Images/nuove/catalogo/6/3.webp"
+      ],
+      "features": [
+        {
+          "title": "Progetto su Misura",
+          "description": "Realizziamo un progetto 3D personalizzato per adattare questo modello ai tuoi spazi e alle tue esigenze."
+        },
+        {
+          "title": "Materiali Selezionati",
+          "description": "Vasta gamma di materiali per ante e top, dal legno massello al gres, visionabili nel nostro showroom."
+        },
+        {
+          "title": "Elettrodomestici di Alta Gamma",
+          "description": "Scegli tra i migliori marchi tecnologici per rendere la tua cucina funzionale e all'avanguardia."
+        },
+        {
+          "title": "Sopralluogo Gratuito",
+          "description": "Un nostro tecnico verrà a casa tua per il rilievo preciso delle misure e la verifica degli impianti."
+        },
+        {
+          "title": "Consulenza Dedicata",
+          "description": "I nostri esperti ti guideranno nella scelta di colori, finiture e accessori per un risultato unico."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Progettazione 100% su misura",
+          "Richiedi un sopralluogo gratuito per rilevare le tue misure"
+        ],
+        "Materiali": [
+          "Ampio campionario di finiture e colori",
+          "Vieni a toccare con mano la qualità in showroom"
+        ],
+        "Elettrodomestici": [
+          "Configurazione libera con le marche che preferisci",
+          "Consulenza dedicata per la scelta del set ideale"
+        ],
+        "Accessori Inclusi": [
+          "Definibili in fase di preventivo",
+          "Contattaci per creare il tuo progetto personalizzato"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
+    },
+    {
+      "id": "C-8",
+      "slug": "Quadra",
+      "name": "Quadra",
+      "shortDescription": "Soluzione d'arredo versatile e completamente personalizzabile",
+      "description": "Questo modello è pensato per adattarsi a contesti diversi, unendo estetica e funzionalità in modo equilibrato. La composizione è modulabile e consente numerose configurazioni, rendendo ogni realizzazione unica. Finiture, materiali e disposizione possono essere personalizzati in base alle esigenze specifiche e allo spazio disponibile.",
+      "price": "Catalogo",
+      "category": "classica",
+      "thumbnail": "/Images/nuove/catalogo/7/3.webp",
+      "images": [
+        "/Images/nuove/catalogo/7/3.webp",
+        "/Images/nuove/catalogo/7/2.webp",
+        "/Images/nuove/catalogo/7/1.webp"
+      ],
+      "features": [
+        {
+          "title": "Progetto su Misura",
+          "description": "Realizziamo un progetto 3D personalizzato per adattare questo modello ai tuoi spazi e alle tue esigenze."
+        },
+        {
+          "title": "Materiali Selezionati",
+          "description": "Vasta gamma di materiali per ante e top, dal legno massello al gres, visionabili nel nostro showroom."
+        },
+        {
+          "title": "Elettrodomestici di Alta Gamma",
+          "description": "Scegli tra i migliori marchi tecnologici per rendere la tua cucina funzionale e all'avanguardia."
+        },
+        {
+          "title": "Sopralluogo Gratuito",
+          "description": "Un nostro tecnico verrà a casa tua per il rilievo preciso delle misure e la verifica degli impianti."
+        },
+        {
+          "title": "Consulenza Dedicata",
+          "description": "I nostri esperti ti guideranno nella scelta di colori, finiture e accessori per un risultato unico."
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Progettazione 100% su misura",
+          "Richiedi un sopralluogo gratuito per rilevare le tue misure"
+        ],
+        "Materiali": [
+          "Ampio campionario di finiture e colori",
+          "Vieni a toccare con mano la qualità in showroom"
+        ],
+        "Elettrodomestici": [
+          "Configurazione libera con le marche che preferisci",
+          "Consulenza dedicata per la scelta del set ideale"
+        ],
+        "Accessori Inclusi": [
+          "Definibili in fase di preventivo",
+          "Contattaci per creare il tuo progetto personalizzato"
+        ]
+      },
+      "relatedProducts": ["cucina-classica-tradizionale", "cucina-minimalista-essential"]
+    },
+    {
       "id": "AA-1",
       "slug": "Armadio-Pantera",
       "name": "Armadio Pantera",
