@@ -1391,10 +1391,6 @@
             .logo-section {
                 position: relative;
             }
-            
-            .mobile-preventivo-text {
-                display: block;
-            }
         }
 
         /* Large desktop - Ensure desktop nav is visible */
@@ -1404,59 +1400,34 @@
             }
         }
 
-        .mobile-preventivo-text {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 400;
-            font-family: "Arvo", serif;
-            letter-spacing: 0.5px;
+        /* STILE PER LA SCRITTA "RICHIEDI PREVENTIVO" SPOSTATA SOTTO IL TITOLO (MOBILE) */
+        .preventivo-link-mobile {
+            display: none; /* Nascosto su desktop */
+            font-size: 1rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            text-decoration: underline;
             cursor: pointer;
+            margin-bottom: 1.5rem;
+            margin-top: -1.5rem; /* Per avvicinarlo al sottotitolo */
             transition: all 0.3s ease;
-            display: none;
-            margin-top: -2px;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            white-space: nowrap;
         }
 
-        .mobile-preventivo-text::after {
-            content: "→";
-            margin-left: 6px;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .mobile-preventivo-text:hover {
-            color: var(--accent-light);
-        }
-
-        .mobile-preventivo-text:hover::after {
+        .preventivo-link-mobile:hover {
+            color: var(--primary-medium);
             transform: translateX(3px);
         }
-
-        /* Hide when scrolled */
-        .header.scrolled .mobile-preventivo-text {
-            display: none;
+        
+        .preventivo-link-mobile::after {
+            content: "→";
+            margin-left: 5px;
+            font-size: 1rem;
         }
 
-        /* Show ONLY on mobile screens */
-        @media (min-width: 324px) and (max-width: 1200px) {
-            .mobile-preventivo-text {
-                display: block; /* Show on mobile */
-            }
-        }
-
-        /* Hide when header is scrolled (even on mobile) */
-        .header.scrolled .mobile-preventivo-text {
-            display: none !important;
-        }
-
-        /* Ensure it's completely hidden on desktop */
-        @media (min-width: 1201px) {
-            .mobile-preventivo-text {
-                display: none !important;
+        /* Mostra SOLO su schermi piccoli */
+        @media (max-width: 768px) {
+            .preventivo-link-mobile {
+                display: inline-block;
             }
         }
 
@@ -1748,7 +1719,7 @@
                         Cucine&nbsp;Italia
                         <span class="logo-subtitle">Arredamenti Brambilla</span>
                     </a>
-                <div class="mobile-preventivo-text" id="mobilePreventivoText">Richiedi preventivo</div>
+                <!-- RIMOSSO IL LINK DA QUI -->
             </div>
         </div>
             
@@ -1819,6 +1790,9 @@
             <div class="product-details">
                 <h1 class="product-title" id="productTitle">Caricamento...</h1>
                 <div class="product-subtitle" id="productSubtitle">Caricamento dettagli...</div>
+                
+                <!-- NUOVA POSIZIONE PER IL LINK PREVENTIVO MOBILE -->
+                <div id="mobilePreventivoText" class="preventivo-link-mobile">Richiedi preventivo</div>
                 
                 <div class="product-price" id="productPrice">
                     Prezzo in caricamento...
@@ -1915,12 +1889,12 @@
                     <div class="contact-item">
                     <span>📞</span>
                     <span>
-                        <a href="https://wa.me/393391703591" target="_blank">
-                            +39 339 170 3591
-                        </a>
-                        <br>
                         <a href="https://wa.me/393496947616" target="_blank">
                             +39 349 694 7616
+                        </a>
+                        <br>
+                        <a href="https://wa.me/393391703591" target="_blank">
+                            +39 339 170 3591
                         </a>
                         <br>
                     </span>
@@ -1997,12 +1971,12 @@
                     <div class="contact-item">
                     <span>📞</span>
                     <span>
-                        <a href="https://wa.me/393391703591" target="_blank" style="text-decoration:none; color:inherit;">
-                            +39 339 170 3591
-                        </a>
-                        <br>
                         <a href="https://wa.me/393496947616" target="_blank" style="text-decoration:none; color:inherit;">
                             +39 349 694 7616
+                        </a>
+                        <br>
+                        <a href="https://wa.me/393391703591" target="_blank" style="text-decoration:none; color:inherit;">
+                            +39 339 170 3591
                         </a>
                         <br>
                     </span>

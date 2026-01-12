@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WT9VV26YB3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WT9VV26YB3');
+</script>
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="5826a745-038a-4511-9317-7f918f19d072" type="text/javascript" async></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cucine di Lusso</title>
-<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+    <title>Cucine Nuove di Lusso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-
-        
         * {
             margin: 0;
             padding: 0;
@@ -26,64 +33,27 @@
         }
 
         body {
-  font-family: "Arvo", serif;
+            font-family: "Arvo", serif;
             line-height: 1.6;
-                background: url('bedge-grunge.png') var(--white);
-
+            background: url('bedge-grunge.png') var(--white);
             color: var(--primary-dark);
             overflow-x: hidden;
+            padding-top: 90px;
         }
 
-        /* Header Styles */
+        /* Header Styles - PULITO SENZA IMMAGINE DI SFONDO */
         .header {
             position: fixed;
-            top: 20px;
+            top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 0.5rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(0px);
-            height: 70px;
+            padding: 1rem 0;
+            background: url('bedge-grunge.png') var(--white);
+            box-shadow: 0 2px 10px rgba(44, 52, 36, 0.1);
+            height: 80px;
             display: flex;
             align-items: center;
-
-
-
-        }
-
-        .header.visible {
-            opacity: 1;
-        }
-
-        .header.scrolled {
-         background: url('bedge-grunge.png') #4f5f3d57;
-        backdrop-filter: blur(20px);
-        box-shadow: 0 8px 32px rgba(44, 52, 36, 0.1);
-        height: 60px; /* Keep the scrolled height the same as original */
-        top: 0; /* Remove the top spacing when scrolled */
-        }
-        .header.scrolled .logo {
-            transform: translateY(8px); /* Keep the same position when scrolled */
-        }
-
-        .header.scrolled .nav-link,
-        .header.scrolled .logo,
-        .header.scrolled .menu-line {
-            color: white;
-        }
-
-        .header.scrolled .cta-button {
-            color: white;
-            border-color: var(--primary-dark);
-        }
-
-        .header.scrolled .cta-button::before {
-            background: var(--primary-dark);
-        }
-
-        .header.scrolled .cta-button:hover {
-            color: var(--white);
         }
 
         .header-content {
@@ -96,15 +66,12 @@
         }
 
         .header-left {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-left: -200px;
-    min-height: 70px; /* Ensure consistent height */
-}
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
         .menu-toggle {
-            
             display: flex;
             flex-direction: column;
             gap: 6px;
@@ -120,7 +87,7 @@
         .menu-line {
             width: 28px;
             height: 2px;
-            background: white;
+            background: var(--primary-dark);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -135,20 +102,16 @@
         .menu-toggle.active .menu-line:nth-child(3) {
             transform: rotate(-45deg) translate(8px, -8px);
         }
-        .header.scrolled .logo-subtitle {
-            transform: translateY(-8px); /* Only subtitle moves up */
-            opacity: 0.9; /* Slightly increase opacity when scrolled */
-        }
+
         .logo {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: white;
+            color: #2C3424;
             text-decoration: none;
             letter-spacing: 2px;
             position: relative;
             display: inline-block;
             transform: translateY(8px);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .logo-subtitle {
@@ -159,7 +122,6 @@
             opacity: 0.85;
             margin-top: 4px;
             line-height: 1;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .logo::after {
@@ -185,7 +147,7 @@
         }
 
         .nav-link {
-            color: white;
+            color: var(--primary-dark);
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
@@ -214,18 +176,18 @@
         .nav-link:hover::before {
             width: 100%;
         }
+    
 
         .cta-button {
-            background: url('bedge-grunge.png') var(--primary-dark);
+            background: var(--primary-dark);
             color: white;
             padding: 12px 20px;
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 1px;
-            margin-right: -200px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-            border: 2px solid white;
+            border: 2px solid var(--primary-dark);
             overflow: hidden;
             z-index: 1;
             font-size: 0.9rem;
@@ -238,7 +200,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--primary-dark);
+            background: var(--primary-medium);
             transform: translateX(-100%);
             transition: transform 0.4s ease;
             z-index: -1;
@@ -257,22 +219,21 @@
         .mobile-menu {
             position: fixed;
             top: 0;
-            width: 580px; /* Reduced from 500px for small screens */
-            left: -580px;
+            width: 500px;
+            left: -500px;
             height: 100vh;
             background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
             backdrop-filter: blur(20px);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1001;
-            padding: 2rem 1.5rem;
+            padding: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .mobile-menu.active {
             left: 0;
-            
         }
 
         .mobile-menu .logo {
@@ -318,608 +279,702 @@
             visibility: visible;
         }
 
-        /* Hero Section */
-.hero {
-    height: 100vh;
-    background: url('anima.webp') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: flex-end;
-    padding: 4rem 2rem;
-    position: relative;
-    overflow: hidden;
-}
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-                        background: rgba(0,0,0,0.4);
-            animation: gradientShift 8s ease-in-out infinite;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 0.6; }
-        }
-
-        .hero-content {
+        /* MAIN CONTENT - LAYOUT PULITO */
+        .main-content {
             max-width: 1400px;
-            margin: 0 auto;
-            position: absolute;
-            z-index: 2;
+            margin: 2rem auto;
+            padding: 0 2rem;
         }
 
-.hero-title {
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 0rem; /* Reduced from 1rem */
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
-    animation: slideInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-subtitle {
-    font-size: clamp(1rem, 3vw, 1.8rem); /* Better size range */
-    color: var(--accent-light);
-    font-weight: 400;
-    animation: slideInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
-    line-height: 1.3; /* Changed from 0.1 to 1.3 */
-    margin-top: 0.1rem; /* Add some space after title */
-}
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Breadcrumb */
+        .breadcrumb {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--primary-medium);
         }
 
-        /* Categories Section */
-        .categories {
-    padding: 4rem 2rem;
-    background: url('bedge-grunge.png') var(--white);
-    position: relative;
-    overflow: hidden;
+        .breadcrumb a {
+            color: var(--primary-medium);
+            text-decoration: none;
         }
 
-        .categories::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url('bedge-grunge.png') var(--white);
+        .breadcrumb a:hover {
+            color: var(--primary-dark);
         }
 
-        @keyframes float {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .categories-container {
-            max-width: 1400px;
-            margin: 0 auto;
+        /* NEW IMAGE GALLERY LAYOUT */
+        .product-main {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Main Image Container */
+        .gallery-main {
             position: relative;
-            z-index: 2;
-        }
-
-        .category-card {
-            background: var(--white);
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(44, 52, 36, 0.1);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .category-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
-            opacity: 0;
-            transition: all 0.4s ease;
-            z-index: 1;
-        }
-
-        .category-card:hover::before {
-            opacity: 0.95;
-        }
-
-        .category-card:hover {
-            transform: translateY(-20px) scale(1.02);
-            box-shadow: 0 40px 80px rgba(44, 52, 36, 0.25);
-        }
-
-        .category-image {
             width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: all 0.5s ease;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(44, 52, 36, 0.15);
+            cursor: zoom-in;
         }
 
-        .category-card:hover .category-image {
+        .gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-main:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Navigation Arrows for Main Image */
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(44, 52, 36, 0.8);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .product-gallery:hover .gallery-nav {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .gallery-nav:hover {
+            background: var(--primary-dark);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .gallery-nav.prev {
+            left: 15px;
+        }
+
+        .gallery-nav.next {
+            right: 15px;
+        }
+
+        /* Thumbnail Container */
+        .gallery-thumbnails {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .thumbnail-track {
+            display: flex;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .gallery-thumb {
+            flex: 0 0 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .gallery-thumb.active {
+            border-color: var(--primary-dark);
+            box-shadow: 0 4px 15px rgba(44, 52, 36, 0.3);
+        }
+
+        .gallery-thumb:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-medium);
+        }
+
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-thumb:hover img {
             transform: scale(1.1);
         }
 
-        .category-content {
-            padding: 3rem;
+        /* Thumbnail Navigation Arrows */
+        .thumb-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(44, 52, 36, 0.9);
+            color: white;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .thumb-nav:hover {
+            background: var(--primary-dark);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .thumb-nav.prev {
+            left: 5px;
+        }
+
+        .thumb-nav.next {
+            right: 5px;
+        }
+
+        /* Image Counter */
+        .image-counter {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(44, 52, 36, 0.9);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Zoom Modal */
+        .zoom-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .zoom-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .zoom-container {
             position: relative;
-            z-index: 2;
-            transition: all 0.4s ease;
+            max-width: 95%;
+            max-height: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .category-card:hover .category-content {
-            color: var(--white);
+        .zoom-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            cursor: grab;
+            transition: transform 0.1s ease;
         }
 
-        .category-title {
+        .zoom-image:active {
+            cursor: grabbing;
+        }
+
+        .zoom-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            transition: all 0.3s ease;
+        }
+
+        .zoom-close:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .zoom-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            transition: all 0.3s ease;
+        }
+
+        .zoom-nav:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .zoom-nav.prev {
+            left: 30px;
+        }
+
+        .zoom-nav.next {
+            right: 30px;
+        }
+
+        /* Dettagli del prodotto */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0rem;
+        }
+
+        .product-title {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
+            color: var(--primary-dark);
+            margin-bottom: 0; /* niente spazio sotto il titolo */
+
         }
 
-        .category-description {
+        .product-subtitle {
             font-size: 1.2rem;
-            opacity: 0.8;
-            line-height: 1.6;
+            color: var(--primary-medium);
+            margin-bottom: 2rem;
+            margin-top: 0;
+        }
+
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
             margin-bottom: 2rem;
         }
 
-        .category-link {
-            display: inline-flex;
-            align-items: center;
+        .product-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--primary-medium);
+            margin-bottom: 2rem;
+        }
+
+        .product-features {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
             gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 1.2rem;
             color: var(--primary-dark);
+            margin-top: 0.2rem;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .feature-desc {
+            color: var(--primary-medium);
+            font-size: 0.95rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-dark);
+            color: white;
+            padding: 15px 30px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            border: 2px solid var(--primary-dark);
             transition: all 0.3s ease;
-            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .category-card:hover .category-link {
-            color: var(--white);
-            transform: translateX(10px);
+        .btn-primary:hover {
+            background: var(--primary-medium);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 52, 36, 0.3);
         }
 
-        .category-link::after {
-            content: '→';
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-dark);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--primary-dark);
             transition: all 0.3s ease;
         }
 
-        .category-card:hover .category-link::after {
-            transform: translateX(5px);
+        .btn-secondary:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-2px);
         }
 
-        .link-icon {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            font-size: 18px;
-            color: #fff;          /* cambia colore a piacere */
-            background: rgba(0,0,0,0.5);
-            border-radius: 50%;
-            padding: 4px 6px;
-            line-height: 1;
+        /* SEZIONI SOTTO */
+        .section {
+            margin-bottom: 4rem;
+            padding: 3rem 0;
         }
 
-/* Why Choose Us Section - Corrected Version */
-.why-us {
-    padding: 8rem 2rem;
-    background: url('bedge-grunge.png') var(--primary-dark);
-    color: #2f2e06;
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-dark);
+        }
+
+        /* Specifiche tecniche */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .spec-card {
+            background: url(bedge-grunge.png) #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgb(44 52 36);
+            border-left: 4px solid var(--primary-dark);
+        }
+
+        .spec-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .spec-list {
+            list-style: none;
+        }
+
+        .spec-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .spec-list li::before {
+            content: '•';
+            color: var(--primary-dark);
+        }
+
+/* Related Products Section */
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card Cucina per prodotti correlati */
+.sn_kitchen_i {
     position: relative;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 34%);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff00;
     overflow: hidden;
 }
 
-.why-us::before {
-    content: '';
+.sn_kitchen_i:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.sn_kitchen_i_link {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('bedge-grunge.png');
-    opacity: 0.2;
+    z-index: 1;
+    text-decoration: none;
 }
 
-.excellence-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 4rem;
-    max-width: 1400px;
-    margin: 0 auto;
+.sn_kitchen_i_title {
+    padding: 20px 20px 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     z-index: 2;
 }
 
-.excellence-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+.sn_kitchen_i_title::after {
+    content: "→";
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
 }
 
-.excellence-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.excellence-visual {
-    position: relative;
-    padding: 3rem 2rem 0;
-}
-
-.visual-container {
-    position: relative;
-    height: 80px;
-}
-
-.visual-icon {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-    transition: all 0.4s ease;
-}
-
-.excellence-card:hover .visual-icon {
-    transform: scale(1.1);
+.sn_kitchen_i:hover .sn_kitchen_i_title::after {
+    transform: translateX(5px);
     opacity: 1;
 }
 
-.visual-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-light), transparent);
-    transition: width 0.8s ease;
-}
-
-.excellence-card:hover .visual-line {
-    width: 100%;
-}
-
-.excellence-content {
-    padding: 2rem;
+.sn_kitchen_i_sw {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
     flex-grow: 1;
+    min-height: 250px;
 }
 
-.excellence-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-    color: var(--white);
+.sn_kitchen_i_sw img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.excellence-description {
-    opacity: 0.8;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    color: var(--accent-light);
+.sn_kitchen_i:hover .sn_kitchen_i_sw img {
+    transform: scale(1.05);
 }
 
-.excellence-stats {
+/* Image navigation controls */
+.sn_kitchen_i_sw_nav {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
     display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    gap: 15px;
 }
 
-.stat-number {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--white), var(--accent-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.sn_swiper_pagination {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
 }
 
-.stat-label {
-    font-size: 0.9rem;
-    opacity: 0.7;
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--white);
+    transform: scale(1.2);
+}
+
+.sn_swiper_nav {
     color: var(--white);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
 }
-        /* Tablet Styles */
+
+.sn_swiper_nav:hover {
+    background: rgba(0,0,0,0.6);
+    transform: scale(1.1);
+}
 
 
+/* Sprite icons */
+.sn_sprite {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
 
+.sn_sprite._external_big svg {
+    fill: var(--primary-dark);
+    transition: all 0.3s ease;
+}
 
-        .section-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 4rem;
-            letter-spacing: 3px;
-            background: linear-gradient(135deg, var(--white), var(--accent-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+.sn_kitchen_i:hover .sn_sprite._external_big svg {
+    fill: var(--accent-light);
+}
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
+.sn_sprite._arrow_left,
+.sn_sprite._arrow_right {
+    width: 16px;
+    height: 16px;
+    font-weight: bold;
+}
 
-        .feature-card {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
+/* Specs section (keeping your existing styles) */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
 
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-light), var(--accent-medium));
-            transition: left 0.5s ease;
-        }
+.spec-card {
+    background: url(bedge-grunge.png) #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgb(44 52 36);
+    border-left: 4px solid var(--primary-dark);
+}
 
-        .feature-card:hover::before {
-            left: 0;
-        }
+.spec-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
-        }
+.spec-list {
+    list-style: none;
+    padding: 0;
+}
 
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: var(--accent-light);
-        }
+.spec-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
 
-        .feature-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
+.spec-list li::before {
+    content: '•';
+    color: var(--primary-dark);
+    font-weight: bold;
+    flex-shrink: 0;
+}
 
-        .feature-description {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
+/* Responsive design */
+@media (max-width: 768px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .sn_kitchen_i_title {
+        font-size: 1.2rem;
+        padding: 15px 15px 10px;
+    }
+    
+    
+    .sn_kitchen_i_sw img {
+        height: 200px;
+    }
+    
+    .sn_kitchen_i_sw {
+        min-height: 200px;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .spec-card {
+        padding: 1.5rem;
+    }
+}
 
-       /* Gallery Section - Ottimizzato per smoothness */
-        .gallery {
-            padding: 4rem 0;
-            background: url('bedge-grunge.png') var(--white);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .gallery-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 4rem;
-            color: var(--primary-dark);
-            letter-spacing: 3px;
-        }
-
-        .gallery-container {
-            overflow: hidden;
-            width: 100%;
-            mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-            -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-        }
-
-        .gallery-scroll {
-            display: flex;
-            gap: 2rem;
-            width: max-content;
-            /* Animazione ultra-smooth con will-change per performance */
-            animation: infiniteScroll 90s linear infinite;
-            will-change: transform;
-            /* Hardware acceleration */
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            perspective: 1000px;
-        }
-
-        /* Pausa smooth senza scatti */
-        .gallery-scroll:hover {
-            animation-play-state: paused;
-        }
-
-        /* Keyframes ottimizzati - usa solo transform per evitare repaints */
-        @keyframes infiniteScroll {
-            0% { 
-                transform: translate3d(0, 0, 0); 
-            }
-            100% { 
-                transform: translate3d(calc(-50% - 1rem), 0, 0); 
-            }
-        }
-
-        .gallery-item {
-            flex-shrink: 0;
-            width: 400px;
-            border-radius: 15px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 15px 35px rgba(44, 52, 36, 0.15);
-            background: url('bedge-grunge.png') var(--white);
-            /* Smooth transitions ottimizzate */
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                       box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            will-change: transform;
-            transform: translateZ(0);
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05) translateZ(0);
-            box-shadow: 0 25px 50px rgba(44, 52, 36, 0.25);
-        }
-
-        .gallery-image {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .gallery-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            will-change: transform;
-            transform: translateZ(0);
-        }
-
-        .gallery-item:hover .gallery-image img {
-            transform: scale(1.1) translateZ(0);
-        }
-
-        /* Review Section */
-        .review-section {
-            padding: 1.5rem;
-            background: var(--white);
-        }
-
-        .client-review {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .client-pfp {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            overflow: hidden;
-            flex-shrink: 0;
-            border: 2px solid var(--accent);
-            transition: transform 0.3s ease;
-        }
-
-        .client-pfp img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-item:hover .client-pfp {
-            transform: scale(1.1);
-        }
-
-        .review-content {
-            flex: 1;
-        }
-
-        .client-name {
-            font-weight: 600;
-            color: var(--primary-dark);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .review-stars {
-            color: #ffc107;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover .review-stars {
-            transform: scale(1.1);
-        }
-
-        .review-text {
-            color: var(--text-light);
-            font-size: 0.85rem;
-            line-height: 1.4;
-            font-style: italic;
-            transition: color 0.3s ease;
-        }
-
-        .gallery-item:hover .review-text {
-            color: var(--primary-dark);
-        }
-
-        .review-date {
-            color: #999;
-            font-size: 0.75rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Responsive ottimizzazioni */
-        @media (max-width: 768px) {
-            .gallery-scroll {
-                animation-duration: 60s; /* Più veloce su mobile */
-            }
-            
-            .gallery-item {
-                width: 320px;
-            }
-            
-            .gallery-image {
-                height: 250px;
-            }
-        }
-
-        /* Riduzione motion per utenti con preferenze accessibilità */
-        @media (prefers-reduced-motion: reduce) {
-            .gallery-scroll {
-                animation-duration: 180s; /* Molto più lento */
-            }
-            
-            .gallery-item,
-            .gallery-image img,
-            .client-pfp,
-            .review-stars {
-                transition: none;
-            }
-            
-            .gallery-item:hover {
-                transform: scale(1.02) translateZ(0);
-            }
-        }
+@media (max-width: 480px) {
+    .sn_swiper_nav {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+}
 
 /* Footer */
 .footer {
     background: url('bedge-grunge.png') linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
-    color: var(--primary-medium); /* Base text color */
+    color: var(--primary-medium);
     padding: 4rem 2rem 2rem;
 }
 
@@ -936,7 +991,7 @@
     font-weight: 600;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
-    color: var(--black) Keep titles white */
+    color: var(--black);
 }
 
 .footer-links {
@@ -946,7 +1001,7 @@
 }
 
 .footer-link {
-    color: #4C583E; /* Lighter version of your accent-light */
+    color: #4C583E;
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 1.1rem;
@@ -968,11 +1023,10 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: #4C583E; /* Darker gray for better readability */
+    color: #4C583E;
     font-size: 1.1rem;
 }
 
-/* Rest of your existing footer styles remain the same */
 .email-signup {
     display: flex;
     gap: 1rem;
@@ -985,7 +1039,7 @@
     padding: 12px 16px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(61, 58, 58, 0.3);
-    color: #4C583E;
+    color: #242a1d;
     font-family: "Philosopher", sans-serif;
 }
 
@@ -1009,13 +1063,13 @@
     background: var(--accent-light);
     color: var(--primary-dark);
     transform: translateY(-2px);
-        color: #4C583E;
+    color: #4C583E;
 }
 
 .social-links {
     display: flex;
     gap: 1rem;
-        color: #4C583E;
+    color: #4C583E;
     margin-top: 1rem;
 }
 
@@ -1046,174 +1100,363 @@
     color: #4C583E;
 }
 
-.nav-desktop {
-    display: none;
-}
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
 
-/* Show mobile menu toggle by default */
-.menu-toggle {
-    display: flex;
-}
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
+        .modal {
+            background: url('bedge-grunge.png') var(--white);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
 
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
 
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--accent-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--primary-medium);
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--primary-dark);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .preventivo-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .preventivo-form input,
+        .preventivo-form textarea {
+            padding: 12px 16px;
+            border: 1px solid var(--accent-light);
+            font-family: "Arvo", serif;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 4px;
+        }
+
+        .preventivo-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: var(--primary-dark);
+            color: white;
+            padding: 14px;
+            border: none;
+            cursor: pointer;
+            font-family: "Arvo", serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .submit-button:hover {
+            background: var(--primary-medium);
+            transform: translateY(-2px);
+        }
 
         /* Mobile Responsive */
-        @media (min-width: 324px) and (max-width: 1200px) {
-                .hero {
-        background-attachment: scroll; /* Remove parallax on mobile */
-        min-height: 80vh; /* Slightly shorter than full viewport */
-        background-size: cover;
-        background-position: 0.0001% center; /* Adjust focal point */
-        padding: 3rem 1rem;
-    }
-    .header .logo {
-        margin-top: 40px;
-    }
-        .hero {
-        aspect-ratio: 9/16; /* Portrait orientation ratio */
-        height: auto;
-    }
-            .header {
-                height: 40px;
+        @media (max-width: 1200px) {
+            .product-main {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
-    .header-left {
-        margin-left: 0px;
-        min-height: 60px; /* Consistent mobile height */
-    }
+            .gallery-main {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+                /* 1. Hide Description and Features on Mobile */
+
+            body {
+                padding-top: 70px;
+            }
+            
+            .header {
+                height: 70px;
+                padding: 0.5rem 0;
+            }
             
             .logo {
                 font-size: 1.5rem;
             }
             
-    .cta-button {
-        margin-right: 0; /* Remove negative margin */
-        padding: 8px 10px; /* Slightly larger padding */
-        font-size: 0.6rem; /* Slightly larger font */
-        white-space: nowrap; /* Prevent text wrapping */
-    }
-    
-        .nav-desktop {
-        display: none;
-    }
-            
-            .menu-toggle {
-                padding: 6px;
+            .nav-desktop {
+                display: none;
             }
             
-            .menu-line {
-                width: 24px;
+            .cta-button {
+                display: none;
             }
             
-
-
-    .hero-content {
-        padding: 0 1rem;
-        bottom: 2rem; /* Position from bottom */
-    }
-        .hero-title, .hero-subtitle {
-        max-width: 100%;
-        word-wrap: break-word;
-    }
-            .hero {
-                padding: 2rem 1rem;
-                background-attachment: scroll;
+            .main-content {
+                padding: 0 1rem;
+                margin: 1rem auto;
             }
-
-            .categories-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            
+            .gallery-main {
+                height: 300px;
             }
-
-            .feature-card {
-                padding: 2rem 1rem;
+            
+            .gallery-thumb {
+                flex: 0 0 60px;
+                height: 60px;
             }
-
-            .gallery-item {
-                width: 300px;
+            
+            .product-title {
+                font-size: 2rem;
             }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            
+            .product-price {
+                font-size: 1.5rem;
             }
-
-            .email-signup {
+            
+            .product-actions {
                 flex-direction: column;
             }
-
-            .social-links {
-                justify-content: center;
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
             }
-
+            
+            .specs-grid, .related-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .mobile-menu {
                 width: 80%;
                 left: -80%;
             }
+            
+            .footer {
+                padding: 2rem 1rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .email-signup {
+                flex-direction: column;
+            }
 
-                .mobile-preventivo-text {
-        display: block; /* Show on mobile */
-    }
+            .zoom-nav {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+            
+            .zoom-nav.prev {
+                left: 15px;
+            }
+            
+            .zoom-nav.next {
+                right: 15px;
+            }
+            
+            .zoom-close {
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .gallery-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .thumb-nav {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
         }
 
         @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2.5rem;
+            .header-content {
+                width: 100%;
+                padding: 0 1rem;
             }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .categories, .why-us {
-                padding: 4rem 1rem;
-            }
-
             
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-                /* Optimized Header for Small Screens (iPhone SE and similar) */
-        @media (min-width: 324px) and (max-width: 427px) {
             .logo {
-                font-size: 2rem;
-                letter-spacing: 0.6px;
-            }
-
-            .header.scrolled {
-                height: 45px;
-            }
-
-            
-            .cta-button {
-                display: none;
+                font-size: 1.3rem;
             }
             
             .menu-line {
                 width: 22px;
             }
-
- 
+            
+            .gallery-main {
+                height: 250px;
+            }
+            
+            .gallery-thumb {
+                flex: 0 0 50px;
+                height: 50px;
+            }
+            
+            .product-title {
+                font-size: 1.8rem;
+            }
+            
+            .product-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .spec-card, .related-card {
+                padding: 1.5rem;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.3rem;
+            }
+            
+            .footer-link, .contact-item {
+                font-size: 1rem;
+            }
+            
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
         }
 
-                /* Large Phones (iPhone Pro Max, Plus models) */
-        @media (min-width: 428px) and (max-width: 767px) {
-            .logo {
-                font-size: 2rem;
+        /* Show only on mobile */
+        @media (min-width: 324px) and (max-width: 1200px) {
+            .logo-section {
+                position: relative;
             }
             
-            .cta-button {
-                display: none;
+            .mobile-preventivo-text {
+                display: block;
             }
-            
-            
-            .mobile-menu {
-                width: 300px;
-                left: -300px;
+        }
+
+        /* Large desktop - Ensure desktop nav is visible */
+        @media (min-width: 1201px) {
+            .nav-desktop {
+                display: flex;
+            }
+        }
+
+        .mobile-preventivo-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+            font-family: "Arvo", serif;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: none;
+            margin-top: -2px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        .mobile-preventivo-text::after {
+            content: "→";
+            margin-left: 6px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .mobile-preventivo-text:hover {
+            color: var(--accent-light);
+        }
+
+        .mobile-preventivo-text:hover::after {
+            transform: translateX(3px);
+        }
+
+        /* Hide when scrolled */
+        .header.scrolled .mobile-preventivo-text {
+            display: none;
+        }
+
+        /* Show ONLY on mobile screens */
+        @media (min-width: 324px) and (max-width: 1200px) {
+            .mobile-preventivo-text {
+                display: block; /* Show on mobile */
+            }
+        }
+
+        /* Hide when header is scrolled (even on mobile) */
+        .header.scrolled .mobile-preventivo-text {
+            display: none !important;
+        }
+
+        /* Ensure it's completely hidden on desktop */
+        @media (min-width: 1201px) {
+            .mobile-preventivo-text {
+                display: none !important;
             }
         }
 
@@ -1233,349 +1476,290 @@
             transform: translateY(0);
         }
 
-        /* Show only on mobile */
-@media (min-width: 324px) and (max-width: 1200px) {
-    .logo-section {
-        align-items: flex-start;
-    }
-    
-    .mobile-preventivo-text {
-        display: block; /* Show on mobile */
-    }
+        /* Stile per la mini mappa */
+/* Stile per la mini mappa */
+.mini-map-container {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--accent-light);
+  width: 100%;
+  max-width: 400px; /* Limita la larghezza massima */
 }
 
-/* Large desktop - Ensure desktop nav is visible */
-@media (min-width: 1201px) {
-    .nav-desktop {
-        display: flex;
-    }
-    
-
+.map-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--primary-dark);
 }
 
-        /* Modal Styles */
-.modal-overlay {
-  position: fixed;
-  top: 0;
+.static-map {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(44, 52, 36, 0.15);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 350px; /* Larghezza massima ridotta */
+  height: 180px; /* Altezza fissa per forma rettangolare */
+}
+
+.static-map:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(44, 52, 36, 0.25);
+}
+
+.static-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene le proporzioni tagliando se necessario */
+  display: block;
+}
+
+.map-overlay {
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal {
-  background: url('bedge-grunge.png') var(--white);
-  border-radius: 0;
-  width: 90%;
-  max-width: 500px;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-}
-
-.modal-overlay.active .modal {
-  transform: translateY(0);
-}
-
-.modal-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--accent-light);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-header h3 {
-  color: var(--primary-dark);
-  font-size: 1.5rem;
-}
-
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--primary-medium);
-  transition: all 0.3s ease;
-}
-
-.modal-close:hover {
-  color: var(--primary-dark);
-  transform: rotate(90deg);
-}
-
-.modal-body {
-  padding: 1.5rem;
-}
-
-.contact-info {
-  margin: 1.5rem 0;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  color: var(--primary-dark);
-  font-size: 1.1rem;
-}
-
-.modal-note {
-  font-style: italic;
-  margin: 1.5rem 0;
-  color: var(--primary-medium);
-}
-
-.preventivo-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.preventivo-form input,
-.preventivo-form textarea {
-  padding: 12px 16px;
-  border: 1px solid var(--accent-light);
-  font-family: "Arvo", serif;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.preventivo-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.submit-button {
-  background: var(--primary-medium);
+  background: rgba(44, 52, 36, 0.85);
   color: white;
-  padding: 14px;
-  border: none;
-  cursor: pointer;
-  font-family: "Arvo", serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
+  padding: 8px;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.submit-button:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
-}
-        .logo-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            position: relative;
-        }
-                .header.scrolled .logo-section {
-            transform: translateY(-8px); /* Moves the entire logo section up */
-        }
-
-.mobile-preventivo-text {
-    font-size: 0.9rem;
-    color: #c7b650;
-    font-weight: 400;
-    font-family: "Arvo", serif;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: none;
-    margin-top: 25px; /* Reduced from -2px */
-    position: relative; /* Changed from absolute */
-    top: auto; /* Remove absolute positioning */
-    left: auto; /* Remove absolute positioning */
-    white-space: nowrap;
-    line-height: 1.2;
+.static-map:hover .map-overlay {
+  opacity: 1;
 }
 
-.mobile-preventivo-text::after {
-    content: "→";
-    margin-left: 6px;
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
-    display: inline-block;
+.map-address {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--primary-medium);
+  line-height: 1.4;
 }
 
-.mobile-preventivo-text:hover {
-    color: #c7b650;
+.map-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; /* Per permettere al container di adattarsi */
 }
 
-.mobile-preventivo-text:hover::after {
-    transform: translateX(3px);
+/* Responsive */
+@media (max-width: 768px) {
+  .mini-map-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    max-width: 100%;
+  }
+  
+  .static-map {
+    max-width: 100%;
+    height: 140px; /* Altezza ridotta per mobile */
+  }
 }
 
-
-/* Hide when scrolled */
-.header.scrolled .mobile-preventivo-text {
-    display: none;
-}
-
-/* Show ONLY on mobile screens */
-@media (min-width: 324px) and (max-width: 1200px) {
-    .mobile-preventivo-text {
-        display: block; /* Show on mobile */
-    }
-}
-
-/* Hide when header is scrolled (even on mobile) */
-.header.scrolled .mobile-preventivo-text {
-    display: none !important;
-}
-
-/* Ensure it's completely hidden on desktop */
-@media (min-width: 1201px) {
-    .mobile-preventivo-text {
-        display: none !important;
-    }
-}
-
-/* Fix for mobile header when scrolled */
-@media (min-width: 324px) and (max-width: 1200px) {
-    .header.scrolled .logo {
-        transform: translateY(-13px) !important; /* Move logo up to align with menu */
-        font-size: 30px;
-    }
-
-    .logo {
-            transform: translateY(3px);
-
-    }  
-
-    .logo-subtitle {
-        margin-top: -6px;
-    }
-    
-    .header.scrolled .logo-subtitle {
-        transform: translateY(-3px) !important; /* Move subtitle up to stay with logo */
-        opacity: 0.9;
-                font-size: 9px;
-    }
-    
-    /* Optional: Adjust header height when scrolled for better fit */
-    .header.scrolled {
-        height: 50px;
-    }
-    
-    .header.scrolled .header-left {
-        min-height: 55px;
-    }
-}
-
-/* Location Banner */
 .location-banner {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: url('bedge-grunge.png') var(--primary-dark);
+    background: url('bedge-grunge.png');
+    background-blend-mode: overlay;
+    background-size: cover;
     color: var(--white);
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 10px 16px;
+    border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    z-index: 999;
+    z-index: 998;
     backdrop-filter: blur(10px);
-    border: 1px solid var(--accent-medium);
-    max-width: 300px;
+    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 280px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .location-banner:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
     box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    border-color: var(--accent-light);
 }
 
 .location-content {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .location-icon {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .location-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.3;
 }
 
 .location-address {
     font-weight: 600;
     margin-bottom: 2px;
+    font-size: 0.9rem;
 }
 
 .location-city {
-    opacity: 0.9;
-    font-size: 0.8rem;
+    opacity: 0.85;
+    font-size: 0.75rem;
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
     .location-banner {
-        bottom: 15px;
+        bottom: 20px; /* Sopra eventuali menu bottom */
         right: 15px;
-        left: 15px;
-        max-width: none;
+        left: auto;
+        max-width: 200px;
+        padding: 8px 12px;
+    }
+    
+    .location-text {
+        font-size: 0.75rem;
+    }
+    
+    .location-address {
+        font-size: 0.8rem;
+    }
+    
+    .location-city {
+        font-size: 0.7rem;
+    }
+    
+    .location-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .location-banner {
+        max-width: 160px;
+        padding: 6px 10px;
+    }
+    
+    .location-content {
+        gap: 8px;
+    }
+}
+
+/* --- NEW CSS FOR MOBILE SPECS --- */
+
+/* By default (Desktop), hide the mobile specs container */
+#mobileSpecsContainer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* 1. Hide Description and Features on Mobile */
+    #productDescription, 
+    #productFeatures,    #full-specs-section {
+        display: none !important;
+        
+    }
+
+    /* 2. Show the Mobile Specs Container */
+    #mobileSpecsContainer {
+        display: block;
+        margin-bottom: 2rem;
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid var(--accent-light);
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+    /* 3. Style it to be compact (not long and annoying) */
+    #mobileSpecsContainer .section-title {
+        font-size: 1.3rem; /* Smaller title */
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    #mobileSpecsContainer .specs-grid {
+        display: block; /* Stack vertically, no grid gaps */
+        gap: 0;
+    }
+
+    #mobileSpecsContainer .spec-card {
+        background: transparent;
+        box-shadow: none;
+        padding: 10px 0;
+        border: none;
+        border-left: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    #mobileSpecsContainer .spec-card:last-child {
+        border-bottom: none;
+    }
+
+    #mobileSpecsContainer .spec-title {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: var(--primary-dark);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #mobileSpecsContainer .spec-list li {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+        line-height: 1.4;
+    }
+    
+    /* Optional: Hide the original bottom specs section on mobile to avoid duplication */
+    /* Add ID="mainSpecsSection" to the bottom section in HTML first */
+    #mainSpecsSection {
+        display: none;
     }
 }
     </style>
 </head>
-
 <body>
-    <!-- Location Banner -->
-<div class="location-banner" onclick="openMaps()">
-    <div class="location-content">
-        <div class="location-icon">📍</div>
-        <div class="location-text">
-            <div class="location-address">Via Torino 71</div>
-            <div class="location-city">21013 Gallarate VA</div>
-        </div>
-    </div>
-</div>
-    <!-- Header -->
+    <!-- Header PULITO -->
     <header class="header" id="header">
         <div class="header-content">
-    <div class="header-left">
-        <div class="menu-toggle" id="menuToggle">
-            <div class="menu-line"></div>
-            <div class="menu-line"></div>
-            <div class="menu-line"></div>
+        <div class="header-left">
+            <div class="menu-toggle" id="menuToggle">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+            <div class="logo-section">
+                    <a href="index.html" class="logo">
+                        Cucine&nbsp;Italia
+                        <span class="logo-subtitle">Arredamenti Brambilla</span>
+                    </a>
+                <div class="mobile-preventivo-text" id="mobilePreventivoText">Richiedi preventivo</div>
+            </div>
         </div>
-        <div class="logo-section">
-<a href="index.html" class="logo">
-    Cucine&nbsp;Italia
-    <span class="logo-subtitle">Arredamenti Brambilla</span>
-</a>
-            <div class="mobile-preventivo-text" id="mobilePreventivoText">Richiedi preventivo</div>
-        </div>
-    </div>
             
             <nav class="nav-desktop">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
                 <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
                 <a href="arredamento.html" class="nav-link">Arredamento</a>
+
                 <a href="servizi.html" class="nav-link">Servizi</a>
                 <a href="index.html#contatti" class="nav-link">Contatti</a>
-                <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
             </nav>
             
             <a href="#preventivo" class="cta-button" id="preventivoButton">Richiedi un preventivo</a>
@@ -1585,343 +1769,130 @@
     <!-- Mobile Menu -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
     <nav class="mobile-menu" id="mobileMenu">
-<a href="index.html" class="logo">
-    Cucine&nbsp;Italia
-    <span class="logo-subtitle">Arredamenti Brambilla</span>
-</a>
+        <a href="index.html" class="logo">Cucine Italia</a>
         <div class="mobile-nav">
-                <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
-                <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
-                <a href="arredamento.html" class="nav-link">Arredamento</a>
-                <a href="servizi.html" class="nav-link">Servizi</a>
-                <a href="index.html#contatti" class="nav-link">Contatti</a>
-                <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
-
+            <a href="SecondaMano.html" class="nav-link">Cucine Seconda Mano</a>
+            <a href="cucine-nuove.html" class="nav-link">Cucine Nuove</a>
+            <a href="arredamento.html" class="nav-link">Arredamento</a>
+            <a href="servizi.html" class="nav-link">Servizi</a>
+            <a href="index.html#contatti" class="nav-link">Contatti</a>
+            <a href="index.html#perche-noi" class="nav-link">Perché Noi?</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Cucine di Eccellenza</h1>
-            <p class="hero-subtitle">Dove l'arte culinaria incontra il design senza tempo. Scopri la perfezione nella tua cucina.</p>
-        </div>
-    </section>
+    <!-- CONTENUTO PRINCIPALE PULITO -->
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a> > 
+            <a href="cucine-nuove.html">Cucine Nuove</a> > 
+            <span>Cucina Moderna Elegante</span>
+        </nav>
 
-    <!-- Categories Section -->
-    <section class="categories" id="categories">
-    <div class="categories-container">
-
-    <!-- Card 2 -->
-    <a href="cucine-nuove.html" class="category-card fade-in" id="cucine-nuove" style="text-decoration:none; color:inherit; position:relative;">
-        <span class="link-icon">↗</span>
-        <img src="Images/home/nuove.webp" alt="Cucine Nuove" class="category-image" loading="lazy">
-        <div class="category-content">
-            <h3 class="category-title">Cucine Nuove</h3>
-            <p class="category-description">Design contemporaneo e innovazione tecnologica.</p>
-            <span class="category-link">Esplora ora</span>
-        </div>
-    </a>
-
-        <!-- Card 1 -->
-        <a href="SecondaMano.html" class="category-card fade-in" id="cucine-Seconda Mano" style="text-decoration:none; color:inherit;">
-                    <span class="link-icon">↗</span>
-        <img src="Images/home/secondamano.webp" alt="Cucine Seconda Mano" class="category-image" loading="lazy">
-        <div class="category-content">
-            <h3 class="category-title">Cucine Seconda Mano</h3>
-            <p class="category-description">Cucine di qualità superiore ricondizionate con cura maniacale.</p>
-            <span class="category-link">Scopri di più</span>
-        </div>
-        </a>
-
-
-    </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery fade-in">
-        <h2 class="gallery-title">Le Nostre Realizzazioni e Recensioni</h2>
-        <div class="gallery-scroll">
-
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (1).webp" loading="lazy" alt="Cucina Moderna">
+        <!-- LAYOUT PRINCIPALE: GALLERIA IMMAGINI A SINISTRA + DETTAGLI A DESTRA -->
+        <section class="product-main fade-in">
+            <!-- New Image Gallery Layout -->
+            <div class="product-gallery" id="productGallery">
+                <!-- Main Image Container -->
+                <div class="gallery-main">
+                    <img src="" alt="Cucina principale" id="mainImage">
+                    
+                    <!-- Navigation Arrows for Main Image -->
+                    <button class="gallery-nav prev" id="mainPrev">‹</button>
+                    <button class="gallery-nav next" id="mainNext">›</button>
+                    
+                    <!-- Image Counter -->
+                    <div class="image-counter" id="imageCounter">1 / 1</div>
                 </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (1).webp" loading="lazy" alt="Paola Conti">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Paola Conti</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Finalmente una cucina come la volevo: luminosa, spaziosa e con piani di lavoro resistenti. Montaggio veloce e preciso."</div>
-                            <div class="review-date">15 Gennaio 2025</div>
-                        </div>
+                
+                <!-- Thumbnails Container -->
+                <div class="gallery-thumbnails">
+                    <button class="thumb-nav prev" id="thumbPrev">‹</button>
+                    <div class="thumbnail-track" id="thumbnailTrack">
+                        <!-- Thumbnails will be populated by JavaScript -->
+                    </div>
+                    <button class="thumb-nav next" id="thumbNext">›</button>
+                </div>
+            </div>
+
+            <!-- Dettagli del prodotto -->
+            <div class="product-details">
+                <h1 class="product-title" id="productTitle">Caricamento...</h1>
+                <div class="product-subtitle" id="productSubtitle">Caricamento dettagli...</div>
+                
+                <div class="product-price" id="productPrice">
+                    Prezzo in caricamento...
+                </div>
+
+                <div class="product-description" id="productDescription">
+                    <p>Caricamento descrizione...</p>
+                </div>
+
+                <div class="product-features" id="productFeatures">
+                    <!-- Features will be populated by JavaScript -->
+                </div>
+
+
+                                <!-- NEW ADDITION START -->
+                <div id="mobileSpecsContainer">
+                    <h2 class="section-title">Specifiche Tecniche</h2>
+                    <div class="specs-grid" id="mobileSpecsGrid">
+                        <!-- Will be populated by JS -->
                     </div>
                 </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (2).webp" loading="lazy"alt="Cucina Classica">
+
+                <div class="product-actions">
+                    <a href="#preventivo" class="btn-primary" id="ctaPreventivo">Richiedi Preventivo</a>
+                    <a href="tel:+393391703591" class="btn-secondary">Chiama Ora</a>
+                    
                 </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (2).webp" loading="lazy"alt="Sergio Lombardi">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Sergio Lombardi</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Il legno ha un profumo fantastico e dà calore alla casa. Finiture curate e grande attenzione ai dettagli."</div>
-                            <div class="review-date">8 Gennaio 2025</div>
-                        </div>
+                <!-- Aggiungi questo codice dentro il div con classe "product-actions" -->
+                <div class="mini-map-container">
+                <h4 class="map-title">Dove Trovarci</h4>
+                <a href="https://www.google.com/maps/place/Arredamenti+Brambilla+Gallarate+-+Cucine+Italia/@45.6466682,8.7912793,16z/data=!3m1!4b1!4m6!3m5!1s0x478689f3fcfeb9c3:0xc72d5a66fad7cfe5!8m2!3d45.6466682!4d8.7938542!16s%2Fg%2F11b6hyqr4p?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D" target="_blank" class="map-link">
+                    <div class="static-map">
+                    <img src="Images/home/Poz.jpg" alt="Mappa della nostra posizione">
+                    <div class="map-overlay">Clicca per vedere su Google Maps</div>
                     </div>
+                </a>
+                <p class="map-address">Via Torino 71, 21013 Gallarate VA, Italia</p>
                 </div>
+                
             </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (3).webp" loading="lazy"alt="Cucina Design">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (1).webp"loading="lazy" alt="Elisa Parodi">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Elisa Parodi</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Bellissimo mix di colori e materiali. Funzionale e facile da tenere in ordine. i miei figli la adorano :)"</div>
-                            <div class="review-date">22 Dicembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (4).webp"loading="lazy" alt="Cucina Lusso">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (4).webp" loading="lazy"alt="Luca Ferrero">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Luca Ferrero</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"L’isola centrale è diventata il punto di ritrovo in casa. Materiali top e montaggio impeccabile."</div>
-                            <div class="review-date">10 Dicembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (5).webp" loading="lazy"alt="Cucina Elegante">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (5).webp"loading="lazy" alt="Chiara Moretti">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Chiara Moretti</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Le ante opache sono bellissime e non lasciano impronte. Spazi interni organizzati alla perfezione."</div>
-                            <div class="review-date">28 Novembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (6).webp" loading="lazy"alt="Cucina Premium">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (6).webp"loading="lazy" alt="Matteo Ricci">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Matteo Ricci</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Pratica, ben illuminata e con cassetti capienti. Veramente un ottima scelta, cordiali, veloci e sopratutto economici."</div>
-                            <div class="review-date">15 Novembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </section>
 
-            <!-- Duplicati per seamless scroll -->
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (7).webp"loading="lazy" alt="Cucina Moderna">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (7).webp"loading="lazy" alt="Silvia Fabbri">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Silvia Fabbri</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Perfetta per il mio appartamento piccolo, ma con tutto lo spazio che serve. Consigliata."</div>
-                            <div class="review-date">12 Novembre 2024</div>
-                        </div>
-                    </div>
-                </div>
+        <!-- SEZIONI SOTTO -->
+        
+        <!-- Specifiche Tecniche -->
+        <!-- Specifiche Tecniche -->
+        <section class="section fade-in" id="full-specs-section">
+            <h2 class="section-title">Specifiche Tecniche</h2>
+            <div class="specs-grid" id="productSpecs">
+                <!-- Specifications will be populated by JavaScript -->
             </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (8).webp" loading="lazy"alt="Cucina Classica">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (8).webp" loading="lazy"alt="Giorgio Pellegrini">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Giorgio Pellegrini</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Stile senza tempo e materiali solidi. La cucina sembra nuova anche dopo mesi di utilizzo intenso."</div>
-                            <div class="review-date">5 Novembre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <div class="gallery-image">
-                    <img src="Images/home/gallery/foto/1 (9).webp" loading="lazy"alt="Cucina Design">
-                </div>
-                <div class="review-section">
-                    <div class="client-review">
-                        <div class="client-pfp">
-                            <img src="Images/home/gallery/recensione/1 (9).webp" loading="lazy"alt="Irene Gatti">
-                        </div>
-                        <div class="review-content">
-                            <div class="client-name">Irene Gatti</div>
-                            <div class="review-stars">★★★★★</div>
-                            <div class="review-text">"Ho scelto questo modello per il piano in quarzo. Facile da pulire e bellissimo da vedere."</div>
-                            <div class="review-date">30 Ottobre 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- Prodotti Correlati -->
+        <section class="section fade-in">
+            <h2 class="section-title">Altre Cucine che Potrebbero Piacerti</h2>
+            <div class="related-grid" id="relatedProducts">
+                <!-- Related products will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-us fade-in" id="perche-noi">
-        <div class="why-us-container">
-        <h2 class="section-title">Perché Sceglierci</h2>
-
-        <div class="excellence-grid">
-
-        <!-- Feature 1: Qualità Selezionata -->
-        <div class="excellence-card">
-            <div class="excellence-visual">
-            <div class="visual-container">
-                <!-- 🏆 Trofeo per qualità -->
-                <svg class="visual-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#c9a227" width="48" height="48">
-                <path d="M17 3V1H7v2H2v4a5 5 0 0 0 5 5h.1A6.995 6.995 0 0 0 11 16.9V19H8v2h8v-2h-3v-2.1A6.995 6.995 0 0 0 16.9 12H17a5 5 0 0 0 5-5V3h-5Zm-2 7a5.978 5.978 0 0 1-3 1 5.978 5.978 0 0 1-3-1c-1.21-.86-2-2.27-2-3.75V5h10v1.25c0 1.48-.79 2.89-2 3.75Z"/>
-                </svg>
-                <div class="visual-line"></div>
-            </div>
-            </div>
-            <div class="excellence-content">
-            <h3 class="excellence-title">Qualità Selezionata</h3>
-            <p class="excellence-description">Ogni cucina viene selezionata e controllata personalmente: materiali solidi, elettrodomestici funzionanti, condizioni impeccabili.</p>
-            <div class="excellence-stats">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Controllate a mano</span>
-            </div>
-            </div>
-        </div>
-
-        <!-- Feature 2: Usato e Nuovo -->
-        <div class="excellence-card">
-            <div class="excellence-visual">
-            <div class="visual-container">
-                <!-- 🔄 Doppia freccia -->
-                <svg class="visual-icon" xmlns="http://www.w3.org/2000/svg" fill="#4caf50" viewBox="0 0 24 24" width="48" height="48">
-                <path d="M6 3v2h9v3l4-4-4-4v3H6zm12 16v-3H9v-3l-4 4 4 4v-3h9z"/>
-                </svg>
-                <div class="visual-line"></div>
-            </div>
-            </div>
-            <div class="excellence-content">
-            <h3 class="excellence-title">Usato e Nuovo</h3>
-            <p class="excellence-description">Diamo valore al risparmio e alla qualità: soluzioni Seconda Mano eccellenti o cucine nuove su misura. Ogni cliente trova ciò che cerca.</p>
-            <div class="excellence-stats">
-                <span class="stat-number">2</span>
-                <span class="stat-label">Linee dedicate</span>
-            </div>
-            </div>
-        </div>
-
-        <!-- Feature 3: Servizio Completo -->
-        <div class="excellence-card">
-            <div class="excellence-visual">
-            <div class="visual-container">
-                <!-- 📦 Camion di consegna -->
-                <svg class="visual-icon" xmlns="http://www.w3.org/2000/svg" fill="#2196f3" viewBox="0 0 24 24" width="48" height="48">
-                <path d="M3 3h13v13H3V3zm15 5h3l3 4v4h-6V8zm-1 9a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-10 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
-                </svg>
-                <div class="visual-line"></div>
-            </div>
-            </div>
-            <div class="excellence-content">
-            <h3 class="excellence-title">Servizio Completo</h3>
-            <p class="excellence-description">Dallo smontaggio al trasporto e rimontaggio: ci occupiamo noi di tutto. Zero stress, solo soluzioni.</p>
-            <div class="excellence-stats">
-                <span class="stat-number">A-Z</span>
-                <span class="stat-label">Servizio incluso</span>
-            </div>
-            </div>
-        </div>
-
-        <!-- Feature 4: Esperienza nel settore -->
-        <div class="excellence-card">
-            <div class="excellence-visual">
-            <div class="visual-container">
-                <!-- ⏳ Clessidra -->
-                <svg class="visual-icon" xmlns="http://www.w3.org/2000/svg" fill="#ff9800" viewBox="0 0 24 24" width="48" height="48">
-                <path d="M6 2v6h.01L6 8l4 4-4 4 .01.01H6v6h12v-6h-.01L18 16l-4-4 4-4-.01-.01H18V2H6z"/>
-                </svg>
-                <div class="visual-line"></div>
-            </div>
-            </div>
-            <div class="excellence-content">
-            <h3 class="excellence-title">Esperienza Reale</h3>
-            <p class="excellence-description">Più di 10 anni a contatto diretto con clienti, trasporti, montaggi e mercati. Sappiamo esattamente cosa serve.</p>
-            <div class="excellence-stats">
-                <span class="stat-number">10+</span>
-                <span class="stat-label">Anni di attività</span>
-            </div>
-            </div>
-        </div>
-
-        </div>
-
-
+    <!-- Zoom Modal -->
+    <div class="zoom-modal" id="zoomModal">
+        <div class="zoom-container">
+            <button class="zoom-close" id="zoomClose">&times;</button>
+            <button class="zoom-nav prev" id="zoomPrev">‹</button>
+            <img src="" alt="Zoom image" id="zoomImage" class="zoom-image">
+            <button class="zoom-nav next" id="zoomNext">›</button>
         </div>
     </div>
-
-    </section>
-
-
 
     <!-- Footer -->
     <footer class="footer" id="contatti">
-
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Menu</h3>
@@ -1944,62 +1915,55 @@
                     <div class="contact-item">
                     <span>📞</span>
                     <span>
-                        <a href="https://wa.me/393391703591" target="_blank">
-                            +39 339 170 3591
-                        </a>
-                        <br>
                         <a href="https://wa.me/393496947616" target="_blank">
                             +39 349 694 7616
                         </a>
                         <br>
+                        <a href="https://wa.me/393391703591" target="_blank">
+                            +39 339 170 3591
+                        </a>
+                        <br>
                     </span>
-
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
-                        <span>Via Torino 71,  21013 Gallarate VA</span>
+                        <span>Via Torino 71, 21013 Gallarate VA</span>
                     </div>
                 </div>
             </div>
-                
+            
             <div class="footer-section">
-
-
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
                 <h3>Socials</h3>
+            <div class="social-links">
 
-<div class="social-links">
 
+                <a href="https://www.facebook.com/profile.php?id=61576278827754" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/cucine.italia/" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@cucineitalia" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="https://share.google/A3HR21mBeUiB6YImR" class="social-link"><i class="fab fa-google"></i></a>
+            </div>
 
-    <a href="https://www.facebook.com/profile.php?id=61576278827754" class="social-link"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/cucine.italia/" class="social-link"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@cucineitalia" class="social-link"><i class="fab fa-tiktok"></i></a>
-    <a href="https://share.google/A3HR21mBeUiB6YImR" class="social-link"><i class="fab fa-google"></i></a>
-</div>
-
-<style>
-.social-links {
-    display: flex;
-    gap: 12px;
-    font-size: 28px; /* Icon size */
-}
-.social-link {
-    color: inherit; /* Or your brand color */
-    text-decoration: none;
-}
-.social-link:hover {
-    color: #123003; /* Hover color */
-}
-</style>
-
+            <style>
+            .social-links {
+                display: flex;
+                gap: 12px;
+                font-size: 28px; /* Icon size */
+            }
+            .social-link {
+                color: inherit; /* Or your brand color */
+                text-decoration: none;
+            }
+            .social-link:hover {
+                color: #123003; /* Hover color */
+            }
+            </style>
             </div>
             
-<div class="footer-section">
-  <h3>Newsletter</h3>
-  <p style="color: #4C583E; margin-bottom: 1rem;">
-    Resta aggiornato sulle nostre novità e offerte esclusive.
-  </p>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: var(--accent-medium); margin-bottom: 1rem;">
+                    Resta aggiornato sulle nostre novità e offerte esclusive.
+                </p>
 <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="email-signup">
   <!-- Configurazioni e protezioni -->
   <input type="hidden" name="_captcha" value="false">
@@ -2011,8 +1975,8 @@
   <button type="submit" class="email-submit">Iscriviti</button>
 </form>
 
-</div>
 
+            </div>
         </div>
         
         <div class="footer-bottom">
@@ -2021,95 +1985,240 @@
     </footer>
 
     <!-- Modal for Preventivo -->
-<div class="modal-overlay" id="preventivoModal">
-  <div class="modal">
-    <div class="modal-header">
-      <h3>Richiedi un Preventivo</h3>
-      <button class="modal-close">&times;</button>
-    </div>
-    <div class="modal-body">
-      <p>Contattaci direttamente per un preventivo personalizzato:</p>
-      <div class="contact-info">
-        <div class="contact-item">
-        <span>📞</span>
-        <span>
-            <a href="https://wa.me/393391703591" target="_blank">
-                +39 339 170 3591
-            </a>
-            <br>
-            <a href="https://wa.me/393496947616" target="_blank">
-                +39 349 694 7616
-            </a>
-            <br>
-        </span>
+    <div class="modal-overlay" id="preventivoModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Richiedi un Preventivo</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Contattaci direttamente per un preventivo personalizzato:</p>
+                <div class="contact-info" style="margin: 1.5rem 0;">
+                    <div class="contact-item">
+                    <span>📞</span>
+                    <span>
+                        <a href="https://wa.me/393496947616" target="_blank" style="text-decoration:none; color:inherit;">
+                            +39 349 694 7616
+                        </a>
+                        <br>
+                        <a href="https://wa.me/393391703591" target="_blank" style="text-decoration:none; color:inherit;">
+                            +39 339 170 3591
+                        </a>
+                        <br>
+                    </span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>info.cucineitalia@gmail.com</span>
+                    </div>
+                </div>
+                <p style="font-style: italic; margin: 1.5rem 0; color: var(--primary-medium);">
+                    Oppure compila il form sottostante e ti risponderemo entro 24 ore.
+                </p>
+                <form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="preventivo-form">
+                <!-- Protezioni e impostazioni -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nuova richiesta di preventivo dal sito">
+                <input type="hidden" name="_template" value="table">
+                <!-- Honeypot anti-spam -->
+                <input type="text" name="_honey" style="display:none">
 
+                <input type="text" name="Nome" placeholder="Nome">
+                <input type="email" name="Email" placeholder="Email Address" required>
+                <input type="tel" name="Telefono" placeholder="Telefono">
+                <textarea name="Richiesta" placeholder="Descrivi la tua richiesta"></textarea>
 
+                <button type="submit" class="submit-button">Invia Richiesta</button>
+                </form>
+
+            </div>
         </div>
-        <div class="contact-item">
-          <span>📧</span>
-          <span>info.cucineitalia@gmail.com</span>
-        </div>
-      </div>
-      <p class="modal-note">Oppure compila il form sottostante e ti risponderemo entro 24 ore.</p>
-<form action="https://formsubmit.co/info.cucineitalia@gmail.com" method="POST" class="preventivo-form">
-  <!-- Protezioni e impostazioni -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Nuova richiesta di preventivo dal sito">
-  <input type="hidden" name="_template" value="table">
-  <!-- Honeypot anti-spam -->
-  <input type="text" name="_honey" style="display:none">
-
-  <input type="text" name="Nome" placeholder="Nome">
-  <input type="email" name="Email" placeholder="Email Address" required>
-  <input type="tel" name="Telefono" placeholder="Telefono">
-  <textarea name="Richiesta" placeholder="Descrivi la tua richiesta"></textarea>
-
-  <button type="submit" class="submit-button">Invia Richiesta</button>
-</form>
-
     </div>
-  </div>
-</div>
 
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- JavaScript -->
     <script>
-        document.getElementById('mobilePreventivoText')?.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('preventivoModal').classList.add('active');
-});
-        // Header scroll animation
-        let lastScroll = 0;
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            const currentScroll = window.scrollY;
-            
-            // Always show header when scrolling up
-            if (currentScroll <= 0) {
-                header.classList.add('visible');
-                header.classList.remove('scrolled');
-                return;
-            }
-            
-            if (currentScroll > lastScroll) {
-                // Scrolling down
-                if (currentScroll > 100) {
-                    header.classList.add('visible', 'scrolled');
-                }
-            } else {
-                // Scrolling up
-                header.classList.add('visible');
-                if (currentScroll > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            }
-            
-            lastScroll = currentScroll;
-        });
+        // Gallery state management
+        let currentImageIndex = 0;
+        let productImages = [];
+        let thumbnailOffset = 0;
+        const thumbnailsVisible = 8; // Number of visible thumbnails
 
-        // Show header on page load
-        window.addEventListener('load', function() {
-            document.getElementById('header').classList.add('visible');
+        // Initialize gallery functionality
+        function initGallery(images) {
+            productImages = images;
+            currentImageIndex = 0;
+            thumbnailOffset = 0;
+            
+            updateMainImage();
+            createThumbnails();
+            updateImageCounter();
+            updateThumbnailTrack();
+        }
+
+        // Update main image
+        function updateMainImage() {
+            const mainImage = document.getElementById('mainImage');
+            if (productImages.length > 0) {
+                mainImage.src = productImages[currentImageIndex];
+                mainImage.alt = `Immagine ${currentImageIndex + 1}`;
+            }
+        }
+
+        // Create thumbnail elements
+        function createThumbnails() {
+            const thumbnailTrack = document.getElementById('thumbnailTrack');
+            thumbnailTrack.innerHTML = '';
+            
+            productImages.forEach((image, index) => {
+                const thumb = document.createElement('div');
+                thumb.className = `gallery-thumb ${index === currentImageIndex ? 'active' : ''}`;
+                thumb.innerHTML = `<img src="${image}" alt="Thumbnail ${index + 1}">`;
+                thumb.onclick = () => selectImage(index);
+                thumbnailTrack.appendChild(thumb);
+            });
+        }
+
+        // Select specific image
+        function selectImage(index) {
+            if (index >= 0 && index < productImages.length) {
+                currentImageIndex = index;
+                updateMainImage();
+                updateThumbnails();
+                updateImageCounter();
+                
+                // Scroll thumbnails if needed
+                if (index < thumbnailOffset || index >= thumbnailOffset + thumbnailsVisible) {
+                    thumbnailOffset = Math.max(0, index - Math.floor(thumbnailsVisible / 2));
+                    updateThumbnailTrack();
+                }
+            }
+        }
+
+        // Update thumbnail active states
+        function updateThumbnails() {
+            const thumbnails = document.querySelectorAll('.gallery-thumb');
+            thumbnails.forEach((thumb, index) => {
+                thumb.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+
+        // Update image counter
+        function updateImageCounter() {
+            const counter = document.getElementById('imageCounter');
+            counter.textContent = `${currentImageIndex + 1} / ${productImages.length}`;
+        }
+
+        // Update thumbnail track position
+        function updateThumbnailTrack() {
+            const track = document.getElementById('thumbnailTrack');
+            const thumbWidth = 80 + 8; // width + gap
+            const offset = -thumbnailOffset * thumbWidth;
+            track.style.transform = `translateX(${offset}px)`;
+            
+            // Update navigation button states
+            const thumbPrev = document.getElementById('thumbPrev');
+            const thumbNext = document.getElementById('thumbNext');
+            
+            thumbPrev.style.display = thumbnailOffset > 0 ? 'flex' : 'none';
+            thumbNext.style.display = thumbnailOffset + thumbnailsVisible < productImages.length ? 'flex' : 'none';
+        }
+
+        // Navigation functions
+        function nextImage() {
+            selectImage((currentImageIndex + 1) % productImages.length);
+        }
+
+        function prevImage() {
+            selectImage((currentImageIndex - 1 + productImages.length) % productImages.length);
+        }
+
+        function scrollThumbnails(direction) {
+            if (direction === 'next' && thumbnailOffset + thumbnailsVisible < productImages.length) {
+                thumbnailOffset++;
+            } else if (direction === 'prev' && thumbnailOffset > 0) {
+                thumbnailOffset--;
+            }
+            updateThumbnailTrack();
+        }
+
+        // Zoom functionality
+        function openZoom() {
+            const zoomModal = document.getElementById('zoomModal');
+            const zoomImage = document.getElementById('zoomImage');
+            
+            zoomImage.src = productImages[currentImageIndex];
+            zoomModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeZoom() {
+            const zoomModal = document.getElementById('zoomModal');
+            zoomModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function zoomNextImage() {
+            nextImage();
+            const zoomImage = document.getElementById('zoomImage');
+            zoomImage.src = productImages[currentImageIndex];
+        }
+
+        function zoomPrevImage() {
+            prevImage();
+            const zoomImage = document.getElementById('zoomImage');
+            zoomImage.src = productImages[currentImageIndex];
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Main image navigation
+            document.getElementById('mainNext').onclick = nextImage;
+            document.getElementById('mainPrev').onclick = prevImage;
+            
+            // Thumbnail navigation
+            document.getElementById('thumbNext').onclick = () => scrollThumbnails('next');
+            document.getElementById('thumbPrev').onclick = () => scrollThumbnails('prev');
+            
+            // Main image click to zoom
+            document.getElementById('mainImage').onclick = openZoom;
+            
+            // Zoom modal controls
+            document.getElementById('zoomClose').onclick = closeZoom;
+            document.getElementById('zoomNext').onclick = zoomNextImage;
+            document.getElementById('zoomPrev').onclick = zoomPrevImage;
+            
+            // Close zoom on overlay click
+            document.getElementById('zoomModal').onclick = function(e) {
+                if (e.target === this) closeZoom();
+            };
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                const zoomModal = document.getElementById('zoomModal');
+                const isZoomOpen = zoomModal.classList.contains('active');
+                
+                switch(e.key) {
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        if (isZoomOpen) zoomPrevImage();
+                        else prevImage();
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        if (isZoomOpen) zoomNextImage();
+                        else nextImage();
+                        break;
+                    case 'Escape':
+                        if (isZoomOpen) closeZoom();
+                        break;
+                }
+            });
+
+            // Load product data
+            loadProductData();
         });
 
         // Mobile menu toggle
@@ -2141,21 +2250,36 @@
             });
         });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+        // Modal functionality
+        const preventivoButton = document.getElementById('preventivoButton');
+        const ctaPreventivo = document.getElementById('ctaPreventivo');
+        const preventivoModal = document.getElementById('preventivoModal');
+        const modalClose = document.getElementById('modalClose');
+        const mobilePreventivoText = document.getElementById('mobilePreventivoText');
+
+        // Open modal when clicking "Richiedi un preventivo"
+        [preventivoButton, ctaPreventivo, mobilePreventivoText].forEach(button => {
+            if (button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    preventivoModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+        });
+
+        // Close modal when clicking X button
+        modalClose.addEventListener('click', function() {
+            preventivoModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close modal when clicking outside
+        preventivoModal.addEventListener('click', function(e) {
+            if (e.target === preventivoModal) {
+                preventivoModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
 
         // Intersection Observer for fade-in animations
@@ -2177,65 +2301,371 @@
             observer.observe(el);
         });
 
-
-
-        // Add this to your existing JavaScript
-const preventivoButton = document.querySelector('.cta-button');
-const preventivoModal = document.getElementById('preventivoModal');
-const modalClose = document.querySelector('.modal-close');
-
-// Open modal when clicking "Richiedi un preventivo"
-preventivoButton.addEventListener('click', function(e) {
-  e.preventDefault();
-  preventivoModal.classList.add('active');
-  document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-});
-
-// Close modal when clicking X button
-modalClose.addEventListener('click', function() {
-  preventivoModal.classList.remove('active');
-  document.body.style.overflow = '';
-});
-
-// Close modal when clicking outside
-preventivoModal.addEventListener('click', function(e) {
-  if (e.target === preventivoModal) {
-    preventivoModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-});
-
-
-    </script>
-
-        <script>
-        // Gestione smooth del pause/play senza JavaScript aggiuntivo
-        // Il CSS :hover gestisce già tutto in modo ottimale
-        
-        // Opzionale: Intersect Observer per performance
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const galleryScroll = entry.target.querySelector('.gallery-scroll');
-                if (entry.isIntersecting) {
-                    galleryScroll.style.animationPlayState = 'running';
-                } else {
-                    galleryScroll.style.animationPlayState = 'paused';
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
                 }
             });
-        }, observerOptions);
+        });
 
-        const gallery = document.querySelector('.gallery');
-        if (gallery) {
-            observer.observe(gallery);
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
         }
-    </script>
 
+        // Load product data from JSON
+        async function loadProductData() {
+            const slug = getUrlParameter('slug');
+            console.log('Slug from URL:', slug);
+
+            if (!slug) {
+                console.error('Nessun slug trovato nell\'URL');
+                showError('Nessun prodotto specificato');
+                return;
+            }
+
+            try {
+                console.log('Caricamento data/cucine.json...');
+                const response = await fetch('data/cucine.json');
+                
+                if (!response.ok) {
+                    throw new Error(`Errore nel caricamento del JSON: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Dati JSON caricati:', data);
+                
+                const product = data.products.find(p => p.slug === slug);
+                console.log('Prodotto trovato:', product);
+                
+                if (!product) {
+                    showError(`Prodotto "${slug}" non trovato`);
+                    return;
+                }
+
+                // Update page with product data
+                updateProductPage(product, data.products);
+
+            } catch (error) {
+                console.error('Errore nel caricamento dei dati:', error);
+                showError('Errore nel caricamento dei dati del prodotto');
+            }
+        }
+
+        // Update page with product data
+        function updateProductPage(product, allProducts) {
+            // Update page title
+            document.title = `${product.name} | Cucine Italia`;
+            
+            // Update breadcrumb
+            const breadcrumb = document.querySelector('.breadcrumb');
+            breadcrumb.innerHTML = `
+                <a href="index.html">Home</a> > 
+                <a href="cucine-nuove.html">Cucine Nuove</a> > 
+                <a href="SecondaMano.html">Cucine Seconda Mano</a> > 
+                <span>${product.name}</span>
+            `;
+            
+            // Update main content
+            document.getElementById('productTitle').textContent = product.name;
+            document.getElementById('productSubtitle').textContent = product.shortDescription;
+            document.getElementById('productPrice').textContent = product.price || 'Prezzo su richiesta';
+            document.getElementById('productDescription').innerHTML = `<p>${product.description}</p>`;
+
+            // Initialize image gallery
+            if (product.images && product.images.length > 0) {
+                initGallery(product.images);
+            }
+
+            // Populate features
+            const featuresContainer = document.getElementById('productFeatures');
+            featuresContainer.innerHTML = '';
+            
+            if (product.features && product.features.length > 0) {
+                product.features.forEach(feature => {
+                    const featureItem = document.createElement('div');
+                    featureItem.className = 'feature-item';
+                    featureItem.innerHTML = `
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <div class="feature-title">${feature.title}</div>
+                            <div class="feature-desc">${feature.description}</div>
+                        </div>
+                    `;
+                    featuresContainer.appendChild(featureItem);
+                });
+            }
+
+                        // Populate specifications
+            // Populate specifications (BOTH Desktop and Mobile)
+// Populate specifications (BOTH Desktop and Mobile)
+            const specsContainer = document.getElementById('productSpecs'); // Desktop/Bottom container
+            const mobileSpecsGrid = document.getElementById('mobileSpecsGrid'); // New Mobile/Top container
+                        
+            specsContainer.innerHTML = '';
+            if(mobileSpecsGrid) mobileSpecsGrid.innerHTML = ''; // Safety check
+
+            if (product.specs && Object.keys(product.specs).length > 0) {
+                Object.entries(product.specs).forEach(([category, items]) => {
+                    // Create HTML string for the card
+                    const cardHTML = `
+                        <h4 class="spec-title">${category}</h4>
+                        <ul class="spec-list">
+                            ${items.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    `;
+
+                    // 1. Append to Bottom Section (Desktop) - SHOW ALL
+                    const specCard = document.createElement('div');
+                    specCard.className = 'spec-card';
+                    specCard.innerHTML = cardHTML;
+                    specsContainer.appendChild(specCard);
+
+                    // 2. Append to Mobile Section (Top) - FILTER SPECIFIC CATEGORIES ONLY
+                    if(mobileSpecsGrid) {
+                        // Check if the category is "Dimensioni" or "Elettrodomestici"
+                        if (category === "Dimensioni" || category === "Elettrodomestici") {
+                            const mobileCard = document.createElement('div');
+                            mobileCard.className = 'spec-card';
+                            mobileCard.innerHTML = cardHTML;
+                            mobileSpecsGrid.appendChild(mobileCard);
+                        }
+                    }
+                });
+            }
+
+            // Populate related products
+            const relatedContainer = document.getElementById('relatedProducts');
+            relatedContainer.innerHTML = '';
+
+            // Filter out current product and get random related products
+            const relatedProducts = allProducts
+                .filter(p => p.slug !== product.slug)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3);
+
+            relatedProducts.forEach(related => {
+                const relatedCard = document.createElement('div');
+                relatedCard.className = 'sn_kitchen_i';
+                relatedCard.innerHTML = `
+                    <a href="product.html?slug=${related.slug}" class="sn_kitchen_i_link"></a>
+                    <div class="sn_kitchen_i_title">
+                        ${related.name}
+                        <div class="sn_sprite _external_big">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="sn_kitchen_i_sw">
+                        <img src="${related.images?.[0] || 'images/placeholder.jpg'}" 
+                            alt="${related.name}">
+                        ${related.images && related.images.length > 1 ? `
+                            <div class="sn_kitchen_i_sw_nav">
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+                relatedContainer.appendChild(relatedCard);
+            });
+
+            // Add image carousel functionality for related products
+            document.querySelectorAll('#relatedProducts .sn_kitchen_i').forEach((card, cardIndex) => {
+                const related = relatedProducts[cardIndex];
+                if (!related.images || related.images.length <= 1) return;
+
+                let currentImageIndex = 0;
+                const img = card.querySelector('img');
+                const bullets = card.querySelectorAll('.swiper-pagination-bullet');
+                const prevBtn = card.querySelector('.sn_swiper_prev');
+                const nextBtn = card.querySelector('.sn_swiper_next');
+
+                function updateImage(index) {
+                    currentImageIndex = index;
+                    img.src = related.images[currentImageIndex];
+                    
+                    // Update pagination bullets
+                    bullets.forEach((bullet, i) => {
+                        bullet.classList.toggle('swiper-pagination-bullet-active', i === currentImageIndex);
+                    });
+                }
+
+                // Previous image
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : related.images.length - 1;
+                        updateImage(newIndex);
+                    });
+                }
+
+                // Next image  
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const newIndex = currentImageIndex < related.images.length - 1 ? currentImageIndex + 1 : 0;
+                        updateImage(newIndex);
+                    });
+                }
+
+                // Pagination bullets
+                bullets.forEach((bullet, index) => {
+                    bullet.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        updateImage(index);
+                    });
+                });
+
+                // Auto-slide functionality (optional)
+                let autoSlideInterval;
+                
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(() => {
+                        const newIndex = currentImageIndex < related.images.length - 1 ? currentImageIndex + 1 : 0;
+                        updateImage(newIndex);
+                    }, 4000); // Change image every 4 seconds
+                }
+
+                function stopAutoSlide() {
+                    if (autoSlideInterval) {
+                        clearInterval(autoSlideInterval);
+                    }
+                }
+
+                // Start auto-slide when not hovering
+                card.addEventListener('mouseenter', stopAutoSlide);
+                card.addEventListener('mouseleave', startAutoSlide);
+                
+                // Start auto-slide initially
+                startAutoSlide();
+            });
+        }
+
+        // Show error message
+        function showError(message) {
+            document.getElementById('productTitle').textContent = 'Prodotto non trovato';
+            document.getElementById('productSubtitle').textContent = message;
+            document.getElementById('productPrice').textContent = '';
+            document.getElementById('productDescription').innerHTML = `
+                <p>Ci scusiamo per l'inconveniente. 
+                <a href="cucine-nuove.html">Torna alla pagina delle cucine</a> per vedere tutti i nostri prodotti disponibili.</p>
+            `;
+            
+            // Hide gallery and other sections
+            document.getElementById('productGallery').style.display = 'none';
+            document.getElementById('productFeatures').style.display = 'none';
+            document.getElementById('productSpecs').style.display = 'none';
+            document.getElementById('relatedProducts').style.display = 'none';
+        }
+
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const swipeDistance = touchEndX - touchStartX;
+            
+            if (Math.abs(swipeDistance) > swipeThreshold) {
+                if (swipeDistance > 0) {
+                    prevImage(); // Swipe right - previous image
+                } else {
+                    nextImage(); // Swipe left - next image
+                }
+            }
+        }
+
+        document.getElementById('mainImage').addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.getElementById('mainImage').addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        // Open maps function
+function openMaps() {
+    const address = "Arredamenti Brambilla Gallarate - Cucine Italia";
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    window.open(mapsUrl, '_blank');
+}
+    </script>
+    <div class="location-banner" onclick="openMaps()">
+    <div class="location-content">
+        <div class="location-icon">📍</div>
+        <div class="location-text">
+            <div class="location-address">Via Torino 71</div>
+            <div class="location-city">21013 Gallarate VA</div>
+        </div>
+    </div>
+</div>
+
+<script>
+      // Intercept ALL forms that use FormSubmit
+  document.querySelectorAll("form[action*='formsubmit.co']").forEach(form => {
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault(); // stop normal redirect
+
+      let formData = new FormData(form);
+      try {
+        await fetch(form.action, {
+          method: form.method,
+          body: formData
+        });
+        // Show popup
+        document.getElementById("thankYouPopup").style.display = "flex";
+        form.reset(); // clear form
+      } catch (err) {
+        alert("❌ Si è verificato un errore, riprova.");
+      }
+    });
+  });
+
+  function closePopup() {
+    document.getElementById("thankYouPopup").style.display = "none";
+  }
+    </script>
+<div class="location-banner" onclick="openMaps()">
+    <div class="location-content">
+        <div class="location-icon">📍</div>
+        <div class="location-text">
+            <div class="location-address">Via Torino 71</div>
+            <div class="location-city">21013 Gallarate VA</div>
+        </div>
+    </div>
+</div>
     <!-- Popup Modal -->
 <div id="thankYouPopup" class="popup-overlay" style="display:none;">
   <div class="popup-content">
@@ -2276,38 +2706,5 @@ preventivoModal.addEventListener('click', function(e) {
     cursor: pointer;
   }
 </style>
-
-<script>
-  // Intercept ALL forms that use FormSubmit
-  document.querySelectorAll("form[action*='formsubmit.co']").forEach(form => {
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault(); // stop normal redirect
-
-      let formData = new FormData(form);
-      try {
-        await fetch(form.action, {
-          method: form.method,
-          body: formData
-        });
-        // Show popup
-        document.getElementById("thankYouPopup").style.display = "flex";
-        form.reset(); // clear form
-      } catch (err) {
-        alert("❌ Si è verificato un errore, riprova.");
-      }
-    });
-  });
-
-  function closePopup() {
-    document.getElementById("thankYouPopup").style.display = "none";
-  }
-
-  // Open maps function
-function openMaps() {
-    const address = "Via Torino 71, 21013 Gallarate VA";
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-    window.open(mapsUrl, '_blank');
-}
-</script>
-
 </body>
+</html>
