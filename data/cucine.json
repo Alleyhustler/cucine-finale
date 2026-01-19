@@ -1833,6 +1833,142 @@
       ]
     },
     {
+      "id": 30,
+      "slug": "Grigio-Foresta-Angolare",
+      "name": "Cucina Grigio Foresta",
+      "shortDescription": "Grigio chiaro moderno, composizione angolare",
+      "description": "Una cucina moderna ed equilibrata, caratterizzata da una raffinata finitura grigio chiaro che dona luminosità e ordine all’ambiente. La composizione angolare da 270 x 270 cm ottimizza lo spazio garantendo funzionalità e continuità visiva. Ideale per chi desidera uno stile contemporaneo, pulito e versatile, con elettrodomestici integrati per un utilizzo quotidiano pratico e intuitivo.",
+      "price": "Pronta Consegna",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/angolare/13/1.webp",
+      "images": [
+        "/Images/usate/angolare/13/1.webp",
+        "/Images/usate/angolare/13/2.webp",
+        "/Images/usate/angolare/13/3.webp"
+      ],
+      "features": [
+        {
+          "title": "Design Moderno Essenziale",
+          "description": "Linee pulite e finitura grigio chiaro per un’estetica contemporanea e senza tempo"
+        },
+        {
+          "title": "Composizione Angolare Funzionale",
+          "description": "Soluzione a L da 270 x 270 cm pensata per sfruttare al massimo lo spazio disponibile"
+        },
+        {
+          "title": "Superfici Facili da Pulire",
+          "description": "Materiali resistenti e pratici, ideali per l’uso quotidiano"
+        },
+        {
+          "title": "Elettrodomestici Integrati",
+          "description": "Cucina completa di elettrodomestici, escluso il forno a microonde"
+        },
+        {
+          "title": "Stile Grigio Foresta",
+          "description": "Tonalità sobria e moderna che si adatta facilmente a diversi ambienti"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Composizione: Angolare",
+          "Lato A: 270 cm",
+          "Lato B: 270 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato grigio chiaro moderno",
+          "Top: Laminato coordinato",
+          "Struttura: Pannelli ad alta resistenza"
+        ],
+        "Elettrodomestici": [
+          "Forno integrato",
+          "Piano cottura",
+          "Lavastoviglie integrata",
+          "Frigorifero combinato",
+          "Cappa aspirante"
+        ],
+        "Accessori Inclusi": [
+          "Pensili con chiusura ammortizzata",
+          "Cassetti con guide soft-close",
+          "Modulo angolare ottimizzato",
+          "Zoccolo coordinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-industrial",
+        "cucina-angolare-scura"
+      ]
+    },
+    {
+      "id": 31,
+      "slug": "Nero-Rovere",
+      "name": "Nero Rovere Urban",
+      "shortDescription": "Nero opaco e legno, composizione angolare",
+      "description": "Una cucina dal carattere deciso e contemporaneo, che combina l’eleganza del nero opaco con il calore naturale del legno. La composizione angolare da 293 x 160 cm è pensata per ambienti moderni dove estetica e funzionalità convivono in equilibrio. Soluzione ideale per chi cerca una cucina di forte impatto visivo, con materiali attuali e un’impostazione pratica, proposta in ottime condizioni come cucina usata selezionata.",
+      "price": "Usata – Prezzo su richiesta",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/angolare/12/1.webp",
+      "images": [
+        "/Images/usate/angolare/12/1.webp",
+        "/Images/usate/angolare/12/2.webp",
+        "/Images/usate/angolare/12/3.webp"
+      ],
+      "features": [
+        {
+          "title": "Contrasto Nero e Legno",
+          "description": "Abbinamento elegante tra superfici nero opaco e finiture effetto legno"
+        },
+        {
+          "title": "Design Urban Moderno",
+          "description": "Stile contemporaneo dal carattere deciso, ideale per ambienti moderni"
+        },
+        {
+          "title": "Composizione Angolare Compatta",
+          "description": "Soluzione funzionale da 293 x 160 cm che ottimizza lo spazio disponibile"
+        },
+        {
+          "title": "Cucina Usata Selezionata",
+          "description": "Proposta usata in buone condizioni, controllata e pronta per una nuova installazione"
+        },
+        {
+          "title": "Superfici Opache Antiriflesso",
+          "description": "Finitura opaca che riduce riflessi e impronte, migliorando l’estetica quotidiana"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Composizione: Angolare",
+          "Lato A: 293 cm",
+          "Lato B: 160 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato nero opaco",
+          "Finiture: Effetto legno",
+          "Top: Laminato coordinato",
+          "Struttura: Pannelli ad alta resistenza"
+        ],
+        "Elettrodomestici": [
+          "Forno integrato",
+          "Piano cottura",
+          "Lavastoviglie integrata",
+          "Cappa aspirante"
+        ],
+        "Accessori Inclusi": [
+          "Pensili con chiusura ammortizzata",
+          "Cassetti con guide soft-close",
+          "Modulo angolare ottimizzato",
+          "Zoccolo coordinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-industrial",
+        "cucina-angolare-scura"
+      ]
+    },
+    {
       "id": "C-1",
       "slug": "Bianco-Cenere",
       "name": "Bianco Cenere",
