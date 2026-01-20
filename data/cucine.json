@@ -1969,6 +1969,74 @@
       ]
     },
     {
+      "id": 32,
+      "slug": "Urban-Rovere",
+      "name": "Cucina Nera Rovere Urban",
+      "shortDescription": "Marrone e nero urbano, composizione lineare",
+      "description": "Una cucina lineare dallo stile urbano deciso, che unisce il calore del rovere alle finiture nere per un’estetica moderna e metropolitana. La composizione da 360 cm offre ampio spazio operativo e contenitivo, risultando ideale per ambienti contemporanei. Proposta come cucina di seconda mano, rappresenta una soluzione completa, funzionale e dal forte impatto visivo.",
+      "price": "Seconda Mano – Prezzo su richiesta",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/lineare/rovere-urban-360/IMG_0001.JPEG",
+      "images": [
+        "/Images/usate/lineare/rovere-urban-360/IMG_0001.JPEG",
+        "/Images/usate/lineare/rovere-urban-360/IMG_0002.JPEG",
+        "/Images/usate/lineare/rovere-urban-360/IMG_0003.JPEG"
+      ],
+      "features": [
+        {
+          "title": "Stile Urban Contemporaneo",
+          "description": "Abbinamento di rovere caldo e dettagli neri per un look moderno e cittadino"
+        },
+        {
+          "title": "Composizione Lineare Ampia",
+          "description": "Sviluppo da 360 cm che garantisce grande spazio di lavoro e contenimento"
+        },
+        {
+          "title": "Cucina Completa",
+          "description": "Dotata di tutti gli elettrodomestici principali, pronta all’uso"
+        },
+        {
+          "title": "Seconda Mano Selezionata",
+          "description": "Cucina usata in buone condizioni, verificata e funzionale"
+        },
+        {
+          "title": "Design Pratico e Robusto",
+          "description": "Materiali resistenti pensati per un utilizzo quotidiano intensivo"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Composizione: Lineare",
+          "Lunghezza: 360 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato effetto rovere",
+          "Dettagli: Finiture nere",
+          "Top: Laminato coordinato",
+          "Struttura: Pannelli ad alta resistenza"
+        ],
+        "Elettrodomestici": [
+          "Forno integrato",
+          "Piano cottura Pari a Nuovo",
+          "Lavastoviglie integrata",
+          "Frigorifero combinato",
+          "Cappa AAA"
+        ],
+        "Accessori Inclusi": [
+          "Pensili con chiusura ammortizzata",
+          "Cassetti con guide soft-close",
+          "Colonne contenitive",
+          "Zoccolo coordinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-industrial",
+        "cucina-angolare-scura"
+      ]
+    },
+    {
       "id": "C-1",
       "slug": "Bianco-Cenere",
       "name": "Bianco Cenere",
