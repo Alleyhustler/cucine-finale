@@ -1976,11 +1976,11 @@
       "description": "Una cucina lineare dallo stile urbano deciso, che unisce il calore del rovere alle finiture nere per un’estetica moderna e metropolitana. La composizione da 360 cm offre ampio spazio operativo e contenitivo, risultando ideale per ambienti contemporanei. Proposta come cucina di seconda mano, rappresenta una soluzione completa, funzionale e dal forte impatto visivo.",
       "price": "Seconda Mano – Prezzo su richiesta",
       "category": "moderna",
-      "thumbnail": "/Images/usate/lineare/rovere-urban-360/IMG_0001.JPEG",
+      "thumbnail": "/Images/usate/lineare/12/b.webp",
       "images": [
-        "/Images/usate/lineare/rovere-urban-360/IMG_0001.JPEG",
-        "/Images/usate/lineare/rovere-urban-360/IMG_0002.JPEG",
-        "/Images/usate/lineare/rovere-urban-360/IMG_0003.JPEG"
+        "/Images/usate/lineare/12/b.webp",
+        "/Images/usate/lineare/12/c.webp",
+        "/Images/usate/lineare/12/a.webp"
       ],
       "features": [
         {
@@ -1989,7 +1989,7 @@
         },
         {
           "title": "Composizione Lineare Ampia",
-          "description": "Sviluppo da 360 cm che garantisce grande spazio di lavoro e contenimento"
+          "description": "Sviluppo da 360 cm che garantisce grande spazio di lavoro e contenimento aggiunta di sostenimento a penisola"
         },
         {
           "title": "Cucina Completa",
@@ -2007,7 +2007,7 @@
       "specs": {
         "Dimensioni": [
           "Composizione: Lineare",
-          "Lunghezza: 360 cm",
+          "Lunghezza: 360 cm + pensila",
           "Profondità: 60 cm standard",
           "Altezza totale: 230 cm"
         ],
@@ -2028,6 +2028,7 @@
           "Pensili con chiusura ammortizzata",
           "Cassetti con guide soft-close",
           "Colonne contenitive",
+          "Penisola conviviale con sgabelli",
           "Zoccolo coordinato"
         ]
       },
