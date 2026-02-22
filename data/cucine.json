@@ -2108,6 +2108,76 @@
       ]
     },
     {
+      "id": 34,
+      "slug": "Angolo-Lube",
+      "name": "Cucina Lube Angolo Bianco",
+      "shortDescription": "Lube angolare con penisola rialzata, bianco moderno",
+      "description": "Cucina angolare Lube di seconda mano in elegante finitura bianca, caratterizzata da una pratica penisola rialzata che separa e valorizza la zona operativa. La composizione compatta ma funzionale si sviluppa su 250 cm x 184 cm, offrendo ergonomia e ottima organizzazione degli spazi. Soluzione moderna e versatile, ideale per ambienti contemporanei.",
+      "price": "Seconda Mano – Prezzo su richiesta",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/angolare/14/1.png",
+      "images": [
+        "/Images/usate/angolare/14/1.png",
+        "/Images/usate/angolare/14/2.png",
+        "/Images/usate/angolare/14/3.png"
+      ],
+      "features": [
+        {
+          "title": "Marca Lube",
+          "description": "Produttore italiano riconosciuto per qualità costruttiva e design moderno"
+        },
+        {
+          "title": "Penisola Rialzata",
+          "description": "Elemento funzionale che crea separazione visiva e può essere utilizzato come piano snack"
+        },
+        {
+          "title": "Finitura Total White",
+          "description": "Colore bianco luminoso che amplia visivamente lo spazio"
+        },
+        {
+          "title": "Elettrodomestici Inclusi",
+          "description": "Dotata di forno e piano cottura Electrolux e lavastoviglie Samsung"
+        },
+        {
+          "title": "Seconda Mano Selezionata",
+          "description": "Cucina usata in buone condizioni, pronta per una nuova installazione"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Tipologia: Angolare con penisola rialzata",
+          "Lato 1: 250 cm",
+          "Lato 2: 184 cm",
+          "Penisola rialzata: 70 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm"
+        ],
+        "Materiali": [
+          "Ante: Laminato bianco",
+          "Top: Laminato coordinato",
+          "Struttura: Pannelli ad alta resistenza"
+        ],
+        "Elettrodomestici": [
+          "Forno Electrolux",
+          "Piano cottura Electrolux",
+          "Lavastoviglie Samsung",
+          "Lavello",
+          "Frigorifero: non incluso",
+          "Cappa: non inclusa"
+        ],
+        "Accessori Inclusi": [
+          "Penisola rialzata integrata",
+          "Pensili contenitivi",
+          "Cassetti con guide scorrevoli",
+          "Modulo angolare ottimizzato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-industrial",
+        "cucina-angolare-scura"
+      ]
+    },
+    {
       "id": "C-1",
       "slug": "Bianco-Cenere",
       "name": "Bianco Cenere",
