@@ -2038,6 +2038,76 @@
       ]
     },
     {
+      "id": 33,
+      "slug": "Bianco-Astro",
+      "name": "Cucina Bianco Astro 395",
+      "shortDescription": "Total white moderna, 395 cm lineare",
+      "description": "Una cucina total white dal design pulito ed elegante, caratterizzata da linee moderne e superfici luminose che amplificano la percezione dello spazio. La composizione lineare da 395 cm offre ampia zona operativa e grande capacità contenitiva. Proposta come seconda mano selezionata, rappresenta una soluzione completa e versatile, con possibilità di modifiche per adattarsi alle vostre misure e configurazioni.",
+      "price": "Seconda Mano – Prezzo su richiesta",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/lineare/13/1 (1).png",
+      "images": [
+        "/Images/usate/lineare/13/1 (1).png",
+        "/Images/usate/lineare/13/1 (2).png",
+        "/Images/usate/lineare/13/1 (3).png"
+      ],
+      "features": [
+        {
+          "title": "Total White Elegante",
+          "description": "Finitura completamente bianca per un ambiente luminoso, moderno e senza tempo"
+        },
+        {
+          "title": "Composizione Ampia 395 cm",
+          "description": "Sviluppo lineare generoso che garantisce comfort e spazio di lavoro esteso"
+        },
+        {
+          "title": "Elettrodomestici di Marca Inclusi",
+          "description": "Dotata di forno, microonde e lavastoviglie da incasso Bosch e piano cottura Whirlpool"
+        },
+        {
+          "title": "Soluzione Completa",
+          "description": "Inclusi frigo da incasso, cappa, lavello e tutti gli elementi principali"
+        },
+        {
+          "title": "Possibilità di Modifiche",
+          "description": "La cucina può essere adattata e rimodulata in base alle vostre misure ed esigenze"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Composizione: Lineare",
+          "Lunghezza: 395 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm",
+          "Modificabile e adattabile su richiesta"
+        ],
+        "Materiali": [
+          "Ante: Laminato bianco",
+          "Top: Laminato coordinato bianco",
+          "Struttura: Pannelli ad alta resistenza"
+        ],
+        "Elettrodomestici": [
+          "Forno integrato",
+          "Microonde da incasso Bosch",
+          "Lavastoviglie da incasso Bosch",
+          "Piano cottura Whirlpool",
+          "Frigorifero da incasso",
+          "Cappa aspirante",
+          "Lavello"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi",
+          "Cassetti con guide scorrevoli",
+          "Colonne da incasso per elettrodomestici",
+          "Zoccolo coordinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-industrial",
+        "cucina-angolare-scura"
+      ]
+    },
+    {
       "id": "C-1",
       "slug": "Bianco-Cenere",
       "name": "Bianco Cenere",
