@@ -652,11 +652,11 @@
       "description": "La Cucina Linfa e Biancore è un progetto d’arredo che fonde l’intensità del legno marrone con la luminosità del bianco, creando un equilibrio tra naturalezza e leggerezza. Le superfici calde e venate del legno richiamano la linfa vitale, mentre il bianco dona ariosità e modernità all’ambiente. Dotata di forno Candy e frigorifero da incasso, questa cucina abbina funzionalità e design in un connubio raffinato adatto a ogni spazio contemporaneo.",
       "price": "Pronta Consegna",
       "category": "classica",
-      "thumbnail": "/Images/usate/angolare/3/1.png",
+      "thumbnail": "/Images/usate/angolare/3/1 (1).jpg",
       "images": [
-        "/Images/usate/angolare/3/1.png",
-        "/Images/usate/angolare/3/2.png",
-        "/Images/usate/angolare/3/3.png"
+        "/Images/usate/angolare/3/1 (1).jpg",
+        "/Images/usate/angolare/3/1 (2).jpg",
+        "/Images/usate/angolare/3/1 (3).jpg"
       ],
       "features": [
         {
@@ -682,9 +682,9 @@
       ],
       "specs": {
       "Dimensioni": [
-        "Lunghezza: 386 x 125 cm ",
+        "Lunghezza: 330 cm ",
         "Profondità: 60 cm standard",
-        "Altezza totale: 230 cm"
+        "Altezza totale: 210 cm"
       ],
       "Materiali": [
         "Ante: Laminato effetto legno marrone e bianco opaco",
@@ -695,7 +695,8 @@
         "Forno Candy multifunzione",
         "Frigorifero da incasso",
         "Lavastoviglie integrata",
-        "Cappa aspirante con illuminazione LED"
+        "Cappa aspirante con illuminazione LED",
+        "Piano cottura"
       ],
       "Accessori Inclusi": [
         "Cassetti con chiusura ammortizzata",
