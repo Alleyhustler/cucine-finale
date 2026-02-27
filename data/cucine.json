@@ -2179,6 +2179,74 @@
       ]
     },
     {
+      "id": 35,
+      "slug": "Nero-Pantera",
+      "name": "Cucina Nero Pantera",
+      "shortDescription": "Nero moderno, 340 cm lineare completa",
+      "description": "Cucina dal carattere deciso e contemporaneo, proposta nella raffinata finitura Nero Pantera. La composizione lineare da 340 cm, con altezza totale 230 cm, offre un’ampia zona operativa e una forte presenza estetica. Ideale per ambienti moderni dove eleganza e funzionalità devono convivere in equilibrio. Soluzione completa di elettrodomestici principali, pronta all’installazione.",
+      "price": "Prezzo su richiesta",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/lineare/14/1.png",
+      "images": [
+        "/Images/usate/lineare/14/1.png",
+        "/Images/usate/lineare/14/2.png",
+        "/Images/usate/lineare/14/3.png"
+      ],
+      "features": [
+        {
+          "title": "Finitura Nero Pantera",
+          "description": "Colore intenso e moderno che dona personalità e profondità all’ambiente"
+        },
+        {
+          "title": "Composizione Lineare 340 cm",
+          "description": "Sviluppo ampio che garantisce comfort operativo e spazio contenitivo"
+        },
+        {
+          "title": "Altezza 230 cm",
+          "description": "Struttura completa con pensili e colonne per massima capienza"
+        },
+        {
+          "title": "Cucina Completa",
+          "description": "Dotata di tutti gli elettrodomestici principali, pronta all’utilizzo"
+        },
+        {
+          "title": "Design Moderno Essenziale",
+          "description": "Linee pulite e impostazione contemporanea adatta a diversi contesti abitativi"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Composizione: Lineare",
+          "Lunghezza: 340 cm",
+          "Altezza totale: 230 cm",
+          "Profondità: 60 cm standard"
+        ],
+        "Materiali": [
+          "Ante: Laminato nero",
+          "Top: Laminato coordinato",
+          "Struttura: Pannelli ad alta resistenza"
+        ],
+        "Elettrodomestici": [
+          "Forno integrato",
+          "Piano cottura",
+          "Lavello",
+          "Cappa aspirante",
+          "Lavastoviglie integrata",
+          "Frigorifero combinato"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi",
+          "Cassetti con guide scorrevoli",
+          "Colonne integrate",
+          "Zoccolo coordinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-industrial",
+        "cucina-angolare-scura"
+      ]
+    },
+    {
       "id": "C-1",
       "slug": "Bianco-Cenere",
       "name": "Bianco Cenere",
