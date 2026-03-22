@@ -2247,6 +2247,76 @@
       ]
     },
     {
+      "id": 36,
+      "slug": "Linea-Prime",
+      "name": "Cucina Linea Prime",
+      "shortDescription": "Lineare circa 4 metri, completa pari al nuovo",
+      "description": "Cucina lineare completa in condizioni pari al nuovo, sviluppata su una lunghezza di circa 4 metri. Una soluzione moderna e funzionale, ideale per chi cerca ampio spazio operativo e una composizione già pronta all’utilizzo. Dotata di tutti gli elettrodomestici principali, rappresenta un’opportunità pratica e conveniente. Possibilità di adattamento alle vostre misure, con servizio disponibile di trasporto e montaggio.",
+      "price": "Prezzo su richiesta",
+      "category": "moderna",
+      "thumbnail": "/Images/usate/lineare/15/3.png",
+      "images": [
+        "/Images/usate/lineare/15/3.png",
+        "/Images/usate/lineare/15/2.png",
+        "/Images/usate/lineare/15/1.png"
+      ],
+      "features": [
+        {
+          "title": "Condizioni Pari al Nuovo",
+          "description": "Cucina mantenuta in stato eccellente, pronta per essere installata"
+        },
+        {
+          "title": "Composizione Ampia",
+          "description": "Sviluppo lineare di circa 4 metri per massimo comfort e spazio di lavoro"
+        },
+        {
+          "title": "Cucina Completa",
+          "description": "Inclusi tutti gli elettrodomestici principali, pronta all’uso"
+        },
+        {
+          "title": "Adattabile su Misura",
+          "description": "Possibilità di modificare la composizione per adattarla ai vostri spazi"
+        },
+        {
+          "title": "Servizi Disponibili",
+          "description": "Trasporto e montaggio disponibili su richiesta"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Composizione: Lineare",
+          "Lunghezza: circa 400 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm",
+          "Modificabile su richiesta"
+        ],
+        "Materiali": [
+          "Ante: Laminato moderno",
+          "Top: Laminato coordinato",
+          "Struttura: Pannelli ad alta resistenza"
+        ],
+        "Elettrodomestici": [
+          "Forno integrato",
+          "Piano cottura",
+          "Lavello",
+          "Cappa aspirante",
+          "Lavastoviglie integrata",
+          "Frigorifero",
+          "Microonde"
+        ],
+        "Accessori Inclusi": [
+          "Pensili contenitivi",
+          "Cassetti con guide scorrevoli",
+          "Colonne integrate",
+          "Zoccolo coordinato"
+        ]
+      },
+      "relatedProducts": [
+        "cucina-moderna-industrial",
+        "cucina-angolare-scura"
+      ]
+    },
+    {
       "id": "C-1",
       "slug": "Bianco-Cenere",
       "name": "Bianco Cenere",
