@@ -2385,6 +2385,70 @@
         "cucina-angolare-scura"
       ]
     },
+      {
+      "id": 38,
+      "slug": "Stellare",
+      "name": "Cucina Stellare",
+      "shortDescription": "Blu moderno, design a colonna effetto armadio",
+      "description": "Cucina di nuova generazione dal design moderno in finitura blu, caratterizzata da una struttura a colonne effetto armadio con pensili integrati. Le linee pulite e verticali creano un impatto estetico elegante e ordinato, perfetto per ambienti contemporanei. Completamente accessoriata, rappresenta una soluzione premium pronta all’uso con massima funzionalità e stile.",
+      "price": "Nuova",
+      "category": "moderna",
+      "thumbnail": "/Images/nuove/lineare/7/b.jpeg",
+      "images": [
+        "/Images/nuove/lineare/7/b.jpeg",
+        "/Images/nuove/lineare/7/a.jpeg",
+        "/Images/nuove/lineare/7/v.jpeg"
+      ],
+      "features": [
+        {
+          "title": "Design a Colonne Effetto Armadio",
+          "description": "Struttura verticale moderna che nasconde e organizza perfettamente gli spazi"
+        },
+        {
+          "title": "Finitura Blu Contemporanea",
+          "description": "Colore elegante e distintivo, ideale per ambienti moderni e di design"
+        },
+        {
+          "title": "Pensili Integrati",
+          "description": "Continuità visiva e maggiore capacità contenitiva"
+        },
+        {
+          "title": "Cucina Completa Premium",
+          "description": "Dotata di tutti gli elettrodomestici per un utilizzo immediato"
+        }
+      ],
+      "specs": {
+        "Dimensioni": [
+          "Lunghezza: 420 cm",
+          "Profondità: 60 cm standard",
+          "Altezza totale: 230 cm circa"
+        ],
+        "Materiali": [
+          "Ante: Laminato blu moderno",
+          "Struttura: Sistema a colonne effetto armadio",
+          "Top: Laminato o effetto pietra premium (da verificare)",
+          "Lavello: Acciaio o composito"
+        ],
+        "Elettrodomestici": [
+          "Forno multifunzione",
+          "Piano cottura fuochi elettrico in vetro",
+          "Lavastoviglie A++ 60 cm",
+          "Cappa aspirante con LED integrato",
+          "Frigorifero incluso",
+          "Microonde integrato"
+        ],
+        "Accessori Inclusi": [
+          "Pensili integrati a tutta altezza",
+          "Colonne contenitive effetto armadio",
+          "Cassetti con sistema soft-close",
+          "Spazi organizzati ad alta capacità"
+        ]
+      },
+        "relatedProducts": [
+          "cucina-classica-tradizionale",
+          "cucina-minimalista-essential"
+      ]
+    },
     {
       "id": "C-1",
       "slug": "Bianco-Cenere",
